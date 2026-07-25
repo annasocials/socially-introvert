@@ -1,0 +1,5 @@
+# ⚠️ Update the sitemap domain below to your real live domain.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sociallyintrovert.com/sitemap.xml

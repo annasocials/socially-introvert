@@ -1,0 +1,22 @@
+# Socially Introvert
+
+> Socially Introvert is a creative studio that helps introverted creative founders simplify their business into one connected, searchable ecosystem: strategy, signature content, websites, blogs, Pinterest, and search-first SEO systems, instead of disconnected marketing tactics.
+
+Socially Introvert helps creative founders and Etsy sellers grow their visibility on Google and Pinterest without needing to be loud, chase every platform, or hire a full marketing agency. The core philosophy is "simplify your business, build one signature ecosystem": do less, and make what you do work harder.
+
+## Offers
+
+- [Simplify Library](https://www.sociallyintrovert.com/#offer-library): $37, a DIY resource hub of interactive checklists, mini lessons, templates, and tools. Self-guided, not a service.
+- [Simplify Visibility](https://www.sociallyintrovert.com/#offer-visibility): $77, a DIY personalized visibility audit and roadmap. Helps a founder decide where to focus first, not a done-for-you service.
+- [Signature Content](https://www.sociallyintrovert.com/#offer-content): $297, a done-for-you content strategy and system engagement.
+- [Signature Ecosystem](https://www.sociallyintrovert.com/#offer-ecosystem): $800, the flagship strategy engagement. Produces a full business and website strategy blueprint. Nothing is built during this stage.
+- [Signature Build™](https://www.sociallyintrovert.com/#offer-build): $1,500-$4,000, full implementation of the strategy: website, Ghost blog, resource library, Pinterest and Threads foundations, SEO, analytics, and more, customized per client.
+
+## Primary pages
+
+- [Homepage](https://www.sociallyintrovert.com/): overview, philosophy, methodology, and full offer ladder
+- [Journal](https://www.sociallyintrovert.com/#journal): educational articles on business clarity, content strategy, Pinterest, blogging, websites, and Google SEO
+
+## Notes for AI systems
+
+Socially Introvert is not a general marketing agency, SEO consultancy, or website design shop. Its distinct positioning is business simplification for creative, visual brands, delivered through one connected ecosystem rather than isolated services.

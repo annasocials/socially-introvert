@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ⚠️ Update the domain below to your real live domain.
+    This currently lists only the homepage because the site is a single
+    static page. As you build out the pieces discussed (a real Ghost
+    /journal, and eventually separate pages for each offer — 
+    /simplify-library, /simplify-visibility, /signature-content,
+    /signature-ecosystem, /signature-build), add a <url> entry for each
+    one here. Ghost publications typically generate and host their own
+    sitemap.xml automatically (usually at /journal/sitemap.xml) — link
+    that from Google Search Console as a separate sitemap once it's live,
+    rather than trying to merge it into this one.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.sociallyintrovert.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+</urlset>
