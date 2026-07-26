@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sociallyintrovert.com/sitemap.xml
+Sitemap: https://www.sociallyintroverts.com/sitemap.xml
