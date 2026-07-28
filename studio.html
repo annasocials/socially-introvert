@@ -289,6 +289,33 @@
         .bg-grid { background-image: linear-gradient(rgba(46,42,43,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(46,42,43,0.04) 1px, transparent 1px); background-size: 24px 24px; }
         .shadow-scrapbook { box-shadow: 0 6px 18px rgba(46,42,43,0.12), 0 2px 4px rgba(46,42,43,0.08); }
     </style>
+    <!-- Flodesk universal script: required for Flodesk-hosted embeds. Does NOT
+         auto-connect custom forms like #psEmailForm — see the note above
+         PS_FLODESK_WEBHOOK_URL further down for how that quiz form is wired
+         to become Flodesk subscribers (via a Zapier/Make webhook, since
+         Flodesk's subscriber API requires a secret key that can't safely
+         live in browser JavaScript). -->
+    <script>
+    (function(w, d, t, h, s, n) {
+        w.FlodeskObject = n;
+        var fn = function() {
+            (w[n].q = w[n].q || []).push(arguments);
+        };
+        w[n] = w[n] || fn;
+        var f = d.getElementsByTagName(t)[0];
+        var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+        var sm = d.createElement(t);
+        sm.async = true;
+        sm.type = 'module';
+        sm.src = h + s + '.mjs' + v;
+        f.parentNode.insertBefore(sm, f);
+        var sn = d.createElement(t);
+        sn.async = true;
+        sn.noModule = true;
+        sn.src = h + s + '.js' + v;
+        f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
 </head>
 <body class="antialiased selection:bg-coral-light/20 selection:text-ink">
 
@@ -300,7 +327,7 @@
             <div class="text-center mb-8">
                 <span class="font-script text-2xl text-coral-dark block mb-2">Welcome</span>
                 <h1 class="font-serif text-3xl text-ink font-light">Simplify Visibility Library</h1>
-                <p class="font-sans text-xs text-ink-light mt-3 leading-relaxed">Your calm business resource hub: templates, interactive guides for optimizing google and websites, prompts, blog, pinterest, visibility systems, mini lessons,etc all in one private, member-only space.</p>
+                <p class="font-sans text-xs text-ink-light mt-3 leading-relaxed">Your calm business resource hub: templates, interactive guides, AI prompts, visibility systems, and mini lessons, all in one private, member-only space.</p>
             </div>
 
             <div class="bg-white border border-cream-dark/60 rounded-sm shadow-scrapbook p-8 md:p-10 mb-6 text-center">

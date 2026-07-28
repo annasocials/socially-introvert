@@ -16,7 +16,7 @@
     <!--
         NOTE: DOMAIN PLACEHOLDER
         Every absolute URL below (canonical, og:url, schema "url" fields) uses
-        https://www.sociallyintroverts.com/ as a placeholder. Find-and-replace
+        https://www.sociallyintrovert.com/ as a placeholder. Find-and-replace
         that with your real live domain before this goes to production, or the
         canonical tag and social previews will point to the wrong place.
     -->
@@ -51,9 +51,9 @@
         "@graph": [
             {
                 "@type": "Organization",
-                "@id": "https://www.sociallyintroverts.com/#organization",
+                "@id": "https://www.sociallyintrovert.com/#organization",
                 "name": "Socially Introvert",
-                "url": "https://www.sociallyintroverts.com/",
+                "url": "https://www.sociallyintrovert.com/",
                 "description": "Socially Introvert helps creative founders simplify their business by building one signature ecosystem: strategy, signature content (a content strategy system), websites, blogs, Pinterest, and search-first SEO systems.",
                 "email": "sociallyintroverts@outlook.com",
                 "sameAs": [
@@ -63,35 +63,35 @@
             },
             {
                 "@type": "WebSite",
-                "@id": "https://www.sociallyintroverts.com/#website",
-                "url": "https://www.sociallyintroverts.com/",
+                "@id": "https://www.sociallyintrovert.com/#website",
+                "url": "https://www.sociallyintrovert.com/",
                 "name": "Socially Introvert",
-                "publisher": { "@id": "https://www.sociallyintroverts.com/#organization" },
+                "publisher": { "@id": "https://www.sociallyintrovert.com/#organization" },
                 "inLanguage": "en-US"
             },
             {
                 "@type": "Person",
-                "@id": "https://www.sociallyintroverts.com/#founder",
+                "@id": "https://www.sociallyintrovert.com/#founder",
                 "name": "Anna",
                 "jobTitle": "Founder, Socially Introvert",
-                "worksFor": { "@id": "https://www.sociallyintroverts.com/#organization" },
-                "url": "https://www.sociallyintroverts.com/#about"
+                "worksFor": { "@id": "https://www.sociallyintrovert.com/#organization" },
+                "url": "https://www.sociallyintrovert.com/#about"
             },
             {
                 "@type": "ProfessionalService",
-                "@id": "https://www.sociallyintroverts.com/#service",
+                "@id": "https://www.sociallyintrovert.com/#service",
                 "name": "Socially Introvert",
-                "image": "https://www.sociallyintroverts.com/images/og-cover.jpg",
-                "url": "https://www.sociallyintroverts.com/",
+                "image": "https://www.sociallyintrovert.com/images/og-cover.jpg",
+                "url": "https://www.sociallyintrovert.com/",
                 "email": "sociallyintroverts@outlook.com",
                 "description": "Creative strategy studio helping introverted founders simplify their business and grow through signature content, websites, blogs, Pinterest, and search-first systems.",
                 "areaServed": ["US", "Europe"],
                 "priceRange": "$47–$4000",
-                "founder": { "@id": "https://www.sociallyintroverts.com/#founder" }
+                "founder": { "@id": "https://www.sociallyintrovert.com/#founder" }
             },
             {
                 "@type": "FAQPage",
-                "@id": "https://www.sociallyintroverts.com/#faq",
+                "@id": "https://www.sociallyintrovert.com/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
@@ -289,6 +289,54 @@
         .bg-grid { background-image: linear-gradient(rgba(46,42,43,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(46,42,43,0.04) 1px, transparent 1px); background-size: 24px 24px; }
         .shadow-scrapbook { box-shadow: 0 6px 18px rgba(46,42,43,0.12), 0 2px 4px rgba(46,42,43,0.08); }
     </style>
+    <!-- Flodesk universal script: required for Flodesk-hosted embeds. Does NOT
+         auto-connect custom forms like #psEmailForm — see the note above
+         PS_FLODESK_WEBHOOK_URL further down for how that quiz form is wired
+         to become Flodesk subscribers (via a Zapier/Make webhook, since
+         Flodesk's subscriber API requires a secret key that can't safely
+         live in browser JavaScript). -->
+    <script>
+    (function(w, d, t, h, s, n) {
+        w.FlodeskObject = n;
+        var fn = function() {
+            (w[n].q = w[n].q || []).push(arguments);
+        };
+        w[n] = w[n] || fn;
+        var f = d.getElementsByTagName(t)[0];
+        var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+        var sm = d.createElement(t);
+        sm.async = true;
+        sm.type = 'module';
+        sm.src = h + s + '.mjs' + v;
+        f.parentNode.insertBefore(sm, f);
+        var sn = d.createElement(t);
+        sn.async = true;
+        sn.noModule = true;
+        sn.src = h + s + '.js' + v;
+        f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+    <script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
 </head>
 <body class="antialiased selection:bg-coral-light/20 selection:text-ink">
 
@@ -492,11 +540,11 @@
                     </h1>
 
                     <p class="font-sans text-ink text-sm md:text-base max-w-md mx-auto leading-relaxed mb-4 font-semibold">
-                        You don't need another platform to manage. You need website, ecosystem, content, and visibility to finally work together.
+                        Most founders don't need another platform to manage. They need the website, content, and visibility they already have to finally work together.
                     </p>
                     
                     <p class="font-sans text-ink-light text-sm md:text-base max-w-md mx-auto leading-relaxed mb-10 font-medium">
-                        Socially Introvert connects pieces into one ecosystem, so growth feels like building on what's already working.
+                        Socially Introvert connects the pieces into one ecosystem, so growth feels less like keeping up and more like building on what's already working.
                     </p>
                     
                     <!-- Tactile Styled Calls To Action -->
@@ -1214,8 +1262,8 @@
                                 <span class="flex items-center"><span class="text-coral mr-1">◆</span> Content</span>
                                 <span class="flex items-center"><span class="text-coral mr-1">◆</span> Pinterest</span>
                                 <span class="flex items-center"><span class="text-coral mr-1">◆</span> LinkedIn &amp; Threads</span>
-                                <span class="flex items-center"><span class="text-coral mr-1">◆</span> Blog</span>
-                                <span class="flex items-center"><span class="text-coral mr-1">◆</span> Visibility and Design Support</span>
+                                <span class="flex items-center"><span class="text-coral mr-1">◆</span> Visibility</span>
+                                <span class="flex items-center"><span class="text-coral mr-1">◆</span> Design Support</span>
                             </div>
                             <div class="pt-2 text-xs italic text-coral-dark font-sans">
                                 <strong>Outcome:</strong> The exact piece your ecosystem is missing, delivered without committing to a full project.
@@ -1877,7 +1925,7 @@
                          Short, useful reads on business clarity, content strategy, and search based content ecosystem for introvert founder. It's a safe space for clear thinking, with a little practical tip along the way.
                     </p>
                     <p class="font-sans text-ink-light/60 text-xs mt-3 italic">
-                        The full journal is currently in development and will be published here soon. In the meantime, here's a preview of what's coming.
+                        The full Journal is being written now on Ghost, and will publish here soon. Here's a preview of what's coming.
                     </p>
                 </div>
 
@@ -4035,7 +4083,7 @@
         ============================================================ */
         const GHOST_CONFIG = {
             enabled: false, // flip to true once your Ghost publication is live
-            baseUrl: '', // e.g. 'https://journal.sociallyintroverts.com'
+            baseUrl: '', // e.g. 'https://journal.sociallyintrovert.com'
         };
 
         function openJournalLink(path) {
@@ -15346,12 +15394,41 @@ More Helpful Content
             <p style="font-size: 13.5px; color: #5a5455; line-height: 1.6; margin: 0 0 22px 0; font-weight: 300;">
                 Enter your email to unlock your full assessment, save your results, and receive a personalized roadmap with practical lessons delivered to your inbox. You'll also join the Socially Introvert Letter, where I share thoughtful strategies and behind-the-scenes insight to help you build a business that's easier to find, easier to understand, and easier to grow.
             </p>
-            <form id="psEmailForm" style="text-align: left;" onsubmit="handlePsEmailSubmit(event)">
-                <label for="psEmailInput" style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888;">Email address</label>
-                <input type="email" id="psEmailInput" required placeholder="you@youremail.com" style="width: 100%; box-sizing: border-box; margin-top: 6px; margin-bottom: 12px; padding: 13px 15px; border-radius: 12px; border: 1.5px solid rgba(46,42,43,0.12); font-family: inherit; font-size: 13px; color: #2e2a2b; background: #faf9f6;">
-                <button type="submit" id="psEmailSubmitBtn" style="width: 100%; background-color: #a35c75; color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 15px 0px; border-radius: 9999px; cursor: pointer; border: none; box-shadow: 0 4px 14px rgba(163, 92, 117, 0.25); font-family: inherit;">Unlock My Results &rarr;</button>
-                <p style="font-size: 10px; color: #999; text-align: center; margin-top: 10px;">No spam, just useful strategy — unsubscribe anytime.</p>
-            </form>
+            <!-- ============================================================
+                 FLODESK INLINE FORM GOES HERE — no Zapier/Make needed.
+
+                 Setup (one time, in your Flodesk account):
+                 1. Forms → Create New → Inline. Choose the segment new
+                    subscribers should join.
+                 2. Style it to match this quiz: background #faf9f6,
+                    text #2e2a2b, accent/button color #a35c75,
+                    button text uppercase, rounded-pill shape,
+                    heading font Playfair Display, body font Plus Jakarta
+                    Sans (Flodesk lets you pick Google Fonts). It won't be
+                    pixel-identical to the custom quiz styling, but this
+                    gets it close without writing any code.
+                 3. Click Embed. You'll see two snippets:
+                    - Header code: already installed site-wide, skip it.
+                    - Inline code: copy it and paste it in place of this
+                      whole HTML comment block, right where it says
+                      PASTE FLODESK INLINE CODE BELOW.
+                 4. In the form's settings, set "After submit" to
+                    Redirect, pointing to:
+                      https://sociallyintroverts.com/?ps_unlocked=1
+                    That's what tells the quiz to reveal results when
+                    the visitor lands back on the page after signing up.
+            ============================================================ -->
+            <!-- PASTE FLODESK INLINE CODE BELOW -->
+            <div id="fd-form-6a674d46aa162eb15012154e"></div>
+<script>
+  window.fd('form', {
+    formId: '6a674d46aa162eb15012154e',
+    containerEl: '#fd-form-6a674d46aa162eb15012154e'
+  });
+</script>
+            <div id="flodesk-ps-form-mount"></div>
+            <!-- END FLODESK INLINE CODE -->
+            <p style="font-size: 10px; color: #999; text-align: center; margin-top: 10px;">No spam, just useful strategy — unsubscribe anytime.</p>
         </div>
 
         <!-- ================= LOADING SCREEN ================= -->
@@ -15462,6 +15539,41 @@ More Helpful Content
         document.getElementById('psOverlay').style.display = 'none';
     }
 
+    // Runs on every page load. If the visitor just came back from
+    // signing up on the Flodesk inline form (redirected to
+    // ?ps_unlocked=1) and we have their saved quiz answers, skip
+    // straight to the results screen instead of making them retake
+    // the quiz or see a second form.
+    function checkPsUnlockRedirect() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('ps_unlocked') !== '1') return;
+        let saved = null;
+        try { saved = JSON.parse(localStorage.getItem('ps_quiz_answers') || 'null'); } catch (e) {}
+        if (!saved) return;
+
+        psAnswers = saved;
+        document.getElementById('psOverlay').style.display = 'block';
+        document.getElementById('ps-welcome-screen').style.display = 'none';
+        document.getElementById('ps-question-container').style.display = 'none';
+        document.getElementById('psProgressBarWrapper').style.display = 'none';
+        document.getElementById('ps-email-screen').style.display = 'none';
+        document.getElementById('ps-loading-screen').style.display = 'flex';
+
+        const results = computePsResults();
+        setTimeout(() => {
+            document.getElementById('ps-loading-screen').style.display = 'none';
+            renderPsResults(results);
+            document.getElementById('ps-results-container').style.display = 'block';
+        }, 1000);
+
+        try { localStorage.removeItem('ps_quiz_answers'); } catch (e) {}
+        // Clean the URL so refreshing doesn't re-trigger this.
+        params.delete('ps_unlocked');
+        const cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+        window.history.replaceState({}, '', cleanUrl);
+    }
+    document.addEventListener('DOMContentLoaded', checkPsUnlockRedirect);
+
     function startPsQuiz() {
         document.getElementById('ps-welcome-screen').style.display = 'none';
         document.getElementById('ps-question-container').style.display = 'block';
@@ -15513,6 +15625,10 @@ More Helpful Content
             document.getElementById('ps-question-container').style.display = 'none';
             document.getElementById('psProgressBarWrapper').style.display = 'none';
             document.getElementById('ps-email-screen').style.display = 'block';
+            // Save answers now, in case Flodesk's inline form redirects the
+            // page after signup — this lets us restore and skip straight
+            // to results on return, instead of losing quiz progress.
+            try { localStorage.setItem('ps_quiz_answers', JSON.stringify(psAnswers)); } catch (e) {}
         } else {
             psCurrentIndex++;
             renderPsQuestion();
@@ -15524,9 +15640,13 @@ More Helpful Content
         renderPsQuestion();
     }
 
-    // PATH B in the standalone quiz notes still applies here: set this to a
-    // Zapier/Make webhook that upserts the subscriber into Flodesk with a
-    // custom field for score + recommended offer. Never blocks the reveal.
+    // NOT CURRENTLY USED — the email screen now uses Flodesk's own inline
+    // form (see #ps-email-screen above) instead of the custom #psEmailForm
+    // this function was built for, since that avoids needing a Zapier/Make
+    // account. Left in place in case you ever want to switch back: get a
+    // Zapier Zap (Webhook → Flodesk Create/Update Subscriber), paste its
+    // URL below, restore the <form id="psEmailForm"> markup, and this
+    // function starts working again exactly as before.
     const PS_FLODESK_WEBHOOK_URL = "";
 
     function handlePsEmailSubmit(e) {
