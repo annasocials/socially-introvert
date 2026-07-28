@@ -368,8 +368,18 @@
                     </span>
                 </div>
 
+                <!-- Mobile menu toggle (Studio nav) -->
+                <div class="lg:hidden col-span-1 border-b border-cream-dark/50 p-4 flex items-center justify-between bg-cream/40">
+                    <h3 class="font-serif text-lg font-bold text-ink">The Studio</h3>
+                    <button id="mobile-menu-btn" aria-label="Open Studio menu" aria-expanded="false" aria-controls="mobile-menu" class="flex items-center justify-center w-10 h-10 text-ink hover:text-coral-dark transition-colors">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
                 <!-- Sidebar on Left -->
-                <aside class="lg:col-span-3 bg-cream/40 border-r border-cream-dark/50 p-8 flex flex-col justify-between">
+                <aside id="mobile-menu" class="hidden lg:flex lg:col-span-3 bg-cream/40 border-r border-cream-dark/50 p-8 flex-col justify-between">
                     <div>
                         <div class="flex items-center space-x-3 mb-10 pb-6 border-b border-cream-dark/40">
                             <div>
@@ -1885,12 +1895,18 @@
             
             if (menuBtn && mobileMenu) {
                 menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex', !isHidden);
+                    menuBtn.setAttribute('aria-expanded', String(!isHidden));
                 });
 
-                mobileMenu.querySelectorAll('a').forEach(link => {
+                mobileMenu.querySelectorAll('a, button').forEach(link => {
                     link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
+                        if (window.innerWidth < 1024) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('flex');
+                            menuBtn.setAttribute('aria-expanded', 'false');
+                        }
                     });
                 });
             }
