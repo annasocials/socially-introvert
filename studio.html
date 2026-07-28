@@ -288,7 +288,37 @@
     <style>
         .bg-grid { background-image: linear-gradient(rgba(46,42,43,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(46,42,43,0.04) 1px, transparent 1px); background-size: 24px 24px; }
         .shadow-scrapbook { box-shadow: 0 6px 18px rgba(46,42,43,0.12), 0 2px 4px rgba(46,42,43,0.08); }
+        /* Anti-FOUC guard: Tailwind is loaded from the CDN and compiles classes
+           in the browser at runtime. On some mobile browsers (Samsung Internet
+           in particular) the first paint can happen before that compilation
+           finishes, so the raw, unstyled HTML briefly (or on slow devices, not
+           so briefly) shows through — that's the "looks broken" flash. This
+           hides the page until Tailwind has generated its styles, then reveals
+           it in one frame. Nothing about the design below changes; this only
+           changes when it's allowed to be shown. A hard 1.2s fallback timeout
+           guarantees the page always becomes visible even if the CDN script
+           is blocked or slow, so nothing can get stuck hidden. */
+        html:not(.tw-ready) body { opacity: 0; }
+        body { opacity: 1; transition: opacity 0.18s ease; }
     </style>
+    <script>
+        (function () {
+            var reveal = function () {
+                document.documentElement.classList.add('tw-ready');
+            };
+            // Give the Tailwind CDN's mutation observer a couple of frames
+            // after the DOM is fully parsed to finish applying styles.
+            document.addEventListener('DOMContentLoaded', function () {
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(reveal);
+                });
+            });
+            // Hard fallback so the page is never permanently hidden
+            // (e.g. if cdn.tailwindcss.com is blocked or slow to load).
+            setTimeout(reveal, 1200);
+        })();
+    </script>
+    <noscript><style>html body { opacity: 1 !important; }</style></noscript>
     <!-- Flodesk universal script: required for Flodesk-hosted embeds. Does NOT
          auto-connect custom forms like #psEmailForm — see the note above
          PS_FLODESK_WEBHOOK_URL further down for how that quiz form is wired
