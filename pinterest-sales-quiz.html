@@ -29,6 +29,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Flodesk universal loader — MUST load before any window.fd('form', ...)
+         call further down the page, or that call throws ("fd is not a
+         function") and the inline form never renders. This is why the form
+         was showing blank: this script used to sit near the bottom of
+         <body>, AFTER the inline embed that calls window.fd(). Moved here,
+         into <head>, so it always runs first (same placement as index.html). -->
+    <script>
+    (function(w, d, t, h, s, n) {
+        w.FlodeskObject = n;
+        var fn = function() {
+          (w[n].q = w[n].q || []).push(arguments);
+        };
+        w[n] = w[n] || fn;
+        var f = d.getElementsByTagName(t)[0];
+        var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+        var sm = d.createElement(t);
+        sm.async = true;
+        sm.type = 'module';
+        sm.src = h + s + '.mjs' + v;
+        f.parentNode.insertBefore(sm, f);
+        var sn = d.createElement(t);
+        sn.async = true;
+        sn.noModule = true;
+        sn.src = h + s + '.js' + v;
+        f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+
     <style>
         html, body { margin: 0; padding: 0; background-color: #faf9f6; }
         @keyframes wizard-spin {
@@ -108,23 +136,28 @@
             </p>
 
             <!-- ============================================================
-                 REQUIRED SETUP — do this before the page goes live:
+                 REQUIRED SETUP — check this in Flodesk before relying on it:
 
-                 1. In Flodesk: Forms → find your existing "Pinterest Sales
-                    Score" form → Duplicate it. This does NOT touch your live
-                    site or the original form at all.
-                 2. Open the new duplicate → Design tab → nothing to change,
-                    it'll already match (background #faf9f6, text #2e2a2b,
-                    accent #a35c75, Playfair Display + Plus Jakarta Sans).
-                 3. Settings → After submit → Redirect → set the URL to:
-                      https://www.sociallyintroverts.com/pinterest-sales-quiz?ps_unlocked=1
-                    (use the exact final URL of THIS page once it's live)
-                 4. Click Embed → copy the "Inline code" snippet → replace
-                    BOTH the formId below AND the containerEl div's id/the
-                    fd('form', ...) call with the ones Flodesk gives you for
-                    the NEW duplicated form (the id will look like
-                    "6a674d46aa..." but be a different string than the one
-                    currently below).
+                 1. In Flodesk: Forms → open the form with ID
+                    6a69cb2b6939ed2dae804461 (the one embedded below).
+                    Confirm it's Active/Published, not a draft.
+                 2. Design tab — confirm it matches the site
+                    (background #faf9f6, text #2e2a2b, accent #a35c75,
+                    Playfair Display + Plus Jakarta Sans).
+                 3. Settings → After submit → Redirect → set the URL to
+                    EXACTLY (must match your real live URL, no www, since
+                    that's what you're using):
+                      https://sociallyintroverts.com/pinterest-sales-quiz?ps_unlocked=1
+                    This is what tells the quiz to reveal results when the
+                    visitor lands back on the page after signing up — if this
+                    redirect isn't set (or points to the wrong URL), the
+                    subscriber still gets added in Flodesk, but they'll never
+                    see the results screen.
+                 4. If this form was never actually finished/duplicated in
+                    Flodesk, do that now, then Embed → copy the "Inline code"
+                    snippet → replace BOTH the formId below AND the
+                    containerEl div's id/the fd('form', ...) call with the
+                    ones Flodesk gives you.
             ============================================================ -->
             <div id="fd-form-6a69cb2b6939ed2dae804461"></div>
             <script>
@@ -196,29 +229,6 @@
 
     </div>
 </div>
-
-<!-- Flodesk universal loader — required once for the inline form above to render -->
-<script>
-(function(w, d, t, h, s, n) {
-    w.FlodeskObject = n;
-    var fn = function() {
-      (w[n].q = w[n].q || []).push(arguments);
-    };
-    w[n] = w[n] || fn;
-    var f = d.getElementsByTagName(t)[0];
-    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-    var sm = d.createElement(t);
-    sm.async = true;
-    sm.type = 'module';
-    sm.src = h + s + '.mjs' + v;
-    f.parentNode.insertBefore(sm, f);
-    var sn = d.createElement(t);
-    sn.async = true;
-    sn.noModule = true;
-    sn.src = h + s + '.js' + v;
-    f.parentNode.insertBefore(sn, f);
-})(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
-</script>
 
 <script>
     /* =========================================================
