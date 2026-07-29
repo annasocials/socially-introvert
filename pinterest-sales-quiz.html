@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) — same GA4 property as the main site, so this page's traffic shows up in the same reports -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CFRTJP9SL');
+    </script>
+
+    <title>Free Pinterest Sales Score | Socially Introvert</title>
+    <meta name="description" content="Take the free 3-minute Pinterest Sales Score quiz and find out what's already working, what's holding you back, and your next step to turn Pinterest into sales.">
+    <!-- IMPORTANT: update this to the exact final live URL of this page before launch -->
+    <link rel="canonical" href="https://www.sociallyintroverts.com/pinterest-sales-quiz">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Pinterest Sales Score | Socially Introvert">
+    <meta property="og:description" content="Take the free 3-minute quiz: is your Pinterest actually built to sell?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sociallyintroverts.com/pinterest-sales-quiz">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html, body { margin: 0; padding: 0; background-color: #faf9f6; }
+        @keyframes wizard-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =========================================================================
+     PINTEREST SALES SCORE — standalone page
+     Ported as-is from the "psOverlay" section of the main site (sociallyintroverts.com).
+     Same markup, same styling, same scoring logic — just shown as normal page
+     content instead of a popup, since this page's only job is the quiz.
+     ========================================================================= -->
+<div style="background-color: #faf9f6; min-height: 100vh; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; box-sizing: border-box;">
+
+    <!-- Header bar -->
+    <div style="position: sticky; top: 0px; background-color: rgba(250, 249, 246, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(46, 42, 43, 0.08); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; z-index: 100000; box-sizing: border-box;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <a href="https://www.sociallyintroverts.com/" style="font-family: 'Playfair Display', serif; font-size: 16px; color: #2e2a2b; font-weight: 500; letter-spacing: 0.03em; text-decoration: none;">Socially Introvert</a>
+            <span style="color: rgba(46, 42, 43, 0.2); font-weight: 300;">|</span>
+            <span style="font-size: 9px; font-weight: 700; color: #a35c75; text-transform: uppercase; letter-spacing: 0.12em;">🍒 Pinterest Sales Score</span>
+        </div>
+    </div>
+
+    <!-- Progress tracking bar -->
+    <div id="psProgressBarWrapper" style="width: 100%; background-color: rgba(46, 42, 43, 0.05); height: 4px; position: relative; display: none;">
+        <div id="psProgressBar" style="background-color: #a35c75; height: 100%; width: 0%; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+    </div>
+
+    <div style="max-width: 560px; margin: 0px auto; padding: 40px 24px; box-sizing: border-box;">
+
+        <!-- ================= WELCOME SCREEN ================= -->
+        <div id="ps-welcome-screen" style="display: block; text-align: left;">
+            <span style="font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: #a35c75; text-transform: uppercase; display: block; margin-bottom: 8px;">A 3-Minute Check-In</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #2e2a2b; line-height: 1.25; margin: 0 0 12px 0; font-weight: 400;">Is Your Pinterest Actually Built to Sell?</h2>
+            <p style="font-size: 14px; color: #5a5455; line-height: 1.6; margin: 0 0 22px 0; font-weight: 300;">
+                Not sure whether your Pinterest strategy is working, or just busy? Answer 10 quick questions and I'll show you what's already working, what's quietly holding you back, and the single next step worth taking.
+            </p>
+            <div style="background-color: #ffffff; border: 1px solid rgba(46, 42, 43, 0.08); padding: 20px; border-radius: 16px; margin-bottom: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.01);">
+                <span style="font-size: 12px; font-weight: 700; color: #2e2a2b; display: block; margin-bottom: 10px;">You'll walk away with</span>
+                <ul style="font-size: 12px; color: #5a5455; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+                    <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;"><span style="color: #a35c75; font-weight: bold;">✓</span> Your Pinterest Sales Readiness Score</li>
+                    <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;"><span style="color: #a35c75; font-weight: bold;">✓</span> Your biggest bottleneck right now</li>
+                    <li style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;"><span style="color: #a35c75; font-weight: bold;">✓</span> A next step matched to where you are</li>
+                </ul>
+            </div>
+            <button onclick="startPsQuiz()" style="width: 100%; background-color: #a35c75; color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 15px 0px; border-radius: 9999px; cursor: pointer; border: none; box-shadow: 0 4px 14px rgba(163, 92, 117, 0.25); font-family: inherit;">
+                Start the Quiz &rarr;
+            </button>
+            <p style="font-size: 10px; color: #999; text-align: center; margin-top: 10px;">Takes about 3 minutes · No right or wrong answers, just honest ones</p>
+        </div>
+
+        <!-- ================= QUESTION CONTAINER ================= -->
+        <div id="ps-question-container" style="display: none; text-align: left;">
+            <div style="margin-bottom: 22px;">
+                <span id="psQuestionStepIndicator" style="font-size: 9px; font-weight: 700; letter-spacing: 0.15em; color: #a35c75; text-transform: uppercase; display: block; margin-bottom: 8px;">Question 1 of 10</span>
+                <h3 id="psQuestionText" style="font-family: 'Playfair Display', serif; font-size: 22px; color: #2e2a2b; line-height: 1.35; margin: 0; font-weight: 400;"></h3>
+            </div>
+            <div id="psOptionsWrap" style="margin-bottom: 6px;"></div>
+            <div id="psInsightBox" style="display: none; background-color: rgba(163, 92, 117, 0.06); border-left: 3px solid #a35c75; border-radius: 0 12px 12px 0; padding: 14px 16px; font-size: 12.5px; color: #5a5455; line-height: 1.55; margin-top: 12px;"></div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 22px; margin-top: 18px; border-top: 1px solid rgba(46, 42, 43, 0.08);">
+                <button id="psPrevBtn" onclick="prevPsQuestion()" style="background: none; border: none; font-size: 11px; font-weight: 600; color: #888; cursor: pointer; padding: 8px 12px;">&larr; Back</button>
+                <button id="psNextBtn" onclick="nextPsQuestion()" disabled style="background-color: #a35c75; color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 24px; border-radius: 9999px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(163, 92, 117, 0.15); font-family: inherit;">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- ================= EMAIL GATE SCREEN ================= -->
+        <div id="ps-email-screen" style="display: none; text-align: center;">
+            <span style="font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: #a35c75; text-transform: uppercase; display: block; margin-bottom: 8px;">Almost There</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #2e2a2b; margin: 0 0 12px 0; font-weight: 400;">Your Personalized Ecosystem Is Ready</h2>
+            <p style="font-size: 13.5px; color: #5a5455; line-height: 1.6; margin: 0 0 22px 0; font-weight: 300;">
+                Enter your email to unlock your full assessment, save your results, and receive a personalized roadmap with practical lessons delivered to your inbox. You'll also join the Socially Introvert Letter, where I share thoughtful strategies and behind-the-scenes insight to help you build a business that's easier to find, easier to understand, and easier to grow.
+            </p>
+
+            <!-- ============================================================
+                 REQUIRED SETUP — do this before the page goes live:
+
+                 1. In Flodesk: Forms → find your existing "Pinterest Sales
+                    Score" form → Duplicate it. This does NOT touch your live
+                    site or the original form at all.
+                 2. Open the new duplicate → Design tab → nothing to change,
+                    it'll already match (background #faf9f6, text #2e2a2b,
+                    accent #a35c75, Playfair Display + Plus Jakarta Sans).
+                 3. Settings → After submit → Redirect → set the URL to:
+                      https://www.sociallyintroverts.com/pinterest-sales-quiz?ps_unlocked=1
+                    (use the exact final URL of THIS page once it's live)
+                 4. Click Embed → copy the "Inline code" snippet → replace
+                    BOTH the formId below AND the containerEl div's id/the
+                    fd('form', ...) call with the ones Flodesk gives you for
+                    the NEW duplicated form (the id will look like
+                    "6a674d46aa..." but be a different string than the one
+                    currently below).
+            ============================================================ -->
+            <div id="fd-form-REPLACE-WITH-NEW-FORM-ID"></div>
+            <script>
+              window.fd('form', {
+                formId: 'REPLACE-WITH-NEW-FORM-ID',
+                containerEl: '#fd-form-REPLACE-WITH-NEW-FORM-ID'
+              });
+            </script>
+
+            <p style="font-size: 10px; color: #999; text-align: center; margin-top: 10px;">No spam, just useful strategy — unsubscribe anytime.</p>
+        </div>
+
+        <!-- ================= LOADING SCREEN ================= -->
+        <div id="ps-loading-screen" style="display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 0px;">
+            <div style="width: 40px; height: 40px; border: 3px solid rgba(46,42,43,0.08); border-top-color: #a35c75; border-radius: 50%; margin: 0 auto 20px; animation: wizard-spin 0.9s linear infinite;"></div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: #2e2a2b; font-weight: 400; margin: 0 0 6px 0;">Building your Pinterest Sales Map...</h3>
+            <p style="font-size: 12px; color: #888; font-weight: 300;">Comparing your answers against what actually drives Pinterest sales.</p>
+        </div>
+
+        <!-- ================= RESULTS CONTAINER ================= -->
+        <div id="ps-results-container" style="display: none; text-align: left;">
+            <div style="text-align: center; margin-bottom: 28px;">
+                <span style="font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: #a35c75; text-transform: uppercase;">Your Results</span>
+                <h2 id="psResultsHeadline" style="font-family: 'Playfair Display', serif; font-size: 26px; color: #2e2a2b; margin: 6px 0 14px 0; font-weight: 400;">Your Pinterest Sales Readiness</h2>
+
+                <div style="position: relative; width: 130px; height: 130px; margin: 0 auto;">
+                    <svg width="130" height="130" style="transform: rotate(-90deg);">
+                        <circle cx="65" cy="65" r="55" stroke="#f5f0ed" stroke-width="9" fill="transparent" />
+                        <circle id="psScoreRing" cx="65" cy="65" r="55" stroke="#a35c75" stroke-width="9" fill="transparent" stroke-linecap="round" stroke-dasharray="345.6" stroke-dashoffset="345.6" style="transition: stroke-dashoffset 1s ease-out;" />
+                    </svg>
+                    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <span id="psScoreText" style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2e2a2b; font-weight: 500;">0%</span>
+                        <span style="font-size: 8px; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700;">Sales Ready</span>
+                    </div>
+                </div>
+                <p id="psResultsSummary" style="font-size: 13px; color: #5a5455; line-height: 1.6; font-weight: 300; margin: 14px auto 0; max-width: 420px;"></p>
+            </div>
+
+            <div style="margin-bottom: 26px;">
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #888; letter-spacing: 0.1em; display: block; margin-bottom: 12px;">Your Breakdown</span>
+                <div id="psBreakdownGrid" style="display: grid; grid-template-columns: 1fr; gap: 12px;"></div>
+            </div>
+
+            <div style="background-color: #ffffff; border: 1px solid rgba(46, 42, 43, 0.08); padding: 20px; border-radius: 16px; margin-bottom: 16px;">
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #a35c75; text-transform: uppercase; display: block; margin-bottom: 8px;">Your Biggest Bottleneck</span>
+                <p id="psBottleneckText" style="font-size: 12.5px; color: #5a5455; line-height: 1.6; margin: 0; font-weight: 300;"></p>
+            </div>
+
+            <div style="background-color: #ffffff; border: 1px solid rgba(46, 42, 43, 0.08); padding: 20px; border-radius: 16px; margin-bottom: 16px;">
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #888; text-transform: uppercase; display: block; margin-bottom: 10px;">What's Worth Rethinking</span>
+                <ul id="psMisconceptionList" style="list-style: none; padding: 0; margin: 0; font-size: 12.5px; color: #5a5455; line-height: 1.5;"></ul>
+            </div>
+
+            <div style="background-color: #ffffff; border: 1px solid rgba(46, 42, 43, 0.08); padding: 20px; border-radius: 16px; margin-bottom: 28px;">
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #888; text-transform: uppercase; display: block; margin-bottom: 10px;">What's Already Working</span>
+                <ul id="psStrengthList" style="list-style: none; padding: 0; margin: 0; font-size: 12.5px; color: #5a5455; line-height: 1.5;"></ul>
+            </div>
+
+            <div style="background-color: rgba(163, 92, 117, 0.05); border: 1px solid rgba(163, 92, 117, 0.15); padding: 24px; border-radius: 20px; margin-bottom: 20px;">
+                <span id="psOfferStep" style="font-size: 9px; font-weight: 700; letter-spacing: 0.12em; color: #a35c75; text-transform: uppercase; display: block; margin-bottom: 6px;">Your Recommended Path</span>
+                <h4 id="psOfferTitle" style="font-family: 'Playfair Display', serif; font-size: 20px; color: #2e2a2b; font-weight: 400; margin: 0 0 4px 0;">Simplify Audit</h4>
+                <span id="psOfferPrice" style="font-size: 11px; color: #888; font-weight: 600;"></span>
+                <p id="psOfferBody" style="font-size: 13px; color: #5a5455; line-height: 1.6; font-weight: 300; margin: 10px 0 16px 0;"></p>
+                <a id="psOfferCta" href="#" style="display: inline-flex; align-items: center; gap: 6px; background-color: #a35c75; color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 13px 22px; border-radius: 9999px; text-decoration: none;">Explore This &rarr;</a>
+            </div>
+
+            <a href="https://www.sociallyintroverts.com/" style="display: block; text-align: center; width: 100%; box-sizing: border-box; background-color: transparent; color: #5a5455; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 14px 0px; border-radius: 9999px; cursor: pointer; border: 1px solid rgba(46,42,43,0.12); font-family: inherit; text-decoration: none;">Visit Socially Introvert &rarr;</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Flodesk universal loader — required once for the inline form above to render -->
+<script>
+(function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+})(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
+
+<script>
+    /* =========================================================
+       PINTEREST SALES SCORE — data, scoring, and screen logic
+       Ported as-is from the main site. Only PS_BASE_URL changed
+       below, since the offer links ("Explore This") point to
+       sections that live on the homepage, not on this page.
+       ========================================================= */
+    const PS_BASE_URL = "https://www.sociallyintroverts.com/"; // offer CTAs point back to homepage sections
+
+    const PS_OFFERS = {
+        library: { step: "01 / LEARN", title: "Simplify Visibility Library", price: "$47", body: "A self-guided library of lessons, interactive guides, and templates — so you can build your Pinterest and content foundation at your own pace before investing further.", anchor: "#offer-library" },
+        score:   { step: "02 / DIAGNOSE", title: "Simplify Audit", price: "From $150", body: "A guided review of your Pinterest presence, content, and website working together — so you know exactly where to focus first instead of guessing.", anchor: "#offer-visibility" },
+        build:   { step: "03 / BUILD", title: "Simplify Build", price: "$1,500–$4,000", body: "Hands-on implementation of the landing page, website, or offer structure your Pinterest traffic is currently landing on nothing to convert into.", anchor: "#offer-build" },
+        repurpose: { step: "04 / MULTIPLY", title: "Simplify Repurpose", price: "$250–$1,000", body: "Turning the content you're already creating into more save-worthy, sales-ready assets — so your best ideas keep working across Pinterest for longer.", anchor: "#offer-content" },
+        studio:  { step: "05 / SUPPORT", title: "Simplify Studio", price: "$250–$800", body: "Focused, done-for-you help with the one piece that's holding your Pinterest ecosystem back — without committing to a full rebuild.", anchor: "#offer-studio" }
+    };
+
+    const PS_QUESTIONS = [
+        { id:1, category:"sales", text:"What is your main goal on Pinterest?", options:[{k:"A",label:"Get lots of impressions"},{k:"B",label:"Get website traffic"},{k:"C",label:"Get email subscribers or product sales"},{k:"D",label:"I'm not sure"}], correct:"C", insight:"Traffic is the vehicle, not the destination — the real goal is what that traffic turns into: a subscriber or a sale.", misconception:"Treating traffic as the finish line, when it's really just the vehicle to something else." },
+        { id:2, category:"content", text:"When creating a pin, what do you spend the most time on?", options:[{k:"A",label:"Making it look pretty"},{k:"B",label:"Writing a keyword-rich title"},{k:"C",label:"Creating content people actually want to save"},{k:"D",label:"I mostly copy what everyone else does"}], correct:"C", insight:"Keywords help people find your pin, but it's content worth saving that makes Pinterest want to keep showing it.", misconception:"Spending more time optimizing the title than making the content itself worth saving." },
+        { id:3, category:"content", text:"Which Pinterest metric matters MOST?", options:[{k:"A",label:"Monthly Views"},{k:"B",label:"Impressions"},{k:"C",label:"Saves"},{k:"D",label:"Followers"}], correct:"C", insight:"Saves are the clearest signal that content is genuinely valuable — Pinterest tends to reward saved content with more reach.", misconception:"Watching views, impressions, or follower counts instead of saves." },
+        { id:4, category:"content", text:"Your pin gets 50,000 impressions but only 15 saves. What do you think?", options:[{k:"A",label:"Amazing"},{k:"B",label:"Pinterest is broken"},{k:"C",label:"My content isn't compelling enough"},{k:"D",label:"I need to pin more"}], correct:"C", insight:"That many impressions with so few saves usually means the pin is being shown but isn't convincing anyone to act on it.", misconception:"Reading a big impression number as success even when engagement underneath it is weak." },
+        { id:5, category:"seo", text:"Where does Pinterest get most of its SEO signals?", options:[{k:"A",label:"Description only"},{k:"B",label:"Image only"},{k:"C",label:"Board + Title + Image + User engagement"},{k:"D",label:"Hashtags"}], correct:"C", insight:"Pinterest blends several signals together — titles, boards, descriptions, images, and especially how people engage — not any single field.", misconception:"Treating one element, like hashtags or the description, as the whole SEO story." },
+        { id:6, category:"sales", text:"Someone lands on your blog. What makes them buy?", options:[{k:"A",label:"Pinterest"},{k:"B",label:"My article solves a problem and naturally leads to my offer"},{k:"C",label:"A beautiful pin"},{k:"D",label:"Luck"}], correct:"B", insight:"Pinterest is the introduction. The content and offer on the other end are what actually persuade someone to buy.", misconception:"Expecting the platform to do the selling instead of the page it leads to." },
+        { id:7, category:"content", text:"Which creator usually wins long-term?", options:[{k:"A",label:"Posts 30 pins every day"},{k:"B",label:"Makes highly useful content that gets saved"},{k:"C",label:"Uses every Pinterest trend"},{k:"D",label:"Buys followers"}], correct:"B", insight:"Consistently useful, save-worthy content beats high-volume pinning over the long run.", misconception:"Equating more output with more results, rather than focusing on what actually earns saves." },
+        { id:8, category:"seo", text:"What is Pinterest trying to do?", options:[{k:"A",label:"Be Instagram"},{k:"B",label:"Keep people scrolling forever"},{k:"C",label:"Show users ideas they'll save and act on"},{k:"D",label:"Reward whoever pins the most"}], correct:"C", insight:"Pinterest is a recommendation engine — its job is surfacing ideas people will save and act on, not maximizing scroll time.", misconception:"Treating Pinterest like a social feed instead of a search and recommendation engine." },
+        { id:9, category:"sales", text:"Which content is MOST likely to generate sales?", options:[{k:"A",label:"\u201c10 Cute Kitchen Ideas\u201d"},{k:"B",label:"\u201cThe Exact Kitchen Storage System I Use (with product recommendations)\u201d"},{k:"C",label:"Random aesthetic images"},{k:"D",label:"Inspirational quotes"}], correct:"B", insight:"Specific, problem-solving content that naturally recommends a product converts far better than generic inspiration.", misconception:"Reaching for broad, aesthetic content instead of specific, problem-solving content." },
+        { id:10, category:"sales", text:"What should you optimize FIRST if your traffic isn't converting?", options:[{k:"A",label:"More pins"},{k:"B",label:"Better keywords"},{k:"C",label:"Landing page + offer + content quality"},{k:"D",label:"More followers"}], correct:"C", insight:"Before chasing more traffic, it's worth optimizing what people actually land on — the page and the offer itself.", misconception:"Trying to fix a conversion problem by adding more traffic instead of improving the destination." }
+    ];
+
+    const PS_CATEGORY_META = { sales: { label:"Sales Mindset & Offer", total:0 }, content: { label:"Save-Worthy Content", total:0 }, seo: { label:"Pinterest SEO & Algorithm", total:0 } };
+    PS_QUESTIONS.forEach(q => PS_CATEGORY_META[q.category].total++);
+
+    let psCurrentIndex = 0;
+    let psAnswers = {};
+
+    // Runs on page load. If the visitor just came back from signing up on
+    // the Flodesk inline form (redirected to ?ps_unlocked=1) and we have
+    // their saved quiz answers, skip straight to the results screen.
+    function checkPsUnlockRedirect() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('ps_unlocked') !== '1') return;
+        let saved = null;
+        try { saved = JSON.parse(localStorage.getItem('ps_quiz_answers') || 'null'); } catch (e) {}
+        if (!saved) return;
+
+        psAnswers = saved;
+        document.getElementById('ps-welcome-screen').style.display = 'none';
+        document.getElementById('ps-question-container').style.display = 'none';
+        document.getElementById('psProgressBarWrapper').style.display = 'none';
+        document.getElementById('ps-email-screen').style.display = 'none';
+        document.getElementById('ps-loading-screen').style.display = 'flex';
+
+        const results = computePsResults();
+        setTimeout(() => {
+            document.getElementById('ps-loading-screen').style.display = 'none';
+            renderPsResults(results);
+            document.getElementById('ps-results-container').style.display = 'block';
+        }, 1000);
+
+        try { localStorage.removeItem('ps_quiz_answers'); } catch (e) {}
+        params.delete('ps_unlocked');
+        const cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+        window.history.replaceState({}, '', cleanUrl);
+    }
+    document.addEventListener('DOMContentLoaded', checkPsUnlockRedirect);
+
+    function startPsQuiz() {
+        document.getElementById('ps-welcome-screen').style.display = 'none';
+        document.getElementById('ps-question-container').style.display = 'block';
+        document.getElementById('psProgressBarWrapper').style.display = 'block';
+        renderPsQuestion();
+    }
+
+    function renderPsQuestion() {
+        const q = PS_QUESTIONS[psCurrentIndex];
+        document.getElementById('psProgressBar').style.width = ((psCurrentIndex) / PS_QUESTIONS.length * 100) + '%';
+        document.getElementById('psQuestionStepIndicator').textContent = `Question ${psCurrentIndex + 1} of ${PS_QUESTIONS.length}`;
+        document.getElementById('psQuestionText').textContent = q.text;
+
+        const wrap = document.getElementById('psOptionsWrap');
+        wrap.innerHTML = '';
+        q.options.forEach(opt => {
+            const existing = psAnswers[psCurrentIndex];
+            const selected = existing && existing.key === opt.k;
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.style.cssText = `display:flex; align-items:flex-start; gap:12px; width:100%; text-align:left; background:${selected ? 'rgba(163,92,117,0.06)' : '#ffffff'}; border:1.5px solid ${selected ? '#a35c75' : 'rgba(46,42,43,0.1)'}; border-radius:14px; padding:14px 16px; margin-bottom:9px; cursor:pointer; font-family:inherit; font-size:13.5px; color:#2e2a2b; box-sizing:border-box;`;
+            btn.innerHTML = `<span style="flex-shrink:0; width:22px; height:22px; border-radius:50%; border:1.5px solid ${selected ? '#a35c75' : 'rgba(46,42,43,0.15)'}; background:${selected ? '#a35c75' : 'transparent'}; color:${selected ? '#fff' : '#888'}; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700;">${opt.k}</span><span>${opt.label}</span>`;
+            btn.onclick = () => selectPsAnswer(opt.k);
+            wrap.appendChild(btn);
+        });
+
+        const insightBox = document.getElementById('psInsightBox');
+        if (psAnswers[psCurrentIndex]) {
+            insightBox.innerHTML = `<strong style="color:#2e2a2b;">Here's what actually matters:</strong><br>${q.insight}`;
+            insightBox.style.display = 'block';
+            document.getElementById('psNextBtn').disabled = false;
+        } else {
+            insightBox.style.display = 'none';
+            document.getElementById('psNextBtn').disabled = true;
+        }
+        document.getElementById('psPrevBtn').style.visibility = psCurrentIndex === 0 ? 'hidden' : 'visible';
+        document.getElementById('psNextBtn').textContent = psCurrentIndex === PS_QUESTIONS.length - 1 ? 'See My Results →' : 'Next →';
+    }
+
+    function selectPsAnswer(key) {
+        const q = PS_QUESTIONS[psCurrentIndex];
+        psAnswers[psCurrentIndex] = { key, correct: key === q.correct, category: q.category };
+        renderPsQuestion();
+    }
+
+    function nextPsQuestion() {
+        if (!psAnswers[psCurrentIndex]) return;
+        if (psCurrentIndex === PS_QUESTIONS.length - 1) {
+            document.getElementById('ps-question-container').style.display = 'none';
+            document.getElementById('psProgressBarWrapper').style.display = 'none';
+            document.getElementById('ps-email-screen').style.display = 'block';
+            // Save answers now, in case Flodesk's inline form redirects the
+            // page after signup — this lets us restore and skip straight
+            // to results on return, instead of losing quiz progress.
+            try { localStorage.setItem('ps_quiz_answers', JSON.stringify(psAnswers)); } catch (e) {}
+        } else {
+            psCurrentIndex++;
+            renderPsQuestion();
+        }
+    }
+    function prevPsQuestion() {
+        if (psCurrentIndex === 0) return;
+        psCurrentIndex--;
+        renderPsQuestion();
+    }
+
+    function computePsResults() {
+        let correctCount = 0;
+        const catCorrect = { sales: 0, content: 0, seo: 0 };
+        const misconceptions = [];
+        const strengths = [];
+
+        PS_QUESTIONS.forEach((q, i) => {
+            const a = psAnswers[i];
+            if (a && a.correct) { correctCount++; catCorrect[q.category]++; }
+            else { misconceptions.push(q.misconception); }
+        });
+
+        const pct = Math.round((correctCount / PS_QUESTIONS.length) * 100);
+        const catScores = {};
+        Object.keys(PS_CATEGORY_META).forEach(key => {
+            const total = PS_CATEGORY_META[key].total;
+            const correct = catCorrect[key];
+            const score10 = Math.round((correct / total) * 10);
+            catScores[key] = { correct, total, score10, label: PS_CATEGORY_META[key].label };
+            if (score10 >= 8) strengths.push(`${PS_CATEGORY_META[key].label} — this is already a real strength.`);
+        });
+
+        const order = ['sales', 'content', 'seo'];
+        let bottleneckCategory = order[0];
+        order.forEach(key => { if (catScores[key].score10 < catScores[bottleneckCategory].score10) bottleneckCategory = key; });
+
+        let offerKey;
+        if (pct < 45) offerKey = 'library';
+        else if (pct < 70) offerKey = 'score';
+        else if (bottleneckCategory === 'sales') offerKey = 'build';
+        else if (bottleneckCategory === 'content') offerKey = 'repurpose';
+        else offerKey = 'studio';
+
+        return { correctCount, pct, catScores, misconceptions, strengths, bottleneckCategory, offerKey };
+    }
+
+    function psBadgeStyle(score10) {
+        if (score10 >= 8) return { bg: 'rgba(122,158,126,0.12)', color: '#5c8161', text: 'Strong' };
+        if (score10 >= 5) return { bg: 'rgba(201,161,90,0.14)', color: '#a3813f', text: 'Developing' };
+        return { bg: 'rgba(192,122,111,0.13)', color: '#a35c50', text: 'Opportunity' };
+    }
+
+    const PS_RESULT_HEADLINES = [
+        { max: 39, headline: "You're Building the Foundation", summary: "You're starting to see how Pinterest sales actually work, but a few core misconceptions are likely costing you traffic that never turns into revenue." },
+        { max: 69, headline: "You Understand the Pieces — Now Connect Them", summary: "You've got real instincts about what makes Pinterest work. The opportunity now is tightening the specific piece that's quietly leaking sales." },
+        { max: 100, headline: "You're Ready to Convert, Not Just Grow", summary: "Your foundation is strong. From here, it's less about learning and more about focused execution on the one piece still holding you back." }
+    ];
+
+    function renderPsResults(results) {
+        const circumference = 2 * Math.PI * 55;
+        const ring = document.getElementById('psScoreRing');
+        ring.setAttribute('stroke-dasharray', circumference.toFixed(1));
+        ring.setAttribute('stroke-dashoffset', (circumference - (results.pct / 100) * circumference).toFixed(1));
+        document.getElementById('psScoreText').textContent = results.pct + '%';
+
+        const headlineData = PS_RESULT_HEADLINES.find(h => results.pct <= h.max);
+        document.getElementById('psResultsHeadline').textContent = headlineData.headline;
+        document.getElementById('psResultsSummary').textContent = headlineData.summary;
+
+        const catWrap = document.getElementById('psBreakdownGrid');
+        catWrap.innerHTML = '';
+        Object.values(results.catScores).forEach(c => {
+            const b = psBadgeStyle(c.score10);
+            const pctWidth = (c.score10 / 10) * 100;
+            catWrap.innerHTML += `
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+                        <span style="font-size:12.5px; font-weight:700; color:#2e2a2b;">${c.label}</span>
+                        <span style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; padding:2px 9px; border-radius:99px; background:${b.bg}; color:${b.color};">${b.text} · ${c.score10}/10</span>
+                    </div>
+                    <div style="height:6px; background:rgba(46,42,43,0.06); border-radius:99px; overflow:hidden;">
+                        <div style="height:100%; width:${pctWidth}%; background:${b.color}; border-radius:99px;"></div>
+                    </div>
+                </div>`;
+        });
+
+        const bottleneckLabel = PS_CATEGORY_META[results.bottleneckCategory].label;
+        document.getElementById('psBottleneckText').textContent = `Right now, ${bottleneckLabel} is what's most likely capping your Pinterest sales. It's not a flaw — it's just the next thing worth your attention before you add more traffic, more pins, or more content on top.`;
+
+        const miscList = document.getElementById('psMisconceptionList');
+        miscList.innerHTML = '';
+        if (results.misconceptions.length === 0) {
+            miscList.innerHTML = `<li style="padding:6px 0; display:flex; gap:8px;"><span style="color:#a35c75;">•</span><span>No major misconceptions showed up — your instincts are well-aligned with how Pinterest actually drives sales.</span></li>`;
+        } else {
+            results.misconceptions.forEach(m => {
+                miscList.innerHTML += `<li style="padding:6px 0; display:flex; gap:8px; border-bottom:1px solid rgba(46,42,43,0.05);"><span style="color:#a35c75;">•</span><span>${m}</span></li>`;
+            });
+        }
+
+        const strengthList = document.getElementById('psStrengthList');
+        strengthList.innerHTML = '';
+        if (results.strengths.length === 0) {
+            strengthList.innerHTML = `<li style="padding:6px 0; display:flex; gap:8px;"><span style="color:#a35c75;">•</span><span>You're early on all three fronts right now — which just means every bit of focus from here compounds quickly.</span></li>`;
+        } else {
+            results.strengths.forEach(s => {
+                strengthList.innerHTML += `<li style="padding:6px 0; display:flex; gap:8px; border-bottom:1px solid rgba(46,42,43,0.05);"><span style="color:#a35c75;">•</span><span>${s}</span></li>`;
+            });
+        }
+
+        const offer = PS_OFFERS[results.offerKey];
+        document.getElementById('psOfferStep').textContent = offer.step;
+        document.getElementById('psOfferTitle').textContent = offer.title;
+        document.getElementById('psOfferPrice').textContent = offer.price;
+        document.getElementById('psOfferBody').textContent = offer.body;
+        document.getElementById('psOfferCta').href = PS_BASE_URL + offer.anchor;
+        document.getElementById('psOfferCta').textContent = `Explore ${offer.title} →`;
+    }
+</script>
+
+</body>
+</html>
