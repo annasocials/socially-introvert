@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) — same GA4 property as the main site -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CFRTJP9SL');
+    </script>
+
+    <title>Socially Introvert | Links</title>
+    <meta name="description" content="Welcome to Socially Introvert — explore full websites, services, and the free Pinterest Sales Score quiz.">
+    <link rel="canonical" href="https://sociallyintroverts.com/threads">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Socially Introvert | Links">
+    <meta property="og:description" content="Explore full websites, services, and the free Pinterest Sales Score quiz.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sociallyintroverts.com/threads">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #e7b9bd; /* matches the pink border area of the image so no color-mismatch flash while it loads */
+        }
+        * { box-sizing: border-box; }
+
+        .bio-wrap {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background-color: #e7b9bd;
+        }
+
+        /* Keeps a fixed 1080:1920 aspect ratio so the % positions below
+           always line up with the pills in the image, at any screen size. */
+        .bio-stage {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1080 / 1920;
+            overflow: hidden;
+        }
+
+        .bio-stage img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .bio-link {
+            position: absolute;
+            left: 25.93%;
+            width: 48.06%;
+            display: block;
+            /* transparent — the button graphic is already in the image */
+            background: transparent;
+            -webkit-tap-highlight-color: rgba(0,0,0,0.08);
+        }
+        .bio-link:active { background: rgba(0,0,0,0.06); }
+
+        #link-websites { top: 47.81%; height: 8.33%; }
+        #link-services { top: 58.70%; height: 8.33%; }
+        #link-quiz     { top: 69.58%; height: 8.33%; }
+    </style>
+</head>
+<body>
+
+<div class="bio-wrap">
+    <div class="bio-stage">
+        <img src="threads-bg.jpg" alt="Socially Introvert — full websites, services, freebies quiz">
+
+        <a id="link-websites" class="bio-link" href="https://sociallyintroverts.com" aria-label="Full Websites"></a>
+        <a id="link-services" class="bio-link" href="https://sociallyintroverts.com/#offer-library" aria-label="Services"></a>
+        <a id="link-quiz" class="bio-link" href="https://sociallyintroverts.com/pinterest-sales-quiz" aria-label="Freebies Quiz"></a>
+    </div>
+</div>
+
+</body>
+</html>
