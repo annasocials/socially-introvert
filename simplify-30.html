@@ -5,10 +5,6 @@
      (e.g. save it as simplify-30.html in the site repo you already push
      to Cloudflare Pages, or as simplify-30/index.html if you want the
      clean URL without ".html" on the end).
-
-     TO DO BEFORE PUBLISHING:
-     - Every "APPLY FOR SIMPLIFY 30" button points to "#apply"
-       (placeholder). Swap for your real application link.
      ================================================================ -->
 <html lang="en">
 <head>
@@ -53,6 +49,25 @@
   }
   #simplify30-page .s30-wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; }
   #simplify30-page section { padding: 60px 0; position: relative; }
+
+  #simplify30-page .s30-backlink {
+    display: block;
+    text-align: center;
+    padding-top: 22px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  #simplify30-page .s30-backlink:hover { color: var(--coral-dark); }
+
+  #simplify30-page .s30-dm-link {
+    color: var(--coral-dark);
+    font-weight: 700;
+    text-decoration: underline;
+  }
 
   #simplify30-page .s30-mono {
     font-family: 'Space Mono', 'Courier New', monospace;
@@ -280,6 +295,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Raleway:wght@400;500;600;700&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+<a href="https://sociallyintroverts.com" class="s30-backlink">&larr; Back to Socially Introverts</a>
+
 <!-- HERO -->
 <section class="s30-hero">
   <div class="s30-wrap">
@@ -299,8 +316,7 @@
     </div>
 
     <div class="s30-btn-wrap">
-      <a href="#apply" class="s30-btn">Apply for Simplify 30</a>
-      <span class="s30-btn-note">$17 to apply &middot; limited spots</span>
+      <p class="s30-btn-note">DM me on <a href="https://www.threads.com/@annplates" class="s30-dm-link" target="_blank" rel="noopener">Threads</a> to apply &middot; $17 &middot; limited spots</p>
     </div>
   </div>
 </section>
@@ -308,8 +324,7 @@
 <!-- INTRO -->
 <section class="s30-intro">
   <div class="s30-wrap">
-    <p>I'll look at what you already have, find the visibility gaps, repurpose your strongest content, and <span class="s30-emph">implement</span> the agreed Pinterest work myself &mdash; then document what happens.</p>
-    <p style="margin-top:14px;">No giant strategy deck that gets forgotten. We actually build it.</p>
+    <p>I'll look at what you already have, find the visibility gaps, repurpose your strongest content, and <span class="s30-emph">implement</span> the agreed work myself &mdash; then document what happens.</p>
   </div>
 </section>
 
@@ -335,7 +350,7 @@
             <li>Where people could actually discover your business</li>
             <li>What we'll focus on during the project</li>
           </ul>
-          <p style="margin-top:6px;">You get a focused <strong style="color:var(--ink);">Simplify Map</strong> &mdash; a personalized roadmap showing exactly how to turn your existing content and account into better reach: what to fix, what to repurpose, and what to publish first. It's what guides everything after this.</p>
+          <p style="margin-top:6px;">You get a <strong style="color:var(--ink);">Simplify Map</strong> &mdash; a roadmap for what to fix, what to repurpose, and what to publish first. It guides everything after this.</p>
         </div>
       </div>
 
@@ -346,8 +361,8 @@
           <div class="s30-phase-body"><h3>Repurpose + Optimize</h3></div>
         </div>
         <div class="s30-phase-body">
-          <p>You don't need more content &mdash; you need your existing content to go further. I select up to 5 pieces (blog posts, educational content, social posts, product content) and turn them into new strategic opportunities.</p>
-          <p>Alongside that, I optimize the Pinterest foundation around the strategy we've built: profile, board structure, naming + descriptions, keyword direction. Plus targeted SEO/content recommendations for key pages &mdash; not a redesign, just what makes existing content easier to find.</p>
+          <p>You don't need more content &mdash; you need your existing content to go further. I select up to 5 pieces (blog posts, educational content, social posts, product content) and turn each one into new formats: Pinterest pins, carousels, IG Stories, Threads posts &mdash; wherever it'll get the most reach.</p>
+          <p>Alongside that, I optimize your Pinterest profile, boards, and keywords, plus give targeted SEO recommendations for key pages. Not a redesign &mdash; just what makes what you already have easier to find.</p>
         </div>
       </div>
 
@@ -358,7 +373,7 @@
           <div class="s30-phase-body"><h3>Implement</h3></div>
         </div>
         <div class="s30-phase-body">
-          <p>This is the part that makes Simplify 30 different &mdash; I'm not handing you a to-do list. I create up to <strong style="color:var(--ink);">10 Pinterest pins</strong> from the opportunities we identified and implement the agreed visibility work myself, within the project.</p>
+          <p>This is what makes Simplify 30 different &mdash; I'm not handing you a to-do list. I create up to <strong style="color:var(--ink);">10 Pinterest pins</strong> from the opportunities we found and implement the agreed visibility work myself.</p>
         </div>
       </div>
 
@@ -369,7 +384,7 @@
           <div class="s30-phase-body"><h3>Measure</h3></div>
         </div>
         <div class="s30-phase-body">
-          <p>We set a baseline before implementation, then track what was discovered, what got engagement, what generated clicks, and which content/topics showed the most potential. You get a simple end-of-project review with what I'd recommend next.</p>
+          <p>I set a baseline before we start, then track what got discovered, what got engagement, what got clicks, and which topics had the most potential. You get a simple end-of-project review with next steps.</p>
         </div>
       </div>
     </div>
@@ -396,7 +411,7 @@
       <div class="s30-inc-card">
         <h4>Content & Pinterest</h4>
         <ul>
-          <li>Repurposing of up to 5 existing pieces</li>
+          <li>Repurposing of up to 5 existing pieces into carousels, IG Stories, and Threads posts &mdash; not just Pinterest</li>
           <li>Up to 10 Pinterest pins</li>
           <li>Profile + board structure optimization</li>
           <li>Keyword/content direction</li>
@@ -467,9 +482,9 @@
       <div class="s30-price-label">30 Days &middot; Limited Spots</div>
       <div class="s30-price">$17</div>
       <div class="s30-price-label">To Apply</div>
-      <p class="s30-price-fine">The project itself is <strong>free</strong> &mdash; I'm building this round as a portfolio case study collection. The $17 simply reserves your spot, since spots are limited and applications close once they're filled. <strong>Not sure yet?</strong> DM me first and I'll answer your questions before you apply. Once you're in, I'll send the full project proposal, timeline, deliverables, and onboarding details before we begin.</p>
+      <p class="s30-price-fine">The project itself is <strong>free</strong> &mdash; I'm building this round as a portfolio case study collection. The $17 just reserves your spot, since spots are limited and applications close once filled. <strong>Not sure yet?</strong> DM me first and I'll answer your questions before you apply. Once you're in, I'll send the full proposal, timeline, and onboarding details before we begin.</p>
       <div class="s30-btn-wrap">
-        <a href="#apply" class="s30-btn">Apply for Simplify 30</a>
+        <p class="s30-btn-note">DM me on <a href="https://www.threads.com/@annplates" class="s30-dm-link" target="_blank" rel="noopener">Threads</a> to apply</p>
       </div>
     </div>
   </div>
@@ -490,10 +505,7 @@
 <section class="s30-final">
   <div class="s30-wrap">
     <h2 class="s30-h2">Have questions first?</h2>
-    <p style="color:var(--ink-soft); font-size:15.5px;">Send me a DM with <strong style="color:var(--ink);">SIMPLIFY 30</strong> and I'll send you the details. Or apply below.</p>
-    <div class="s30-btn-wrap">
-      <a href="#apply" class="s30-btn">Apply for Simplify 30</a>
-    </div>
+    <p style="color:var(--ink-soft); font-size:15.5px;">Send me a DM on <a href="https://www.threads.com/@annplates" class="s30-dm-link" target="_blank" rel="noopener">Threads</a> with <strong style="color:var(--ink);">SIMPLIFY 30</strong> and I'll send you the details.</p>
     <p class="s30-case-note">A small note before you apply: because this is being built as a portfolio collection, selected work, process, and agreed-upon results may be documented and shared publicly as a case study. You'll know exactly what will be documented before the project begins.</p>
   </div>
 </section>
