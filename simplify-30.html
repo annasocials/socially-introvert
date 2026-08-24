@@ -8,6 +8,14 @@
      TO DO:
      - Apply buttons already point to your Beacons checkout link.
      - DM line already points to your Threads.
+     - The "Send me your quick answers" form uses FormSubmit.co (a free
+       service that forwards static form submissions straight to an
+       email — no backend needed). The FIRST time someone submits it,
+       FormSubmit sends sociallyintroverts@outlook.com a confirmation
+       email you need to click to activate delivery. After that, every
+       submission lands in your inbox automatically. Test it once
+       yourself after publishing so it's activated before real
+       applicants use it.
      ================================================================ -->
 <html lang="en">
 <head>
@@ -247,6 +255,25 @@
 
   #simplify30-page .s30-case-note { font-size: 12.5px; max-width: 480px; margin: 26px auto 0; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 18px; }
 
+  #simplify30-page .s30-form { display: flex; flex-direction: column; gap: 16px; }
+  #simplify30-page .s30-form label {
+    display: flex; flex-direction: column; gap: 6px;
+    font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--ink-soft); font-weight: 700;
+  }
+  #simplify30-page .s30-form input[type="text"],
+  #simplify30-page .s30-form textarea,
+  #simplify30-page .s30-form select {
+    font-family: 'Raleway', sans-serif; font-size: 14.5px; font-weight: 400;
+    text-transform: none; letter-spacing: normal;
+    padding: 10px 12px; border: 1px solid var(--line); border-radius: 4px;
+    background: #fff; color: var(--ink); resize: vertical;
+  }
+  #simplify30-page .s30-form input:focus,
+  #simplify30-page .s30-form textarea:focus,
+  #simplify30-page .s30-form select:focus { outline: 2px solid var(--coral); }
+  #simplify30-page .s30-form button.s30-btn { border: none; cursor: pointer; }
+
   @media (max-width: 600px) {
     #simplify30-page .s30-pink-headline { font-size: 32px; }
     #simplify30-page .s30-includes, #simplify30-page .s30-fit { grid-template-columns: 1fr; }
@@ -277,14 +304,14 @@
     <h1 class="s30-pink-headline">calling all small<br>creative businesses</h1>
 
     <div class="s30-intro-copy">
-      <p>If you have a pile of raw content, ideas, offers and expertise but no idea how to turn all of it into content system that actually supports your business, this is for you.</p>
+      <p>If you have a pile of raw content, ideas, offers and expertise but no idea how to turn all of it into a content system that actually supports your business, this is for you.</p>
       <p><span class="s30-strong">I'm opening a few Simplify 30 spots.</span></p>
-      <p>For 30 days, I'll look at how all things:</p>
+      <p>For 30 days, I'll look at how all things</p>
       <div class="s30-flow">audience <b>&rarr;</b> messaging <b>&rarr;</b> buyer signals <b>&rarr;</b> offers <b>&rarr;</b> launches <b>&rarr;</b> brand content <b>&rarr;</b> content pillars</div>
-      <p>Actually connected and then I'll turn that into a strategy and actually help you implement it.</p>
-      <p><span class="s30-strong">Not strategy audit you have to implement yourself.</span></p>
-      <p>The goal is to leave you with content ecosystem that makes sense for your business not just a pile of content.</p>
-      <p>I'm doing this as a small portfolio/case-study collaboration, so there are only few spots.</p>
+      <p>Actually connected then I'll turn that into content strategy and help you implement it.</p>
+      <p><span class="s30-strong">Not another audit you have to figure out yourself.</span></p>
+      <p>The goal is to leave you with a content ecosystem that makes sense for your business &mdash; not just a pile of content.</p>
+      <p>I'm doing this as a small portfolio/case-study collaboration, so there are only a few spots.</p>
     </div>
 
     <div class="s30-btn-wrap">
@@ -449,6 +476,93 @@
           <a href="https://shop.beacons.ai/annplates/a2106907-153f-4e54-9ff9-8d3d5feabfb9" class="s30-btn">Apply for Simplify 30</a>
           <span class="s30-dm-line">or DM me on Threads &mdash; <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">@annplates</a></span>
         </div>
+      </div>
+    </details>
+
+    <details class="s30-acc">
+      <summary>What happens after you apply</summary>
+      <div class="s30-acc-body">
+        <div class="s30-phases">
+          <div class="s30-phase">
+            <span class="s30-phase-pin"></span>
+            <div class="s30-phase-top">
+              <span class="s30-phase-num">1</span>
+              <div class="s30-phase-body"><h3>You apply</h3></div>
+            </div>
+            <div class="s30-phase-body">
+              <p>You pay the $17 to hold your spot and send over your quick answers (see below) so I know a bit about your business.</p>
+            </div>
+          </div>
+          <div class="s30-phase">
+            <span class="s30-phase-pin"></span>
+            <div class="s30-phase-top">
+              <span class="s30-phase-num">2</span>
+              <div class="s30-phase-body"><h3>I review it</h3></div>
+            </div>
+            <div class="s30-phase-body">
+              <p>I read every application myself and check it against the fit criteria above &mdash; not a bot, not a form that auto-approves.</p>
+            </div>
+          </div>
+          <div class="s30-phase">
+            <span class="s30-phase-pin"></span>
+            <div class="s30-phase-top">
+              <span class="s30-phase-num">3</span>
+              <div class="s30-phase-body"><h3>I onboard you</h3></div>
+            </div>
+            <div class="s30-phase-body">
+              <p>After you submit and apply, I email you directly with whole project proposal, timeline, deliverables, and a short onboarding form to collect what I'll need (logins, assets, brand info) before we start.</p>
+            </div>
+          </div>
+          <div class="s30-phase">
+            <span class="s30-phase-pin"></span>
+            <div class="s30-phase-top">
+              <span class="s30-phase-num">4</span>
+              <div class="s30-phase-body"><h3>We begin</h3></div>
+            </div>
+            <div class="s30-phase-body">
+              <p>Your 30 days start on the agreed date, with a weekly check-in email so you always know what's happening.</p>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:20px; padding:16px 18px; background:var(--paper); border-left:3px solid var(--coral); font-size:14.5px; color:var(--ink-soft);">
+          <strong style="color:var(--ink);">A quick note so you can apply with confidence:</strong> I actually do the implementation myself. This isn't a strategy PDF you're left to figure out on your own &mdash; I build the pins, optimize the profile, and publish the agreed work personally, and document what happens along the way.
+        </p>
+      </div>
+    </details>
+
+    <details class="s30-acc">
+      <summary>Send me your quick answers</summary>
+      <div class="s30-acc-body">
+        <p style="font-size:14.5px; color:var(--ink-soft); margin-bottom:18px;">Fill this out after you apply (or before, if you're just curious) &mdash; it goes straight to my inbox so I know your business before we talk.</p>
+        <form action="https://formsubmit.co/sociallyintroverts@outlook.com" method="POST" class="s30-form">
+          <input type="hidden" name="_subject" value="New Simplify 30 quick answers">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <label>Name & business name
+            <input type="text" name="Name & Business" required>
+          </label>
+          <label>Website / Instagram / Pinterest
+            <input type="text" name="Links" required>
+          </label>
+          <label>What do you sell or do?
+            <textarea name="What you sell" rows="2" required></textarea>
+          </label>
+          <label>What's the #1 thing you'd want help with in the next 30 days?
+            <textarea name="Biggest goal" rows="2" required></textarea>
+          </label>
+          <label>Comfortable with this being documented as a public case study?
+            <select name="Case study comfort" required>
+              <option value="">Select one</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+
+          <div class="s30-btn-wrap">
+            <button type="submit" class="s30-btn">Send My Answers</button>
+          </div>
+        </form>
       </div>
     </details>
   </div>
