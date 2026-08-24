@@ -171,6 +171,28 @@
     text-decoration: underline; text-underline-offset: 3px;
   }
 
+  /* ================= who I work best with, scannable ================= */
+  #simplify30-page .s30-who-grid {
+    max-width: 620px; margin: 22px auto 0;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  #simplify30-page .s30-who-item {
+    display: flex; align-items: flex-start; gap: 14px; text-align: left;
+  }
+  #simplify30-page .s30-who-icon {
+    color: var(--pink); font-size: 20px; line-height: 1.4; flex-shrink: 0; margin-top: 2px;
+  }
+  #simplify30-page .s30-who-item h3 {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600;
+    font-size: 21px; margin: 0 0 3px; color: var(--ink);
+  }
+  #simplify30-page .s30-who-item p {
+    margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.5;
+  }
+  #simplify30-page .s30-who-primary .s30-who-icon { color: var(--pink-deep); }
+  #simplify30-page .s30-who-primary h3 { color: var(--pink-deep); }
+  #simplify30-page .s30-who-primary p { color: var(--ink); }
+
   /* ================= color-block sections (image 2 structure) ================= */
   #simplify30-page .s30-block-blush { background: var(--blush); }
   #simplify30-page .s30-block-ink { background: var(--ink); color: #f4ece7; }
@@ -322,6 +344,43 @@
 
     <div class="s30-btn-wrap">
       <span class="s30-sticky">psst &mdash; the full breakdown is below &darr;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOCK: who this is for, scannable ================= -->
+<section class="s30-collage-hero" style="padding:48px 0 52px;">
+  <div class="s30-wrap">
+    <span class="s30-eyebrow" style="justify-content:center; width:100%;">Who I Work Best With</span>
+    <div class="s30-who-grid">
+      <div class="s30-who-item s30-who-primary">
+        <span class="s30-who-icon">&#10047;</span>
+        <div>
+          <h3>Creative Product Brands</h3>
+          <p>products, shops &amp; handmade businesses that want their content and visibility to support sales.</p>
+        </div>
+      </div>
+      <div class="s30-who-item">
+        <span class="s30-who-icon">&#10047;</span>
+        <div>
+          <h3>Content-Led Founder Creators</h3>
+          <p>bloggers, Substack writers, newsletter creators &amp; educators with valuable content that isn't reaching enough people.</p>
+        </div>
+      </div>
+      <div class="s30-who-item">
+        <span class="s30-who-icon">&#10047;</span>
+        <div>
+          <h3>Creative Service Businesses</h3>
+          <p>designers, photographers, consultants &amp; other creative founders selling their expertise.</p>
+        </div>
+      </div>
+      <div class="s30-who-item">
+        <span class="s30-who-icon">&#10047;</span>
+        <div>
+          <h3>Digital Product Businesses</h3>
+          <p>creators selling Notion templates, memberships, workshops or other digital offers.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
