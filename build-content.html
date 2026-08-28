@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Let's Build Your Content | Anna | Socially Introverts</title>
+<meta name="description" content="Your product has a bigger story than a product post. I help you build a connected content ecosystem around what you sell.">
+<link rel="canonical" href="https://sociallyintroverts.com/build-content">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Let's Build Your Content | Anna | Socially Introverts">
+<meta property="og:description" content="Your product has a bigger story than a product post. I help you build a connected content ecosystem around what you sell.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/build-content">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 0 0 rgba(122,22,38,0);
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ BUILD-CONTENT SECTION ============ */
+  .build{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .build-title{
+    font-size:3.6rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+  }
+  .build-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:34ch;
+    line-height:1.4;
+    margin:0 0 20px;
+  }
+  .build-intro{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+    line-height:1.6;
+    margin:0 0 32px;
+  }
+  .build-intro:last-of-type{
+    margin-bottom:56px;
+  }
+
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px 14px;
+    margin:0 0 64px;
+  }
+  .flow-node{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:12px 20px;
+    line-height:1.2;
+  }
+  .flow-node--loop{
+    background:transparent;
+    border:1.5px solid var(--maroon);
+    color:var(--maroon);
+  }
+  .flow-arrow{
+    font-family:var(--font-script);
+    font-size:1.5rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+
+  .build-steps{
+    display:flex;
+    flex-direction:column;
+    gap:38px;
+  }
+  .build-step{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:20px;
+    padding-bottom:38px;
+    border-bottom:1px solid rgba(122,22,38,0.25);
+  }
+  .build-step:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+  }
+  .build-num{
+    font-family:var(--font-script);
+    font-size:3rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+  .build-step-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 10px;
+  }
+  .build-step-body{
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    max-width:58ch;
+    margin:0 0 20px;
+    white-space:pre-line;
+  }
+  .build-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    border-radius:999px;
+    padding:13px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .build-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .build-title{ font-size:2.5rem; }
+    .build-lede{ font-size:1.3rem; max-width:none; }
+    .flow-node{ font-size:0.85rem; padding:10px 16px; }
+    .flow-arrow{ font-size:1.2rem; }
+    .build-step{ grid-template-columns:1fr; gap:6px; }
+    .build-num{ font-size:2.4rem; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="https://sociallyintroverts.com/#offer-library">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://sociallyintroverts.com">Websites</a>
+  </nav>
+
+  <section class="build">
+    <p class="build-title">Let's build your content.</p>
+    <p class="build-lede">Your product has a bigger story than a product post.</p>
+    <p class="build-intro">I help you build a connected content ecosystem around what you sell so people can discover your brand through the things they already search for, care about, and consume.</p>
+
+    <p class="build-intro">Our product shouldn't only appear when you're trying to make a sale. We build the content around it &mdash; the questions, interests, lifestyles and topics your customers already care about &mdash; so your brand has more ways to be discovered.</p>
+
+    <div class="flow">
+      <span class="flow-node">Product</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node">Customer Interests</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node">Content Categories</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node">Search + Discovery</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node">Repurposing</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node">Distribution</span>
+      <span class="flow-arrow">&rarr;</span>
+      <span class="flow-node flow-node--loop">Product</span>
+    </div>
+
+    <div class="build-steps">
+      <div class="build-step">
+        <span class="build-num">01</span>
+        <div>
+          <p class="build-step-title">Find your content world</p>
+          <p class="build-step-body">We look beyond the product itself.
+What does your customer care about?
+What problems are they trying to solve?
+What are they searching for?
+What lifestyle or interests naturally connect to your product?</p>
+          <a class="build-btn" href="https://sociallyintroverts.com/#offer-library">Content strategy + search research</a>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">02</span>
+        <div>
+          <p class="build-step-title">Build the content</p>
+          <p class="build-step-body">We turn those opportunities into useful content.
+Blog topics · social content · carousels · Pinterest content · short-form video · evergreen ideas</p>
+          <a class="build-btn" href="https://sociallyintroverts.com/#offer-library">Content planning + creation</a>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">03</span>
+        <div>
+          <p class="build-step-title">Make what you already have work harder</p>
+          <p class="build-step-body">You don't need to constantly create something new.
+I take your existing content, footage, photos and ideas and turn them into more useful marketing assets.</p>
+          <a class="build-btn" href="https://sociallyintroverts.com/#offer-library">Content repurposing</a>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">04</span>
+        <div>
+          <p class="build-step-title">Get it discovered</p>
+          <p class="build-step-body">Creating it is only half the job.
+I help distribute your content across the channels and search surfaces where your audience can actually find it.</p>
+          <a class="build-btn" href="https://sociallyintroverts.com/#offer-library">SEO + search visibility + content distribution</a>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">05</span>
+        <div>
+          <p class="build-step-title">Keep it moving</p>
+          <p class="build-step-body">Your content shouldn't disappear into a folder after you make it.
+I help organize, schedule, manage and keep the system moving.</p>
+          <a class="build-btn" href="https://sociallyintroverts.com/#offer-library">Content management</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="https://sociallyintroverts.com">📍 singapore + worldwide</a>
+    <a href="threads.html#build-content">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="https://sociallyintroverts.com/#offer-library">behind the toolkit</a>
+  </div>
+
+</div>
+</body>
+</html>

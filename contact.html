@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Get In Touch | Anna | Socially Introverts</title>
+<meta name="description" content="Let's map out your quiet growth. Send over the details, that's usually all I need to spot the pattern.">
+<link rel="canonical" href="https://sociallyintroverts.com/contact">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Get In Touch | Anna | Socially Introverts">
+<meta property="og:description" content="Let's map out your quiet growth. Send over the details, that's usually all I need to spot the pattern.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/contact">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ CONTACT HERO ============ */
+  .contact{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .contact-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .contact-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 16px;
+    max-width:18ch;
+  }
+  .contact-title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--maroon);
+  }
+  .contact-sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:52ch;
+    line-height:1.5;
+    margin:0 0 56px;
+  }
+
+  /* ============ CONTACT GRID ============ */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:36px;
+    align-items:start;
+  }
+
+  .channels{
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:6px;
+    padding:34px 30px;
+  }
+  .channels-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .channels-body{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 28px;
+  }
+  .channel-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .channel-link{
+    display:block;
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:6px;
+    padding:14px 18px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .channel-link:hover{
+    border-color:var(--maroon);
+    transform:translateX(3px);
+  }
+  .channel-label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:4px;
+  }
+  .channel-value{
+    font-size:1.05rem;
+    color:var(--ink);
+    word-break:break-word;
+  }
+
+  /* ============ FORM ============ */
+  .form-card{
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:6px;
+    padding:34px 30px;
+  }
+  .form-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 22px;
+  }
+  .field{
+    margin-bottom:20px;
+  }
+  .field label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:8px;
+  }
+  .field input,
+  .field select,
+  .field textarea{
+    width:100%;
+    font-family:var(--font-display);
+    font-size:1.02rem;
+    color:var(--ink);
+    background:rgba(255,255,255,0.7);
+    border:1px solid rgba(122,22,38,0.3);
+    border-radius:4px;
+    padding:12px 14px;
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    border-color:var(--maroon);
+  }
+  .field textarea{
+    resize:vertical;
+    min-height:110px;
+  }
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .submit-btn{
+    width:100%;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-family:var(--font-display);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    border:none;
+    border-radius:999px;
+    padding:16px 24px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+  .form-note{
+    font-size:0.85rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:14px;
+  }
+
+  /* ============ SOCIALS ROW ============ */
+  .socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin:56px 0 0;
+  }
+  .socials a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.02em;
+    border-radius:999px;
+    padding:14px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .socials a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .contact-title{ font-size:2.4rem; }
+    .contact-sub{ font-size:1.05rem; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .field-row{ grid-template-columns:1fr; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="https://sociallyintroverts.com/#offer-library">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://sociallyintroverts.com">Websites</a>
+  </nav>
+
+  <section class="contact">
+    <span class="contact-eyebrow">Get In Touch</span>
+    <p class="contact-title">Let's map out your <em>quiet growth.</em></p>
+    <p class="contact-sub">Send over all the details &mdash; that's usually all I need to spot the pattern.</p>
+
+    <div class="contact-grid">
+
+      <div class="channels">
+        <p class="channels-title">Direct Channels</p>
+        <p class="channels-body">I read and respond to every message personally. If you aren't sure which stepping stone fits your current roadblock, simply send over the messy version.</p>
+
+        <div class="channel-list">
+          <a class="channel-link" href="mailto:sociallyintroverts@outlook.com">
+            <span class="channel-label">Email</span>
+            <span class="channel-value">sociallyintroverts@outlook.com</span>
+          </a>
+          <a class="channel-link" href="https://www.pinterest.com/sociallyintroverts/" target="_blank" rel="noopener">
+            <span class="channel-label">Pinterest</span>
+            <span class="channel-value">@sociallyintroverts</span>
+          </a>
+          <a class="channel-link" href="https://www.instagram.com/annplates/" target="_blank" rel="noopener">
+            <span class="channel-label">Instagram</span>
+            <span class="channel-value">@annplates</span>
+          </a>
+          <a class="channel-link" href="https://www.threads.com/@annplates" target="_blank" rel="noopener">
+            <span class="channel-label">Threads</span>
+            <span class="channel-value">@annplates</span>
+          </a>
+        </div>
+      </div>
+
+      <form id="si-contact-form" class="form-card">
+        <p class="form-title">Send a Note</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="struggle">Roadblock Challenge</label>
+          <input id="struggle" name="struggle" type="text" placeholder="Visibility, positioning, site exit drops...">
+        </div>
+
+        <div class="field">
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" placeholder="Share a few notes about your craft, target audience, and current setup." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send It Over</button>
+        <p class="form-note">Sending launches a pre-filled email straight to your default mail app.</p>
+      </form>
+
+    </div>
+
+    <div class="socials">
+      <a href="https://www.pinterest.com/sociallyintroverts/" target="_blank" rel="noopener">Pinterest ↗</a>
+      <a href="https://www.instagram.com/annplates/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">Threads ↗</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="https://sociallyintroverts.com">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="https://sociallyintroverts.com/#offer-library">behind the toolkit</a>
+  </div>
+
+</div>
+
+<script>
+  const contactForm = document.getElementById('si-contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(contactForm);
+      const subject = `Socially Introvert Inquiry from ${data.get('name')}`;
+      const body = [
+        `From: ${data.get('name')}`,
+        `Reply Channel: ${data.get('email')}`,
+        `Roadblock: ${data.get('struggle')}`,
+        '',
+        'Project details:',
+        data.get('details')
+      ].join('\n');
+      window.location.href = `mailto:sociallyintroverts@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
+</script>
+
+</body>
+</html>
