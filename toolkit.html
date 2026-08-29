@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Behind the Toolkit | Anna | Socially Introverts</title>
+<meta name="description" content="The tools behind the work — research, strategy, content creation, analytics and distribution, matched to what each project actually needs.">
+<link rel="canonical" href="https://sociallyintroverts.com/toolkit">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Behind the Toolkit | Anna | Socially Introverts">
+<meta property="og:description" content="The tools behind the work — research, strategy, content creation, analytics and distribution, matched to what each project actually needs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/toolkit">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ TOOLKIT SECTION ============ */
+  .toolkit{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .toolkit-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .toolkit-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+  }
+  .toolkit-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:40ch;
+    line-height:1.4;
+    margin:0 0 20px;
+  }
+  .toolkit-intro{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+    line-height:1.6;
+    margin:0 0 56px;
+  }
+
+  /* ============ TOOL CATEGORIES ============ */
+  .toolkit-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:26px;
+    margin-bottom:44px;
+  }
+  .tool-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:28px 26px;
+  }
+  .tool-num{
+    font-family:var(--font-script);
+    font-size:2.2rem;
+    color:var(--maroon);
+    line-height:1;
+    display:block;
+    margin-bottom:10px;
+  }
+  .tool-cat{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .tool-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .tool-pill{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.9rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    border-radius:999px;
+    padding:9px 16px;
+    line-height:1.2;
+  }
+
+  /* ============ NOTE ============ */
+  .toolkit-note{
+    border:1px dashed rgba(122,22,38,0.4);
+    border-radius:8px;
+    padding:22px 26px;
+    max-width:76ch;
+  }
+  .toolkit-note-title{
+    font-size:1.15rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 6px;
+  }
+  .toolkit-note-body{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .toolkit-title{ font-size:2.4rem; }
+    .toolkit-lede{ font-size:1.3rem; max-width:none; }
+    .toolkit-grid{ grid-template-columns:1fr; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://sociallyintroverts.com">Websites</a>
+  </nav>
+
+  <section class="toolkit">
+    <span class="toolkit-eyebrow">Behind the Toolkit</span>
+    <p class="toolkit-title">The tools behind the work.</p>
+    <p class="toolkit-lede">Different projects call for different tools.</p>
+    <p class="toolkit-intro">I work across research, strategy, content creation, analytics and distribution using the tools that best fit each project.</p>
+
+    <div class="toolkit-grid">
+
+      <div class="tool-card">
+        <span class="tool-num">01</span>
+        <p class="tool-cat">Research + Insights</p>
+        <div class="tool-list">
+          <span class="tool-pill">Brandwatch</span>
+          <span class="tool-pill">Pinterest Trends</span>
+          <span class="tool-pill">PinClicks</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">02</span>
+        <p class="tool-cat">SEO + Search</p>
+        <div class="tool-list">
+          <span class="tool-pill">Google Search Console</span>
+          <span class="tool-pill">GA4</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">03</span>
+        <p class="tool-cat">Planning + Management</p>
+        <div class="tool-list">
+          <span class="tool-pill">Notion</span>
+          <span class="tool-pill">ClickUp</span>
+          <span class="tool-pill">Excel</span>
+          <span class="tool-pill">Word</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">04</span>
+        <p class="tool-cat">Design + Creative</p>
+        <div class="tool-list">
+          <span class="tool-pill">Canva</span>
+          <span class="tool-pill">Lightroom</span>
+          <span class="tool-pill">Figma</span>
+          <span class="tool-pill">Framer</span>
+          <span class="tool-pill">Cosmos</span>
+          <span class="tool-pill">Dupe Photos</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">05</span>
+        <p class="tool-cat">Async Collaboration</p>
+        <div class="tool-list">
+          <span class="tool-pill">Loom</span>
+          <span class="tool-pill">Voxer</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">06</span>
+        <p class="tool-cat">Publishing + Distribution</p>
+        <div class="tool-list">
+          <span class="tool-pill">Pinterest</span>
+          <span class="tool-pill">WordPress</span>
+          <span class="tool-pill">Shopify</span>
+          <span class="tool-pill">Flodesk</span>
+          <span class="tool-pill">Kit</span>
+          <span class="tool-pill">Beacons</span>
+          <span class="tool-pill">Metricool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">07</span>
+        <p class="tool-cat">Tracking + Measurement</p>
+        <div class="tool-list">
+          <span class="tool-pill">GA4</span>
+          <span class="tool-pill">Search Console</span>
+          <span class="tool-pill">GTM</span>
+          <span class="tool-pill">Pinterest Tag</span>
+          <span class="tool-pill">Metricool</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="toolkit-note">
+      <p class="toolkit-note-title">And a few others, here and there.</p>
+      <p class="toolkit-note-body">This is the core stack, but every project is a little different. I pull in other tools occasionally when a specific job calls for it. There are simply too many to list them all here.</p>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="https://sociallyintroverts.com">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+  </div>
+
+</div>
+</body>
+</html>
