@@ -175,27 +175,15 @@
     position:relative;
     border-radius:5px;
     overflow:hidden;
+    aspect-ratio:9/16;
+    max-height:520px;
+    background:#000;
   }
   .about-video-wrap video{
+    width:100%;
+    height:100%;
     border-radius:5px;
-  }
-  .about-story-bar{
-    position:absolute;
-    top:8px;
-    left:8px;
-    right:8px;
-    height:2px;
-    background:rgba(255,255,255,0.35);
-    border-radius:2px;
-    overflow:hidden;
-  }
-  .about-story-bar::after{
-    content:"";
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width:70%;
-    background:#fff;
-    border-radius:2px;
+    object-fit:cover;
   }
   .about-story-header{
     position:absolute;
@@ -205,14 +193,6 @@
     display:flex;
     align-items:center;
     gap:8px;
-  }
-  .about-story-avatar{
-    width:26px;
-    height:26px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--pill),var(--maroon));
-    border:2px solid #fff;
-    flex-shrink:0;
   }
   .about-story-username{
     color:#fff;
@@ -440,14 +420,12 @@
 
       <div class="about-video-card">
         <div class="about-video-wrap">
-          <video src="instagram_stories.mp4" autoplay muted loop playsinline aria-label="Instagram story preview of Lily's Jewelry storefront entrance."></video>
-          <div class="about-story-bar"></div>
+          <video src="instagram_stories.mp4" autoplay muted loop playsinline webkit-playsinline aria-label="Instagram story preview of a jewelry charm collection laid out on a tray."></video>
           <div class="about-story-header">
-            <span class="about-story-avatar"></span>
-            <span class="about-story-username">lilysjewels</span>
+            <span class="about-story-username">julesjewels</span>
           </div>
         </div>
-        <p class="about-video-caption">a peek behind the scenes</p>
+        <p class="about-video-caption">a mock campaign for jewelry brands</p>
       </div>
     </div>
 
