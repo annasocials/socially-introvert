@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Why I'm Your Bestie | Anna | Socially Introverts</title>
+<meta name="description" content="No calls, no daily check-ins, no performing professionalism. Just async, honest work from someone who's actually done the thing.">
+<link rel="canonical" href="https://sociallyintroverts.com/bestie">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Why I'm Your Bestie | Anna | Socially Introverts">
+<meta property="og:description" content="No calls, no daily check-ins, no performing professionalism. Just async, honest work from someone who's actually done the thing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/bestie">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+  .nav a.is-active{
+    border:1.5px solid var(--maroon);
+  }
+
+  /* ============ HERO ============ */
+  .bestie{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .bestie-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .bestie-title{
+    font-size:3.6rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 16px;
+    max-width:20ch;
+  }
+  .bestie-title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--maroon);
+  }
+  .bestie-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:34ch;
+    line-height:1.4;
+    margin:0 0 20px;
+  }
+  .bestie-intro{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+    line-height:1.6;
+    margin:0 0 56px;
+  }
+
+  /* ============ CARD GRID ============ */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:26px;
+    margin-bottom:26px;
+  }
+  .card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:30px 28px;
+  }
+  .card--wide{
+    grid-column:1 / -1;
+  }
+  .card-num{
+    font-family:var(--font-script);
+    font-size:2.2rem;
+    color:var(--maroon);
+    line-height:1;
+    display:block;
+    margin-bottom:10px;
+  }
+  .card-title{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 12px;
+  }
+  .card-body{
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 16px;
+  }
+  .card-body:last-child{ margin-bottom:0; }
+  .pill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .pill-tag{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.9rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    border-radius:999px;
+    padding:9px 16px;
+    line-height:1.2;
+  }
+
+  /* ============ TRUST SPLIT ============ */
+  .trust{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+  }
+  .trust-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .trust-list li{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:22px;
+    position:relative;
+  }
+  .trust-list--no li::before{
+    content:"✕";
+    position:absolute;
+    left:0;
+    color:var(--ink-soft);
+    font-weight:700;
+    opacity:0.55;
+  }
+  .trust-list--yes li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+  .trust-label{
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:12px;
+    display:block;
+  }
+
+  /* ============ ECOSYSTEM FLOW ============ */
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px 14px;
+    margin-top:8px;
+  }
+  .flow-node{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:12px 20px;
+    line-height:1.2;
+  }
+  .flow-arrow{
+    font-family:var(--font-script);
+    font-size:1.5rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+
+  /* ============ BOTTOM LINE ============ */
+  .bottom-line{
+    border:1.5px solid var(--maroon);
+    border-radius:8px;
+    padding:38px 34px;
+    margin-top:26px;
+    text-align:center;
+  }
+  .bottom-line-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 10px;
+  }
+  .bottom-line-body{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:60ch;
+    margin:0 auto 26px;
+  }
+  .bottom-line-actions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+  .bl-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:15px 26px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .bl-btn--outline{
+    background:transparent;
+    border:1.5px solid var(--maroon);
+    color:var(--maroon);
+  }
+  .bl-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .bestie-title{ font-size:2.5rem; }
+    .bestie-lede{ font-size:1.3rem; max-width:none; }
+    .cards{ grid-template-columns:1fr; }
+    .trust{ grid-template-columns:1fr; }
+    .flow-node{ font-size:0.85rem; padding:10px 16px; }
+    .flow-arrow{ font-size:1.2rem; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a class="is-active" href="bestie.html">Why I'm Your Bestie</a>
+  </nav>
+
+  <section class="bestie">
+    <span class="bestie-eyebrow">Not Your Agency</span>
+    <p class="bestie-title">Why I'm your <em>bestie.</em></p>
+    <p class="bestie-lede">I don't do calls.</p>
+    <p class="bestie-intro">I know. Most marketers say "let's hop on a discovery call." I won't. However you communicate with your actual best friend &mdash; that's how we work.</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <span class="card-num">01</span>
+        <p class="card-title">We work async, always</p>
+        <p class="card-body">You don't need to block out an hour, do your hair, or perform "professionalism" for me. Send me a voice note while you're packing orders. Reply to my email at 11pm when you finally have a second to breathe. I'll be there, and I'll make sure everything stays seamless.</p>
+        <div class="pill-list">
+          <span class="pill-tag">Voice Notes</span>
+          <span class="pill-tag">Loom Video</span>
+          <span class="pill-tag">Chat</span>
+          <span class="pill-tag">Email</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-num">02</span>
+        <p class="card-title">I've actually done the thing</p>
+        <p class="card-body">Before I built Socially Introverts, I was deep pinterest and blog world. I know what it's like to stare at a blank content calendar and feel like you're shouting into the void, and I know what it's like to have 200 product photos and zero idea which ones to post.</p>
+      </div>
+
+      <div class="card card--wide">
+        <span class="card-num">03</span>
+        <p class="card-title">I know when it clicks</p>
+        <p class="card-body">When one blog post starts bringing in search traffic. When one Pinterest pin keeps getting saves and sales years later. When your content finally starts working while you sleep. That's the feeling I build for you.</p>
+      </div>
+
+      <div class="card card--wide">
+        <span class="card-num">04</span>
+        <p class="card-title">Trust runs both ways</p>
+        <p class="card-body" style="margin-bottom:24px;">I'm not going to micromanage you. Please don't micromanage me. I do my best work when you trust me to handle the discovery side so you can handle the making side.</p>
+        <div class="trust">
+          <div>
+            <span class="trust-label">You Don't Need To</span>
+            <ul class="trust-list trust-list--no">
+              <li>Build every single direction</li>
+              <li>Rewrite every caption</li>
+              <li>"Check in" daily</li>
+            </ul>
+          </div>
+          <div>
+            <span class="trust-label">What I Send Instead</span>
+            <ul class="trust-list trust-list--yes">
+              <li>A weekly voice note or email on what I built, published, and what's working</li>
+              <li>You say "looks good" or "can we tweak this one thing?"</li>
+              <li>We move on</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-num">05</span>
+        <p class="card-title">I actually like the quiet work</p>
+        <p class="card-body">Keyword research at 10pm? Love it. Building a pinterest board structure while listening to a podcast? Perfect. Repurposing your blog post into 5 pins without bothering you once? That's my ideal Tuesday.</p>
+        <div class="pill-list">
+          <span class="pill-tag">Keyword Research</span>
+          <span class="pill-tag">Board Structure</span>
+          <span class="pill-tag">Repurposing</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-num">06</span>
+        <p class="card-title">I'm also a 9-5 worker. I get it.</p>
+        <p class="card-body">I'm not sitting around waiting to hop on a Zoom or Google Meet. I'm building your content system between my own meetings, during my lunch break, at 10pm when the house is quiet &mdash; just like you're making your products in the stolen hours of your own day. I respect your time because I barely have enough of my own.</p>
+      </div>
+
+      <div class="card card--wide">
+        <span class="card-num">07</span>
+        <p class="card-title">Your product is a lifestyle, not an ad</p>
+        <p class="card-body" style="margin-bottom:24px;">Most product brands post product photos and wonder why nobody engages. Here's the truth: people don't buy products, they buy the life your product fits into. I find those lifestyle moments &mdash; the slow morning with your mug, the confidence of wearing your earrings, the cozy home with your candle &mdash; and build your entire content ecosystem around them.</p>
+        <div class="flow">
+          <span class="flow-node">Pinterest for Search</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-node">Blog for SEO</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-node">Instagram for Lifestyle + Discovery</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-line">
+      <p class="bottom-line-title">The bottom line.</p>
+      <p class="bottom-line-body">You make things. Really good things. I make sure the people who are already looking for those things can actually find them &mdash; across Pinterest, search, and Instagram &mdash; without you having to become a full-time content creator. No calls. No daily posting. No "showing up." Just your work, discovered by the right people, in the lifestyle context it deserves.</p>
+      <div class="bottom-line-actions">
+        <a class="bl-btn" href="work-together.html">Ways to Work Together</a>
+        <a class="bl-btn bl-btn--outline" href="contact.html">Send Me a Note</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+  </div>
+
+</div>
+</body>
+</html>
