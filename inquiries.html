@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Work With Me | Anna | Socially Introverts</title>
+<meta name="description" content="Tell me what you're building. I'll tell you if we're a fit. Send your inquiry to start working with Anna.">
+<link rel="canonical" href="https://sociallyintroverts.com/inquiries">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Work With Me | Anna | Socially Introverts">
+<meta property="og:description" content="Tell me what you're building. I'll tell you if we're a fit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/inquiries">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ INQUIRY HERO ============ */
+  .inquiry{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .inquiry-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .inquiry-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 16px;
+    max-width:18ch;
+  }
+  .inquiry-sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:52ch;
+    line-height:1.5;
+    margin:0 0 48px;
+  }
+
+  /* ============ GRID ============ */
+  .inquiry-grid{
+    display:grid;
+    grid-template-columns:1fr 260px;
+    gap:36px;
+    align-items:start;
+  }
+
+  /* ============ FORM CARD ============ */
+  .form-card{
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:38px 34px;
+  }
+  .field{
+    margin-bottom:24px;
+  }
+  .field:last-of-type{
+    margin-bottom:28px;
+  }
+  .field label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:10px;
+  }
+  .field-hint{
+    text-transform:none;
+    font-weight:400;
+    color:var(--ink-soft);
+    letter-spacing:normal;
+  }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field textarea,
+  .field select{
+    width:100%;
+    font-family:var(--font-display);
+    font-size:1.02rem;
+    color:var(--ink);
+    background:rgba(255,255,255,0.7);
+    border:1px solid rgba(122,22,38,0.3);
+    border-radius:4px;
+    padding:13px 16px;
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder{
+    color:rgba(107,20,32,0.35);
+  }
+  .field input:focus,
+  .field textarea:focus,
+  .field select:focus{
+    border-color:var(--maroon);
+  }
+  .field textarea{
+    resize:vertical;
+    min-height:100px;
+  }
+  .field select{
+    cursor:pointer;
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a1626' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 16px center;
+    padding-right:40px;
+  }
+
+  .radio-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .radio-group label{
+    text-transform:none;
+    font-weight:500;
+    font-size:1rem;
+    letter-spacing:normal;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    margin-bottom:0;
+  }
+  .radio-group input[type="radio"]{
+    width:18px;
+    height:18px;
+    accent-color:var(--maroon);
+    cursor:pointer;
+    flex:none;
+  }
+
+  .field-group.hidden{
+    display:none;
+  }
+
+  .submit-btn{
+    display:inline-block;
+    width:100%;
+    background:var(--maroon);
+    color:#fff;
+    font-family:var(--font-display);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    border:none;
+    border-radius:999px;
+    padding:18px 24px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(122,22,38,0.25);
+  }
+
+  .form-note{
+    font-size:0.95rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:26px;
+  }
+  .form-note a{
+    color:var(--maroon);
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ POLAROID ============ */
+  .inquiry-visual{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+    padding-top:20px;
+  }
+  .polaroid{
+    background:#fffdfb;
+    padding:14px 14px 36px;
+    width:230px;
+    border-radius:2px;
+    box-shadow:0 10px 22px rgba(122,22,38,0.22);
+    transform:rotate(-4deg);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .polaroid:hover{
+    transform:translateY(-6px) rotate(0deg);
+    box-shadow:0 16px 28px rgba(122,22,38,0.28);
+  }
+  .polaroid img{
+    display:block;
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    background:#000;
+  }
+  .polaroid-cap{
+    font-family:var(--font-script);
+    font-size:1.3rem;
+    color:var(--maroon);
+    text-align:center;
+    margin-top:14px;
+  }
+  .inquiry-visual-note{
+    font-size:1rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    max-width:26ch;
+    line-height:1.5;
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .inquiry-title{ font-size:2.4rem; }
+    .inquiry-sub{ font-size:1.05rem; }
+    .inquiry-grid{ grid-template-columns:1fr; }
+    .inquiry-visual{ flex-direction:row; justify-content:center; padding-top:0; margin-bottom:8px; }
+    .inquiry-visual-note{ display:none; }
+    .form-card{ padding:28px 22px; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="bestie.html">Why I'm Your Bestie</a>
+  </nav>
+
+  <section class="inquiry">
+    <span class="inquiry-eyebrow">Work With Me</span>
+    <p class="inquiry-title">Tell me what you're building.</p>
+    <p class="inquiry-sub">I'll tell you if we're a fit &mdash; the more you share here, the better I can point you the right direction.</p>
+
+    <div class="inquiry-grid">
+
+      <form class="form-card" action="YOUR_FORM_HANDLER_URL" method="POST">
+
+        <!-- Name -->
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <!-- What they make -->
+        <div class="field">
+          <label for="business">What do you make/sell? Drop your website or shop link.</label>
+          <input type="text" id="business" name="business" placeholder="Handmade ceramics — annaceramics.etsy.com" required>
+        </div>
+
+        <!-- Struggle -->
+        <div class="field">
+          <label>What's your biggest struggle right now?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="struggle" value="pinterest" required> Pinterest isn't bringing traffic</label>
+            <label><input type="radio" name="struggle" value="system"> I have content but no system</label>
+            <label><input type="radio" name="struggle" value="instagram"> Instagram feels like a black hole</label>
+            <label><input type="radio" name="struggle" value="posting"> I don't know what to post</label>
+            <label><input type="radio" name="struggle" value="other"> Something else</label>
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div class="field">
+          <label for="service">Which service are you interested in?</label>
+          <select id="service" name="service" required onchange="toggleBudget()">
+            <option value="" disabled selected>Choose one</option>
+            <option value="simplify30">🍋 Simplify 30 — $17 trial</option>
+            <option value="simplifyone">🍊 Simplify One — $400, one thing done for you</option>
+            <option value="studio">🍒 Simplify Studio — $850/mo</option>
+            <option value="build">🍓 Simplify Build — $3K one-time</option>
+            <option value="notsure">Not sure — tell me what's right</option>
+          </select>
+        </div>
+
+        <!-- Budget (hidden by default, shows for Simplify One / Studio / Build) -->
+        <div class="field field-group hidden" id="budget-group">
+          <label>What's your investment range?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="budget" value="under500"> Under $500</label>
+            <label><input type="radio" name="budget" value="500-1000"> $500&ndash;$1,000</label>
+            <label><input type="radio" name="budget" value="1000-2000"> $1,000&ndash;$2,000</label>
+            <label><input type="radio" name="budget" value="2000-5000"> $2,000&ndash;$5,000</label>
+            <label><input type="radio" name="budget" value="notsure"> Not sure yet</label>
+          </div>
+        </div>
+
+        <!-- Assets -->
+        <div class="field">
+          <label>Do you have existing content/assets I can work with?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="assets" value="yes" required> Yes &mdash; product photos, blog posts, social content</label>
+            <label><input type="radio" name="assets" value="some"> Some &mdash; I have photos but not much else</label>
+            <label><input type="radio" name="assets" value="no"> Not really &mdash; starting from scratch</label>
+          </div>
+        </div>
+
+        <!-- Optional note -->
+        <div class="field">
+          <label for="note">Anything else I should know? <span class="field-hint">(optional)</span></label>
+          <textarea id="note" name="note" placeholder="Timeline, specific goals, etc."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send My Inquiry</button>
+
+        <p class="form-note">Prefer email? <a href="mailto:sociallyintroverts@outlook.com">sociallyintroverts@outlook.com</a></p>
+      </form>
+
+      <div class="inquiry-visual">
+        <div class="polaroid">
+          <img src="coffee_and_bread.jpg" alt="Cozy flat lay with iced coffee, a croissant, and a phone on silent mode">
+          <p class="polaroid-cap">take your time</p>
+        </div>
+        <p class="inquiry-visual-note">No rush on this one &mdash; grab a coffee, fill it out whenever it's quiet.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+  </div>
+
+</div>
+
+<script>
+  function toggleBudget() {
+    const service = document.getElementById('service').value;
+    const budgetGroup = document.getElementById('budget-group');
+    // Show budget for Simplify One ($400), Studio ($850), and Build ($3K). Hide for Simplify 30 and "not sure"
+    if (service === 'simplifyone' || service === 'studio' || service === 'build') {
+      budgetGroup.classList.remove('hidden');
+    } else {
+      budgetGroup.classList.add('hidden');
+    }
+  }
+</script>
+
+</body>
+</html>
