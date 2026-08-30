@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Turn One Product Into a Month of Content | Anna | Socially Introverts</title>
+<meta name="description" content="A free 5-step framework to stop creating more content and start making your existing content work harder.">
+<link rel="canonical" href="https://sociallyintroverts.com/tester">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Turn One Product Into a Month of Content | Anna | Socially Introverts">
+<meta property="og:description" content="A free 5-step framework to stop creating more content and start making your existing content work harder.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/tester">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ HERO ============ */
+  .free{
+    max-width:1000px;
+    margin:0 auto;
+  }
+  .free-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .free-title{
+    font-size:3.6rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+    max-width:20ch;
+  }
+  .free-sub{
+    font-size:1.15rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:var(--maroon);
+    text-transform:uppercase;
+    max-width:58ch;
+    line-height:1.5;
+    margin:0 0 22px;
+  }
+  .free-body{
+    font-size:1.18rem;
+    color:var(--ink-soft);
+    max-width:58ch;
+    line-height:1.6;
+    margin:0 0 32px;
+  }
+  .free-cta{
+    display:inline-block;
+    background:var(--maroon);
+    color:#fff;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:18px 34px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .free-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(122,22,38,0.25);
+  }
+
+  /* ============ FRAMEWORK STEPS ============ */
+  .steps-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:88px 0 34px;
+  }
+  .build-steps{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    margin-bottom:64px;
+  }
+  .build-step{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:20px;
+    padding-bottom:32px;
+    border-bottom:1px solid rgba(122,22,38,0.25);
+  }
+  .build-step:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+  }
+  .build-num{
+    font-family:var(--font-script);
+    font-size:2.6rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+  .build-step-title{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .build-step-body{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:56ch;
+    margin:0;
+  }
+
+  /* ============ WHO IT'S FOR ============ */
+  .who-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:34px 30px;
+    margin-bottom:56px;
+    max-width:1000px;
+  }
+  .who-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 20px;
+  }
+  .who-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .who-list li{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:26px;
+    position:relative;
+  }
+  .who-list li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+
+  /* ============ ECOSYSTEM NOTE ============ */
+  .eco-note{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    line-height:1.65;
+    max-width:66ch;
+    margin:0 0 56px;
+  }
+  .eco-note strong{
+    color:var(--maroon);
+  }
+
+  /* ============ OFFERS ============ */
+  .offers-lede{
+    font-size:1.3rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:60ch;
+    line-height:1.5;
+    margin:0 0 30px;
+  }
+  .services{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    margin-bottom:56px;
+  }
+  .svc{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:32px 30px;
+    display:grid;
+    grid-template-columns:1fr 220px;
+    gap:26px;
+    align-items:center;
+  }
+  .svc-emoji{
+    font-size:1.6rem;
+    margin-bottom:6px;
+    display:block;
+  }
+  .svc-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .svc-oneliner{
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .svc-buy{
+    background:rgba(255,255,255,0.6);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:6px;
+    padding:20px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .svc-price{
+    font-size:2rem;
+    font-weight:600;
+    color:var(--maroon);
+    line-height:1;
+    margin-bottom:2px;
+  }
+  .svc-price span{
+    font-size:0.9rem;
+    font-weight:500;
+    color:var(--ink-soft);
+  }
+  .svc-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.88rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:13px 20px;
+    width:100%;
+    margin-top:14px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .svc-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ POLAROID GALLERY ============ */
+  .polaroid-strip{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    gap:30px;
+    margin:36px 0 56px;
+  }
+  .polaroid{
+    background:#fffdfb;
+    padding:14px 14px 36px;
+    width:230px;
+    border-radius:2px;
+    box-shadow:0 10px 22px rgba(122,22,38,0.22);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .polaroid:hover{
+    transform:translateY(-6px) rotate(0deg) !important;
+    box-shadow:0 16px 28px rgba(122,22,38,0.28);
+  }
+  .polaroid.rotate-a{ transform:rotate(-4deg); }
+  .polaroid.rotate-b{ transform:rotate(3deg); }
+  .polaroid.rotate-c{ transform:rotate(-2deg); }
+  .polaroid.rotate-d{ transform:rotate(4deg); }
+  .polaroid img,
+  .polaroid video{
+    display:block;
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    background:#000;
+  }
+  .polaroid-cap{
+    font-family:var(--font-script);
+    font-size:1.3rem;
+    color:var(--maroon);
+    text-align:center;
+    margin-top:14px;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    .free-title{ font-size:2.4rem; }
+    .free-sub{ font-size:1rem; }
+    .free-body{ font-size:1.05rem; }
+    .build-step{ grid-template-columns:1fr; gap:6px; }
+    .svc{ grid-template-columns:1fr; }
+    .foot{ flex-direction:column; }
+    .polaroid-strip{ justify-content:center; }
+    .polaroid{ width:44vw; max-width:230px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="bestie.html">Why I'm Your Bestie</a>
+  </nav>
+
+  <section class="free">
+    <span class="free-eyebrow">Free Guide</span>
+    <p class="free-title">Turn One Product Into a Month of Content.</p>
+    <p class="free-sub">The "what do I even post?" guide for product makers and SaaS founders who are tired of starting from scratch every time they need to market.</p>
+    <p class="free-body">A simple 5-step framework to stop creating more content and start making your existing content work harder. Just the philosophy that changes everything.</p>
+    <a class="free-cta" href="https://shop.beacons.ai/annplates/0f63e4f0-767a-49d8-9183-06fadff471aa" target="_blank" rel="noopener">Get the Free Guide</a>
+
+    <p class="steps-title">The 5-step framework, at a glance.</p>
+
+    <div class="build-steps">
+      <div class="build-step">
+        <span class="build-num">01</span>
+        <div>
+          <p class="build-step-title">Start with ONE product</p>
+          <p class="build-step-body">Pick one product. Everything builds from here.</p>
+
+          <div class="polaroid-strip">
+            <div class="polaroid rotate-a">
+              <video src="sticky_notes_animation.mp4" muted loop autoplay playsinline></video>
+              <p class="polaroid-cap">behind the scenes</p>
+            </div>
+            <div class="polaroid rotate-b">
+              <img src="3.jpg" alt="Research board open on a laptop screen">
+              <p class="polaroid-cap">the research</p>
+            </div>
+            <div class="polaroid rotate-c">
+              <img src="marina-trindade-dupe.jpeg" alt="Phone photographing a book and jewelry flat lay">
+              <p class="polaroid-cap">the details</p>
+            </div>
+            <div class="polaroid rotate-d">
+              <img src="ella-farrand-dupe.jpeg" alt="Close-up of knit sweaters on hangers">
+              <p class="polaroid-cap">the product</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">02</span>
+        <div>
+          <p class="build-step-title">Find the bigger world around it</p>
+          <p class="build-step-body">The lifestyle, rituals, and moments your customer already cares about.</p>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">03</span>
+        <div>
+          <p class="build-step-title">Choose your content categories</p>
+          <p class="build-step-body">Turn those insights into 3&ndash;5 recurring themes so you never start from zero.</p>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">04</span>
+        <div>
+          <p class="build-step-title">Find evergreen topics</p>
+          <p class="build-step-body">What your customer searches for before they ever discover your product.</p>
+        </div>
+      </div>
+
+      <div class="build-step">
+        <span class="build-num">05</span>
+        <div>
+          <p class="build-step-title">Repurpose ONE topic</p>
+          <p class="build-step-body">Watch how one idea becomes a blog post, Pinterest pin, carousel, video, and email.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="who-card">
+      <p class="who-title">Who This Is For</p>
+      <ul class="who-list">
+        <li>Product makers (ceramics, jewelry, candles, textiles, art, etc)</li>
+        <li>Small ecomm brands</li>
+        <li>Anyone with visual products or lifestyle and no content system</li>
+        <li>People who'd rather create than market</li>
+      </ul>
+    </div>
+
+    <p class="eco-note">This guide is an introduction to a <strong>content ecosystem</strong> &mdash; where every piece of content connects to the next, and your product is the natural answer to questions your customer is already asking.</p>
+
+    <p class="offers-lede">If you read this and think "I want this, but I don't have time to build it myself" &mdash; I offer two ways in.</p>
+
+    <div class="services">
+      <div class="svc">
+        <div>
+          <span class="svc-emoji">🍋</span>
+          <p class="svc-title">Simplify 30</p>
+          <p class="svc-oneliner">A $17 paid trial. 30 days of me building a piece of your system.</p>
+        </div>
+        <div class="svc-buy">
+          <span class="svc-price">$17</span>
+          <span></span>
+          <a class="svc-btn" href="https://shop.beacons.ai/annplates/a2106907-153f-4e54-9ff9-8d3d5feabfb9" target="_blank" rel="noopener">Start Simplify 30</a>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <span class="svc-emoji">🍒</span>
+          <p class="svc-title">Simplify Studio</p>
+          <p class="svc-oneliner">I become your ongoing content strategist + SMM.</p>
+        </div>
+        <div class="svc-buy">
+          <span class="svc-price">$850<span>/mo</span></span>
+          <a class="svc-btn" href="https://shop.beacons.ai/annplates/72382f69-88db-4590-9c5d-b2aab62d8d5f" target="_blank" rel="noopener">Start Your Studio Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+  </div>
+
+</div>
+</body>
+</html>
