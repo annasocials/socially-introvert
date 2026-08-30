@@ -15,7 +15,7 @@
 </script>
 
 <title>Anna | Socially Introverts</title>
-<meta name="description" content="Hi, I'm Anna — you make the things, I market them. I make products feel human.DFY content marketing for visual product brands and SaaS founders who want more than feature lists and promotional posts. I turn your product into a content ecosystem built around the people, problems, ideas and lifestyles surrounding it. ">
+<meta name="description" content="Hi, I'm Anna — you make the things, I market them. I make products feel human. DFY content marketing for visual product brands and SaaS founders who want more than feature lists and promotional posts. I turn your product into a content ecosystem built around the people, problems, ideas and lifestyles surrounding it. ">
 <link rel="canonical" href="https://sociallyintroverts.com/threads">
 <meta name="robots" content="index, follow">
 
@@ -106,15 +106,41 @@
     margin:0 0 14px;
     line-height:1.05;
   }
-  .hero-sub{
-    font-size:1.05rem;
-    font-weight:600;
-    letter-spacing:0.01em;
-    color:var(--maroon);
-    text-transform:uppercase;
+  .hero-card{
+    background:rgba(255,255,255,0.45);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:10px;
+    padding:22px 26px;
     max-width:46ch;
-    line-height:1.5;
     margin:0 0 46px;
+  }
+  .hero-card-tag{
+    display:inline-block;
+    font-size:0.7rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    background:var(--pill);
+    border-radius:999px;
+    padding:5px 14px;
+    margin-bottom:12px;
+  }
+  .hero-card-lead{
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.4;
+    margin:0 0 10px;
+  }
+  .hero-card-body{
+    font-size:0.98rem;
+    font-weight:500;
+    color:var(--ink-soft);
+    letter-spacing:normal;
+    text-transform:none;
+    line-height:1.55;
+    margin:0;
   }
 
   .hero-line1{
@@ -284,7 +310,11 @@
   <div class="hero">
     <div class="hero-text">
       <p class="hero-headline">Hi, I'm Anna.</p>
-      <p class="hero-sub">I make products feel human. DFY content marketing for visual product brands and SaaS founders who want more than feature lists and promotional posts. I turn your product into a content ecosystem built around the people, problems, ideas and lifestyles surrounding it.</p>
+      <div class="hero-card">
+        <span class="hero-card-tag">DFY Content Marketing</span>
+        <p class="hero-card-lead">I make products feel human.</p>
+        <p class="hero-card-body">For visual product brands and SaaS founders who want more than feature lists and promotional posts. I turn your product into a content ecosystem built around the people, problems, ideas and lifestyles surrounding it.</p>
+      </div>
 
       <p class="hero-line1">You make the things.</p>
       <p class="hero-script">i market them</p>
