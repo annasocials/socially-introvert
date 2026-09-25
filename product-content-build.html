@@ -138,12 +138,25 @@
     text-transform:uppercase;
     border-radius:999px;
     padding:16px 26px;
-    margin-bottom:56px;
+    margin-bottom:32px;
     transition:transform .15s ease, box-shadow .15s ease;
   }
   .hero-btn:hover{
     transform:translateY(-2px);
     box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ SUMMARY STRIP ============ */
+  .summary-strip{
+    font-size:0.98rem;
+    font-weight:600;
+    color:var(--maroon);
+    border:1px dashed rgba(122,22,38,0.4);
+    border-radius:999px;
+    padding:14px 22px;
+    display:inline-block;
+    margin-bottom:56px;
+    line-height:1.5;
   }
 
   /* ============ VIDEO ============ */
@@ -215,6 +228,53 @@
     font-weight:600;
     border-radius:999px;
     padding:10px 18px;
+  }
+
+  .arrow-items{
+    margin:14px 0 20px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .arrow-items li{
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:22px;
+    position:relative;
+  }
+  .arrow-items li::before{
+    content:"\2192";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+
+  .channel-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+    margin:20px 0 22px;
+  }
+  .channel-card{
+    background:rgba(255,255,255,0.5);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:20px 20px;
+  }
+  .channel-card-title{
+    font-size:1.15rem;
+    font-weight:600;
+    color:var(--maroon);
+    margin:0 0 6px;
+  }
+  .channel-card-body{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    line-height:1.45;
   }
 
   /* ============ STEPS ============ */
@@ -466,6 +526,7 @@
     .page-title{ font-size:2.5rem; }
     .page-lede{ font-size:1.3rem; max-width:none; }
     .get-grid{ grid-template-columns:1fr; }
+    .channel-grid{ grid-template-columns:1fr; }
     .step{ grid-template-columns:1fr; gap:6px; }
     .step-num{ font-size:2.1rem; }
     .foot{ flex-direction:column; }
@@ -490,6 +551,8 @@
     <p class="page-intro">You already have the products. You probably already have the photos, videos, ideas, customer questions and stories too &mdash; you just don't have time to turn all of it into marketing. I figure out what your business should be talking about, where those conversations belong, and then I create the actual content for you. So you can stop starting from "what should I post?" every week &mdash; and start publishing content that people discover and eventually buy.</p>
     <p class="tags">Lifestyle &middot; Ecommerce &middot; Wellness &middot; F&amp;B</p>
     <a class="hero-btn" href="https://shop.beacons.ai/annplates/293561f0-bc60-49e7-aad0-8bc93e1e1683" target="_blank" rel="noopener">Start a Product Content Build &rarr;</a>
+    <br>
+    <span class="summary-strip">10 finished content pieces &middot; personalized direction &middot; recommended channels &middot; 1 revision round &middot; delivered in 2 weeks</span>
 
     <div class="video-card">
       <video controls playsinline preload="metadata">
@@ -541,15 +604,48 @@ Maybe your folder looks something like this:</p>
         <div class="step">
           <span class="step-num">01</span>
           <div>
-            <p class="step-title">I find the content world</p>
-            <p class="step-body">I look at your products, customers, lifestyle, interests, problems, desires, stories and existing content. Then I identify the conversations and angles that make sense for your brand.</p>
+            <p class="step-title">Content Direction</p>
+            <p class="step-body">I'll review your:</p>
+            <ul class="arrow-items">
+              <li>products</li>
+              <li>website</li>
+              <li>existing content</li>
+              <li>audience</li>
+              <li>current marketing</li>
+              <li>business priorities</li>
+            </ul>
+            <p class="step-body">Then I'll identify:</p>
+            <ul class="arrow-items">
+              <li>key content conversations</li>
+              <li>useful angles</li>
+              <li>recommended channels</li>
+              <li>formats</li>
+              <li>recurring/series opportunities</li>
+              <li>ways the content can connect</li>
+            </ul>
+            <p class="step-body">You don't need to arrive with a content strategy.</p>
           </div>
         </div>
         <div class="step">
           <span class="step-num">02</span>
           <div>
-            <p class="step-title">I choose where the content should live</p>
-            <p class="step-body">You don't need to be everywhere. I'll look at your business, audience, products, existing content and discovery opportunities and recommend the channels that make the most sense &mdash; Instagram for visual storytelling, Threads for opinions and founder-led ideas, Pinterest for visual/search discovery, or a combination. You don't have to figure that part out.</p>
+            <p class="step-title">Channel Recommendation</p>
+            <p class="step-body">You don't need to be everywhere. I'll recommend the channel mix that makes the most sense for your business, based on your business stage and founder personality. That could include:</p>
+            <div class="channel-grid">
+              <div class="channel-card">
+                <p class="channel-card-title">Instagram</p>
+                <p class="channel-card-body">for visual storytelling, product education + brand connection</p>
+              </div>
+              <div class="channel-card">
+                <p class="channel-card-title">Threads</p>
+                <p class="channel-card-body">for founder-led ideas, opinions, stories + conversations</p>
+              </div>
+              <div class="channel-card">
+                <p class="channel-card-title">Pinterest</p>
+                <p class="channel-card-body">for search/discovery + evergreen product content</p>
+              </div>
+            </div>
+            <p class="step-body">Your 10 pieces will be distributed across the channels that make the most sense for this build.</p>
           </div>
         </div>
         <div class="step">
@@ -569,8 +665,14 @@ Maybe your folder looks something like this:</p>
         <div class="step">
           <span class="step-num">05</span>
           <div>
-            <p class="step-title">I connect the pieces</p>
-            <p class="step-body">If something can naturally move from Instagram &rarr; Threads &rarr; Pinterest, I'll adapt it. If a product conversation can become a series, I'll build it into the direction. The goal isn't 10 random posts &mdash; it's 10 pieces that make sense together.</p>
+            <p class="step-title">Connected Content</p>
+            <p class="step-body">The pieces won't be created as 10 unrelated posts. I'll look for natural connections between them.</p>
+            <ul class="arrow-items">
+              <li>One strong idea may become multiple formats</li>
+              <li>A product conversation may become a recurring series</li>
+              <li>A customer question may become a carousel, Thread and Pin</li>
+            </ul>
+            <p class="step-body">The goal is to give your content somewhere to go.</p>
           </div>
         </div>
       </div>
