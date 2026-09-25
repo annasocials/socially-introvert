@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbe7ea">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Simplify Product Content Build | Anna | Socially Introverts</title>
+<meta name="description" content="Turn your scattered photos, videos and ideas into a connected content system. I find the content world around your product, then actually create it.">
+<link rel="canonical" href="https://sociallyintroverts.com/product-content-build">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Simplify Product Content Build | Anna | Socially Introverts">
+<meta property="og:description" content="Turn your scattered photos, videos and ideas into a connected content system. I find the content world around your product, then actually create it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/product-content-build">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#fbe7ea;
+    --bg-2:#f6dde3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#6b1420;
+    --ink-soft:#4a2a2f;
+    --maroon:#7a1626;
+    --line:#7a1626;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--bg-1) 0px, var(--bg-1) 110px,
+        var(--bg-2) 110px, var(--bg-2) 220px
+      );
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ HERO ============ */
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .page-title{
+    font-size:3.6rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+  }
+  .page-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:44ch;
+    line-height:1.4;
+    margin:0 0 20px;
+  }
+  .page-intro{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:64ch;
+    line-height:1.6;
+    margin:0 0 26px;
+  }
+  .tags{
+    font-size:0.95rem;
+    color:var(--maroon);
+    font-style:italic;
+    margin:0 0 40px;
+  }
+  .hero-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:16px 26px;
+    margin-bottom:56px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .hero-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ VIDEO ============ */
+  .video-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:14px;
+    margin-bottom:56px;
+  }
+  .video-card video{
+    width:100%;
+    display:block;
+    border-radius:6px;
+  }
+  .video-cap{
+    font-size:0.9rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:12px;
+  }
+
+  /* ============ SECTION ============ */
+  .section{
+    margin-bottom:60px;
+  }
+  .section-title{
+    font-size:2rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 18px;
+    max-width:32ch;
+  }
+  .section-body{
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    line-height:1.65;
+    max-width:62ch;
+    margin:0 0 14px;
+    white-space:pre-line;
+  }
+
+  .folder-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:18px 0 24px;
+  }
+  .folder-pill{
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(122,22,38,0.25);
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    border-radius:999px;
+    padding:9px 16px;
+  }
+
+  .arrow-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+    margin:18px 0 24px;
+  }
+  .arrow-pill{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    border-radius:999px;
+    padding:10px 18px;
+  }
+
+  /* ============ STEPS ============ */
+  .steps{
+    display:flex;
+    flex-direction:column;
+    gap:34px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:18px;
+    padding-bottom:34px;
+    border-bottom:1px solid rgba(122,22,38,0.25);
+  }
+  .step:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+  }
+  .step-num{
+    font-family:var(--font-script);
+    font-size:2.6rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+  .step-title{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .step-body{
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:58ch;
+  }
+
+  /* ============ GET GRID ============ */
+  .get-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:22px;
+  }
+  .get-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(122,22,38,0.25);
+    border-radius:8px;
+    padding:24px 24px;
+  }
+  .get-card-title{
+    font-size:1.25rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .get-card-body{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+
+  /* ============ NOTION / SUPPORT NOTE ============ */
+  .notion-note{
+    border:1.5px solid var(--maroon);
+    background:rgba(255,255,255,0.55);
+    border-radius:8px;
+    padding:28px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .notion-note-title{
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 6px;
+  }
+  .notion-note-body{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    max-width:66ch;
+  }
+  .notion-note-body strong{
+    color:var(--maroon);
+  }
+
+  /* ============ FOR YOU IF ============ */
+  .for-you-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:18px 0;
+  }
+  .for-you-pill{
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(122,22,38,0.25);
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    border-radius:999px;
+    padding:9px 16px;
+  }
+  .traits{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .traits li{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:20px;
+    position:relative;
+  }
+  .traits li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+  .not-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .not-list li{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+
+  /* ============ PRICE CARD ============ */
+  .price-card{
+    background:rgba(255,255,255,0.55);
+    border:2px solid var(--maroon);
+    border-radius:10px;
+    padding:38px 34px;
+    max-width:560px;
+  }
+  .price-name{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .price-amount{
+    font-size:2.8rem;
+    font-weight:600;
+    color:var(--maroon);
+    line-height:1;
+    margin:0 0 4px;
+  }
+  .price-turn{
+    font-size:0.92rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .price-includes{
+    margin:0 0 26px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .price-includes li{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.45;
+    padding-left:20px;
+    position:relative;
+  }
+  .price-includes li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+  .price-btn{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:16px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .price-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+  }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta{
+    text-align:left;
+    max-width:64ch;
+  }
+  .final-cta .page-title{
+    font-size:2.4rem;
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .page-title{ font-size:2.5rem; }
+    .page-lede{ font-size:1.3rem; max-width:none; }
+    .get-grid{ grid-template-columns:1fr; }
+    .step{ grid-template-columns:1fr; gap:6px; }
+    .step-num{ font-size:2.1rem; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="bestie.html">Why I'm Your Bestie</a>
+  </nav>
+
+  <section class="wrap">
+    <span class="eyebrow">Simplify 🍋</span>
+    <p class="page-title">Product Content Build</p>
+    <p class="page-lede">Turn your scattered photos + ideas into a connected content system.</p>
+    <p class="page-intro">You already have the products. You probably already have the photos, videos, ideas, customer questions and stories too &mdash; you just don't have time to turn all of it into marketing. I figure out what your business should be talking about, where those conversations belong, and then I create the actual content for you. So you can stop starting from "what should I post?" every week &mdash; and start publishing content that people discover and eventually buy.</p>
+    <p class="tags">Lifestyle &middot; Ecommerce &middot; Wellness &middot; F&amp;B</p>
+    <a class="hero-btn" href="https://shop.beacons.ai/annplates/293561f0-bc60-49e7-aad0-8bc93e1e1683" target="_blank" rel="noopener">Start a Product Content Build &rarr;</a>
+
+    <div class="video-card">
+      <video controls playsinline preload="metadata">
+        <source src="product_build.mp4" type="video/mp4">
+        Your browser doesn't support embedded video &mdash; you can still download it above.
+      </video>
+      <p class="video-cap">A peek at how a Product Content Build actually comes together.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">You don't need more content ideas.</p>
+      <p class="section-body">You need someone to make sense of what you already have.
+
+Maybe your folder looks something like this:</p>
+      <div class="folder-list">
+        <span class="folder-pill">📸 47 product photos</span>
+        <span class="folder-pill">🎥 random videos from your phone</span>
+        <span class="folder-pill">📝 notes you meant to turn into posts</span>
+        <span class="folder-pill">💬 customer questions</span>
+        <span class="folder-pill">⭐ reviews</span>
+        <span class="folder-pill">🛍️ product descriptions</span>
+        <span class="folder-pill">📱 old posts</span>
+        <span class="folder-pill">💡 half-finished ideas</span>
+      </div>
+      <p class="section-body">There's plenty there. But when Monday comes around: "What should I post?" So you make something. Then another thing. Then something promotional because you haven't posted in a while. And eventually your content starts feeling like a collection of unrelated posts instead of something that's actually building your brand. That's what I want to simplify.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Your product is the starting point. Not the entire content strategy.</p>
+      <p class="section-body">I don't think you need to squeeze 30 posts out of one product. I think we need to look at the world around it. A candle isn't just a candle. It's:</p>
+      <div class="arrow-list">
+        <span class="arrow-pill">slow evenings</span>
+        <span class="arrow-pill">home</span>
+        <span class="arrow-pill">self-care</span>
+        <span class="arrow-pill">gifting</span>
+        <span class="arrow-pill">rituals</span>
+        <span class="arrow-pill">atmosphere</span>
+        <span class="arrow-pill">hosting friends</span>
+        <span class="arrow-pill">seasonal moments</span>
+        <span class="arrow-pill">the person who buys it</span>
+        <span class="arrow-pill">the life they want it to fit into</span>
+      </div>
+      <p class="section-body">Those aren't random content ideas. They're conversations your brand can have. And those conversations can become content.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Here's how Simplify works.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <p class="step-title">I find the content world</p>
+            <p class="step-body">I look at your products, customers, lifestyle, interests, problems, desires, stories and existing content. Then I identify the conversations and angles that make sense for your brand.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <p class="step-title">I choose where the content should live</p>
+            <p class="step-body">You don't need to be everywhere. I'll look at your business, audience, products, existing content and discovery opportunities and recommend the channels that make the most sense &mdash; Instagram for visual storytelling, Threads for opinions and founder-led ideas, Pinterest for visual/search discovery, or a combination. You don't have to figure that part out.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <p class="step-title">I build the content direction</p>
+            <p class="step-body">Before I start creating, I map out what we're actually going to talk about &mdash; content themes, conversation angles, recurring topics, formats, recommended channels and series opportunities. If I spot an idea that could become a repeatable series, I'll build that into the direction too.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <p class="step-title">Then I actually make the content</p>
+            <p class="step-body">You don't get a list of ideas and a "good luck!" &mdash; you get the actual content: carousels, graphics, captions, hooks and CTAs for Instagram; complete Threads and conversation starters; finished Pins, Pin copy, titles and descriptions for Pinterest. The exact mix is based on your business, not a one-size-fits-all package.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">05</span>
+          <div>
+            <p class="step-title">I connect the pieces</p>
+            <p class="step-body">If something can naturally move from Instagram &rarr; Threads &rarr; Pinterest, I'll adapt it. If a product conversation can become a series, I'll build it into the direction. The goal isn't 10 random posts &mdash; it's 10 pieces that make sense together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">What you get</p>
+      <div class="get-grid">
+        <div class="get-card">
+          <p class="get-card-title">Content direction</p>
+          <p class="get-card-body">A personalized direction for this build: key conversations + themes, content angles, recommended channels, formats, recurring/series opportunities and how the pieces connect.</p>
+        </div>
+        <div class="get-card">
+          <p class="get-card-title">10 ready-to-publish pieces</p>
+          <p class="get-card-body">The exact mix is chosen for your business &mdash; for example 3 Instagram carousels, 2 graphics, 3 Threads and 2 Pinterest Pins, or a completely different combination if that makes more sense.</p>
+        </div>
+        <div class="get-card">
+          <p class="get-card-title">Actual content creation</p>
+          <p class="get-card-body">Copy, hooks, captions, CTAs, carousel slides, graphics, Threads and Pinterest Pins. Not templates. Not prompts. Not homework &mdash; actual content you can publish.</p>
+        </div>
+        <div class="get-card">
+          <p class="get-card-title">Connected content + repurposing</p>
+          <p class="get-card-body">The pieces are built around related ideas rather than being 10 disconnected posts, and strong ideas get adapted across channels where it makes sense.</p>
+        </div>
+        <div class="get-card">
+          <p class="get-card-title">One revision round</p>
+          <p class="get-card-body">You review everything together and send one focused round of feedback.</p>
+        </div>
+        <div class="get-card">
+          <p class="get-card-title">Organized delivery</p>
+          <p class="get-card-body">Everything arrives in one clear workspace, ready for you to publish.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="notion-note">
+        <p class="notion-note-title">Everything lives in one shared Notion.</p>
+        <p class="notion-note-body">The whole build is managed inside a Notion workspace, so your content direction, the pieces themselves and our feedback all stay <strong>connected in one place</strong> instead of scattered across email threads. After delivery, you get <strong>30 days of weekly support</strong> inside that same Notion, so I can check in on what's working and help you adjust as you publish.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">This is for you if&hellip;</p>
+      <p class="section-body">Simplify is designed for small lifestyle ecommerce businesses run by thoughtful founders, especially founders who still work full-time while building their brand. You might be:</p>
+      <div class="for-you-list">
+        <span class="for-you-pill">a home decor brand</span>
+        <span class="for-you-pill">a candle business</span>
+        <span class="for-you-pill">a stationery brand</span>
+        <span class="for-you-pill">a skincare / wellness brand</span>
+        <span class="for-you-pill">a food or beverage business</span>
+        <span class="for-you-pill">a lifestyle product brand</span>
+        <span class="for-you-pill">a small shop with a strong point of view</span>
+      </div>
+      <p class="section-body">You're probably someone who:</p>
+      <ul class="traits">
+        <li>cares about what you're building</li>
+        <li>has lots of raw material but not enough time</li>
+        <li>doesn't want to chase trends every day</li>
+        <li>wants thoughtful marketing that connects back to the business</li>
+        <li>would rather make the product than spend hours making content about it</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <p class="section-title">This is not social media management.</p>
+      <p class="section-body">I don't take over your accounts, post for you, manage your DMs or sit inside your comments. You own and publish on your platforms &mdash; I'm the person behind the scenes turning your products, ideas and business into the content.</p>
+      <ul class="not-list">
+        <li>🚫 figure out what to post</li>
+        <li>🚫 choose which platform deserves your attention</li>
+        <li>🚫 write every caption yourself</li>
+        <li>🚫 design every carousel</li>
+        <li>🚫 spend Sunday night planning next week's content</li>
+        <li>🚫 become a full-time content creator</li>
+      </ul>
+      <p class="section-body"><em>You make the things. I market them.</em></p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">The investment</p>
+      <div class="price-card">
+        <p class="price-name">Simplify Product Content Build</p>
+        <p class="price-amount">$297</p>
+        <p class="price-turn">Typical turnaround: 2 weeks &middot; timeline begins once I've received your info + assets</p>
+        <ul class="price-includes">
+          <li>Personalized content direction + recommended channel mix</li>
+          <li>10 ready-to-publish content pieces</li>
+          <li>Copy, captions, hooks + CTAs</li>
+          <li>Connected content direction + repurposing where appropriate</li>
+          <li>Managed in a shared Notion, everything in one place</li>
+          <li>30 days of weekly support after delivery, via Notion</li>
+          <li>One revision round</li>
+        </ul>
+        <a class="price-btn" href="https://shop.beacons.ai/annplates/293561f0-bc60-49e7-aad0-8bc93e1e1683" target="_blank" rel="noopener">Start Your Product Content Build</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">What happens next</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <p class="step-title">Tell me about your business</p>
+            <p class="step-body">Fill out a short form with your website, products, audience, goals and what you're currently struggling with.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <p class="step-title">Send me the messy folder</p>
+            <p class="step-body">Photos, videos, existing content, reviews, notes. It doesn't need to be organized. Seriously.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <p class="step-title">I figure out the direction</p>
+            <p class="step-body">I identify the content world around your products and recommend where we should focus, right inside our shared Notion.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <p class="step-title">I create</p>
+            <p class="step-body">I turn that direction into the actual content.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">05</span>
+          <div>
+            <p class="step-title">You review</p>
+            <p class="step-body">You get one focused revision round.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">06</span>
+          <div>
+            <p class="step-title">You publish &mdash; and I stay close for 30 days</p>
+            <p class="step-body">Everything is yours to use, and we keep checking in weekly through Notion for a month to see what's actually working.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section final-cta">
+      <p class="page-title">Ready to stop starting from zero?</p>
+      <p class="section-body">You already made the product. You probably already have more content hiding inside it than you think. Let's find it.</p>
+      <a class="hero-btn" href="https://shop.beacons.ai/annplates/293561f0-bc60-49e7-aad0-8bc93e1e1683" target="_blank" rel="noopener">Start a Product Content Build &rarr;</a>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+  </div>
+
+</div>
+</body>
+</html>
