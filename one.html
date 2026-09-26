@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f1ee">
+
+<!-- Google tag (gtag.js) — same GA4 property as the main site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CFRTJP9SL');
+</script>
+
+<title>Simplify One | Anna | Socially Introverts</title>
+<meta name="description" content="A focused, one-off content or marketing project built around what you actually need right now. Starts from $70 up to $600.">
+<link rel="canonical" href="https://sociallyintroverts.com/one">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Simplify One | Anna | Socially Introverts">
+<meta property="og:description" content="A focused, one-off content or marketing project built around what you actually need right now. Starts from $70 up to $600.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/one">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background-color:var(--bg-1);
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ HERO ============ */
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .page-title{
+    font-size:2.6rem;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.25;
+    margin:0 0 18px;
+    max-width:24ch;
+    letter-spacing:0.01em;
+  }
+  .page-lede{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:60ch;
+    line-height:1.6;
+    margin:0 0 10px;
+  }
+  .deco-line{
+    font-family:var(--font-script);
+    font-size:1.3rem;
+    color:var(--maroon);
+    margin:14px 0 32px;
+  }
+  .hero-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.95rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:16px 26px;
+    margin-bottom:56px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .hero-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ SECTION ============ */
+  .section{
+    margin-bottom:56px;
+  }
+  .section-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 16px;
+    max-width:36ch;
+  }
+  .section-body{
+    font-size:1.06rem;
+    color:var(--ink-soft);
+    line-height:1.65;
+    max-width:62ch;
+    margin:0 0 14px;
+    white-space:pre-line;
+  }
+
+  .arrow-items{
+    margin:6px 0 20px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .arrow-items li{
+    font-size:1.03rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:22px;
+    position:relative;
+  }
+  .arrow-items li::before{
+    content:"\2192";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+
+  .traits{
+    margin:6px 0 20px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .traits li{
+    font-size:1.03rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    padding-left:22px;
+    position:relative;
+  }
+  .traits li::before{
+    content:"\2713";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+
+  /* ============ STEPS ============ */
+  .steps{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:18px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(93,15,17,0.25);
+  }
+  .step:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+  }
+  .step-num{
+    font-family:var(--font-script);
+    font-size:2.4rem;
+    color:var(--maroon);
+    line-height:1;
+  }
+  .step-title{
+    font-size:1.4rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .step-body{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:56ch;
+  }
+
+  /* ============ PRICE CARD ============ */
+  .price-card{
+    background:rgba(255,255,255,0.5);
+    border:2px solid var(--maroon);
+    border-radius:10px;
+    padding:34px 32px;
+    max-width:520px;
+  }
+  .price-range{
+    font-size:2.4rem;
+    font-weight:600;
+    color:var(--maroon);
+    line-height:1;
+    margin:0 0 10px;
+  }
+  .price-note{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-bottom:22px;
+  }
+  .price-btn{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:16px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .price-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ NOT-LIST ============ */
+  .not-note{
+    border:1px dashed rgba(93,15,17,0.4);
+    border-radius:8px;
+    padding:26px 26px;
+    max-width:70ch;
+  }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta{
+    max-width:64ch;
+  }
+  .ask-list{
+    margin:18px 0 24px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .ask-list li{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .signoff{
+    font-family:var(--font-script);
+    font-size:1.6rem;
+    color:var(--maroon);
+    margin:24px 0 6px;
+  }
+  .tagline{
+    font-size:0.98rem;
+    font-style:italic;
+    color:var(--ink-soft);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .page-title{ font-size:2.1rem; }
+    .page-lede{ font-size:1.02rem; }
+    .step{ grid-template-columns:1fr; gap:6px; }
+    .step-num{ font-size:2rem; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="about.html">About</a>
+    <a href="threads.html">Back to Home</a>
+    <a href="work-together.html">Work Together</a>
+    <a href="contact.html">Contact</a>
+    <a href="bestie.html">Why I'm Your Bestie</a>
+  </nav>
+
+  <section class="wrap">
+    <span class="eyebrow">Simplify One</span>
+    <p class="page-title">Focused One-Off Project 𑣲⋆｡˚</p>
+    <p class="page-lede">Need help with one specific content or marketing problem?</p>
+    <p class="section-body">Not every business needs a monthly social media manager. Sometimes you just need someone to look at the thing you're stuck on, figure out what needs to happen, and help you get it done.</p>
+    <p class="deco-line">͙͘͡★</p>
+    <p class="page-lede" style="margin-bottom:20px;">Ready to work together?</p>
+    <a class="hero-btn" href="https://shop.beacons.ai/annplates/14b49245-4a1a-47fa-ac47-6779cbe4cfe4" target="_blank" rel="noopener">Apply Here</a>
+
+    <div class="section">
+      <p class="section-title">Timeline ｡˚</p>
+      <p class="section-body">After the payment occurred, I onboard you in 24&ndash;48 hours. The work starts after I've received the form &mdash; it will be 10&ndash;21 days depending on what you need. (If you need it faster, message me.)</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">What I can help with 🎀</p>
+      <p class="section-body">A focused, one-off project built around what you actually need right now. Depending on the project, that might look like:</p>
+      <ul class="arrow-items">
+        <li>Content ideas or concepts</li>
+        <li>Content strategy for a specific goal</li>
+        <li>Blog posts and turning your product into blog ideas</li>
+        <li>Threads social content or Signature Series</li>
+        <li>Pinterest content + SEO</li>
+        <li>Short-form video edit</li>
+        <li>Carousels design + copy</li>
+        <li>Repurposing existing content</li>
+        <li>Mini website optimizations</li>
+        <li>A small batch of content</li>
+        <li>Content planning</li>
+        <li>Digital collages campaign</li>
+        <li>Turning something you've already created into more marketing</li>
+      </ul>
+      <p class="section-body">You don't need to choose from a giant service menu. Tell me what's going on, and we'll figure out the right scope. ✮ ⋆ ˚</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Who this is for &gt;⩊&lt;.ᐟ</p>
+      <p class="section-body">This is a good fit if:</p>
+      <ul class="traits">
+        <li>You already have a business, product, or idea you're building</li>
+        <li>You know you need help with something specific</li>
+        <li>You don't need ongoing management</li>
+        <li>You'd rather get focused help than commit to a big package</li>
+        <li>You want someone who can bring both strategy + creativity to the project</li>
+      </ul>
+      <p class="section-body">Especially for small product-based businesses, creative founders, and businesses that have something good already but need help turning it into better content. &gt;⩊&lt;.ᐟ</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">How it works ᨳଓ</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <p class="step-title">Tell me what's going on ⋆‧°𓏲</p>
+            <p class="step-body">Send me a message explaining what you're working on, what you're stuck on, and what you'd like help with. You don't need to know exactly what service you need.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <p class="step-title">We define the project 𐙚</p>
+            <p class="step-body">I'll look at what you need and recommend a focused scope. No unnecessary package. No trying to squeeze you into something you don't need.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <p class="step-title">I do the work 🧸ྀི</p>
+            <p class="step-body">Once the scope is agreed and payment is complete, I'll get to work. Most projects are completed asynchronously through email or your preferred workspace.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <p class="step-title">You get the thing you needed ✿</p>
+            <p class="step-body">You'll receive the agreed deliverables, plus any useful context or recommendations that naturally come out of the project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Investment ☆</p>
+      <div class="price-card">
+        <p class="price-range">$70&ndash;$600</p>
+        <p class="price-note">Starts from $70 up to $600. The price depends on the scope of the project. Small, focused work starts around $70, while more involved strategy + creation projects can go up to $600. I'll confirm the exact scope and price before you commit to anything.</p>
+        <a class="price-btn" href="https://shop.beacons.ai/annplates/14b49245-4a1a-47fa-ac47-6779cbe4cfe4" target="_blank" rel="noopener">Apply Here</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">What this isn't ִֶָ🦢་༘࿐</p>
+      <p class="section-body">This isn't monthly social media management. I won't automatically take over your Instagram, Pinterest, Threads, or other channels. And I don't believe every business needs someone posting constantly. Sometimes you just need the right person to come in, solve one problem, and leave you with something useful.</p>
+    </div>
+
+    <div class="section final-cta">
+      <p class="page-title">Want to work together?</p>
+      <p class="section-body">Send me a message and tell me:</p>
+      <ul class="ask-list">
+        <li>ᯓᡣ𐭩 What are you working on?</li>
+        <li>ᯓᡣ𐭩 What's feeling difficult right now?</li>
+        <li>ᯓᡣ𐭩 What would you love to have done?</li>
+      </ul>
+      <p class="section-body">I'll take it from there. 🤍</p>
+      <p class="signoff">With Love, Anna.</p>
+      <p class="tagline">You make the things. I market them.</p>
+      <br>
+      <a class="hero-btn" href="https://shop.beacons.ai/annplates/14b49245-4a1a-47fa-ac47-6779cbe4cfe4" target="_blank" rel="noopener">Apply Here</a>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">lets build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+  </div>
+
+</div>
+</body>
+</html>
