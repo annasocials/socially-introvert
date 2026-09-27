@@ -190,6 +190,87 @@
     line-height:1;
   }
 
+  /* ============ PREVIEW / SNEAK PEEK ============ */
+  .preview-section{
+    margin-bottom:56px;
+  }
+  .preview-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .preview-sub{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:56ch;
+    margin:0 0 26px;
+  }
+  .preview-card{
+    display:inline-block;
+    background:#fff;
+    border-radius:14px;
+    padding:6px;
+    box-shadow:0 12px 26px rgba(93,15,17,0.18);
+    max-width:380px;
+    transform:rotate(-1.5deg);
+  }
+  .preview-card img{
+    display:block;
+    width:100%;
+    border-radius:10px;
+  }
+  .preview-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:30px;
+  }
+  .preview-item{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .preview-item .preview-card:nth-child(1){ transform:rotate(-1.5deg); }
+  .preview-item:nth-child(2) .preview-card{ transform:rotate(1.5deg); }
+  .preview-item .preview-card{ max-width:260px; }
+  .preview-cap{
+    font-size:0.9rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-top:12px;
+  }
+  .sneak-peek{
+    margin-top:30px;
+  }
+  .sneak-peek-label{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+    max-width:56ch;
+    margin:0 0 16px;
+  }
+  .sneak-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .sneak-links a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.02em;
+    border-radius:999px;
+    padding:14px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .sneak-links a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
   /* ============ DIVIDER ============ */
   .divider{
     border:none;
@@ -274,6 +355,33 @@
         <span class="flow-node">Results and Testimonials</span>
         <span class="flow-arrow">&rarr;</span>
         <span class="flow-node flow-node--last">What We'd Do Next</span>
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <p class="preview-title">A peek at how I think about this</p>
+      <p class="preview-sub">A quick look at how one product can build a whole content world &mdash; digital collages, custom journals, the works.</p>
+      <div class="preview-row">
+        <div class="preview-item">
+          <div class="preview-card">
+            <img src="series.png" alt="Threads post: Episode 1 of sharing how a product can build a content world">
+          </div>
+          <p class="preview-cap">how one product becomes a content world</p>
+        </div>
+        <div class="preview-item">
+          <div class="preview-card">
+            <img src="services.gif" alt="A services page interaction concept">
+          </div>
+          <p class="preview-cap">a little UI concept I put together</p>
+        </div>
+      </div>
+
+      <div class="sneak-peek">
+        <p class="sneak-peek-label">Want a sneak peek before the full case studies are up? I've been sharing some of the process in these places:</p>
+        <div class="sneak-links">
+          <a href="https://www.instagram.com/stories/highlights/18116280130785267/" target="_blank" rel="noopener">Instagram Highlights &#8599;</a>
+          <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">Threads &#8599;</a>
+        </div>
       </div>
     </div>
   </section>
