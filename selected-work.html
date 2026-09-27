@@ -15,12 +15,12 @@
 </script>
 
 <title>Selected Work | Anna | Socially Introverts</title>
-<meta name="description" content="A new collection of implementation-focused projects — coming soon.">
+<meta name="description" content="Concept projects showing how one product becomes a whole content world — plus real client case studies, coming soon.">
 <link rel="canonical" href="https://sociallyintroverts.com/selected-work">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="Selected Work | Anna | Socially Introverts">
-<meta property="og:description" content="A new collection of implementation-focused projects — coming soon.">
+<meta property="og:description" content="Concept projects showing how one product becomes a whole content world — plus real client case studies, coming soon.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sociallyintroverts.com/selected-work">
 
@@ -294,6 +294,134 @@
     box-shadow:0 6px 14px rgba(93,15,17,0.20);
   }
 
+  /* ============ CONCEPT PROJECTS ============ */
+  .concept-intro{
+    max-width:66ch;
+    margin:0 0 44px;
+  }
+  .concept-intro-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 10px;
+  }
+  .concept-intro-sub{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 14px;
+  }
+  .concept-intro-question{
+    font-size:1.05rem;
+    font-style:italic;
+    color:var(--maroon);
+    line-height:1.5;
+  }
+
+  .concept-list{
+    display:flex;
+    flex-direction:column;
+    gap:34px;
+    margin-bottom:60px;
+  }
+  .concept-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:10px;
+    padding:34px 32px;
+  }
+  .concept-head{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:24px;
+  }
+  .concept-num{
+    font-family:var(--font-script);
+    font-size:2.6rem;
+    color:var(--maroon);
+    line-height:1;
+    flex:none;
+  }
+  .concept-eyebrow{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:6px;
+  }
+  .concept-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+  }
+  .concept-body{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:32px;
+    align-items:start;
+  }
+  .concept-points{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .concept-label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:5px;
+  }
+  .concept-text{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+  .concept-figure{
+    margin:0;
+    position:sticky;
+    top:24px;
+  }
+  .concept-figure img,
+  .concept-figure video{
+    display:block;
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 12px 26px rgba(93,15,17,0.18);
+  }
+  .concept-figure figcaption{
+    font-size:0.88rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-top:10px;
+    text-align:center;
+  }
+
+  .concept-closing{
+    border:1px dashed rgba(93,15,17,0.4);
+    border-radius:8px;
+    padding:26px 28px;
+    max-width:78ch;
+    margin-bottom:56px;
+  }
+  .concept-closing-title{
+    font-size:1.15rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 6px;
+  }
+  .concept-closing-body{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+
   /* ============ DIVIDER ============ */
   .divider{
     border:none;
@@ -331,6 +459,9 @@
     .process-card{ padding:28px 22px; }
     .flow-node{ font-size:0.85rem; padding:10px 16px; }
     .flow-arrow{ font-size:1.2rem; }
+    .concept-card{ padding:26px 22px; }
+    .concept-body{ grid-template-columns:1fr; }
+    .concept-figure{ position:static; order:-1; }
     .foot{ flex-direction:column; }
   }
 </style>
@@ -370,13 +501,178 @@
           <p class="preview-cap">a little UI concept I put together</p>
         </div>
       </div>
+    </div>
 
-      <div class="sneak-peek">
-        <p class="sneak-peek-label">Want a sneak peek before the full case studies are up? I've been sharing some of the process in these places:</p>
-        <div class="sneak-links">
-          <a href="https://www.instagram.com/stories/highlights/18116280130785267/" target="_blank" rel="noopener">Instagram Highlights &#8599;</a>
-          <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">Threads &#8599;</a>
+    <div class="concept-intro">
+      <p class="concept-intro-title">Concept Projects</p>
+      <p class="concept-intro-sub">Independent projects I built to show how I think &mdash; not client work, but the same process I use on every product: find what's being overlooked, build the content world around it, then actually make the pieces.</p>
+      <p class="concept-intro-question">The question each one answers: if I handed Anna my product, what would she see that I don't?</p>
+    </div>
+
+    <div class="concept-list">
+
+      <article class="concept-card">
+        <div class="concept-head">
+          <span class="concept-num">01</span>
+          <div>
+            <span class="concept-eyebrow">Concept Project &middot; Digital Wellness</span>
+            <p class="concept-title">moonveilelysium</p>
+          </div>
         </div>
+        <div class="concept-body">
+          <div class="concept-points">
+            <div class="concept-point">
+              <span class="concept-label">The product</span>
+              <p class="concept-text">Digital gratitude journals and printable wellness tools for people who want softer, more mindful days.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I noticed</span>
+              <p class="concept-text">Nobody searches "digital gratitude journal" when they actually need one &mdash; but everyone is already looking for the feeling right before that moment: overwhelmed, running on empty, craving a reset.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The opportunity</span>
+              <p class="concept-text">Sell the reset, not the PDF. Meet people inside the small mindful moments they're already having, so the journal shows up already wanted instead of cold.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The bigger content world</span>
+              <p class="concept-text">Gentle mornings &middot; slow living &middot; tiny daily rituals &middot; gratitude prompts &middot; evening wind-downs &middot; sunset reflection</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I created</span>
+              <p class="concept-text">A content system built entirely around small pauses &mdash; Gentle Reset, 3 Mindful Moments, Slow Down and Enjoy, Begin Your Day With Intentions &mdash; each piece doubling as a soft entry point into the free 7-Day Gratitude Sample.</p>
+            </div>
+          </div>
+          <figure class="concept-figure">
+            <img src="moonveilelysium.jpg" alt="moonveilelysium digital wellness Pinterest profile with gratitude journal and mindful content pins" loading="lazy">
+            <figcaption>example content &middot; Pinterest profile concept</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="concept-card">
+        <div class="concept-head">
+          <span class="concept-num">02</span>
+          <div>
+            <span class="concept-eyebrow">Concept Project &middot; Apparel</span>
+            <p class="concept-title">badmeow.co</p>
+          </div>
+        </div>
+        <div class="concept-body">
+          <div class="concept-points">
+            <div class="concept-point">
+              <span class="concept-label">The product</span>
+              <p class="concept-text">An "anti-social uniform" apparel brand &mdash; hoodies and tees for people who don't like people, powered by caffeine and corporate fatigue.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I noticed</span>
+              <p class="concept-text">The product is a t-shirt, but what people are actually buying is the feeling of being understood &mdash; the specific exhaustion of small talk, back-to-back meetings, and Mondays.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The opportunity</span>
+              <p class="concept-text">Don't market it as clothing. Market it as a mood people already relate to, and let a recurring mascot carry the joke so the brand becomes something people want to quote and share, not just wear.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The bigger content world</span>
+              <p class="concept-text">Corporate sarcasm &middot; quiet quitting humor &middot; coffee-before-people culture &middot; "professionally unavailable" &middot; WFH boundaries</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I created</span>
+              <p class="concept-text">A meme-first content identity &mdash; "for people who don't like people" &mdash; pairing product shots with deadpan captions and a recurring cat mascot so the brand reads as a personality, not a product line.</p>
+            </div>
+          </div>
+          <figure class="concept-figure">
+            <img src="badmeow.jpg" alt="badmeow.co Pinterest profile with anti-social themed apparel content and cat mascot" loading="lazy">
+            <figcaption>example content &middot; Pinterest profile concept</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="concept-card">
+        <div class="concept-head">
+          <span class="concept-num">03</span>
+          <div>
+            <span class="concept-eyebrow">Concept Project &middot; Luxury Accessories</span>
+            <p class="concept-title">Glossy &amp; Glam</p>
+          </div>
+        </div>
+        <div class="concept-body">
+          <div class="concept-points">
+            <div class="concept-point">
+              <span class="concept-label">The product</span>
+              <p class="concept-text">Designer-inspired bags, shoes and accessories, shipping worldwide from Dubai.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I noticed</span>
+              <p class="concept-text">In a crowded "affordable luxury" space, most competitors just post product photos &mdash; nothing in the feed says why the piece matters to someone's actual life.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The opportunity</span>
+              <p class="concept-text">Sell intentional luxury &mdash; a lifestyle of quiet elegance and considered spending &mdash; and give the product an aspirational world to live in instead of a plain product shot.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The bigger content world</span>
+              <p class="concept-text">Quiet luxury &middot; capsule wardrobes &middot; gifting culture &middot; luxury minimalism &middot; "our happy besties" social proof</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I created</span>
+              <p class="concept-text">A moodboard-driven content system &mdash; Intentional Luxury, Glam &amp; Love, Luxury Minimalists &mdash; positioning each piece as part of an elevated daily ritual, plus a recurring "our bag personality" series to boost engagement.</p>
+            </div>
+          </div>
+          <figure class="concept-figure">
+            <img src="glossyglam.jpg" alt="Glossy and Glam Pinterest profile with luxury accessory and intentional luxury lifestyle content" loading="lazy">
+            <figcaption>example content &middot; Pinterest profile concept</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="concept-card">
+        <div class="concept-head">
+          <span class="concept-num">04</span>
+          <div>
+            <span class="concept-eyebrow">Concept Project &middot; Pet Products</span>
+            <p class="concept-title">pupsandsuchtreats</p>
+          </div>
+        </div>
+        <div class="concept-body">
+          <div class="concept-points">
+            <div class="concept-point">
+              <span class="concept-label">The product</span>
+              <p class="concept-text">All-natural, handbaked dog treats, custom hound birthday cakes and paw balms, handcrafted in Pittsburgh, PA.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I noticed</span>
+              <p class="concept-text">The product is food for dogs, but the real driver is the owner's love for their dog &mdash; a treat photo alone doesn't sell that, but a dog's genuine reaction does.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The opportunity</span>
+              <p class="concept-text">Build the content world around "dog mom" culture instead of the treats themselves &mdash; the joy of spoiling your dog, the guilt-free good-dog moment, gifting a birthday cake to a pet.</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">The bigger content world</span>
+              <p class="concept-text">Dog mom starter packs &middot; "good dog" humor &middot; picky-eater approval &middot; breed-specific content &middot; pup-approved reviews</p>
+            </div>
+            <div class="concept-point">
+              <span class="concept-label">What I created</span>
+              <p class="concept-text">A content system that leans on real dog reactions and owner testimonials &mdash; "my picky eater loves these" &mdash; over product photography, framed as a lovable, review-driven brand people trust before they buy.</p>
+            </div>
+          </div>
+          <figure class="concept-figure">
+            <video controls playsinline poster="concept-example-poster.jpg">
+              <source src="concept-example.mp4" type="video/mp4">
+            </video>
+            <figcaption>example content &middot; Pinterest profile concept</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="concept-closing">
+      <p class="concept-closing-title">Coming soon</p>
+      <p class="concept-closing-body">A Threads Signature Series case study &mdash; plus the full Pinterest/SEO and content-build client case studies &mdash; are being documented next. Until then, I've been sharing some of the process here:</p>
+      <div class="sneak-links" style="margin-top:16px;">
+        <a href="https://www.instagram.com/stories/highlights/18116280130785267/" target="_blank" rel="noopener">Instagram Highlights &#8599;</a>
+        <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">Threads &#8599;</a>
       </div>
     </div>
   </section>
