@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#fbe7ea">
+<meta name="theme-color" content="#f5f1ee">
 
 <!-- Google tag (gtag.js) — same GA4 property as the main site -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CFRTJP9SL"></script>
@@ -30,14 +30,14 @@
 
 <style>
   :root{
-    --bg-1:#fbe7ea;
-    --bg-2:#f6dde3;
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
     --pill:#f0c3cb;
     --pill-ink:#7a2035;
-    --ink:#6b1420;
+    --ink:#5d0f11;
     --ink-soft:#4a2a2f;
-    --maroon:#7a1626;
-    --line:#7a1626;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
     --font-display:'Cormorant Garamond', serif;
     --font-script:'Beau Rivage', cursive;
   }
@@ -54,12 +54,7 @@
 
   .page{
     min-height:100vh;
-    background:
-      repeating-linear-gradient(
-        90deg,
-        var(--bg-1) 0px, var(--bg-1) 110px,
-        var(--bg-2) 110px, var(--bg-2) 220px
-      );
+    background-color:var(--bg-1);
     padding:36px 5vw 40px;
   }
 
@@ -85,7 +80,7 @@
   }
   .nav a:hover{
     transform:translateY(-2px);
-    box-shadow:0 6px 14px rgba(122,22,38,0.18);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
   }
 
   /* ============ INQUIRY HERO ============ */
@@ -127,7 +122,7 @@
   /* ============ FORM CARD ============ */
   .form-card{
     background:rgba(255,255,255,0.35);
-    border:1px solid rgba(122,22,38,0.25);
+    border:1px solid rgba(93,15,17,0.25);
     border-radius:8px;
     padding:38px 34px;
   }
@@ -161,7 +156,7 @@
     font-size:1.02rem;
     color:var(--ink);
     background:rgba(255,255,255,0.7);
-    border:1px solid rgba(122,22,38,0.3);
+    border:1px solid rgba(93,15,17,0.3);
     border-radius:4px;
     padding:13px 16px;
     outline:none;
@@ -169,7 +164,7 @@
   }
   .field input::placeholder,
   .field textarea::placeholder{
-    color:rgba(107,20,32,0.35);
+    color:rgba(93,15,17,0.35);
   }
   .field input:focus,
   .field textarea:focus,
@@ -183,7 +178,7 @@
   .field select{
     cursor:pointer;
     appearance:none;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a1626' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235d0f11' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position:right 16px center;
     padding-right:40px;
@@ -236,7 +231,7 @@
   }
   .submit-btn:hover{
     transform:translateY(-2px);
-    box-shadow:0 8px 18px rgba(122,22,38,0.25);
+    box-shadow:0 8px 18px rgba(93,15,17,0.25);
   }
 
   .form-note{
@@ -265,13 +260,13 @@
     padding:14px 14px 36px;
     width:230px;
     border-radius:2px;
-    box-shadow:0 10px 22px rgba(122,22,38,0.22);
+    box-shadow:0 10px 22px rgba(93,15,17,0.22);
     transform:rotate(-4deg);
     transition:transform .2s ease, box-shadow .2s ease;
   }
   .polaroid:hover{
     transform:translateY(-6px) rotate(0deg);
-    box-shadow:0 16px 28px rgba(122,22,38,0.28);
+    box-shadow:0 16px 28px rgba(93,15,17,0.28);
   }
   .polaroid img{
     display:block;
@@ -384,6 +379,7 @@
             <label><input type="radio" name="struggle" value="system"> I have content but no system</label>
             <label><input type="radio" name="struggle" value="instagram"> Instagram feels like a black hole</label>
             <label><input type="radio" name="struggle" value="posting"> I don't know what to post</label>
+            <label><input type="radio" name="struggle" value="sales"> I don't get any sales</label>
             <label><input type="radio" name="struggle" value="other"> Something else</label>
           </div>
         </div>
@@ -393,8 +389,8 @@
           <label for="service">Which service are you interested in?</label>
           <select id="service" name="service" required onchange="toggleBudget()">
             <option value="" disabled selected>Choose one</option>
-            <option value="simplify30">🍋 Simplify 30 — $17 trial</option>
-            <option value="simplifyone">🍊 Simplify One — $400, one thing done for you</option>
+            <option value="contentbuild">🍋 Simplify Product Content Build — $297</option>
+            <option value="simplifyone">🍊 Simplify One — $70&ndash;$600, one thing done for you</option>
             <option value="studio">🍒 Simplify Studio — $850/mo</option>
             <option value="build">🍓 Simplify Build — $3K one-time</option>
             <option value="notsure">Not sure — tell me what's right</option>
@@ -461,7 +457,7 @@
   function toggleBudget() {
     const service = document.getElementById('service').value;
     const budgetGroup = document.getElementById('budget-group');
-    // Show budget for Simplify One ($400), Studio ($850), and Build ($3K). Hide for Simplify 30 and "not sure"
+    // Show budget for Simplify One ($70-$600), Studio ($850), and Build ($3K). Hide for the fixed-price Content Build and "not sure"
     if (service === 'simplifyone' || service === 'studio' || service === 'build') {
       budgetGroup.classList.remove('hidden');
     } else {
