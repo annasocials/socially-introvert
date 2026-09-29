@@ -123,16 +123,34 @@
     .foot{ flex-direction:column; }
   }
 </style>
+
+<style id="nav-mobile">
+  /* shared nav: 3 pills, one row, mobile-first */
+  .nav-wrap{ margin-bottom:48px; }
+  .nav-brand{ display:inline-block; margin:0 0 6px; line-height:0; }
+  .nav-brand img{ display:block; height:56px; width:auto; }
+  @media (max-width:420px){ .nav-brand img{ height:48px; } }
+  .nav{ display:flex; flex-wrap:nowrap; gap:10px; margin:0 0 0; padding:8px 0; position:sticky; top:0; z-index:50; background:var(--bg-1, #f5f1ee); }
+  .nav a{ flex:1 1 0; min-width:0; padding:14px 10px; font-size:0.85rem; letter-spacing:0.02em; white-space:nowrap; background:transparent; color:var(--pill-ink, #7a2035); border:1.5px solid var(--pill-ink, #7a2035); box-shadow:none; }
+  .nav a.nav-primary{ background:var(--pill, #f0c3cb); border-color:var(--pill, #f0c3cb); }
+  .nav a.is-active{ background:var(--pill-ink, #7a2035); border-color:var(--pill-ink, #7a2035); color:#fff; }
+  .nav a.nav-primary.is-active{ background:var(--pill-ink, #7a2035); border-color:var(--pill-ink, #7a2035); color:#fff; }
+  @media (min-width:861px){ .nav{ position:static; max-width:620px; } .nav a{ flex:0 0 auto; padding:16px 30px; } }
+  @media (max-width:420px){ .nav{ gap:6px; } .nav a{ padding:13px 6px; font-size:0.76rem; letter-spacing:0.01em; } }
+  .foot{ row-gap:14px; }
+  @media (max-width:860px){ .foot a{ padding:6px 0; display:inline-block; } }
+</style>
 </head>
 <body>
 <div class="page">
+  <div class="nav-wrap">
+  <a class="nav-brand" href="threads.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
   <nav class="nav">
     <a href="about.html">About</a>
-    <a href="threads.html">Back to Home</a>
-    <a href="work-together.html">Work Together</a>
-    <a href="contact.html">Contact</a>
-    <a href="bestie.html">Why I'm Your Bestie</a>
+    <a class="nav-primary" href="work-together.html">Work Together</a>
+    <a href="inquiries.html">Inquiries</a>
   </nav>
+  </div>
 
   <div class="wrap">
     <span class="eyebrow">Simplify Studio 🍒</span>
@@ -207,7 +225,7 @@
         <p class="body">You don&rsquo;t need to know exactly what you need before reaching out.</p>
         <p class="body">Tell me what&rsquo;s happening in the business and what you&rsquo;ve been struggling to keep up with.</p>
         <p class="body">We&rsquo;ll figure out whether Studio makes sense &mdash; or whether a smaller project would be better.</p>
-        <a class="btn" href="contact.html">Ask About Studio &rarr;</a>
+        <a class="btn" href="inquiries.html">Ask About Studio &rarr;</a>
       </div>
     </div>
 
@@ -227,6 +245,8 @@
     <a href="selected-work.html">selected work</a>
     <a href="toolkit.html">behind the toolkit</a>
     <a href="tester.html">free guide</a>
+    <a href="contact.html">contact</a>
+    <a href="bestie.html">why I\'m your bestie</a>
   </div>
 
   <div class="foot" style="margin-top:14px;"><span>my own product&rsquo;s blog brought me traffic + sales. I build that for your product brands now.</span></div>
