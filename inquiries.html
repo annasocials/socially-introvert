@@ -390,9 +390,9 @@
           <select id="service" name="service" required onchange="toggleBudget()">
             <option value="" disabled selected>Choose one</option>
             <option value="contentbuild">🍋 Simplify Product Content Build — $297</option>
-            <option value="simplifyone">🍊 Simplify One — $70&ndash;$600, one thing done for you</option>
+            <option value="simplifyone">🍊 Simplify One — $70&ndash;$650, one thing done for you</option>
             <option value="studio">🍒 Simplify Studio — $850/mo</option>
-            <option value="build">🍓 Simplify Build — $3K one-time</option>
+            <option value="build">🍓 Simplify Build — $4K one-time</option>
             <option value="notsure">Not sure — tell me what's right</option>
           </select>
         </div>
@@ -457,7 +457,7 @@
   function toggleBudget() {
     const service = document.getElementById('service').value;
     const budgetGroup = document.getElementById('budget-group');
-    // Show budget for Simplify One ($70-$600), Studio ($850), and Build ($3K). Hide for the fixed-price Content Build and "not sure"
+    // Show budget for Simplify One ($70-$650), Studio ($850), and Build ($4K). Hide for the fixed-price Content Build and "not sure"
     if (service === 'simplifyone' || service === 'studio' || service === 'build') {
       budgetGroup.classList.remove('hidden');
     } else {
