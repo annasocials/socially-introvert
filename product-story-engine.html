@@ -664,12 +664,16 @@
     .sh-more{ display:none; }
   }
   @media (max-width:420px){ .promo-bar{ font-size:0.82rem; } .sh-logo img{ height:40px; } }
-  .foot{ row-gap:14px; }
-  @media (max-width:860px){ .foot a{ padding:6px 0; display:inline-block; } }
+  .foot{ justify-content:center; gap:12px 30px; text-align:center; }
+  @media (max-width:860px){
+    .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
+    .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
+    .foot a{ padding:9px 0; }
+  }
 </style>
 </head>
 <body>
-<div class="promo-bar"><a href="work-together.html#referral">Refer a product brand, earn $30&ndash;$50 by PayPal <span>See how &rarr;</span></a></div>
+<div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
 <header class="site-header" id="site-header">
   <div class="sh-row">
     <a class="sh-logo" href="threads.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
@@ -894,15 +898,14 @@
 
   <div class="foot">
     <a class="foot-loc" href="threads.html">📍 singapore + worldwide</a>
-    <a href="build-content.html">lets build your content</a>
+    <a href="build-content.html">let&rsquo;s build your content</a>
     <a href="selected-work.html">selected work</a>
     <a href="toolkit.html">behind the toolkit</a>
     <a href="tester.html">free guide</a>
     <a href="contact.html">contact</a>
-    <a href="bestie.html">why I\'m your bestie</a>
+    <a href="refer.html">refer a client</a>
+    <a href="bestie.html">why I&rsquo;m your bestie</a>
   </div>
-
-  <div class="foot" style="margin-top:14px;"><span>my own product&rsquo;s blog brought me traffic + sales. I build that for your product brands now.</span></div>
 
 </div>
 <script>
