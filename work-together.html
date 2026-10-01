@@ -282,6 +282,42 @@
   .think-flow{ font-size:1rem; font-weight:700; letter-spacing:0.04em; color:var(--maroon); line-height:1.7; margin:16px 0; max-width:60ch; }
   .think-sign{ font-family:var(--font-script); font-size:2rem; color:var(--maroon); line-height:1.3; margin-top:18px; }
 
+
+  /* ============ TICKET SERVICE CARDS ============ */
+  .tix{ display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:34px 24px; max-width:1020px; margin:0 auto 50px; padding:30px 0 40px; }
+  .tix-wrap{ width:310px; flex:none; transform-origin:center top; z-index:1; filter:drop-shadow(0px 14px 24px rgba(93,15,17,0.14)); }
+  .tix-wrap--l{ transform:translateY(14px) rotate(-5deg); }
+  .tix-wrap--r{ transform:translateY(14px) rotate(5deg); }
+  .tix-wrap--c{ z-index:2; }
+  .tix-card{
+    box-sizing:border-box; width:100%; background:#fffaf5; padding:34px 26px 30px;
+    display:flex; flex-direction:column; align-items:center;
+    -webkit-mask:radial-gradient(circle 7px at 12px 0px, transparent 7px, #000 7.5px) repeat-x 0 0 / 24px 51%, radial-gradient(circle 7px at 12px 100%, transparent 7px, #000 7.5px) repeat-x 0 100% / 24px 51%;
+            mask:radial-gradient(circle 7px at 12px 0px, transparent 7px, #000 7.5px) repeat-x 0 0 / 24px 51%, radial-gradient(circle 7px at 12px 100%, transparent 7px, #000 7.5px) repeat-x 0 100% / 24px 51%;
+  }
+  .tix-top{ min-height:26px; margin-bottom:8px; text-align:center; }
+  .tix-tag{ display:inline-block; font-size:0.72rem; letter-spacing:0.12em; font-weight:700; color:var(--maroon); text-transform:uppercase; }
+  .tix-tag--rec::after{ content:""; display:block; width:100%; height:2px; background:#d6461e; margin-top:3px; border-radius:2px; }
+  .tix-name{ font-size:1.8rem; font-weight:500; line-height:1.1; color:var(--ink); text-align:center; margin:0; }
+  .tix-rule{ width:40px; height:1px; background:rgba(93,15,17,0.35); margin:14px auto 22px; }
+  .tix-price{ font-size:3rem; font-weight:500; line-height:1; color:var(--ink); text-align:center; }
+  .tix-price small{ font-size:1.2rem; font-weight:500; color:var(--ink-soft); }
+  .tix-per{ font-size:0.88rem; color:var(--ink-soft); margin-top:10px; letter-spacing:0.03em; text-align:center; }
+  .tix-line{ width:100%; height:1px; background:rgba(93,15,17,0.3); margin:24px auto 20px; }
+  .tix-lead{ font-size:1.05rem; font-weight:600; color:var(--ink); line-height:1.35; text-align:center; margin:0 0 14px; }
+  .tix-list{ width:100%; display:flex; flex-direction:column; gap:11px; margin:0; padding:0; list-style:none; }
+  .tix-list li{ display:flex; gap:10px; align-items:flex-start; font-size:1rem; line-height:1.4; color:var(--ink-soft); }
+  .tix-list li::before{ content:""; width:4px; height:4px; border-radius:999px; background:var(--maroon); margin-top:9px; flex-shrink:0; }
+  .tix-best{ width:100%; font-size:0.92rem; font-style:italic; color:var(--ink-soft); line-height:1.4; margin-top:16px; }
+  .tix-best strong{ font-style:normal; color:var(--ink); }
+  .tix-btn{ margin-top:26px; background:var(--maroon); color:#fff; border-radius:999px; padding:13px 26px; font-size:0.82rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; text-align:center; line-height:1.25; transition:transform .15s ease, box-shadow .15s ease; }
+  .tix-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(93,15,17,0.30); }
+  @media (max-width:860px){
+    .tix{ flex-direction:column; align-items:center; gap:30px; padding:10px 0 20px; }
+    .tix-wrap--l,.tix-wrap--r{ transform:none; }
+    .tix-wrap{ width:100%; max-width:340px; }
+  }
+
   /* ============ DIVIDER ============ */
   .divider{
     border:none;
@@ -382,101 +418,53 @@
 <img src="socially_introverts_services.gif" alt="Animated services folders: full ecosystem, monthly container, one time project, finished content and blog, pilot, and free" width="1080" height="1350" style="display:block; width:100%; height:auto; border-radius:10px;">
 </div>
 
-    <div class="services">
-
-      <div class="svc">
-        <div>
-          <span class="svc-tag">30-Day Pilot</span>
-          <p class="svc-title">Threads Signature Series Pilot</p>
-          <p class="svc-oneliner"><strong>Want a quick win first?</strong></p>
-          <p class="svc-oneliner">A guided 30-day pilot for small businesses. You make the things. I help you find what your business can talk about on Threads.</p>
-          <ul class="svc-list">
-            <li>I research your brand and create eight original Threads posts for you to publish</li>
-            <li>Weekly check-ins to help you notice what is working</li>
-          </ul>
-          <p class="svc-best"><strong>Best for:</strong> small businesses who want to test their Threads direction before a bigger build.</p>
-        </div>
-        <div class="svc-buy">
-          <span class="svc-price">$17</span>
-          <span class="svc-duration">guided 30-day pilot</span>
-          <a class="svc-btn" href="pilot.html">See the Pilot</a>
-        </div>
-      </div>
-
-    <div class="svc svc--featured">
-        <div>
-          <span class="svc-tag">Story Engine</span>
-          <p class="svc-title">Simplify Product Story Engine</p>
-          <p class="svc-oneliner">You made the product. I&rsquo;ll build the path that leads people to it. One campaign, one story-driven blog and ten pieces of content, each with one job: move the right person from your feed to your website.</p>
-          <ul class="svc-list">
-            <li>Campaign map + keyword research, 4 SEO blog posts + 10 ready-to-publish social pieces</li>
-            <li>Pinterest pins for every post, all in one shared Notion hub</li>
-            <li>30-day measured report, so you can see what&rsquo;s actually working</li>
-          </ul>
-          <p class="svc-best"><strong>Best for:</strong> product makers who'd rather create than market.</p>
-        </div>
-        <div class="svc-buy">
-          <span class="svc-price">$497</span>
-          <span class="svc-duration">3-week build + 30-day tracking</span>
-          <a class="svc-btn" href="product-story-engine.html">Apply for Simplify Product Story Engine</a>
-        </div>
-      </div>
-
-      <div class="svc">
-        <div>
-          <span class="svc-tag">Focused Project</span>
-          <p class="svc-title">Simplify One</p>
-          <p class="svc-oneliner"><strong>One focused marketing problem. One useful thing built properly.</strong></p>
-          <p class="svc-oneliner">You don&rsquo;t always need a whole system.</p>
-          <p class="svc-oneliner">Sometimes you need someone to look at one thing, figure out the best way to approach it, and actually build it.</p>
-          <p class="svc-oneliner">Simplify One is for one focused project your business needs at the time. One task, one outcome, done. No bigger commitment.</p>
-        </div>
-        <div class="svc-buy">
-          <span class="svc-price">$70&ndash;$650</span>
-          <span class="svc-duration">10&ndash;21 days turnaround, depends on project</span>
-          <a class="svc-btn" href="one.html">Start Simplify One</a>
-        </div>
-      </div>
-
-
-      <div class="svc">
-        <div>
-          <span class="svc-tag">Monthly Container Build</span>
-          <p class="svc-title">Simplify Studio</p>
-          <p class="svc-oneliner"><strong>A monthly marketing + creative container.</strong></p>
-          <p class="svc-oneliner">Each month, we look at what&rsquo;s happening in your business (new products, launches, campaigns, content gaps, seasonal moments, customer questions, discovery opportunities) and decide what needs to be built. The exact mix is scoped around your business each month, rather than locking you into a fixed package of posts. You bring me what&rsquo;s happening in the business.</p>
-          <p class="svc-oneliner">I help figure out what deserves attention, then I build it with you.</p>
-          <p class="svc-best"><strong>Best for:</strong> founders who want ongoing marketing + creative support without hiring a traditional social media manager.</p>
-        </div>
-        <div class="svc-buy">
-          <span class="svc-price">$850<span>/mo</span></span>
-          <span class="svc-duration">starting at, ongoing monthly</span>
-          <a class="svc-btn" href="studio.html">Ask About Studio</a>
-        </div>
-      </div>
-
-      <div class="svc">
-        <div>
-          <span class="svc-tag">Done For You</span>
-          <p class="svc-title">Simplify Build</p>
-          <p class="svc-oneliner"><strong>A connected marketing foundation, built properly.</strong></p>
-          <p class="svc-oneliner">Sometimes the problem isn&rsquo;t that you need more content.</p>
-          <p class="svc-oneliner">The problem is that the pieces don&rsquo;t connect.</p>
-          <p class="svc-oneliner">Your website. Your content. Your search visibility. Your resources. Your discovery paths.</p>
-          <p class="svc-oneliner">Simplify Build is a focused, one-time project and 6 months support where I build the foundation that helps those pieces support one another.</p>
-          <p class="svc-oneliner">Depending on what your business needs. Everything is scoped around your business and what we&rsquo;re actually trying to build.</p>
-          <p class="svc-oneliner">This isn&rsquo;t a template you plug your business into.</p>
-          <p class="svc-oneliner">It&rsquo;s a foundation built around how you naturally create, what you sell, and how you want people to find you.</p>
-          <p class="svc-best"><strong>Best for:</strong> small visual/product-based brands that already know they need a stronger foundation and want someone to actually build it.</p>
-        </div>
-        <div class="svc-buy">
-          <span class="svc-price">$4,000</span>
-          <span class="svc-duration">starting price, one-time project</span>
-          <a class="svc-btn" href="build.html">Start a Simplify Build</a>
-        </div>
-      </div>
-
-      </div>
+<div class="tix">
+  <div class="tix-wrap tix-wrap--l"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">30-Day Pilot</span></div>
+    <p class="tix-name">Threads Signature Series Pilot</p><div class="tix-rule"></div>
+    <div class="tix-price">$17</div><div class="tix-per">guided 30-day pilot</div><div class="tix-line"></div>
+    <p class="tix-lead">Want a quick win first?</p>
+    <ul class="tix-list"><li>I research your brand and create eight original Threads posts for you to publish</li><li>Weekly check-ins to help you notice what is working</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> small businesses who want to test their Threads direction before a bigger build.</p>
+    <a class="tix-btn" href="pilot.html">See the Pilot</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--c"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag tix-tag--rec">Story Engine</span></div>
+    <p class="tix-name">Simplify Product Story Engine</p><div class="tix-rule"></div>
+    <div class="tix-price">$497</div><div class="tix-per">3-week build + 30-day tracking</div><div class="tix-line"></div>
+    
+    <ul class="tix-list"><li>One campaign, one story-driven blog and ten pieces of content, each moving the right person from your feed to your website</li><li>Campaign map + keyword research, 4 SEO blog posts + 10 ready-to-publish social pieces</li><li>Pinterest pins for every post, all in one shared Notion hub</li><li>30-day measured report, so you can see what&rsquo;s actually working</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> product makers who&rsquo;d rather create than market.</p>
+    <a class="tix-btn" href="product-story-engine.html">Apply for Product Story Engine</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--r"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Focused Project</span></div>
+    <p class="tix-name">Simplify One</p><div class="tix-rule"></div>
+    <div class="tix-price">$70&ndash;$650</div><div class="tix-per">10&ndash;21 days turnaround, depends on project</div><div class="tix-line"></div>
+    <p class="tix-lead">One focused marketing problem. One useful thing built properly.</p>
+    <ul class="tix-list"><li>You don&rsquo;t always need a whole system</li><li>One task, one outcome, done</li><li>No bigger commitment</li></ul>
+    
+    <a class="tix-btn" href="one.html">Start Simplify One</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--l"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Monthly Container Build</span></div>
+    <p class="tix-name">Simplify Studio</p><div class="tix-rule"></div>
+    <div class="tix-price">$850<small>/mo</small></div><div class="tix-per">starting at, ongoing monthly</div><div class="tix-line"></div>
+    <p class="tix-lead">A monthly marketing + creative container.</p>
+    <ul class="tix-list"><li>Each month we look at what&rsquo;s happening in your business and decide what needs to be built</li><li>Scoped around your business each month, not a fixed package of posts</li><li>You bring me what&rsquo;s happening; I help figure out what deserves attention, then build it with you</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> founders who want ongoing marketing + creative support without hiring a traditional social media manager.</p>
+    <a class="tix-btn" href="studio.html">Ask About Studio</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--r"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Done For You</span></div>
+    <p class="tix-name">Simplify Build</p><div class="tix-rule"></div>
+    <div class="tix-price">$4,000</div><div class="tix-per">starting price, one-time project</div><div class="tix-line"></div>
+    <p class="tix-lead">A connected marketing foundation, built properly.</p>
+    <ul class="tix-list"><li>Your website, content, search visibility, resources and discovery paths, connected</li><li>A focused one-time project and 6 months support</li><li>Not a template: built around how you create, what you sell, and how you want people to find you</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> small visual/product-based brands that already know they need a stronger foundation.</p>
+    <a class="tix-btn" href="build.html">Start a Simplify Build</a>
+  </div></div>
+</div>
 
     <p class="page-sub" style="margin:8px 0 14px;">I didn&rsquo;t learn this from a course. I built a blog around my own product and watched it turn into traffic and sales. Now I build that path for other product brands.</p>
 <p class="page-sub" style="margin:0 0 28px;">Ready to apply or have a question? Email <a href="mailto:sociallyintroverts@outlook.com" style="text-decoration:underline;">sociallyintroverts@outlook.com</a></p>
