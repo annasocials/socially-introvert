@@ -722,7 +722,7 @@
   var nums=[].slice.call(page.querySelectorAll('.fp-n'));
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var played=false;
-  function reset(){ played=false; page.classList.remove('is-filled'); nums.forEach(function(n){ n.textContent='0'+n.getAttribute('data-n'); }); }
+  function reset(){ if(!played) return; played=false; page.classList.remove('is-filled'); nums.forEach(function(n){ n.textContent='0'+n.getAttribute('data-n'); }); }
   function play(){
     if(played) return; played=true;
     if(reduce){ page.classList.add('is-filled'); return; }
@@ -735,8 +735,8 @@
     });
   }
   new MutationObserver(function(){
-    if(!page.hasAttribute('inert') && !page.classList.contains('is-gone')) play(); else reset();
-  }).observe(page,{attributes:true,attributeFilter:['inert','class']});
+    if(page.hasAttribute('inert')) reset(); else play();
+  }).observe(page,{attributes:true,attributeFilter:['inert']});
 })();
 </script>
 </body>
