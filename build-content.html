@@ -111,6 +111,7 @@
     line-height:1.6;
     margin:0 0 32px;
   }
+  .build-intro{ white-space:pre-line; }
   .build-intro:last-of-type{
     margin-bottom:56px;
   }
@@ -152,7 +153,7 @@
   }
   .build-step{
     display:grid;
-    grid-template-columns:100px 1fr;
+    grid-template-columns:100px 1fr 240px;
     gap:20px;
     padding-bottom:38px;
     border-bottom:1px solid rgba(93,15,17,0.25);
@@ -160,6 +161,14 @@
   .build-step:last-child{
     border-bottom:none;
     padding-bottom:0;
+  }
+  .build-img{
+    width:240px;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:8px;
+    border:1px solid rgba(93,15,17,0.25);
+    display:block;
   }
   .build-num{
     font-family:var(--font-script);
@@ -195,6 +204,43 @@
   .build-btn:hover{
     transform:translateY(-2px);
     box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ TIMELINE ============ */
+  .tl{ position:relative; margin:0 0 8px; }
+  .tl::before,.tl::after{ content:""; position:absolute; left:-9px; width:24px; height:24px; border-radius:50%; background:var(--maroon); z-index:4; }
+  .tl::before{ top:0; }
+  .tl::after{ bottom:0; }
+  .tl-row{ position:relative; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; padding:50px 0 60px; }
+  .tl-row::before,.tl-row::after{ content:""; position:absolute; box-sizing:border-box; border:0 solid var(--pill); z-index:1; pointer-events:none; }
+  .tl-text{ position:relative; z-index:3; }
+  .tl-imgwrap{ position:relative; z-index:3; display:flex; justify-content:center; }
+  .tl-img{ width:100%; max-width:380px; aspect-ratio:4/5; object-fit:cover; border-radius:24px; display:block; }
+  .tl-a .tl-text{ grid-column:1; grid-row:1; padding-left:50px; }
+  .tl-a .tl-imgwrap{ grid-column:2; grid-row:1; }
+  .tl-b .tl-text{ grid-column:2; grid-row:1; padding-right:50px; }
+  .tl-b .tl-imgwrap{ grid-column:1; grid-row:1; }
+  /* snake path: down the left edge, along the bottom to the middle, down the middle, back along the bottom to the left */
+  .tl-a::before{ left:0; top:50px; bottom:0; width:calc(50% - 50px); border-left-width:6px; border-bottom-width:6px; border-bottom-left-radius:50px; }
+  .tl-b::before{ left:50px; top:50px; bottom:0; width:calc(50% - 50px); border-right-width:6px; border-bottom-width:6px; border-bottom-right-radius:50px; }
+  .tl-b::after{ left:calc(50% - 50px); top:-6px; width:50px; height:56px; border-top-width:6px; border-right-width:6px; border-top-right-radius:50px; }
+  .tl-a:not(.tl-first)::after{ left:0; top:-6px; width:50px; height:56px; border-top-width:6px; border-left-width:6px; border-top-left-radius:50px; }
+  .tl-first::before{ top:15px; }
+  .tl-last::before{ bottom:15px; border-bottom-width:0; border-bottom-left-radius:0; }
+
+  /* fill + count-up */
+  .tl-fill{ position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:2; clip-path:inset(0 0 100% 0); }
+  .tl-fill .tl-text,.tl-fill .tl-imgwrap{ visibility:hidden; }
+  .tl-fill .tl-row::before,.tl-fill .tl-row::after{ border-color:var(--maroon); }
+  .tl-fill::before,.tl-fill::after{ display:none; }
+
+  @media (max-width:860px){
+    .tl-row{ grid-template-columns:1fr; gap:24px; padding:30px 0 40px 30px; }
+    .tl-row::before{ left:0 !important; right:auto !important; top:0 !important; bottom:0 !important; width:0 !important; border-width:0 0 0 6px !important; border-radius:0 !important; }
+    .tl-row::after{ display:none !important; }
+    .tl-a .tl-text,.tl-b .tl-text{ grid-column:1; grid-row:1; padding:0; }
+    .tl-a .tl-imgwrap,.tl-b .tl-imgwrap{ grid-column:1; grid-row:2; justify-content:flex-start; }
+    .tl-img{ max-width:340px; }
   }
 
   /* ============ DIVIDER ============ */
@@ -234,6 +280,7 @@
     .flow-node{ font-size:0.85rem; padding:10px 16px; }
     .flow-arrow{ font-size:1.2rem; }
     .build-step{ grid-template-columns:1fr; gap:6px; }
+    .build-img{ width:100%; max-width:320px; margin-top:14px; }
     .build-num{ font-size:2.4rem; }
     .foot{ flex-direction:column; }
   }
@@ -291,84 +338,90 @@
 <div class="page">
 
   <section class="build">
-    <p class="build-title">Let's build your content.</p>
+    <p class="build-title">Let&rsquo;s build your content.</p>
     <p class="build-lede">Your product has a bigger story than a product post.</p>
-    <p class="build-intro">I help you build a connected content ecosystem around what you sell so people can discover your brand through the things they already search for, care about, and consume.</p>
+    <p class="build-intro">I help product brands build a connected content world around what they sell so people can discover your brand through the things they already search for, care about, and consume.</p>
 
-    <p class="build-intro">Our product shouldn't only appear when you're trying to make a sale. We build the content around it the questions, interests, lifestyles and topics your customers already care about so your brand has more ways to be discovered.</p>
+    <p class="build-intro">Your product shouldn&rsquo;t only show up when you&rsquo;re trying to make a sale.
+We build content around the questions, interests, lifestyles, problems and topics your customers already care about creating more ways for the right people to discover your brand.</p>
 
     <div class="flow">
       <span class="flow-node">Product</span>
       <span class="flow-arrow">&rarr;</span>
       <span class="flow-node">Customer Interests</span>
       <span class="flow-arrow">&rarr;</span>
-      <span class="flow-node">Content Categories</span>
+      <span class="flow-node">Content</span>
       <span class="flow-arrow">&rarr;</span>
       <span class="flow-node">Search + Discovery</span>
       <span class="flow-arrow">&rarr;</span>
-      <span class="flow-node">Repurposing</span>
-      <span class="flow-arrow">&rarr;</span>
-      <span class="flow-node">Distribution</span>
+      <span class="flow-node">Website</span>
       <span class="flow-arrow">&rarr;</span>
       <span class="flow-node flow-node--loop">Product</span>
     </div>
 
-    <div class="build-steps">
-      <div class="build-step">
-        <span class="build-num">01</span>
-        <div>
+    <div class="tl">
+      <div class="tl-row tl-a tl-first">
+        <div class="tl-text">
+          <span class="build-num">01</span>
           <p class="build-step-title">Find your content world</p>
           <p class="build-step-body">We look beyond the product itself.
 What does your customer care about?
-What problems are they trying to solve?
+What are they trying to solve?
 What are they searching for?
-What lifestyle or interests naturally connect to your product?</p>
+What interests, habits or lifestyles naturally connect to your product?</p>
           <a class="build-btn" href="work-together.html">Content strategy + search research</a>
         </div>
+        <div class="tl-imgwrap"><img class="tl-img" src="reagan-kinsella-dupe.jpeg" alt="Laptop with a moodboard lock screen beside a matcha latte and candle" loading="lazy"></div>
       </div>
-
-      <div class="build-step">
-        <span class="build-num">02</span>
-        <div>
+      <div class="tl-row tl-b">
+        <div class="tl-text">
+          <span class="build-num">02</span>
           <p class="build-step-title">Build the content</p>
-          <p class="build-step-body">We turn those opportunities into useful content.
-Blog topics · social content · carousels · Pinterest content · short-form video · evergreen ideas</p>
+          <p class="build-step-body">We turn those opportunities into useful, discoverable content.
+Blog posts · social content · carousels · Pinterest content · short-form video · evergreen ideas</p>
           <a class="build-btn" href="work-together.html">Content planning + creation</a>
         </div>
+        <div class="tl-imgwrap"><img class="tl-img" src="alyssia-rose-dupe.jpeg" alt="Wellness planner and pen resting on a laptop" loading="lazy"></div>
       </div>
-
-      <div class="build-step">
-        <span class="build-num">03</span>
-        <div>
+      <div class="tl-row tl-a">
+        <div class="tl-text">
+          <span class="build-num">03</span>
           <p class="build-step-title">Make what you already have work harder</p>
-          <p class="build-step-body">You don't need to constantly create something new.
-I take your existing content, footage, photos and ideas and turn them into more useful marketing assets.</p>
+          <p class="build-step-body">You don&rsquo;t need to create something completely new every time you want to market your brand.
+I take the content, footage, photos and ideas you already have and find more ways to turn them into useful marketing assets.</p>
           <a class="build-btn" href="work-together.html">Content repurposing</a>
         </div>
+        <div class="tl-imgwrap"><img class="tl-img" src="emma-masur-dupe.jpeg" alt="Folded cable knit sweater, jeans and slippers on gingham linen" loading="lazy"></div>
       </div>
-
-      <div class="build-step">
-        <span class="build-num">04</span>
-        <div>
-          <p class="build-step-title">Get it discovered</p>
-          <p class="build-step-body">Creating it is only half the job.
-I help distribute your content across the channels and search surfaces where your audience can actually find it.</p>
+      <div class="tl-row tl-b">
+        <div class="tl-text">
+          <span class="build-num">04</span>
+          <p class="build-step-title">Make it easier to discover</p>
+          <p class="build-step-body">Creating the content is only part of the job.
+I help connect it to the search engines, platforms and discovery channels where your audience is already looking so your content has a chance to keep working beyond the day you publish it.</p>
           <a class="build-btn" href="work-together.html">SEO + search visibility + content distribution</a>
         </div>
+        <div class="tl-imgwrap"><img class="tl-img" src="isabella-bonnet-dupe.jpeg" alt="Hand painted Bon Appetit plate with heart shaped trinkets" loading="lazy"></div>
       </div>
-
-      <div class="build-step">
-        <span class="build-num">05</span>
-        <div>
-          <p class="build-step-title">Keep it moving</p>
-          <p class="build-step-body">Your content shouldn't disappear into a folder after you make it.
-I help organize, schedule, manage and keep the system moving.</p>
-          <a class="build-btn" href="work-together.html">Content management</a>
+      <div class="tl-row tl-a tl-last">
+        <div class="tl-text">
+          <span class="build-num">05</span>
+          <p class="build-step-title">Build the system around it</p>
+          <p class="build-step-body">Good content shouldn&rsquo;t disappear into a folder after you make it.
+We create a repeatable system for organizing, connecting and continuing the content around your products so you&rsquo;re not constantly starting from zero.</p>
+          <a class="build-btn" href="work-together.html">Content systems</a>
         </div>
+        <div class="tl-imgwrap"><img class="tl-img" src="tuany-kohler-dupe.jpeg" alt="Yogurt bowl with strawberries, blueberries and granola beside cinnamon banana toast" loading="lazy"></div>
       </div>
     </div>
-  <p class="build-intro" style="margin:56px 0 14px;">I didn&rsquo;t learn this from a course. I built a blog around my own product and watched it turn into traffic and sales. Now I build that path for other product brands.</p>
-    <p class="build-intro">Ready to apply or have a question? Email <a href="mailto:sociallyintroverts@outlook.com" style="text-decoration:underline;">sociallyintroverts@outlook.com</a></p>
+
+    <p class="build-step-title" style="margin:56px 0 10px;">Why I do this</p>
+    <p class="build-intro" style="margin:0 0 14px;">I didn&rsquo;t learn this from a course.
+I built a blog around my own product and watched it bring people into my brand through things they were already searching for and eventually toward the product itself.</p>
+    <p class="build-intro" style="margin:0 0 40px;">Now I build that same kind of path for other product brands.</p>
+
+    <p class="build-step-title" style="margin:0 0 10px;">Ready to build yours?</p>
+    <p class="build-intro">Email <a href="mailto:sociallyintroverts@outlook.com" style="text-decoration:underline;">sociallyintroverts@outlook.com</a> to apply or ask a question.</p>
   </section>
 
   <hr class="divider">
@@ -393,6 +446,35 @@ I help organize, schedule, manage and keep the system moving.</p>
   b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
   m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+<script>
+(function(){
+  var tl=document.querySelector('.tl'); if(!tl) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clone=tl.cloneNode(true); clone.className='tl tl-fill'; clone.setAttribute('aria-hidden','true');
+  [].forEach.call(clone.querySelectorAll('a,img'),function(n){ n.removeAttribute('href'); n.removeAttribute('src'); n.setAttribute('tabindex','-1'); });
+  tl.appendChild(clone);
+  function update(){
+    var r=tl.getBoundingClientRect(), vh=window.innerHeight;
+    var p=Math.max(0,Math.min(1,(vh*0.6-r.top)/r.height));
+    clone.style.clipPath='inset(0 0 '+(100-p*100)+'% 0)';
+  }
+  var tick=false;
+  function onScroll(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; update(); }); }
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); update();
+  var nums=[].slice.call(tl.querySelectorAll(':scope > .tl-row .build-num'));
+  nums.forEach(function(el){ el._to=parseInt(el.textContent,10); });
+  function count(el){
+    var to=el._to; if(reduce){ el.textContent='0'+to; return; }
+    var t0=null,dur=900;
+    function step(t){ if(!t0) t0=t; var k=Math.min(1,(t-t0)/dur); el.textContent='0'+Math.max(1,Math.round(k*to)); if(k<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); count(e.target); } }); },{threshold:0.6});
+    nums.forEach(function(el){ io.observe(el); });
+  }
 })();
 </script>
 </body>
