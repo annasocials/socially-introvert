@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f1ee">
+
+<!-- Analytics: Google Analytics (GA4) only loads after a visitor clicks Accept. See cookie-consent.js -->
+<script src="cookie-consent.js"></script>
+
+<title>Ways to Work Together | Anna | Socially Introverts</title>
+<meta name="description" content="Simplify Product Story Engine, Simplify Studio, or Simplify Build. Pick the way you want to work with Anna.">
+<link rel="canonical" href="https://sociallyintroverts.com/work-together">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Ways to Work Together | Anna | Socially Introverts">
+<meta property="og:description" content="Simplify Product Story Engine, Simplify Studio, or Simplify Build. Pick the way you want to work with Anna.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/work-together">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background-color:var(--bg-1);
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ INTRO ============ */
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .page-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 16px;
+  }
+  .page-sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:56ch;
+    line-height:1.55;
+    margin:0 0 56px;
+  }
+
+  /* ============ SERVICE CARDS ============ */
+  .services{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    margin-bottom:44px;
+  }
+  .svc{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:8px;
+    padding:32px 30px;
+    display:grid;
+    grid-template-columns:1fr 240px;
+    gap:26px;
+    align-items:start;
+  }
+  .svc--featured{
+    border:2px solid var(--maroon);
+    background:rgba(255,255,255,0.55);
+  }
+  .svc-tag{
+    display:inline-block;
+    font-size:0.68rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    background:var(--pill);
+    border-radius:999px;
+    padding:5px 14px;
+    margin-bottom:12px;
+  }
+  .svc-title{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .svc-oneliner{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin:0 0 16px;
+  }
+  .svc-list{
+    margin:0 0 16px;
+    padding:0;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .svc-list li{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.45;
+    padding-left:20px;
+    position:relative;
+  }
+  .svc-list li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--maroon);
+    font-weight:700;
+  }
+  .svc-best{
+    font-size:0.9rem;
+    font-style:italic;
+    color:var(--ink-soft);
+  }
+  .svc-best strong{
+    font-style:normal;
+    color:var(--ink);
+  }
+
+  .svc-buy{
+    background:rgba(255,255,255,0.6);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:6px;
+    padding:22px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .svc-price{
+    font-size:2.2rem;
+    font-weight:600;
+    color:var(--maroon);
+    line-height:1;
+    margin-bottom:2px;
+  }
+  .svc-price span{
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--ink-soft);
+  }
+  .svc-duration{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    margin-bottom:16px;
+  }
+  .svc-btn{
+    display:inline-block;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.9rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:13px 22px;
+    width:100%;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .svc-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ SIMPLIFY ONE NOTE ============ */
+  .one-note{
+    border:1px dashed rgba(93,15,17,0.4);
+    border-radius:8px;
+    padding:22px 26px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:56px;
+  }
+  .one-note-text{
+    max-width:56ch;
+  }
+  .one-note-title{
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .one-note-body{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .one-note-body strong{
+    color:var(--maroon);
+  }
+  .one-note-btn{
+    display:inline-block;
+    background:transparent;
+    border:1.5px solid var(--maroon);
+    color:var(--maroon);
+    font-size:0.85rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:11px 20px;
+    white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .one-note-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ NOT SURE + THINKING ============ */
+  .one-note{ margin-top:44px; margin-bottom:0; }
+  .one-note-body + .one-note-body{ margin-top:10px; }
+  .think{ margin:56px 0 0; }
+  .think-title{ font-size:2rem; font-weight:600; color:var(--ink); margin:0 0 14px; }
+  .think-body{ font-size:1.1rem; color:var(--ink-soft); line-height:1.6; max-width:60ch; margin:0 0 12px; }
+  .think-flow{ font-size:1rem; font-weight:700; letter-spacing:0.04em; color:var(--maroon); line-height:1.7; margin:16px 0; max-width:60ch; }
+  .think-sign{ font-family:var(--font-script); font-size:2rem; color:var(--maroon); line-height:1.3; margin-top:18px; }
+
+
+  /* ============ TICKET SERVICE CARDS ============ */
+  .tix{ display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:34px 24px; max-width:1020px; margin:0 auto 50px; padding:30px 0 40px; }
+  .tix-wrap{ width:310px; flex:none; transform-origin:center top; z-index:1; filter:drop-shadow(0px 14px 24px rgba(93,15,17,0.14)); }
+  .tix-wrap--l{ transform:translateY(14px) rotate(-5deg); }
+  .tix-wrap--r{ transform:translateY(14px) rotate(5deg); }
+  .tix-wrap--c{ z-index:2; }
+  .tix-card{
+    box-sizing:border-box; width:100%; background:#fffaf5; padding:34px 26px 30px;
+    display:flex; flex-direction:column; align-items:center;
+    -webkit-mask:radial-gradient(circle 7px at 12px 0px, transparent 7px, #000 7.5px) repeat-x 0 0 / 24px 51%, radial-gradient(circle 7px at 12px 100%, transparent 7px, #000 7.5px) repeat-x 0 100% / 24px 51%;
+            mask:radial-gradient(circle 7px at 12px 0px, transparent 7px, #000 7.5px) repeat-x 0 0 / 24px 51%, radial-gradient(circle 7px at 12px 100%, transparent 7px, #000 7.5px) repeat-x 0 100% / 24px 51%;
+  }
+  .tix-top{ min-height:26px; margin-bottom:8px; text-align:center; }
+  .tix-tag{ display:inline-block; font-size:0.72rem; letter-spacing:0.12em; font-weight:700; color:var(--maroon); text-transform:uppercase; }
+  .tix-tag--rec::after{ content:""; display:block; width:100%; height:2px; background:#d6461e; margin-top:3px; border-radius:2px; }
+  .tix-name{ font-size:1.8rem; font-weight:500; line-height:1.1; color:var(--ink); text-align:center; margin:0; }
+  .tix-rule{ width:40px; height:1px; background:rgba(93,15,17,0.35); margin:14px auto 22px; }
+  .tix-price{ font-size:3rem; font-weight:500; line-height:1; color:var(--ink); text-align:center; }
+  .tix-price small{ font-size:1.2rem; font-weight:500; color:var(--ink-soft); }
+  .tix-per{ font-size:0.88rem; color:var(--ink-soft); margin-top:10px; letter-spacing:0.03em; text-align:center; }
+  .tix-line{ width:100%; height:1px; background:rgba(93,15,17,0.3); margin:24px auto 20px; }
+  .tix-lead{ font-size:1.05rem; font-weight:600; color:var(--ink); line-height:1.35; text-align:center; margin:0 0 14px; }
+  .tix-list{ width:100%; display:flex; flex-direction:column; gap:11px; margin:0; padding:0; list-style:none; }
+  .tix-list li{ display:flex; gap:10px; align-items:flex-start; font-size:1rem; line-height:1.4; color:var(--ink-soft); }
+  .tix-list li::before{ content:""; width:4px; height:4px; border-radius:999px; background:var(--maroon); margin-top:9px; flex-shrink:0; }
+  .tix-best{ width:100%; font-size:0.92rem; font-style:italic; color:var(--ink-soft); line-height:1.4; margin-top:16px; }
+  .tix-best strong{ font-style:normal; color:var(--ink); }
+  .tix-btn{ margin-top:26px; background:var(--maroon); color:#fff; border-radius:999px; padding:13px 26px; font-size:0.82rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; text-align:center; line-height:1.25; transition:transform .15s ease, box-shadow .15s ease; }
+  .tix-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(93,15,17,0.30); }
+  @media (max-width:860px){
+    .tix{ flex-direction:column; align-items:center; gap:30px; padding:10px 0 20px; }
+    .tix-wrap--l,.tix-wrap--r{ transform:none; }
+    .tix-wrap{ width:100%; max-width:340px; }
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    .page-title{ font-size:2.4rem; }
+    .svc{ grid-template-columns:1fr; }
+    .one-note{ flex-direction:column; align-items:flex-start; }
+    .one-note-btn{ width:100%; text-align:center; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+
+<style id="site-header-css">
+  .promo-bar{ background:#5d0f11; color:#f5f1ee; text-align:center; font-size:0.9rem; line-height:1.3; }
+  .promo-bar a{ display:block; padding:10px 5vw; }
+  .promo-bar span{ text-decoration:underline; white-space:nowrap; }
+  .site-header{ position:sticky; top:0; z-index:100; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); }
+  .sh-row{ display:flex; align-items:center; justify-content:space-between; padding:8px 5vw; position:relative; }
+  .sh-logo{ display:block; line-height:0; }
+  .sh-logo img{ display:block; height:44px; width:auto; }
+  .sh-toggle{ width:48px; height:48px; border:0; border-radius:14px; background:var(--pill,#f0c3cb); cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:0; }
+  .sh-toggle span{ display:block; width:22px; height:2px; background:var(--pill-ink,#7a2035); border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .sh-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .sh-menu{ display:none; position:absolute; left:0; right:0; top:100%; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); padding:6px 5vw 22px; flex-direction:column; gap:10px; max-height:calc(100vh - 110px); overflow-y:auto; box-shadow:0 12px 20px rgba(93,15,17,0.10); }
+  .sh-menu.open{ display:flex; }
+  .sh-menu > a{ display:block; text-align:center; padding:15px 20px; border:1.5px solid var(--pill-ink,#7a2035); border-radius:999px; color:var(--pill-ink,#7a2035); font-size:0.95rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; }
+  .sh-menu > a.sh-primary{ background:var(--pill,#f0c3cb); border-color:var(--pill,#f0c3cb); }
+  .sh-menu > a.is-active{ background:var(--pill-ink,#7a2035); border-color:var(--pill-ink,#7a2035); color:#fff; }
+  .sh-more{ display:flex; flex-wrap:wrap; justify-content:center; gap:4px 18px; margin-top:6px; font-style:italic; font-size:1.02rem; color:var(--ink,#5d0f11); }
+  .sh-more a{ padding:8px 0; }
+  @media (min-width:861px){
+    .sh-toggle{ display:none; }
+    .sh-menu{ display:flex; position:static; flex-direction:row; gap:12px; padding:0; border:0; box-shadow:none; max-height:none; overflow:visible; background:transparent; }
+    .sh-menu > a{ padding:12px 24px; font-size:0.85rem; }
+    .sh-more{ display:none; }
+  }
+  @media (max-width:420px){ .promo-bar{ font-size:0.82rem; } .sh-logo img{ height:40px; } }
+  .foot{ justify-content:center; gap:12px 30px; text-align:center; }
+  @media (max-width:860px){
+    .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
+    .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
+    .foot a{ padding:9px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
+<header class="site-header" id="site-header">
+  <div class="sh-row">
+    <a class="sh-logo" href="index.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+    <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="sh-menu" id="sh-menu" aria-label="Main">
+      <a href="about.html">About</a>
+      <a class="sh-primary is-active" href="work-together.html">Work Together</a>
+      <a href="inquiries.html">Inquiries</a>
+      <div class="sh-more"><a href="contact.html">Contact</a><a href="bestie.html">Why I&rsquo;m your bestie</a><a href="tester.html">Free guide</a></div>
+    </nav>
+  </div>
+</header>
+<div class="page">
+
+  <div class="wrap">
+    <p class="page-title">Ways to Work Together</p>
+    <p class="page-sub" style="margin-bottom:14px;">Some brands need one focused thing. Some need content built around their products. Some want a marketing brain in the room every month. And sometimes, the foundation itself needs to be built.</p>
+    <p class="page-sub">Choose the level of support that makes sense for where your business is right now.</p>
+<p class="page-sub" style="margin-top:14px;">The path: Threads Signature Series Pilot $17 &rarr; Product Story Engine $497 &rarr; Simplify One $70&ndash;650 &rarr; Simplify Studio $850/mo &rarr; Simplify Build $4,000.</p>
+<div style="max-width:520px; margin:28px auto 36px;">
+<img src="socially_introverts_services.gif" alt="Animated services folders: full ecosystem, monthly container, one time project, finished content and blog, pilot, and free" width="1080" height="1350" style="display:block; width:100%; height:auto; border-radius:10px;">
+</div>
+
+<div class="tix">
+  <div class="tix-wrap tix-wrap--l"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">30-Day Pilot</span></div>
+    <p class="tix-name">Threads Signature Series Pilot</p><div class="tix-rule"></div>
+    <div class="tix-price">$17</div><div class="tix-per">guided 30-day pilot</div><div class="tix-line"></div>
+    <p class="tix-lead">Want a quick win first?</p>
+    <ul class="tix-list"><li>I research your brand and create eight original Threads posts for you to publish</li><li>Weekly check-ins to help you notice what is working</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> small businesses who want to test their Threads direction before a bigger build.</p>
+    <a class="tix-btn" href="pilot.html">See the Pilot</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--c"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag tix-tag--rec">Story Engine</span></div>
+    <p class="tix-name">Simplify Product Story Engine</p><div class="tix-rule"></div>
+    <div class="tix-price">$497</div><div class="tix-per">3-week build + 30-day tracking</div><div class="tix-line"></div>
+    
+    <ul class="tix-list"><li>One campaign, one story-driven blog and ten pieces of content, each moving the right person from your feed to your website</li><li>Campaign map + keyword research, 4 SEO blog posts + 10 ready-to-publish social pieces</li><li>Pinterest pins for every post, all in one shared Notion hub</li><li>30-day measured report, so you can see what&rsquo;s actually working</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> product makers who&rsquo;d rather create than market.</p>
+    <a class="tix-btn" href="product-story-engine.html">Apply for Product Story Engine</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--r"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Focused Project</span></div>
+    <p class="tix-name">Simplify One</p><div class="tix-rule"></div>
+    <div class="tix-price">$70&ndash;$650</div><div class="tix-per">10&ndash;21 days turnaround, depends on project</div><div class="tix-line"></div>
+    <p class="tix-lead">One focused marketing problem. One useful thing built properly.</p>
+    <ul class="tix-list"><li>You don&rsquo;t always need a whole system</li><li>One task, one outcome, done</li><li>No bigger commitment</li></ul>
+    
+    <a class="tix-btn" href="one.html">Start Simplify One</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--l"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Monthly Container Build</span></div>
+    <p class="tix-name">Simplify Studio</p><div class="tix-rule"></div>
+    <div class="tix-price">$850<small>/mo</small></div><div class="tix-per">starting at, ongoing monthly</div><div class="tix-line"></div>
+    <p class="tix-lead">A monthly marketing + creative container.</p>
+    <ul class="tix-list"><li>Each month we look at what&rsquo;s happening in your business and decide what needs to be built</li><li>Scoped around your business each month, not a fixed package of posts</li><li>You bring me what&rsquo;s happening; I help figure out what deserves attention, then build it with you</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> founders who want ongoing marketing + creative support without hiring a traditional social media manager.</p>
+    <a class="tix-btn" href="studio.html">Ask About Studio</a>
+  </div></div>
+  <div class="tix-wrap tix-wrap--r"><div class="tix-card">
+    <div class="tix-top"><span class="tix-tag">Done For You</span></div>
+    <p class="tix-name">Simplify Build</p><div class="tix-rule"></div>
+    <div class="tix-price">$4,000</div><div class="tix-per">starting price, one-time project</div><div class="tix-line"></div>
+    <p class="tix-lead">A connected marketing foundation, built properly.</p>
+    <ul class="tix-list"><li>Your website, content, search visibility, resources and discovery paths, connected</li><li>A focused one-time project and 6 months support</li><li>Not a template: built around how you create, what you sell, and how you want people to find you</li></ul>
+    <p class="tix-best"><strong>Best for:</strong> small visual/product-based brands that already know they need a stronger foundation.</p>
+    <a class="tix-btn" href="build.html">Start a Simplify Build</a>
+  </div></div>
+</div>
+
+    <p class="page-sub" style="margin:8px 0 14px;">I didn&rsquo;t learn this from a course. I built a blog around my own product and watched it turn into traffic and sales. Now I build that path for other product brands.</p>
+<p class="page-sub" style="margin:0 0 28px;">Ready to apply or have a question? Email <a href="mailto:sociallyintroverts@outlook.com" style="text-decoration:underline;">sociallyintroverts@outlook.com</a></p>
+<div id="referral" style="border:1px dashed rgba(93,15,17,0.4); border-radius:8px; padding:26px; max-width:70ch; margin:0 0 32px; scroll-margin-top:110px;">
+<p class="page-sub" style="font-weight:600; font-size:1.5rem; margin:0 0 10px;">Know a product brand that needs help with marketing?</p>
+<p class="page-sub" style="margin:0 0 12px;">Introduce them and I&rsquo;ll take it from there. You don&rsquo;t need to sell anything. If they book, I&rsquo;ll send you a thank-you by PayPal:</p>
+<p class="page-sub" style="margin:0 0 4px;">&rarr; Product Story Engine: $30</p>
+<p class="page-sub" style="margin:0 0 4px;">&rarr; Simplify Studio: $40</p>
+<p class="page-sub" style="margin:0 0 18px;">&rarr; Simplify Build: $50</p>
+<a class="one-note-btn" href="refer.html">Send Me the Intro</a>
+</div>
+<div class="one-note">
+      <div class="one-note-text">
+        <p class="one-note-title">Not sure which one you need?</p>
+        <p class="one-note-body">You don&rsquo;t need to arrive with the perfect brief.</p>
+        <p class="one-note-body">Tell me what you&rsquo;re selling, what&rsquo;s happening in the business, and what&rsquo;s currently making marketing harder than it should be.</p>
+        <p class="one-note-body">I&rsquo;ll help you figure out where I&rsquo;d start.</p>
+      </div>
+      <a class="one-note-btn" href="inquiries.html">Send an Inquiry</a>
+<p class="one-note-body" style="margin-top:14px;"><a href="bestie.html" style="text-decoration:underline;">How I work: why I&rsquo;m your bestie &rarr;</a></p>
+    </div>
+
+    <div class="think">
+      <p class="think-title">How I think about the work</p>
+      <p class="think-body">I don&rsquo;t start with:<br>&ldquo;What should we post this week?&rdquo;</p>
+      <p class="think-body">I start with:<br>&ldquo;What are we actually trying to market?&rdquo;</p>
+      <p class="think-body">Then we work backwards:</p>
+      <p class="think-flow">PRODUCT &rarr; MARKETING IDEA &rarr; CAMPAIGN &rarr; CONTENT &rarr; DISCOVERY &rarr; WEBSITE &rarr; PURCHASE</p>
+      <p class="think-sign">You make the things.<br>I figure out how to market them.</p>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="index.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">let&rsquo;s build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+    <a href="contact.html">contact</a>
+    <a href="refer.html">refer a client</a>
+    <a href="bestie.html">why I&rsquo;m your bestie</a>
+  <a href="threads.html">start here</a>
+  <a href="privacy.html">privacy</a>
+  <button type="button" class="cookie-reopen" data-cookie-reopen>cookie settings</button>
+  </div>
+
+</div>
+<script>
+(function(){
+  var b=document.querySelector('.sh-toggle'), m=document.getElementById('sh-menu');
+  if(!b||!m) return;
+  function set(o){ m.classList.toggle('open',o); b.setAttribute('aria-expanded',o); b.setAttribute('aria-label',o?'Close menu':'Open menu'); }
+  b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>

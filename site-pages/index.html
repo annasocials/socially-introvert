@@ -97,10 +97,8 @@
   .foot{ display:flex; flex-wrap:wrap; justify-content:center; gap:12px 30px; text-align:center; max-width:1400px; margin:0 auto; padding:0 5vw 40px; font-size:1.05rem; font-style:italic; }
   .foot a{ transition:opacity .15s ease; } .foot a:hover{ opacity:.65; }
   .foot-loc{ font-style:normal; font-weight:600; }
-  .foot-home{ display:inline-block; background:var(--pill); color:var(--pill-ink); font-style:normal; font-weight:600; font-size:0.92rem; letter-spacing:0.03em; text-transform:uppercase; border-radius:999px; padding:12px 24px; }
   @media (max-width:860px){
     .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
-    .foot-home{ grid-column:1 / -1; justify-self:start; margin-bottom:4px; }
     .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
     .foot a{ padding:9px 0; }
   }
@@ -122,8 +120,6 @@
   .door.open
   @media (max-width:860px){ .leaf{ padding:15vh 4vw 8vh; } .leaf .panel{ border-radius:999px 999px 8px 8px; }  }
 
-  .door{ animation:doorgone 0s linear 4s forwards; }
-  @keyframes doorgone{ to{ visibility:hidden; pointer-events:none; } }
   @media (prefers-reduced-motion:reduce){
     .leaf{ transition:none; } .door{ transition:none; }
   }
@@ -176,7 +172,6 @@
   <hr class="divider">
 
   <div class="foot">
-    <a class="foot-home" href="threads.html">Home</a>
     <a class="foot-loc" href="index.html">📍 singapore + worldwide</a>
     <a href="build-content.html">let&rsquo;s build your content</a>
     <a href="selected-work.html">selected work</a>
@@ -185,7 +180,8 @@
     <a href="contact.html">contact</a>
     <a href="refer.html">refer a client</a>
     <a href="bestie.html">why I&rsquo;m your bestie</a>
-    <a href="privacy.html">privacy</a>
+    <a href="threads.html">start here</a>
+  <a href="privacy.html">privacy</a>
     <button type="button" class="cookie-reopen" data-cookie-reopen>cookie settings</button>
   </div>
 </main>

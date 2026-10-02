@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f1ee">
+
+<!-- Analytics: Google Analytics (GA4) only loads after a visitor clicks Accept. See cookie-consent.js -->
+<script src="cookie-consent.js"></script>
+
+<title>Refer A Client | Anna | Socially Introverts</title>
+<meta name="description" content="Know a product-based brand that needs help with marketing? Send me the intro and I take it from there.">
+<link rel="canonical" href="https://sociallyintroverts.com/refer">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Refer A Client | Anna | Socially Introverts">
+<meta property="og:description" content="Know a product-based brand that needs help with marketing? Send me the intro and I take it from there.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/refer">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background-color:var(--bg-1);
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ CONTACT HERO ============ */
+  .contact{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .contact-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .contact-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 16px;
+    max-width:18ch;
+  }
+  .contact-title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--maroon);
+  }
+  .contact-sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:52ch;
+    line-height:1.5;
+    margin:0 0 56px;
+  }
+
+  /* ============ CONTACT GRID ============ */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:36px;
+    align-items:start;
+  }
+
+  .channels{
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:6px;
+    padding:34px 30px;
+  }
+  .channels-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .channels-body{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 28px;
+  }
+  .channel-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .channel-link{
+    display:block;
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:6px;
+    padding:14px 18px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .channel-link:hover{
+    border-color:var(--maroon);
+    transform:translateX(3px);
+  }
+  .channel-label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:4px;
+  }
+  .channel-value{
+    font-size:1.05rem;
+    color:var(--ink);
+    word-break:break-word;
+  }
+
+  /* ============ FORM ============ */
+  .form-card{
+    background:rgba(255,255,255,0.35);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:6px;
+    padding:34px 30px;
+  }
+  .form-title{
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 22px;
+  }
+  .field{
+    margin-bottom:20px;
+  }
+  .field label{
+    display:block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:8px;
+  }
+  .field input,
+  .field select,
+  .field textarea{
+    width:100%;
+    font-family:var(--font-display);
+    font-size:1.02rem;
+    color:var(--ink);
+    background:rgba(255,255,255,0.7);
+    border:1px solid rgba(93,15,17,0.3);
+    border-radius:4px;
+    padding:12px 14px;
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    border-color:var(--maroon);
+  }
+  .field textarea{
+    resize:vertical;
+    min-height:110px;
+  }
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .submit-btn{
+    width:100%;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-family:var(--font-display);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    border:none;
+    border-radius:999px;
+    padding:16px 24px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+  .form-note{
+    font-size:0.85rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:14px;
+  }
+
+  /* ============ SOCIALS ROW ============ */
+  .socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin:56px 0 0;
+  }
+  .socials a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.02em;
+    border-radius:999px;
+    padding:14px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .socials a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .contact-title{ font-size:2.4rem; }
+    .contact-sub{ font-size:1.05rem; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .field-row{ grid-template-columns:1fr; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+
+<style id="site-header-css">
+  .promo-bar{ background:#5d0f11; color:#f5f1ee; text-align:center; font-size:0.9rem; line-height:1.3; }
+  .promo-bar a{ display:block; padding:10px 5vw; }
+  .promo-bar span{ text-decoration:underline; white-space:nowrap; }
+  .site-header{ position:sticky; top:0; z-index:100; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); }
+  .sh-row{ display:flex; align-items:center; justify-content:space-between; padding:8px 5vw; position:relative; }
+  .sh-logo{ display:block; line-height:0; }
+  .sh-logo img{ display:block; height:44px; width:auto; }
+  .sh-toggle{ width:48px; height:48px; border:0; border-radius:14px; background:var(--pill,#f0c3cb); cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:0; }
+  .sh-toggle span{ display:block; width:22px; height:2px; background:var(--pill-ink,#7a2035); border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .sh-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .sh-menu{ display:none; position:absolute; left:0; right:0; top:100%; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); padding:6px 5vw 22px; flex-direction:column; gap:10px; max-height:calc(100vh - 110px); overflow-y:auto; box-shadow:0 12px 20px rgba(93,15,17,0.10); }
+  .sh-menu.open{ display:flex; }
+  .sh-menu > a{ display:block; text-align:center; padding:15px 20px; border:1.5px solid var(--pill-ink,#7a2035); border-radius:999px; color:var(--pill-ink,#7a2035); font-size:0.95rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; }
+  .sh-menu > a.sh-primary{ background:var(--pill,#f0c3cb); border-color:var(--pill,#f0c3cb); }
+  .sh-menu > a.is-active{ background:var(--pill-ink,#7a2035); border-color:var(--pill-ink,#7a2035); color:#fff; }
+  .sh-more{ display:flex; flex-wrap:wrap; justify-content:center; gap:4px 18px; margin-top:6px; font-style:italic; font-size:1.02rem; color:var(--ink,#5d0f11); }
+  .sh-more a{ padding:8px 0; }
+  @media (min-width:861px){
+    .sh-toggle{ display:none; }
+    .sh-menu{ display:flex; position:static; flex-direction:row; gap:12px; padding:0; border:0; box-shadow:none; max-height:none; overflow:visible; background:transparent; }
+    .sh-menu > a{ padding:12px 24px; font-size:0.85rem; }
+    .sh-more{ display:none; }
+  }
+  @media (max-width:420px){ .promo-bar{ font-size:0.82rem; } .sh-logo img{ height:40px; } }
+  .foot{ justify-content:center; gap:12px 30px; text-align:center; }
+  @media (max-width:860px){
+    .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
+    .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
+    .foot a{ padding:9px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
+<header class="site-header" id="site-header">
+  <div class="sh-row">
+    <a class="sh-logo" href="index.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+    <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="sh-menu" id="sh-menu" aria-label="Main">
+      <a href="about.html">About</a>
+      <a class="sh-primary" href="work-together.html">Work Together</a>
+      <a href="inquiries.html">Inquiries</a>
+      <div class="sh-more"><a href="contact.html">Contact</a><a href="bestie.html">Why I&rsquo;m your bestie</a><a href="tester.html">Free guide</a></div>
+    </nav>
+  </div>
+</header>
+<div class="page">
+
+  <section class="contact">
+    <span class="contact-eyebrow">Refer A Client</span>
+    <p class="contact-title">Send me the <em>intro.</em></p>
+    <p class="contact-sub">Know a product-based brand that needs help with marketing? Just introduce them. You don&rsquo;t need to sell anything, I take it from there.</p>
+
+    <div class="contact-grid" style="grid-template-columns:1fr;max-width:720px;">
+      <form id="si-refer-form" class="form-card">
+        <p class="form-title">Refer a client</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="rname">Your name</label>
+            <input id="rname" name="rname" type="text" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="remail">Your email</label>
+            <input id="remail" name="remail" type="email" placeholder="you@email.com" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">Your referral&rsquo;s name</label>
+            <input id="fname" name="fname" type="text" placeholder="Their name" required>
+          </div>
+          <div class="field">
+            <label for="femail">Your referral&rsquo;s email</label>
+            <input id="femail" name="femail" type="email" placeholder="their@email.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fsocial">Your referral&rsquo;s social media (optional)</label>
+          <input id="fsocial" name="fsocial" type="text" placeholder="@theirhandle or profile link">
+        </div>
+
+        <div class="field">
+          <label for="fservice">Which service are they interested in?</label>
+          <select id="fservice" name="fservice" required>
+            <option value="" disabled selected>Choose an option</option>
+            <option>Product Story Engine ($30 for you)</option>
+            <option>Simplify Studio ($40 for you)</option>
+            <option>Simplify Build ($50 for you)</option>
+            <option>Not sure, you decide</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="paypal">Your PayPal email (optional)</label>
+          <input id="paypal" name="paypal" type="email" placeholder="So I can send your thank-you if they book">
+        </div>
+
+        <div class="field">
+          <label for="fnote">Anything you&rsquo;d like me to know?</label>
+          <textarea id="fnote" name="fnote" placeholder="Optional"></textarea>
+        </div>
+
+        <p class="form-note" style="text-align:left;margin:0 0 20px;">By submitting this referral, you confirm that you&rsquo;ve introduced this person to Socially Introverts and have permission to share their contact information.</p>
+
+        <button type="submit" class="submit-btn">Send Referral</button>
+        <p class="form-note">Submitting opens a pre-filled email in your default email app.</p>
+      </form>
+    </div>
+
+    <p class="contact-sub" style="margin:36px 0 0;">If they book, I&rsquo;ll send you a thank-you by PayPal: $30 for Product Story Engine, $40 for Simplify Studio, $50 for Simplify Build.</p>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="index.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">let&rsquo;s build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+    <a href="contact.html">contact</a>
+    <a href="refer.html">refer a client</a>
+    <a href="bestie.html">why I&rsquo;m your bestie</a>
+  <a href="threads.html">start here</a>
+  <a href="privacy.html">privacy</a>
+  <button type="button" class="cookie-reopen" data-cookie-reopen>cookie settings</button>
+  </div>
+
+</div>
+
+<script>
+  const referForm = document.getElementById('si-refer-form');
+  if (referForm) {
+    referForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const d = new FormData(referForm);
+      const subject = `Client referral from ${d.get('rname')}`;
+      const body = [
+        `Referred by: ${d.get('rname')} (${d.get('remail')})`,
+        `PayPal for thank-you: ${d.get('paypal') || 'not provided'}`,
+        '',
+        `Referral: ${d.get('fname')} (${d.get('femail')})`,
+        `Social: ${d.get('fsocial') || 'not provided'}`,
+        `Interested in: ${d.get('fservice')}`,
+        '',
+        'Notes:',
+        d.get('fnote') || '-',
+        '',
+        'The referrer confirmed they have introduced this person and have permission to share their contact information.'
+      ].join('\n');
+      window.location.href = `mailto:sociallyintroverts@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
+</script>
+
+<script>
+(function(){
+  var b=document.querySelector('.sh-toggle'), m=document.getElementById('sh-menu');
+  if(!b||!m) return;
+  function set(o){ m.classList.toggle('open',o); b.setAttribute('aria-expanded',o); b.setAttribute('aria-label',o?'Close menu':'Open menu'); }
+  b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>

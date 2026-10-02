@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f1ee">
+
+<!-- Analytics: Google Analytics (GA4) only loads after a visitor clicks Accept. See cookie-consent.js -->
+<script src="cookie-consent.js"></script>
+
+<title>Threads Signature Series Pilot | Anna | Socially Introverts</title>
+<meta name="description" content="A $17 guided 30-day pilot for small businesses. I research your brand, create eight original Threads posts, then check in weekly to help you notice what is working.">
+<link rel="canonical" href="https://sociallyintroverts.com/pilot">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Threads Signature Series Pilot | Anna | Socially Introverts">
+<meta property="og:description" content="A $17 guided 30-day pilot for small businesses. You make the things. I help you find what your business can talk about on Threads.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/pilot">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background-color:var(--bg-1);
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ HERO ============ */
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .page-title{
+    font-size:3.2rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+    max-width:22ch;
+  }
+  .page-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:36ch;
+    line-height:1.4;
+    margin:0 0 12px;
+  }
+  .page-sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:56ch;
+    line-height:1.6;
+    margin:0 0 36px;
+  }
+
+  .banner{
+    display:block;
+    width:100%;
+    max-width:900px;
+    margin:0 0 56px;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid rgba(93,15,17,0.25);
+    box-shadow:0 14px 30px rgba(74,20,30,0.16);
+  }
+  .banner img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  /* ============ HOOK + HOW ============ */
+  .hook{
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.3;
+    max-width:32ch;
+    margin:0 0 16px;
+  }
+  .hook-body{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    line-height:1.65;
+    max-width:62ch;
+    margin:0 0 56px;
+  }
+
+  .hook-body--tight{ margin-bottom:20px; }
+
+  /* ============ PRICE CARD ============ */
+  .price-card{
+    background:rgba(255,255,255,0.5);
+    border:2px solid var(--maroon);
+    border-radius:10px;
+    padding:34px 32px;
+    max-width:520px;
+    margin-bottom:56px;
+  }
+  .price-cta{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 12px;
+  }
+  .price-range{
+    font-size:2.4rem;
+    font-weight:600;
+    color:var(--maroon);
+    line-height:1;
+    margin:0 0 6px;
+  }
+  .price-note{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-bottom:22px;
+  }
+  .price-btn{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:16px 24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .price-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  .signoff{
+    font-family:var(--font-script);
+    font-size:2.2rem;
+    color:var(--maroon);
+    line-height:1.3;
+  }
+
+  /* ============ DETAILS (added copy) ============ */
+  .detail-section{ margin:0 0 56px; }
+  .detail-title{ font-size:1.9rem; font-weight:600; color:var(--ink); line-height:1.3; margin:0 0 16px; }
+  .detail-body{ font-size:1.12rem; color:var(--ink-soft); line-height:1.65; max-width:62ch; margin:0 0 14px; }
+  .detail-list{ margin:6px 0 20px; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; max-width:62ch; }
+  .detail-list li{ font-size:1.05rem; color:var(--ink-soft); line-height:1.5; padding-left:22px; position:relative; }
+  .detail-list li::before{ content:"\2192"; position:absolute; left:0; color:var(--maroon); font-weight:700; }
+  .detail-list--plain li{ padding-left:0; }
+  .detail-list--plain li::before{ content:none; }
+  .detail-steps{ display:flex; flex-direction:column; gap:30px; }
+  .detail-step{ display:grid; grid-template-columns:90px 1fr; gap:18px; padding-bottom:30px; border-bottom:1px solid rgba(93,15,17,0.25); }
+  .detail-step:last-child{ border-bottom:none; padding-bottom:0; }
+  .detail-num{ font-family:var(--font-script); font-size:2.4rem; color:var(--maroon); line-height:1; }
+  .detail-step-title{ font-size:1.4rem; font-weight:600; color:var(--ink); margin:0 0 8px; }
+  .detail-step-body{ font-size:1.02rem; color:var(--ink-soft); line-height:1.6; max-width:58ch; margin:0 0 10px; }
+  @media (max-width:860px){
+    .detail-title{ font-size:1.5rem; }
+    .detail-step{ grid-template-columns:1fr; gap:6px; }
+    .detail-num{ font-size:2rem; }
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .page-title{ font-size:2.3rem; }
+    .page-lede{ font-size:1.3rem; max-width:none; }
+    .hook{ font-size:1.5rem; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+
+<style id="site-header-css">
+  .promo-bar{ background:#5d0f11; color:#f5f1ee; text-align:center; font-size:0.9rem; line-height:1.3; }
+  .promo-bar a{ display:block; padding:10px 5vw; }
+  .promo-bar span{ text-decoration:underline; white-space:nowrap; }
+  .site-header{ position:sticky; top:0; z-index:100; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); }
+  .sh-row{ display:flex; align-items:center; justify-content:space-between; padding:8px 5vw; position:relative; }
+  .sh-logo{ display:block; line-height:0; }
+  .sh-logo img{ display:block; height:44px; width:auto; }
+  .sh-toggle{ width:48px; height:48px; border:0; border-radius:14px; background:var(--pill,#f0c3cb); cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:0; }
+  .sh-toggle span{ display:block; width:22px; height:2px; background:var(--pill-ink,#7a2035); border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .sh-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .sh-menu{ display:none; position:absolute; left:0; right:0; top:100%; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); padding:6px 5vw 22px; flex-direction:column; gap:10px; max-height:calc(100vh - 110px); overflow-y:auto; box-shadow:0 12px 20px rgba(93,15,17,0.10); }
+  .sh-menu.open{ display:flex; }
+  .sh-menu > a{ display:block; text-align:center; padding:15px 20px; border:1.5px solid var(--pill-ink,#7a2035); border-radius:999px; color:var(--pill-ink,#7a2035); font-size:0.95rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; }
+  .sh-menu > a.sh-primary{ background:var(--pill,#f0c3cb); border-color:var(--pill,#f0c3cb); }
+  .sh-menu > a.is-active{ background:var(--pill-ink,#7a2035); border-color:var(--pill-ink,#7a2035); color:#fff; }
+  .sh-more{ display:flex; flex-wrap:wrap; justify-content:center; gap:4px 18px; margin-top:6px; font-style:italic; font-size:1.02rem; color:var(--ink,#5d0f11); }
+  .sh-more a{ padding:8px 0; }
+  @media (min-width:861px){
+    .sh-toggle{ display:none; }
+    .sh-menu{ display:flex; position:static; flex-direction:row; gap:12px; padding:0; border:0; box-shadow:none; max-height:none; overflow:visible; background:transparent; }
+    .sh-menu > a{ padding:12px 24px; font-size:0.85rem; }
+    .sh-more{ display:none; }
+  }
+  @media (max-width:420px){ .promo-bar{ font-size:0.82rem; } .sh-logo img{ height:40px; } }
+  .foot{ justify-content:center; gap:12px 30px; text-align:center; }
+  @media (max-width:860px){
+    .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
+    .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
+    .foot a{ padding:9px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
+<header class="site-header" id="site-header">
+  <div class="sh-row">
+    <a class="sh-logo" href="index.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+    <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="sh-menu" id="sh-menu" aria-label="Main">
+      <a href="about.html">About</a>
+      <a class="sh-primary" href="work-together.html">Work Together</a>
+      <a href="inquiries.html">Inquiries</a>
+      <div class="sh-more"><a href="contact.html">Contact</a><a href="bestie.html">Why I&rsquo;m your bestie</a><a href="tester.html">Free guide</a></div>
+    </nav>
+  </div>
+</header>
+<div class="page">
+
+  <section class="wrap">
+    <span class="eyebrow">Threads Signature Series 🍰</span>
+    <p class="page-title">Threads Signature Series 30 Days Pilot ★</p>
+    <p class="page-lede">A $17 guided 30-day pilot for small businesses.</p>
+    <p class="page-sub">You make the things. I help you find what your business can talk about on Threads. 𑣲⋆。 ̊</p>
+
+    <div class="banner">
+      <img src="threads.png" alt="Threads Signature Series Pilot by Anna: build one recognizable idea hiding inside your business and repeatable bingeable content">
+    </div>
+
+    <p class="hook">What if one recognizable idea could be more than just engagement?</p>
+    <p class="hook-body hook-body--tight">It&rsquo;s the reason people follow you, talk to you, collab with you, eventually hire you, send you referrals and bring in consistent sales.</p>
+
+    <p class="hook-body">I research your brand, create eight original Threads posts for you to publish over 30 days, then check in weekly to help you notice what is working.</p>
+
+    <div class="detail-section">
+    <p class="detail-body">I look at your actual business, existing public content, products, and goals before I write anything.</p>
+    <p class="detail-body">I look for :</p>
+    <ul class="detail-list detail-list--plain">
+      <li>☆ founder opinions</li>
+      <li>☆ stories</li>
+      <li>☆ expertise</li>
+      <li>☆ processes</li>
+      <li>☆ weird little details</li>
+      <li>☆ customer questions</li>
+      <li>☆ behind-the-scenes</li>
+      <li>☆ things the founder naturally talks about</li>
+      <li>☆ perspectives your target audiences could keep coming back to</li>
+    </ul>
+    <p class="detail-body">After payment, you will receive the onboarding form. You have more to talk about than “here is my product/my offer.” 🍦</p>
+    <p class="detail-body">If you run a small product-based and creative services business, threads can be a place to share the stories, thoughts, decisions, customer questions, personality, and little details behind what you make. But knowing what to say is usually the hard part. That is what this is for.</p>
+    <p class="detail-body">I will research your business and public online presence, create eight original Threads posts tailored to your brand, then support you with short weekly check-ins while you test the content over 30 days. 🍬</p>
+    <p class="detail-body">You stay in control of your account. I give you the direction, content, and guidance. You make the things. I find what we can keep talking about that led you to the right audiences.</p>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">What you receive 🍪</p>
+    <p class="detail-body">For $17, you will receive :</p>
+    <ul class="detail-list">
+      <li>A short onboarding form so I can understand your business, products, goals, voice, and audience.</li>
+      <li>Research into your public online presence.</li>
+      <li>Review of your Threads, Instagram, website/shop, product pages, and other relevant public platforms.</li>
+      <li>A mini Threads content direction based on what I find.</li>
+      <li>Eight original, ready-to-post Threads posts.</li>
+      <li>A mix of content tailored to your business founder stories, product perspectives, customer questions, useful posts, observations, conversation starters, and soft promotional posts.</li>
+      <li>One repeatable signature-series direction that fits your business.</li>
+      <li>A suggested 30-day posting rhythm two posts per week for four weeks.</li>
+      <li>Four short async weekly check-ins via email.</li>
+      <li>A final 30-day recap with what seemed to work, what to keep testing, and a recommended next step.</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">How it works ⋆.˚✮🎧✮˚.⋆</p>
+    <div class="detail-steps">
+      <div class="detail-step">
+        <span class="detail-num">01</span>
+        <div>
+          <p class="detail-step-title">Purchase</p>
+          <p class="detail-step-body">Purchase the Threads Signature Series Pilot for $17 through the payment link.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">02</span>
+        <div>
+          <p class="detail-step-title">Onboarding</p>
+          <p class="detail-step-body">After payment, you will receive a short form. You will share your business links, what you sell, what you want Threads to help with, and any screenshots or context that will help me understand your business.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">03</span>
+        <div>
+          <p class="detail-step-title">Research</p>
+          <p class="detail-step-body">I review the public places your business already exists your Threads, Instagram, website, shop, product pages, other relevant platforms, current offers, and the conversations around what you sell.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">04</span>
+        <div>
+          <p class="detail-step-title">Content direction</p>
+          <p class="detail-step-body">I identify what your business could meaningfully talk about on Threads beyond “here is my product.”</p>
+          <p class="detail-step-body">I look for stories, customer questions, founder perspective, product details, useful ideas, lifestyle connections, and conversations that could make people want to reply, follow, or learn more.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">05</span>
+        <div>
+          <p class="detail-step-title">Your eight posts</p>
+          <p class="detail-step-body">I create eight original Threads posts based on the strongest direction for your business. The posts are written for you to copy, paste, adapt if needed, and publish from your own account.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">06</span>
+        <div>
+          <p class="detail-step-title">Delivery</p>
+          <p class="detail-step-body">You receive your content in one organized Google Doc within 7-9 business days after I receive your completed onboarding form.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">07</span>
+        <div>
+          <p class="detail-step-title">30-day testing</p>
+          <p class="detail-step-body">You publish two posts per week for four weeks. At the end of each week, you send screenshots of the posts you published and their insights. I send a short written notes check-in with what I noticed and what I recommend testing next.</p>
+        </div>
+      </div>
+      <div class="detail-step">
+        <span class="detail-num">08</span>
+        <div>
+          <p class="detail-step-title">Final recap</p>
+          <p class="detail-step-body">At the end of 30 days, you receive a simple recap of the content patterns that seem most promising for your business. You can use the direction independently, book a deeper project, or ask about ongoing Threads support. No pressure.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">What I track with you ᨳଓ</p>
+    <p class="detail-body">We are looking for useful patterns, including :</p>
+    <ul class="detail-list">
+      <li>Which post topics get the most real replies.</li>
+      <li>Which posts make people visit your profile or follow you.</li>
+      <li>Which posts create product questions, DMs, or interest in your business.</li>
+      <li>Which content format feels most natural for you to publish.</li>
+      <li>Which stories, founder thoughts, or customer questions people care about.</li>
+      <li>Whether there is a repeatable series worth continuing.</li>
+      <li>What to do more of, less of, or test differently next month.</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">What this is not ⋆.𐙚 ̊.</p>
+    <p class="detail-body">This is a guided content pilot, not Threads account management.</p>
+    <p class="detail-body">You will publish the posts from your own account.</p>
+    <p class="detail-body">I do not:</p>
+    <ul class="detail-list">
+      <li>Log into your Threads account.</li>
+      <li>Schedule or publish your posts.</li>
+      <li>Reply to comments, quotes, or DMs.</li>
+      <li>Do customer service or sales conversations for your business.</li>
+      <li>Engage daily on your behalf.</li>
+      <li>Create additional posts during the 30 days.</li>
+      <li>Monitor your account every day.</li>
+      <li>Guarantee views, followers, leads, website traffic, or sales.</li>
+    </ul>
+    <p class="detail-body">The goal is to give you a clear, thoughtful sample of how your business could show up on Threads and help you learn from the first month of testing it.</p>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">This is a good fit if 𝄞⨾💿✮˚.⋆</p>
+    <ul class="detail-list">
+      <li>You sell products, handmade goods, digital products, art, creative services, or something with a story behind it.</li>
+      <li>You want to test Threads but do not know what to post.</li>
+      <li>You are tired of posting only product announcements.</li>
+      <li>Likes the idea of a repeatable series</li>
+      <li>You want content that sounds human and specific to your business.</li>
+      <li>Doesn't want to constantly invent new post ideas</li>
+      <li>You want a low-risk way to experience my content thinking before investing in a larger project.</li>
+      <li>You are willing to publish two posts per week and send quick screenshots for the weekly check-ins.</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">This may not be for you if ִֶָ🪽་༘</p>
+    <ul class="detail-list">
+      <li>You need someone to publish, schedule, reply, or manage your account.</li>
+      <li>You want guaranteed sales, follower growth, or viral reach.</li>
+      <li>You need daily posts or a high-volume content package.</li>
+      <li>You want unlimited revisions or ongoing custom advice.</li>
+      <li>You cannot commit to publishing at least two posts per week during the test.</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">Important details ❦</p>
+    <ul class="detail-list">
+      <li>Price: $17</li>
+      <li>Content delivery: Within 7-9 business days after payment and completed onboarding.</li>
+      <li>Test period: 30 days from the date you receive your content.</li>
+      <li>Number of posts: Eight original Threads posts.</li>
+      <li>Posting rhythm: Two posts per week for four weeks.</li>
+      <li>Check-ins: Four async weekly check-ins.</li>
+      <li>Communication : Email and Google doc async workspace.</li>
+      <li>Revisions : Factual corrections only, such as product names, product details, prices, links, or launch dates.</li>
+      <li>Results: No views, follower, inquiry, or sales results are guaranteed.</li>
+      <li>Refunds : Because this is a custom research and content-creation service, NO refunds available.</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">Ready to test your Threads direction? 🍋</p>
+    <p class="detail-body">Book the Threads Signature Series Pilot for $17.</p>
+    <p class="detail-body">Then tell me what you make, what you want to grow, and what feels hardest about content right now.</p>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-title">Why email only?</p>
+    <p class="detail-body">I intentionally designed this pilot to be asynchronous. 🍒</p>
+    <p class="detail-body">The 30-day test starts when your content is delivered not when you pay.</p>
+    <ul class="detail-list detail-list--plain">
+      <li>01 . Welcome + Onboarding (24-48 hours after you pay)</li>
+      <li>02.  Your Threads Posts + 30-Day Plan (7-9 business days after onboarding)</li>
+      <li>03.  Performance Tracker + Weekly Scorecards (Weekly Check-in)</li>
+    </ul>
+    </div>
+
+    <div class="detail-section">
+    <p class="detail-body">A signature series is a continuous theme hiding inside your business that you can build repeatedly with different angles. It is one content format your business can keep returning to because it is naturally connected to your products, perspective, audience, and story.</p>
+    </div>
+
+    <div class="price-card">
+      <p class="price-cta">Ready to test your Threads direction?</p>
+      <p class="price-range">$17</p>
+      <p class="price-note">A guided 30-day pilot. Eight original Threads posts, weekly check-ins.</p>
+      <a class="price-btn" href="https://shop.beacons.ai/annplates/a2106907-153f-4e54-9ff9-8d3d5feabfb9" target="_blank" rel="noopener">Apply Here</a>
+    </div>
+
+    <p class="detail-body">I didn&rsquo;t learn this from a course. I built a blog around my own product and watched it turn into traffic and sales. Now I build that path for other product brands.</p>
+<p class="detail-body">Ready to apply or have a question? Email <a href="mailto:sociallyintroverts@outlook.com" style="text-decoration:underline;">sociallyintroverts@outlook.com</a></p>
+<p class="signoff">With Love, Anna.</p>
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="index.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">let&rsquo;s build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+    <a href="contact.html">contact</a>
+    <a href="refer.html">refer a client</a>
+    <a href="bestie.html">why I&rsquo;m your bestie</a>
+  <a href="threads.html">start here</a>
+  <a href="privacy.html">privacy</a>
+  <button type="button" class="cookie-reopen" data-cookie-reopen>cookie settings</button>
+  </div>
+
+</div>
+<script>
+(function(){
+  var b=document.querySelector('.sh-toggle'), m=document.getElementById('sh-menu');
+  if(!b||!m) return;
+  function set(o){ m.classList.toggle('open',o); b.setAttribute('aria-expanded',o); b.setAttribute('aria-label',o?'Close menu':'Open menu'); }
+  b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>

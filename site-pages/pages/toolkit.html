@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f1ee">
+
+<!-- Analytics: Google Analytics (GA4) only loads after a visitor clicks Accept. See cookie-consent.js -->
+<script src="cookie-consent.js"></script>
+
+<title>Behind the Toolkit | Anna | Socially Introverts</title>
+<meta name="description" content="The tools behind the work: research, strategy, content creation, analytics and distribution, matched to what each project actually needs.">
+<link rel="canonical" href="https://sociallyintroverts.com/toolkit">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Behind the Toolkit | Anna | Socially Introverts">
+<meta property="og:description" content="The tools behind the work: research, strategy, content creation, analytics and distribution, matched to what each project actually needs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sociallyintroverts.com/toolkit">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5f1ee;
+    --bg-2:#efe9e4;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --line:#5d0f11;
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    color:var(--ink);
+    font-family:var(--font-display);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  p{ margin:0; }
+
+  .page{
+    min-height:100vh;
+    background-color:var(--bg-1);
+    padding:36px 5vw 40px;
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:64px;
+  }
+  .nav a{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-align:center;
+    border-radius:999px;
+    padding:16px 26px;
+    line-height:1.2;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(93,15,17,0.20);
+  }
+
+  /* ============ TOOLKIT SECTION ============ */
+  .toolkit{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .toolkit-eyebrow{
+    font-family:var(--font-script);
+    font-size:1.8rem;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:8px;
+  }
+  .toolkit-title{
+    font-size:3.4rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.1;
+    margin:0 0 18px;
+  }
+  .toolkit-lede{
+    font-size:1.6rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    max-width:40ch;
+    line-height:1.4;
+    margin:0 0 20px;
+  }
+  .toolkit-intro{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+    line-height:1.6;
+    margin:0 0 56px;
+  }
+
+  /* ============ TOOL CATEGORIES ============ */
+  .toolkit-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:26px;
+    margin-bottom:44px;
+  }
+  .tool-card{
+    background:rgba(255,255,255,0.4);
+    border:1px solid rgba(93,15,17,0.25);
+    border-radius:8px;
+    padding:28px 26px;
+  }
+  .tool-num{
+    font-family:var(--font-script);
+    font-size:2.2rem;
+    color:var(--maroon);
+    line-height:1;
+    display:block;
+    margin-bottom:10px;
+  }
+  .tool-cat{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .tool-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .tool-pill{
+    background:var(--pill);
+    color:var(--pill-ink);
+    font-size:0.9rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    border-radius:999px;
+    padding:9px 16px;
+    line-height:1.2;
+  }
+
+  /* ============ NOTE ============ */
+  .toolkit-note{
+    border:1px dashed rgba(93,15,17,0.4);
+    border-radius:8px;
+    padding:22px 26px;
+    max-width:76ch;
+  }
+  .toolkit-note-title{
+    font-size:1.15rem;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 6px;
+  }
+  .toolkit-note-body{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+
+  /* ============ DIVIDER ============ */
+  .divider{
+    border:none;
+    border-top:2px solid var(--line);
+    max-width:1400px;
+    margin:56px auto 26px;
+  }
+
+  /* ============ FOOTER ============ */
+  .foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+    font-size:1.05rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .foot a{ transition:opacity .15s ease; }
+  .foot a:hover{ opacity:0.65; }
+  .foot-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-style:normal;
+    font-weight:600;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:860px){
+    .toolkit-title{ font-size:2.4rem; }
+    .toolkit-lede{ font-size:1.3rem; max-width:none; }
+    .toolkit-grid{ grid-template-columns:1fr; }
+    .foot{ flex-direction:column; }
+  }
+</style>
+
+<style id="site-header-css">
+  .promo-bar{ background:#5d0f11; color:#f5f1ee; text-align:center; font-size:0.9rem; line-height:1.3; }
+  .promo-bar a{ display:block; padding:10px 5vw; }
+  .promo-bar span{ text-decoration:underline; white-space:nowrap; }
+  .site-header{ position:sticky; top:0; z-index:100; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); }
+  .sh-row{ display:flex; align-items:center; justify-content:space-between; padding:8px 5vw; position:relative; }
+  .sh-logo{ display:block; line-height:0; }
+  .sh-logo img{ display:block; height:44px; width:auto; }
+  .sh-toggle{ width:48px; height:48px; border:0; border-radius:14px; background:var(--pill,#f0c3cb); cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:0; }
+  .sh-toggle span{ display:block; width:22px; height:2px; background:var(--pill-ink,#7a2035); border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .sh-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .sh-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .sh-menu{ display:none; position:absolute; left:0; right:0; top:100%; background:var(--bg-1,#f5f1ee); border-bottom:1px solid rgba(93,15,17,0.15); padding:6px 5vw 22px; flex-direction:column; gap:10px; max-height:calc(100vh - 110px); overflow-y:auto; box-shadow:0 12px 20px rgba(93,15,17,0.10); }
+  .sh-menu.open{ display:flex; }
+  .sh-menu > a{ display:block; text-align:center; padding:15px 20px; border:1.5px solid var(--pill-ink,#7a2035); border-radius:999px; color:var(--pill-ink,#7a2035); font-size:0.95rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; }
+  .sh-menu > a.sh-primary{ background:var(--pill,#f0c3cb); border-color:var(--pill,#f0c3cb); }
+  .sh-menu > a.is-active{ background:var(--pill-ink,#7a2035); border-color:var(--pill-ink,#7a2035); color:#fff; }
+  .sh-more{ display:flex; flex-wrap:wrap; justify-content:center; gap:4px 18px; margin-top:6px; font-style:italic; font-size:1.02rem; color:var(--ink,#5d0f11); }
+  .sh-more a{ padding:8px 0; }
+  @media (min-width:861px){
+    .sh-toggle{ display:none; }
+    .sh-menu{ display:flex; position:static; flex-direction:row; gap:12px; padding:0; border:0; box-shadow:none; max-height:none; overflow:visible; background:transparent; }
+    .sh-menu > a{ padding:12px 24px; font-size:0.85rem; }
+    .sh-more{ display:none; }
+  }
+  @media (max-width:420px){ .promo-bar{ font-size:0.82rem; } .sh-logo img{ height:40px; } }
+  .foot{ justify-content:center; gap:12px 30px; text-align:center; }
+  @media (max-width:860px){
+    .foot{ display:grid; grid-template-columns:1fr 1fr; gap:2px 16px; text-align:left; }
+    .foot-loc{ grid-column:1 / -1; margin-bottom:6px; }
+    .foot a{ padding:9px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
+<header class="site-header" id="site-header">
+  <div class="sh-row">
+    <a class="sh-logo" href="index.html" aria-label="Socially Introverts home"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+    <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="sh-menu" id="sh-menu" aria-label="Main">
+      <a href="about.html">About</a>
+      <a class="sh-primary" href="work-together.html">Work Together</a>
+      <a href="inquiries.html">Inquiries</a>
+      <div class="sh-more"><a href="contact.html">Contact</a><a href="bestie.html">Why I&rsquo;m your bestie</a><a href="tester.html">Free guide</a></div>
+    </nav>
+  </div>
+</header>
+<div class="page">
+
+  <section class="toolkit">
+    <span class="toolkit-eyebrow">Behind the Toolkit</span>
+    <p class="toolkit-title">The tools behind the work.</p>
+    <p class="toolkit-lede">Different projects call for different tools.</p>
+    <p class="toolkit-intro">I work across research, strategy, content creation, analytics and distribution using the tools that best fit each project.</p>
+
+    <div class="toolkit-grid">
+
+      <div class="tool-card">
+        <span class="tool-num">01</span>
+        <p class="tool-cat">Research + Insights</p>
+        <div class="tool-list">
+          <span class="tool-pill">Brandwatch</span>
+          <span class="tool-pill">Pinterest Trends</span>
+          <span class="tool-pill">PinClicks</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">02</span>
+        <p class="tool-cat">SEO + Search</p>
+        <div class="tool-list">
+          <span class="tool-pill">Google Search Console</span>
+          <span class="tool-pill">GA4</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">03</span>
+        <p class="tool-cat">Planning + Management</p>
+        <div class="tool-list">
+          <span class="tool-pill">Notion</span>
+          <span class="tool-pill">ClickUp</span>
+          <span class="tool-pill">Excel</span>
+          <span class="tool-pill">Word</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">04</span>
+        <p class="tool-cat">Design + Creative</p>
+        <div class="tool-list">
+          <span class="tool-pill">Canva</span>
+          <span class="tool-pill">Lightroom</span>
+          <span class="tool-pill">Figma</span>
+          <span class="tool-pill">Framer</span>
+          <span class="tool-pill">Cosmos</span>
+          <span class="tool-pill">Dupe Photos</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">05</span>
+        <p class="tool-cat">Async Collaboration</p>
+        <div class="tool-list">
+          <span class="tool-pill">Loom</span>
+          <span class="tool-pill">Voxer</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">06</span>
+        <p class="tool-cat">Publishing + Distribution</p>
+        <div class="tool-list">
+          <span class="tool-pill">Pinterest</span>
+          <span class="tool-pill">WordPress</span>
+          <span class="tool-pill">Shopify</span>
+          <span class="tool-pill">Flodesk</span>
+          <span class="tool-pill">Kit</span>
+          <span class="tool-pill">Beacons</span>
+          <span class="tool-pill">Metricool</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <span class="tool-num">07</span>
+        <p class="tool-cat">Tracking + Measurement</p>
+        <div class="tool-list">
+          <span class="tool-pill">GA4</span>
+          <span class="tool-pill">Search Console</span>
+          <span class="tool-pill">GTM</span>
+          <span class="tool-pill">Pinterest Tag</span>
+          <span class="tool-pill">Metricool</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="toolkit-note">
+      <p class="toolkit-note-title">And a few others, here and there.</p>
+      <p class="toolkit-note-body">This is the core stack, but every project is a little different. I pull in other tools occasionally when a specific job calls for it. There are simply too many to list them all here.</p>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <div class="foot">
+    <a class="foot-loc" href="index.html">📍 singapore + worldwide</a>
+    <a href="build-content.html">let&rsquo;s build your content</a>
+    <a href="selected-work.html">selected work</a>
+    <a href="toolkit.html">behind the toolkit</a>
+    <a href="tester.html">free guide</a>
+    <a href="contact.html">contact</a>
+    <a href="refer.html">refer a client</a>
+    <a href="bestie.html">why I&rsquo;m your bestie</a>
+  <a href="threads.html">start here</a>
+  <a href="privacy.html">privacy</a>
+  <button type="button" class="cookie-reopen" data-cookie-reopen>cookie settings</button>
+  </div>
+
+</div>
+<script>
+(function(){
+  var b=document.querySelector('.sh-toggle'), m=document.getElementById('sh-menu');
+  if(!b||!m) return;
+  function set(o){ m.classList.toggle('open',o); b.setAttribute('aria-expanded',o); b.setAttribute('aria-label',o?'Close menu':'Open menu'); }
+  b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>
