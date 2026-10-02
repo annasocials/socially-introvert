@@ -106,7 +106,9 @@
   /* ============ THE DOOR ============ */
   .door{ position:fixed; inset:0; z-index:500; perspective:1800px; overflow:hidden; background:var(--bg-1); transition:background .2s ease 1s; }
   .door.open{ background:transparent; pointer-events:none; }
-  .leaf{ position:absolute; top:0; bottom:0; width:50%; background:var(--pill); transition:transform 1.4s cubic-bezier(.65,0,.25,1); backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:5vh 3vw; }
+  .door-logo{ position:absolute; top:2.5vh; right:5vw; z-index:3; width:min(200px,38vw); height:auto; transition:opacity .4s ease; }
+  .door.open .door-logo{ opacity:0; }
+  .leaf{ position:absolute; top:0; bottom:0; width:50%; background:var(--pill); transition:transform 1.4s cubic-bezier(.65,0,.25,1); backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:17vh 3vw 6vh; }
   .leaf.l{ left:0; transform-origin:left center; border-right:1.5px solid var(--maroon); }
   .leaf.r{ right:0; transform-origin:right center; }
   .door.open .leaf.l{ transform:rotateY(-112deg); }
@@ -115,11 +117,8 @@
   .panel img{ width:100%; height:100%; object-fit:cover; display:block; }
   .knob{ position:absolute; top:50%; width:16px; height:16px; margin-top:-8px; border-radius:50%; background:var(--maroon); z-index:2; }
   .leaf.l .knob{ right:14px; } .leaf.r .knob{ left:14px; }
-  .door-center{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:3; text-align:center; transition:opacity .4s ease; width:max-content; max-width:90vw; }
-  .door-logo{ display:block; width:min(380px,72vw); height:auto; margin:0 auto 14px; }
-  .door.open .door-center{ opacity:0; }
-  .door-skip{ position:absolute; bottom:22px; left:50%; transform:translateX(-50%); z-index:3; font-style:italic; font-size:1.05rem; text-decoration:underline; text-underline-offset:3px; background:none; border:0; color:var(--ink); cursor:pointer; font-family:inherit; }
-  @media (max-width:860px){ .leaf{ padding:12vh 4vw; } .leaf .panel{ border-radius:999px 999px 8px 8px; }  }
+  .door.open
+  @media (max-width:860px){ .leaf{ padding:15vh 4vw 8vh; } .leaf .panel{ border-radius:999px 999px 8px 8px; }  }
 
   @media (prefers-reduced-motion:reduce){
     .leaf{ transition:none; } .door{ transition:none; }
@@ -129,14 +128,10 @@
 </head>
 <body class="is-closed">
 
-<div class="door" id="door" aria-label="Welcome">
+<div class="door" id="door" aria-label="Welcome" role="presentation">
   <div class="leaf l"><div class="panel"><img src="7.webp" alt="Flat lay of open vintage books, shells, glasses and a paper flower collage on linen" width="1080" height="1374"></div><span class="knob"></span></div>
-  <div class="leaf r"><div class="panel"><img src="6.webp" alt="An open scrapbook journal with photos, tickets and stickers on a green wavy rug" width="1440" height="1800"></div><span class="knob"></span></div>
-  <div class="door-center">
-    <img class="door-logo" src="logo.png" alt="Socially Introverts" width="851" height="364">
-    <button type="button" class="pill" id="door-open">Open the door</button>
-  </div>
-  <button type="button" class="door-skip" id="door-skip">skip</button>
+  <div class="leaf r"><div class="panel"><img src="2.webp" alt="A wall of framed vintage art above a shelf of books and a glowing lamp" width="1080" height="1350"></div><span class="knob"></span></div>
+  <img class="door-logo" src="logo.png" alt="Socially Introverts" width="851" height="364">
 </div>
 
 <div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
@@ -207,15 +202,16 @@
   try{ seen=sessionStorage.getItem('si_door_seen')==='1'; }catch(e){}
   var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(seen||calm){ finish(); return; }
+  var opened=false;
   function openDoor(){
+    if(opened) return; opened=true;
     try{ sessionStorage.setItem('si_door_seen','1'); }catch(e){}
     body.classList.remove('is-closed');
     door.classList.add('open');
     setTimeout(finish,1500);
   }
-  document.getElementById('door-open').addEventListener('click',openDoor);
-  document.getElementById('door-skip').addEventListener('click',function(){ try{ sessionStorage.setItem('si_door_seen','1'); }catch(e){} finish(); });
-  document.getElementById('door-open').focus();
+  door.addEventListener('click',openDoor);
+  setTimeout(openDoor,1400);
 })();
 </script>
 </body>
