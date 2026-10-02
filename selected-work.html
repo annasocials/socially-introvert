@@ -545,6 +545,31 @@
   .ts-gallery-cap{ font-size:0.88rem; font-style:italic; color:var(--ink-soft,#4a2a2f); text-align:center; margin-top:12px; }
   @media (max-width:860px){ .ts-gallery{ grid-template-columns:1fr; } }
 </style>
+<style id="hanging-cards-style">
+  #hanging-cards{ scroll-margin-top:90px; }
+  .hc{ position:relative; width:100%; max-width:1000px; height:560px; border:1px solid rgba(93,15,17,0.25); border-radius:12px; overflow:hidden; background:var(--bg-1,#f5f1ee); touch-action:pan-y; user-select:none; -webkit-user-select:none; cursor:grab; outline:none; --hc-w:300px; }
+  .hc.is-drag{ cursor:grabbing; }
+  .hc:focus-visible{ outline:2px dashed var(--maroon,#5d0f11); outline-offset:4px; }
+  .hc-line{ position:absolute; left:0; right:0; top:44px; height:3px; margin-top:-1px; background:rgba(93,15,17,0.55); border-radius:2px; box-shadow:0 5px 9px rgba(93,15,17,0.12); }
+  .hc-track{ position:absolute; inset:0; -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 36px,#000 calc(100% - 36px),transparent 100%); mask-image:linear-gradient(90deg,transparent 0,#000 36px,#000 calc(100% - 36px),transparent 100%); }
+  .hc-card{ position:absolute; left:0; top:44px; width:var(--hc-w); will-change:transform; }
+  .hc-swing{ position:relative; transform-origin:50% 0; will-change:transform; }
+  .hc-swing::before{ content:""; position:absolute; left:50%; top:-9px; width:16px; height:34px; margin-left:-8px; border-radius:4px; background:var(--pill-ink,#7a2035); box-shadow:inset 0 0 0 2px rgba(255,255,255,0.22), 0 3px 6px rgba(93,15,17,0.25); z-index:3; }
+  .hc-face{ position:relative; margin-top:12px; background:#fff; border-radius:14px; padding:6px; box-shadow:0 12px 26px rgba(93,15,17,0.20); }
+  .hc-media{ position:relative; border-radius:10px; overflow:hidden; aspect-ratio:var(--ar,0.8); background:#ece7e0; }
+  .hc-media img, .hc-media video{ display:block; width:100%; height:100%; object-fit:cover; pointer-events:none; -webkit-user-drag:none; }
+  .hc-shade{ position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .35s ease; background:linear-gradient(to top, rgba(40,10,14,0.66) 0%, rgba(40,10,14,0.18) 38%, rgba(40,10,14,0) 62%); }
+  .hc-cap{ position:absolute; left:16px; right:16px; bottom:14px; pointer-events:none; opacity:0; transform:translateY(8px); transition:opacity .35s ease, transform .4s ease; color:#fff; }
+  .hc-cap strong{ display:block; font-size:1.35rem; font-weight:600; line-height:1.15; }
+  .hc-cap span{ display:block; font-size:0.95rem; font-style:italic; opacity:0.9; margin-top:2px; }
+  .hc-card:hover .hc-shade, .hc:focus-visible .hc-shade{ opacity:1; }
+  .hc-card:hover .hc-cap, .hc:focus-visible .hc-cap{ opacity:1; transform:none; }
+  @media (hover:none){ .hc-shade{ opacity:1; } .hc-cap{ opacity:1; transform:none; } }
+  .hc-bar{ max-width:1000px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px; margin-top:16px; }
+  .hc-note{ margin:0; flex:1 1 280px; font-size:1.02rem; font-style:italic; line-height:1.5; color:var(--ink-soft,#4a2a2f); }
+  .hc-controls{ display:flex; gap:10px; }
+  @media (max-width:860px){ .hc{ height:450px; --hc-w:210px; } .hc-cap strong{ font-size:1.12rem; } .hc-cap span{ font-size:0.85rem; } }
+</style>
 </head>
 <body>
 <div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
@@ -584,6 +609,30 @@
             <img src="services.gif" alt="A services page interaction concept">
           </div>
           <p class="preview-cap">a little UI concept I put together</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="desk-section" id="hanging-cards">
+      <p class="preview-title">Concept project: hanging cards</p>
+      <p class="preview-sub">A little interactive carousel made from my own projects. Drag it sideways and watch the cards swing.</p>
+      <div class="hc" id="hc" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Hanging cards carousel. Drag, or use the left and right arrow keys.">
+        <div class="hc-line" aria-hidden="true"></div>
+        <div class="hc-track">
+        <div class="hc-card" style="--ar:1080 / 1310"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-moonveil.jpg" alt="moonveilelysium Instagram profile concept with gratitude journal content" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>moonveilelysium</strong><span>Digital wellness concept</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:1080 / 1310"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-badmeow.jpg" alt="badmeow.co Instagram profile concept with cat mascot and apparel content" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>badmeow.co</strong><span>Anti-social apparel concept</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:1080 / 1310"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-glossy.jpg" alt="Glossy and Glam Instagram profile concept with luxury accessory content" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>Glossy &amp; Glam</strong><span>Luxury accessories concept</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:720 / 900"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><video muted loop playsinline preload="metadata" poster="concept-example-poster.jpg" aria-label="pupsandsuchtreats concept content video"><source src="concept-example.mp4" type="video/mp4"></video><div class="hc-shade"></div><div class="hc-cap"><strong>pupsandsuchtreats</strong><span>Pet products concept</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:475 / 523"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-threads-ep1.jpg" alt="Threads post: Episode 1 of sharing how a product can build a content world" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>Episode 1</strong><span>How one product builds a content world</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:722 / 1002"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-pinterest-stats.jpg" alt="Threads posts from the Your Pinterest Sister series with view counts" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>Your Pinterest Sister</strong><span>Threads series posts</span></div></div></div></div></div>
+        <div class="hc-card" style="--ar:612 / 760"><div class="hc-swing"><div class="hc-face"><div class="hc-media"><img src="hang-matcha.jpg" alt="A hand holding a cup of matcha latte from above" draggable="false" loading="lazy"><div class="hc-shade"></div><div class="hc-cap"><strong>Matcha morning</strong><span>A slow, cosy mood</span></div></div></div></div></div>
+        </div>
+      </div>
+      <div class="hc-bar">
+        <p class="hc-note">independent concept, not client work &middot; drag, swipe or use the arrow keys</p>
+        <div class="hc-controls">
+          <button type="button" class="desk-btn" id="hc-prev" aria-label="Previous cards">&larr; Prev</button>
+          <button type="button" class="desk-btn" id="hc-next" aria-label="Next cards">Next &rarr;</button>
         </div>
       </div>
     </div>
@@ -961,6 +1010,70 @@
     items.forEach(function(el,i){ el.style.left=home[i].l; el.style.top=home[i].t; el.style.zIndex=1; });
     nameEl.textContent='Tidy.'; descEl.textContent='Everything is back where it started.';
   });
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('hc'); if(!root) return;
+  var cards=[].slice.call(root.querySelectorAll('.hc-card'));
+  var swings=cards.map(function(c){ return c.querySelector('.hc-swing'); });
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var st=cards.map(function(){ return {a:0,w:0}; });
+  var step=0,total=0,offset=-30,vel=0,dragging=false,lastX=0,lastT=0,raf=0,lastTs=0,nudged=false;
+  function measure(){ var w=cards[0].offsetWidth, g=w<260?16:24; step=w+g; total=step*cards.length; }
+  function render(){
+    for(var i=0;i<cards.length;i++){
+      var x=(((i*step-offset+step)%total)+total)%total-step;
+      cards[i].style.transform='translate3d('+x.toFixed(1)+'px,0,0)';
+      swings[i].style.transform='rotate('+st[i].a.toFixed(4)+'rad)';
+    }
+  }
+  function frame(ts){
+    var dt=Math.min(0.034,(ts-lastTs)/1000||0.016); lastTs=ts;
+    if(dragging){ vel*=Math.pow(0.02,dt); }
+    else { vel*=Math.pow(0.04,dt); if(Math.abs(vel)<8) vel=0; offset+=vel*dt; }
+    var target=reduce?0:Math.max(-0.42,Math.min(0.42,-vel*0.00035)), moving=false;
+    for(var i=0;i<st.length;i++){
+      var s=st[i];
+      if(reduce){ s.a=0; s.w=0; continue; }
+      var k=52+((i*7)%5)*5;
+      s.w+=(k*(target-s.a)-5.5*s.w)*dt; s.a+=s.w*dt;
+      if(Math.abs(s.a)>0.0006||Math.abs(s.w)>0.002) moving=true; else { s.a=0; s.w=0; }
+    }
+    render();
+    if(dragging||vel!==0||moving){ raf=requestAnimationFrame(frame); } else { raf=0; }
+  }
+  function wake(){ if(!raf){ lastTs=performance.now(); raf=requestAnimationFrame(frame); } }
+  root.addEventListener('pointerdown',function(e){
+    if(e.pointerType==='mouse'&&e.button!==0) return;
+    dragging=true; lastX=e.clientX; lastT=performance.now(); vel=0;
+    try{ root.setPointerCapture(e.pointerId); }catch(_){}
+    root.classList.add('is-drag'); wake();
+  });
+  root.addEventListener('pointermove',function(e){
+    if(!dragging) return;
+    var now=performance.now(), dx=e.clientX-lastX, dtm=Math.max(1,now-lastT);
+    offset-=dx; vel=vel*0.6+(-dx/dtm*1000)*0.4; lastX=e.clientX; lastT=now; wake();
+  });
+  function end(){ if(!dragging) return; dragging=false; root.classList.remove('is-drag'); wake(); }
+  root.addEventListener('pointerup',end); root.addEventListener('pointercancel',end);
+  root.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight') vel+=900; else if(e.key==='ArrowLeft') vel-=900; else return;
+    e.preventDefault(); wake();
+  });
+  var pb=document.getElementById('hc-prev'), nb=document.getElementById('hc-next');
+  if(pb) pb.addEventListener('click',function(){ vel-=1100; wake(); });
+  if(nb) nb.addEventListener('click',function(){ vel+=1100; wake(); });
+  var vids=[].slice.call(root.querySelectorAll('video'));
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      var on=en[0].isIntersecting;
+      vids.forEach(function(v){ if(on&&!reduce){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else { v.pause(); } });
+      if(on&&!nudged&&!reduce){ nudged=true; st.forEach(function(s,i){ s.w=(i%2?1.7:-1.7); }); wake(); }
+    },{threshold:0.35}).observe(root);
+  }
+  var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ measure(); render(); },120); });
+  measure(); render();
 })();
 </script>
 </body>
