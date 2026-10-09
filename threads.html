@@ -559,6 +559,39 @@
   .site-header{ background:rgba(246,228,223,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
   @media print{ body::before{ display:none; } }
 </style>
+<style id="tr-reveal-css">
+  .tr-section{ max-width:1400px; margin:0 auto 56px; --tr-h:340px; --tr-drop:150px; }
+  .tr-row{ display:flex; gap:14px; align-items:flex-start; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 2px 8px; -webkit-overflow-scrolling:touch; }
+  .tr-card{ flex:0 0 min(78vw,285px); scroll-snap-align:start; }
+  @media (min-width:1181px){
+    .tr-row{ display:grid; grid-template-columns:repeat(5,1fr); gap:18px; overflow:visible; padding:0; }
+    .tr-card{ flex:none; }
+    .tr-front{ padding:18px; }
+    .tr-name{ font-size:1.3rem; }
+    .tr-quote{ font-size:1.05rem; }
+  }
+  .tr-card{ position:relative; height:var(--tr-h); transition:height .45s cubic-bezier(.2,.8,.2,1); }
+  .tr-card.is-open{ height:calc(var(--tr-h) + var(--tr-drop)); }
+  .tr-back{ position:absolute; top:0; left:0; width:100%; height:var(--tr-h); border-radius:12px; overflow:hidden; background:#161314; z-index:1; box-shadow:0 10px 24px rgba(74,20,30,0.16); }
+  .tr-back a{ display:block; height:var(--tr-drop); overflow:hidden; cursor:zoom-in; }
+  .tr-img{ display:block; width:100%; height:auto; }
+  .tr-img--low{ margin-top:-49%; }
+  .tr-front{ position:absolute; top:0; left:0; width:100%; height:var(--tr-h); z-index:2; display:flex; flex-direction:column; justify-content:space-between; gap:12px; padding:22px; background:#faf5f2; border:1px solid rgba(93,15,17,0.25); border-radius:12px; cursor:pointer; transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .2s ease; outline:none; }
+  .tr-card.is-open .tr-front{ transform:translateY(var(--tr-drop)); box-shadow:0 12px 26px rgba(74,20,30,0.18); }
+  .tr-front:focus-visible{ outline:2px solid var(--maroon); outline-offset:3px; }
+  .tr-name{ font-size:1.55rem; font-weight:600; color:var(--maroon); line-height:1.15; margin:0 0 4px; overflow-wrap:anywhere; }
+  .tr-name--handle{ font-size:1.12rem; overflow-wrap:break-word; }
+  @media (min-width:1181px){ .tr-name.tr-name--handle{ font-size:1.05rem; } }
+  .tr-role{ font-size:0.74rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); opacity:.8; margin:0; }
+  .tr-quote{ font-size:1.12rem; font-style:italic; color:var(--ink-soft); line-height:1.45; margin:0; }
+  .tr-hint{ align-self:flex-start; font-size:0.74rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--pill-ink); background:var(--pill); border-radius:999px; padding:6px 14px; }
+  .tr-hint::after{ content:"See the message \2193"; }
+  .tr-card.is-open .tr-hint::after{ content:"Hide \2191"; }
+  @media (max-width:860px){
+    .tr-section{ --tr-h:330px; }
+  }
+  @media (prefers-reduced-motion:reduce){ .tr-card,.tr-front{ transition:none; } }
+</style>
 </head>
 <body>
 <div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
@@ -661,6 +694,53 @@
         <span class="offer-q">Need a bigger system built?</span>
         <span class="offer-a">Simplify Build <span class="offer-price">&middot; $4,000</span></span>
       </a>
+    </div>
+  </section>
+
+  <section class="tr-section" aria-labelledby="tr-title">
+    <p class="offer-title" id="tr-title">Kind words</p>
+    <p class="offer-subtitle">Real messages and comments from Threads. Tap a card to see the original.</p>
+    <div class="tr-row">
+    <div class="tr-card" data-tr>
+      <div class="tr-back"><a href="tr-clarity-dm.png" target="_blank" rel="noopener" tabindex="-1" title="Open the full screenshot"><img class="tr-img" src="tr-clarity-dm.png" alt="Threads direct message: Omg. Thank you so much I didn&rsquo;t. Expected this much of clarity from you" width="637" height="283" loading="lazy"></a></div>
+      <div class="tr-front" role="button" tabindex="0" aria-expanded="false" aria-label="Anonymous: show the original message">
+        <div class="tr-who"><p class="tr-name">Anonymous</p><p class="tr-role">Direct message</p></div>
+        <p class="tr-quote">&ldquo;Thank you so much&hellip; this much of clarity from you.&rdquo;</p>
+        <span class="tr-hint" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="tr-card" data-tr>
+      <div class="tr-back"><a href="tr-yourcontentcreature.png" target="_blank" rel="noopener" tabindex="-1" title="Open the full screenshot"><img class="tr-img" src="tr-yourcontentcreature.png" alt="Threads comment from yourcontentcreature saying the help was more than just Pinterest help and they can&rsquo;t wait to start more" width="390" height="133" loading="lazy"></a></div>
+      <div class="tr-front" role="button" tabindex="0" aria-expanded="false" aria-label="@yourcontentcreature: show the original message">
+        <div class="tr-who"><p class="tr-name tr-name--handle">@yourcontentcreature</p><p class="tr-role">Threads comment</p></div>
+        <p class="tr-quote">&ldquo;&hellip;more than just Pinterest help, really can&rsquo;t wait to start more hehe&rdquo;</p>
+        <span class="tr-hint" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="tr-card" data-tr>
+      <div class="tr-back"><a href="tr-designsoncove.png" target="_blank" rel="noopener" tabindex="-1" title="Open the full screenshot"><img class="tr-img" src="tr-designsoncove.png" alt="Threads comment from designsoncove.co: Aww Anna you&rsquo;re great, I love working with you and you have so much knowledge in Pinterest, so of course I turn to the Pinterest Queen" width="465" height="193" loading="lazy"></a></div>
+      <div class="tr-front" role="button" tabindex="0" aria-expanded="false" aria-label="@designsoncove.co: show the original message">
+        <div class="tr-who"><p class="tr-name tr-name--handle">@designsoncove.co</p><p class="tr-role">Threads comment</p></div>
+        <p class="tr-quote">&ldquo;I love working with you and you have so much knowledge in Pinterest.&rdquo;</p>
+        <span class="tr-hint" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="tr-card" data-tr>
+      <div class="tr-back"><a href="tr-stephanie-dm.png" target="_blank" rel="noopener" tabindex="-1" title="Open the full screenshot"><img class="tr-img tr-img--low" src="tr-stephanie-dm.png" alt="Threads direct message from Stephanie of Reiki and Wellness by Stephanie, thanking Anna and saying she has outdone herself with all of this information" width="268" height="265" loading="lazy"></a></div>
+      <div class="tr-front" role="button" tabindex="0" aria-expanded="false" aria-label="Stephanie: show the original message">
+        <div class="tr-who"><p class="tr-name">Stephanie</p><p class="tr-role">Reiki and Wellness &middot; Threads DM</p></div>
+        <p class="tr-quote">&ldquo;You really have outdone yourself with all of this information.&rdquo;</p>
+        <span class="tr-hint" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="tr-card" data-tr>
+      <div class="tr-back"><a href="tr-self-publisher.png" target="_blank" rel="noopener" tabindex="-1" title="Open the full screenshot"><img class="tr-img" src="tr-self-publisher.png" alt="Threads comment from a self-publisher saying your Threads posts changed how they think about marketing and that applying them to Pinterest is already showing in their analytics" width="691" height="624" loading="lazy"></a></div>
+      <div class="tr-front" role="button" tabindex="0" aria-expanded="false" aria-label="Anonymous self-publisher: show the original message">
+        <div class="tr-who"><p class="tr-name">Anonymous self-publisher</p><p class="tr-role">Threads comment</p></div>
+        <p class="tr-quote">&ldquo;I&rsquo;ve been applying what you share to my Pinterest and it&rsquo;s already showing in my analytics.&rdquo;</p>
+        <span class="tr-hint" aria-hidden="true"></span>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -770,6 +850,27 @@
   new MutationObserver(function(){
     if(page.hasAttribute('inert')) reset(); else play();
   }).observe(page,{attributes:true,attributeFilter:['inert']});
+})();
+</script>
+<script>
+(function(){
+  var cards=document.querySelectorAll('[data-tr]'); if(!cards.length) return;
+  var canHover=window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  function set(c,open){
+    c.classList.toggle('is-open',open);
+    var f=c.querySelector('.tr-front'), a=c.querySelector('.tr-back a');
+    f.setAttribute('aria-expanded',open?'true':'false');
+    a.tabIndex=open?0:-1;
+  }
+  cards.forEach(function(c){
+    var f=c.querySelector('.tr-front');
+    f.addEventListener('click',function(){ if(!canHover) set(c,!c.classList.contains('is-open')); });
+    f.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); set(c,!c.classList.contains('is-open')); } });
+    if(canHover){
+      c.addEventListener('mouseenter',function(){ set(c,true); });
+      c.addEventListener('mouseleave',function(){ set(c,false); });
+    }
+  });
 })();
 </script>
 </body>
