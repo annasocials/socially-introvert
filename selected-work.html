@@ -599,6 +599,51 @@
   .site-header{ background:rgba(246,228,223,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
   @media print{ body::before{ display:none; } }
 </style>
+<style id="sw-results-style">
+  #pinterest-results,#day-21-case-study,#threads-signature-series,#pinterest-moodboards{ scroll-margin-top:90px; }
+  .sw-stack{ display:flex; flex-direction:column; gap:22px; }
+  .sw-blocklabel{ display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--maroon); margin:0 0 10px; }
+  .sw-stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .sw-stat{ background:rgba(255,255,255,0.55); border:1px solid rgba(93,15,17,0.2); border-radius:8px; padding:14px 14px 12px; }
+  .sw-num{ display:block; font-size:2rem; font-weight:600; color:var(--maroon); line-height:1; }
+  .sw-lab{ display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin-top:7px; }
+  .sw-up{ display:block; font-size:0.92rem; font-weight:700; color:var(--pill-ink,#7a2035); margin-top:3px; }
+  .sw-compare{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .sw-day{ background:rgba(255,255,255,0.4); border:1px solid rgba(93,15,17,0.22); border-radius:10px; padding:18px; }
+  .sw-day--end{ background:rgba(255,255,255,0.65); border:1.5px solid rgba(93,15,17,0.45); }
+  .sw-day .sw-stats{ grid-template-columns:1fr 1fr; }
+  .sw-day-sub{ font-size:0.9rem; font-style:italic; color:var(--ink-soft); margin:-4px 0 12px; line-height:1.4; }
+  .sw-gallery{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px; }
+  .sw-gallery a{ display:block; }
+  .sw-gallery img,.sw-wide img{ display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 10px 22px rgba(93,15,17,0.18); background:rgba(93,15,17,0.08); transition:transform .15s ease; }
+  .sw-gallery a:hover img,.sw-wide a:hover img{ transform:translateY(-3px); }
+  .sw-wide{ margin-top:6px; } .sw-wide a{ display:block; }
+  .sw-cap{ font-size:0.88rem; font-style:italic; color:var(--ink-soft); text-align:center; margin-top:10px; }
+  .sw-moods{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:6px; }
+  .sw-mood{ margin:0; }
+  .sw-mood a{ display:block; }
+  .sw-mood img{ display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 12px 26px rgba(93,15,17,0.18); transition:transform .15s ease; }
+  .sw-mood a:hover img{ transform:translateY(-3px); }
+  .sw-mood figcaption{ margin-top:12px; }
+  .sw-mood strong{ display:block; font-size:1.2rem; font-weight:600; color:var(--ink); line-height:1.2; margin-bottom:4px; }
+  .sw-mood span{ display:block; font-size:0.98rem; color:var(--ink-soft); line-height:1.5; }
+  #threads-signature-series .concept-figure{ max-width:320px; width:100%; justify-self:end; }
+  #threads-signature-series .concept-figure img{ width:100%; height:auto; }
+  #threads-signature-series .concept-figure a{ display:block; }
+  #threads-signature-series .concept-figure a + a{ margin-top:14px; }
+  @media (min-width:861px){
+    #threads-signature-series .concept-body{ grid-template-columns:1fr 320px; align-items:start; }
+  }
+  @media (max-width:860px){
+    #threads-signature-series .concept-figure{ max-width:340px; margin:0 auto 6px; justify-self:center; }
+  }
+  @media (max-width:860px){
+    .sw-stats{ grid-template-columns:1fr 1fr; }
+    .sw-compare{ grid-template-columns:1fr; }
+    .sw-gallery{ grid-template-columns:1fr; }
+    .sw-moods{ grid-template-columns:1fr; max-width:360px; margin-left:auto; margin-right:auto; }
+  }
+</style>
 </head>
 <body>
 <div class="promo-bar"><a href="refer.html">Know a product brand that needs marketing help? Introduce them, earn $30&ndash;$50 <span>Refer &rarr;</span></a></div>
@@ -701,6 +746,190 @@
         <a href="pinterest-sister-4.jpg" target="_blank" rel="noopener"><img src="pinterest-sister-4.jpg" alt="Pinterest strategy posts from the Your Pinterest Sister series on Threads" loading="lazy"></a>
       </div>
       <p class="ts-gallery-cap">posts from the series &middot; tap one to open it bigger</p>
+    </article>
+
+    <article class="concept-card concept-card--feature" id="pinterest-results">
+      <div class="concept-head">
+        <div>
+          <span class="concept-eyebrow">Case study &middot; My own Pinterest accounts, not client work</span>
+          <p class="concept-title">Pinterest Discovery Results</p>
+        </div>
+      </div>
+      <div class="case-chips">
+        <span>Pinterest discovery</span><span>Organic pins</span><span>Two accounts I run</span>
+      </div>
+      <div class="concept-points">
+        <div class="concept-point">
+          <span class="concept-label">The idea</span>
+          <p class="concept-text">Pinterest works more like a search engine than a social feed. People arrive looking for something, so I build pins around what they&rsquo;re already searching for and where they&rsquo;ll want to go next.</p>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">The numbers</span>
+          <p class="concept-text">Two accounts of mine, straight from Pinterest analytics. Percentages are Pinterest&rsquo;s own comparison with the period before.</p>
+        </div>
+        <div class="sw-stack">
+          <div>
+            <span class="sw-blocklabel">Account one &middot; last 30 days (8/23/26 to 9/22/26)</span>
+            <div class="sw-stats"><div class="sw-stat"><span class="sw-num">119k</span><span class="sw-lab">Impressions</span><span class="sw-up">+38%</span></div><div class="sw-stat"><span class="sw-num">5.6k</span><span class="sw-lab">Engagements</span><span class="sw-up">+32%</span></div><div class="sw-stat"><span class="sw-num">132</span><span class="sw-lab">Outbound clicks</span><span class="sw-up">+50%</span></div><div class="sw-stat"><span class="sw-num">1k</span><span class="sw-lab">Saves</span><span class="sw-up">+30%</span></div><div class="sw-stat"><span class="sw-num">89k</span><span class="sw-lab">Total audience</span><span class="sw-up">+35%</span></div><div class="sw-stat"><span class="sw-num">4.2k</span><span class="sw-lab">Engaged audience</span><span class="sw-up">+35%</span></div></div>
+          </div>
+          <div class="sw-gallery">
+            <a href="pinterest-30day-1.jpg" target="_blank" rel="noopener"><img src="pinterest-30day-1.jpg" alt="Pinterest analytics for the last 30 days, 8/23/26 to 9/22/26: 119k impressions, up 38 percent" width="881" height="1126" loading="lazy"></a>
+            <a href="pinterest-top-pins.jpg" target="_blank" rel="noopener"><img src="pinterest-top-pins.jpg" alt="Pinterest Top Pins view sorted by impressions: 546k, 171k and 34k, all organic" width="910" height="1089" loading="lazy"></a>
+          </div>
+          <p class="sw-cap">overall performance, and my top three pins by impressions, all organic &middot; tap to open bigger</p>
+          <div>
+            <span class="sw-blocklabel">Account two &middot; compared with the 31 days before the selected range</span>
+            <div class="sw-stats"><div class="sw-stat"><span class="sw-num">227.77k</span><span class="sw-lab">Impressions</span><span class="sw-up">+29%</span></div><div class="sw-stat"><span class="sw-num">40.34k</span><span class="sw-lab">Engagements</span><span class="sw-up">+24%</span></div><div class="sw-stat"><span class="sw-num">15.61k</span><span class="sw-lab">Outbound clicks</span><span class="sw-up">+20%</span></div><div class="sw-stat"><span class="sw-num">2.36k</span><span class="sw-lab">Saves</span><span class="sw-up">+45%</span></div><div class="sw-stat"><span class="sw-num">142.28k</span><span class="sw-lab">Total audience</span><span class="sw-up">+43%</span></div><div class="sw-stat"><span class="sw-num">6.58k</span><span class="sw-lab">Engaged audience</span><span class="sw-up">+37%</span></div></div>
+          </div>
+          <div class="sw-wide">
+            <a href="pinterest-30day-2.jpg" target="_blank" rel="noopener"><img src="pinterest-30day-2.jpg" alt="Pinterest analytics overall performance: 227.77k impressions, 40.34k engagements, 15.61k outbound clicks, 2.36k saves" width="1000" height="262" loading="lazy"></a>
+            <p class="sw-cap">the Pinterest analytics screen for the second account</p>
+          </div>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">What this is, and isn&rsquo;t</span>
+          <p class="concept-text">These are my own accounts, so this shows how I work on Pinterest, not a promise of what your numbers will do. If you want to know what I&rsquo;d look at on your account first, that&rsquo;s a good intro chat.</p>
+        </div>
+        <div class="case-cta">
+          <a class="case-btn" href="book.html">&rarr; Book an intro chat</a>
+          <span class="case-cta-note">tell me what you sell and I&rsquo;ll tell you what I notice</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="concept-card concept-card--feature" id="day-21-case-study">
+      <div class="concept-head">
+        <div>
+          <span class="concept-eyebrow">Case study &middot; My own test account, not client work</span>
+          <p class="concept-title">Day 1 to Day 21: A Real-Time Pinterest Case Study</p>
+        </div>
+      </div>
+      <div class="case-chips">
+        <span>17 &rarr; 16k impressions</span><span>21 days</span><span>Built in public on Threads</span>
+      </div>
+      <div class="concept-points">
+        <div class="concept-point">
+          <span class="concept-label">The setup</span>
+          <p class="concept-text">I started a Pinterest test account for home and room-decor finds and shared the whole thing on Threads as it happened: the strategy, how the pieces connect, and the wins and the fails. Day 1 showed 17 impressions and nothing else.</p>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">Day 1 and Day 21</span>
+          <p class="concept-text">Pinterest&rsquo;s last-30-days view on each day, side by side.</p>
+        </div>
+        <div class="sw-compare">
+          <div class="sw-day">
+            <span class="sw-blocklabel">Day 1</span>
+            <p class="sw-day-sub">3/14/26 to 4/13/26</p>
+            <div class="sw-stats"><div class="sw-stat"><span class="sw-num">17</span><span class="sw-lab">Impressions</span></div><div class="sw-stat"><span class="sw-num">0</span><span class="sw-lab">Engagements</span></div><div class="sw-stat"><span class="sw-num">0</span><span class="sw-lab">Outbound clicks</span></div><div class="sw-stat"><span class="sw-num">0</span><span class="sw-lab">Saves</span></div></div>
+          </div>
+          <div class="sw-day sw-day--end">
+            <span class="sw-blocklabel">Day 21</span>
+            <p class="sw-day-sub">4/4/26 to 5/4/26</p>
+            <div class="sw-stats"><div class="sw-stat"><span class="sw-num">16k</span><span class="sw-lab">Impressions</span></div><div class="sw-stat"><span class="sw-num">2.3k</span><span class="sw-lab">Engagements</span></div><div class="sw-stat"><span class="sw-num">1k</span><span class="sw-lab">Outbound clicks</span></div><div class="sw-stat"><span class="sw-num">127</span><span class="sw-lab">Saves</span></div><div class="sw-stat"><span class="sw-num">1.9k</span><span class="sw-lab">Total audience</span></div><div class="sw-stat"><span class="sw-num">63</span><span class="sw-lab">Engaged audience</span></div></div>
+          </div>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">What happened next</span>
+          <p class="concept-text">The goal was a high-ticket service client who found me through Threads. By Day 21 I&rsquo;d landed a one-off service client from my Threads email list, so I ended the series there.</p>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">What this is, and isn&rsquo;t</span>
+          <p class="concept-text">A test account of my own, so there are no client results here. It shows what I do from a standing start.</p>
+        </div>
+        <div class="case-cta">
+          <a class="case-btn" href="https://www.threads.com/@annplates" target="_blank" rel="noopener">&rarr; See the build on Threads</a>
+        </div>
+      </div>
+      <div class="sw-gallery" style="margin-top:30px;">
+        <a href="case-study-day1.jpg" target="_blank" rel="noopener"><img src="case-study-day1.jpg" alt="Threads post for Day 1 of the real-time Pinterest case study, with Pinterest analytics showing 17 impressions" width="1000" height="1383" loading="lazy"></a>
+        <a href="case-study-day21.jpg" target="_blank" rel="noopener"><img src="case-study-day21.jpg" alt="Threads post for Day 21 of the case study, with Pinterest analytics showing 16k impressions and 1k outbound clicks" width="1000" height="1401" loading="lazy"></a>
+      </div>
+      <p class="ts-gallery-cap">the two Threads posts, Day 1 and Day 21 &middot; tap one to open it bigger</p>
+    </article>
+
+    <article class="concept-card concept-card--feature" id="threads-signature-series">
+      <div class="concept-head">
+        <div>
+          <span class="concept-eyebrow">Signature Series &middot; Built for small e-commerce brands</span>
+          <p class="concept-title">If I Were Marketing</p>
+        </div>
+      </div>
+      <div class="case-chips">
+        <span>Threads Signature Series</span><span>Small e-commerce brands</span><span>Episode 1: handmade jewelry</span>
+      </div>
+      <div class="concept-body">
+        <div class="concept-points">
+          <div class="concept-point">
+            <span class="concept-label">The series</span>
+            <p class="concept-text">A recurring Threads series where each episode takes one kind of small brand and shows what I&rsquo;d do to market it. Episode 1 was for small handmade jewelry brands.</p>
+          </div>
+          <div class="concept-point">
+            <span class="concept-label">Episode 1, in a line</span>
+            <p class="concept-text">How to improve your product discovery system so people can buy. The carousel&rsquo;s point: a jewelry brand doesn&rsquo;t need more product posts, it needs more path to the products, built from product stories, styling, gift content and buying guides.</p>
+          </div>
+          <div class="concept-point">
+            <span class="concept-label">How an episode works</span>
+            <p class="concept-text">One clear promise and one easy next step. Comment a word and I send a free mini guide on turning your product into a month of content. The people who care raise their hand without being sold to.</p>
+          </div>
+          <div class="concept-point">
+            <span class="concept-label">Why a series</span>
+            <p class="concept-text">It&rsquo;s the format I build for small e-commerce brands: one voice and one repeatable shape, so posting stops being a blank-page problem and starts feeling like episodes people come back for.</p>
+          </div>
+          <div class="concept-point">
+            <span class="concept-label">What this is, and isn&rsquo;t</span>
+            <p class="concept-text">This is the series itself, not a results report.</p>
+          </div>
+          <div class="case-cta">
+            <a class="case-btn" href="pilot.html">&rarr; See the $17 Pilot</a>
+            <span class="case-cta-note">eight Threads posts built around your brand</span>
+          </div>
+        </div>
+        <figure class="concept-figure">
+          <a href="threads-if-i-were-marketing.jpg" target="_blank" rel="noopener"><img src="threads-if-i-were-marketing.jpg" alt="Threads post: Episode 1 of If I Were Marketing, for small handmade jewelry brands" width="1000" height="1079" loading="lazy"></a>
+          <a href="threads-ep1-discovery-system.jpg" target="_blank" rel="noopener"><img src="threads-ep1-discovery-system.jpg" alt="Threads post: Episode 1, how to improve your product discovery system so people can buy, for small handmade jewelry brands, with carousel slides on product story, styling, gift content and buying guides" width="958" height="675" loading="lazy"></a>
+          <figcaption>Episode 1 on Threads, two posts &middot; tap one to open it bigger</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="concept-card concept-card--feature" id="pinterest-moodboards">
+      <div class="concept-head">
+        <div>
+          <span class="concept-eyebrow">Pinterest board concepts &middot; Independent, not client work</span>
+          <p class="concept-title">Moodboards for Pinterest Boards</p>
+        </div>
+      </div>
+      <div class="case-chips">
+        <span>Board concepts</span><span>Three moods</span><span>Made for brands</span>
+      </div>
+      <div class="concept-points">
+        <div class="concept-point">
+          <span class="concept-label">How I start</span>
+          <p class="concept-text">Before I make a single pin, I build the world around the product: what the person feels, what they want, what they&rsquo;re already saving. These are three board concepts, each one a mood a brand could live inside.</p>
+        </div>
+        <div class="sw-moods">
+          <figure class="sw-mood">
+            <a href="moodboard-lovebirds.jpg" target="_blank" rel="noopener"><img src="moodboard-lovebirds.jpg" alt="Moodboard: February for the lovebirds, with couples, soft affirmations, a heart pillow and a rose keychain" width="720" height="1280" loading="lazy"></a>
+            <figcaption><strong>February for the lovebirds</strong><span>Couples, gifting and soft affirmations. A board concept for gift and keepsake brands.</span></figcaption>
+          </figure>
+          <figure class="sw-mood">
+            <a href="moodboard-soft-girl.jpg" target="_blank" rel="noopener"><img src="moodboard-soft-girl.jpg" alt="Moodboard: soft girl therapy, with a smoothie, pink bows, books, headphones and a self-care journal" width="720" height="1280" loading="lazy"></a>
+            <figcaption><strong>soft girl therapy</strong><span>Slow mornings, small rewards and everything pink. A board concept for wellness and stationery brands.</span></figcaption>
+          </figure>
+          <figure class="sw-mood">
+            <a href="moodboard-creative-burnout.jpg" target="_blank" rel="noopener"><img src="moodboard-creative-burnout.jpg" alt="Moodboard: creative burnout, with tarot cards, a pink laptop and a retro phone" width="720" height="1280" loading="lazy"></a>
+            <figcaption><strong>creative burnout</strong><span>The tired-but-still-creating mood, softened with tarot and beautiful things. A board concept for creator and journal brands.</span></figcaption>
+          </figure>
+        </div>
+        <div class="concept-point">
+          <span class="concept-label">What this shows</span>
+          <p class="concept-text">The product comes second and the feeling comes first. A board built around a feeling is easier for the right person to find, save and come back to.</p>
+        </div>
+        <div class="case-cta">
+          <a class="case-btn" href="mailto:sociallyintroverts@outlook.com?subject=Looking%20at%20my%20product">&rarr; Email me about your product</a>
+          <span class="case-cta-note">tell me what you sell and I&rsquo;ll tell you what mood I&rsquo;d build</span>
+        </div>
+      </div>
     </article>
 
     <article class="concept-card concept-card--feature" id="case-study">
@@ -980,7 +1209,7 @@
 
     <div class="concept-closing">
       <p class="concept-closing-title">Coming soon</p>
-      <p class="concept-closing-body">A Threads Signature Series case study, plus the full Pinterest/SEO and content-build client case studies, are being documented next. Until then, I've been sharing some of the process here:</p>
+      <p class="concept-closing-body">The full Pinterest/SEO and content-build client case studies are being documented next. Until then, I've been sharing some of the process here:</p>
       <div class="sneak-links" style="margin-top:16px;">
         <a href="https://www.instagram.com/stories/highlights/18116280130785267/" target="_blank" rel="noopener">Instagram Highlights &#8599;</a>
         <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener">Threads &#8599;</a>
