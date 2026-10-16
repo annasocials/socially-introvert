@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6e4df">
+<meta name="robots" content="noindex, nofollow">
+<title>Simplify Pinterest Management Ecosystem | Socially Introverts</title>
+<meta name="description" content="Simplify Pinterest Management Ecosystem: one connected system that maps, creates, publishes and reviews your Pinterest each month. Case-study partner rate, $500 per month.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-1:#f5e6e3;
+    --pill:#f0c3cb;
+    --pill-ink:#7a2035;
+    --ink:#5d0f11;
+    --ink-soft:#4a2a2f;
+    --maroon:#5d0f11;
+    --card:rgba(255,255,255,0.45);
+    --card-line:rgba(93,15,17,0.25);
+    --font-display:'Cormorant Garamond', serif;
+    --font-script:'Beau Rivage', cursive;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; color:var(--ink); font-family:var(--font-display); -webkit-font-smoothing:antialiased; }
+  body{
+    background-color:var(--bg-1);
+    background-image:
+      linear-gradient(180deg, rgba(240,195,203,0.55) 0%, rgba(245,230,227,0) 40%),
+      repeating-linear-gradient(0deg, rgba(93,15,17,0.035) 0 1px, transparent 1px 22px),
+      repeating-linear-gradient(90deg, rgba(93,15,17,0.035) 0 1px, transparent 1px 22px);
+  }
+  a{ color:inherit; }
+  p,h1,h2,h3,ul{ margin:0; }
+  ul{ padding:0; list-style:none; }
+
+  .page{ padding:28px 5vw 64px; }
+  .wrap{ max-width:900px; margin:0 auto; }
+  .logo{ display:block; margin:0 auto 40px; width:150px; height:auto; }
+
+  .eyebrow{ display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--maroon); background:var(--pill); border-radius:999px; padding:6px 16px; }
+  .h-title{ font-size:3.6rem; font-weight:500; line-height:1.05; color:var(--ink); margin:18px 0 14px; }
+  .h-sub{ font-size:1.55rem; font-style:italic; color:var(--ink-soft); line-height:1.35; max-width:32ch; margin:0 0 20px; }
+  .lead{ font-size:1.2rem; color:var(--ink-soft); line-height:1.6; max-width:58ch; }
+
+  .hero{ margin-bottom:52px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 28px; }
+  .chips span{ font-size:0.8rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--pill-ink); background:var(--pill); border-radius:999px; padding:9px 18px; }
+  .chips span.price{ background:var(--maroon); color:#fff; }
+
+  .btn{ display:inline-block; text-decoration:none; background:var(--maroon); color:#fff; font-size:0.92rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:999px; padding:16px 30px; text-align:center; transition:transform .15s ease, box-shadow .15s ease; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 18px rgba(93,15,17,0.25); }
+  .btn:focus-visible{ outline:2px solid var(--maroon); outline-offset:3px; }
+
+  section{ margin:0 0 56px; }
+  .sec-title{ font-size:2.3rem; font-weight:500; line-height:1.15; color:var(--ink); margin:0 0 14px; }
+  .sec-lead{ font-size:1.15rem; color:var(--ink-soft); line-height:1.6; max-width:62ch; margin:0 0 16px; }
+  .label{ display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--maroon); margin:0 0 8px; }
+
+  .card{ background:var(--card); border:1px solid var(--card-line); border-radius:8px; padding:26px 26px 24px; }
+  .card--strong{ border:2px solid var(--maroon); background:rgba(255,255,255,0.62); }
+
+  .connects{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:22px 0 0; }
+  .connects .card{ padding:20px 18px; }
+  .connects p{ font-size:1.1rem; line-height:1.4; color:var(--ink); font-weight:600; }
+
+  .steps{ display:flex; flex-direction:column; gap:20px; }
+  .step{ display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:start; }
+  .step .n{ width:44px; height:44px; border-radius:999px; background:var(--maroon); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:600; }
+  .step h3{ font-size:1.5rem; font-weight:600; color:var(--maroon); margin:2px 0 4px; line-height:1.2; }
+  .step p{ font-size:1.1rem; line-height:1.55; color:var(--ink-soft); max-width:60ch; }
+
+  .phases{ display:flex; flex-direction:column; gap:16px; }
+  .phase h3{ font-size:1.5rem; font-weight:600; color:var(--maroon); margin:0 0 10px; line-height:1.2; }
+  .phase p{ font-size:1.08rem; line-height:1.55; color:var(--ink-soft); max-width:64ch; margin:0 0 10px; }
+  .phase .get{ margin:14px 0 0; padding-top:12px; border-top:1px dashed rgba(93,15,17,0.35); color:var(--ink); }
+  .phase .get strong{ color:var(--maroon); }
+
+  .checks{ display:flex; flex-direction:column; gap:12px; }
+  .checks li{ position:relative; padding-left:34px; font-size:1.15rem; line-height:1.5; color:var(--ink-soft); }
+  .checks li::before{ content:""; position:absolute; left:0; top:5px; width:20px; height:20px; border-radius:999px; background:var(--pill); }
+  .checks li::after{ content:""; position:absolute; left:6px; top:9px; width:8px; height:5px; border-left:2px solid var(--pill-ink); border-bottom:2px solid var(--pill-ink); transform:rotate(-45deg); }
+
+  .invest{ text-align:center; padding:40px 26px; }
+  .invest .price{ font-size:3.4rem; font-weight:500; color:var(--maroon); line-height:1; margin:8px 0 6px; }
+  .invest .per{ font-size:1.1rem; color:var(--ink-soft); margin:0 0 18px; }
+  .invest .small{ font-size:1.1rem; color:var(--ink-soft); line-height:1.55; max-width:52ch; margin:0 auto 14px; }
+  .invest .btn{ margin-top:10px; }
+
+  .fine{ font-size:1rem; font-style:italic; color:var(--ink-soft); line-height:1.5; max-width:62ch; margin:18px auto 0; text-align:center; }
+
+  .closing{ text-align:center; padding:12px 0 8px; }
+  .closing .sec-title{ margin-bottom:10px; }
+  .closing .sec-lead{ margin:0 auto 22px; }
+  .contact-line{ text-align:center; font-size:1.15rem; color:var(--ink-soft); margin-top:30px; }
+  .contact-line a{ text-decoration:underline; }
+
+  .backrow{ margin:0 0 18px; }
+  .back{ display:inline-block; text-decoration:none; font-size:0.85rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--pill-ink); background:var(--pill); border-radius:999px; padding:10px 20px; transition:transform .15s ease, box-shadow .15s ease; }
+  .back:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(93,15,17,0.20); }
+
+  .cut{ display:block; height:auto; filter:drop-shadow(0 14px 18px rgba(74,20,30,0.22)); }
+  .hero-grid{ display:grid; grid-template-columns:1.25fr 0.75fr; gap:30px; align-items:center; }
+  .hero-art{ position:relative; min-height:420px; }
+  .hero-art .m{ position:absolute; right:0; top:0; width:78%; transform:rotate(4deg); }
+  .hero-art .s{ position:absolute; left:0; bottom:0; width:56%; transform:rotate(-6deg); }
+  .stickers{ display:flex; justify-content:center; align-items:flex-end; gap:24px; margin:0 0 14px; }
+  .stickers .c{ width:110px; transform:rotate(-6deg); }
+  .stickers .k{ width:130px; transform:rotate(5deg); }
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-art{ min-height:320px; max-width:380px; width:100%; margin:0 auto; }
+  }
+  @media (max-width:860px){
+    .h-title{ font-size:2.8rem; }
+    .connects{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .page{ padding:22px 20px 48px; }
+    .h-title{ font-size:2.4rem; }
+    .h-sub{ font-size:1.35rem; }
+    .sec-title{ font-size:1.9rem; }
+    .connects{ grid-template-columns:1fr; }
+    .btn{ display:block; width:100%; }
+    .step{ grid-template-columns:38px 1fr; gap:14px; }
+    .step .n{ width:38px; height:38px; font-size:1.05rem; }
+  }
+  @media (prefers-reduced-motion:reduce){ .btn,.back{ transition:none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="wrap">
+
+    <p class="backrow"><a class="back" href="work-together.html">&larr; Back to Work Together</a></p>
+    <img class="logo" src="logo.png" alt="Socially Introverts" width="219" height="98">
+
+    <!-- HERO -->
+    <header class="hero">
+     <div class="hero-grid"><div>
+      <span class="eyebrow">Case study &middot; Limited pilot</span>
+      <h1 class="h-title">Simplify Pinterest Management Ecosystem</h1>
+      <p class="h-sub">One connected system to help the right people discover your business.</p>
+      <p class="lead">I plan, create, publish and review your Pinterest every month, and every Pin points to a page on your website where people can take the next step.</p>
+      <div class="chips">
+        <span class="price">$500 per month</span>
+        <span>Case-study partner rate</span>
+      </div>
+      <a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener">Become a Case-Study Partner</a>
+     </div>
+     <div class="hero-art">
+      <img class="cut m" src="ecosystem-matcha.webp" alt="Iced matcha, a compact camera, a lip balm and sunglasses laid out together">
+      <img class="cut s" src="ecosystem-strawberries.webp" alt="Fresh strawberries">
+     </div></div>
+    </header>
+
+    <!-- WHAT IT IS -->
+    <section aria-labelledby="what">
+      <h2 class="sec-title" id="what">Pinterest takes more than making Pins</h2>
+      <p class="sec-lead">You already have products, services, photos and ideas worth sharing. Turning them into steady Pinterest content takes more than making Pins and scheduling them.</p>
+      <p class="sec-lead">Simplify Pinterest Management connects four things:</p>
+      <div class="connects">
+        <div class="card"><p>What your business offers</p></div>
+        <div class="card"><p>What people may be searching for</p></div>
+        <div class="card"><p>The content you publish</p></div>
+        <div class="card"><p>The website pages where people take the next step</p></div>
+      </div>
+    </section>
+
+    <!-- THE LOOP -->
+    <section aria-labelledby="loop">
+      <h2 class="sec-title" id="loop">One loop instead of five separate tasks</h2>
+      <div class="steps">
+        <div class="step"><span class="n" aria-hidden="true">1</span><div><h3>Map: choose the right opportunities</h3><p>I review your priority products or services, relevant search themes, seasonal opportunities and existing content. From that I build a focused monthly Pin Map.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">2</span><div><h3>Make: turn the plan into content</h3><p>I create original Pins from your existing brand assets, with relevant titles, descriptions and destination URLs. The number of Pins depends on your business goals and setup.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">3</span><div><h3>Publish: keep your content moving</h3><p>I schedule approved Pins to relevant boards and plan publishing around your priorities and seasonal moments.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">4</span><div><h3>Learn: see what the data says</h3><p>I review the Pinterest analytics available: impressions, saves, outbound clicks and top-performing content. I look for patterns worth exploring.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">5</span><div><h3>Simplify: decide what comes next</h3><p>You get a short monthly report and a clear list of priorities for the next cycle. Each month builds on what we learned, so you never start from scratch.</p></div></div>
+      </div>
+    </section>
+
+    <!-- LOW FRICTION -->
+    <section aria-labelledby="easy">
+      <h2 class="sec-title" id="easy">Designed to be low-friction</h2>
+      <div class="card card--strong">
+        <span class="label">Your part each month</span>
+        <ul class="checks">
+          <li>Approve the Pin Map.</li>
+          <li>Review the creative batch.</li>
+          <li>Read one short monthly report.</li>
+        </ul>
+        <p class="sec-lead" style="margin:18px 0 0;">I handle the agreed planning, creation, publishing and review.</p>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section aria-labelledby="invest">
+      <div class="card card--strong invest">
+        <span class="label" id="invest">Case-study partner rate</span>
+        <p class="price">$500</p>
+        <p class="per">per month</p>
+        <p class="small">A limited pilot for product-based and experience-based businesses that want Pinterest managed for them.</p>
+        <p class="small">The pilot has a defined monthly scope, agreed approval points and clear reporting. It is built to set up a steady workflow and learn from your account&rsquo;s performance over time.</p>
+        <a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener">Become a Case-Study Partner</a>
+        <p class="fine">Pinterest results vary by business, audience, content, website and season, and depend on your business setup.</p>
+      </div>
+    </section>
+
+    <!-- FIRST MONTH -->
+    <section aria-labelledby="first">
+      <h2 class="sec-title" id="first">How the first month works</h2>
+      <p class="sec-lead">It starts with understanding your business, moves into the work, and then uses what we learn to set the next month.</p>
+      <div class="phases">
+        <div class="card phase">
+          <span class="label">Onboarding &middot; before publishing</span>
+          <h3>Phase 1: Understand the business</h3>
+          <p>I review your website, social media, products or services, existing content, brand positioning, customer journey and available Pinterest analytics.</p>
+          <p>I also ask about your priorities, important offers, target customers, seasonal campaigns and what success looks like for you.</p>
+          <p class="get"><strong>You get:</strong> a clear picture of your business, its current discovery path and the opportunities worth exploring.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">Month 1 &middot; planning</span>
+          <h3>Phase 2: Map the strategy</h3>
+          <p>I use the research to choose priority products or services, search themes, content angles and website destinations. You review a Pin Map before I create any content.</p>
+          <p class="get"><strong>You get:</strong> an agreed monthly plan that connects your offers to Pins and URLs.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">Month 1 &middot; execution</span>
+          <h3>Phase 3: Make and publish</h3>
+          <p>I create the agreed Pins, write search-focused titles and descriptions, schedule the content and check the destination links. You review the creative batch at the agreed approval point. Once you approve it, I handle publishing.</p>
+          <p class="get"><strong>You get:</strong> the agreed content, prepared and published on schedule.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">End of month 1</span>
+          <h3>Phase 4: Review and refine</h3>
+          <p>I review the available data, look at early content signals and write a short report.</p>
+          <p class="get"><strong>You get:</strong> a review of what was published, what we can see so far and what deserves more testing.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">After month 1</span>
+          <h3>Phase 5: Strategy call and next steps</h3>
+          <p>We meet to go over the first findings, your priorities, what we learned and the direction for next month. It is a focused strategy session, not a weekly meeting. Afterward I write down the agreed priorities and continue asynchronously.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONGOING -->
+    <section aria-labelledby="ongoing">
+      <h2 class="sec-title" id="ongoing">How the ongoing months work</h2>
+      <p class="sec-lead">From month two, the same loop repeats: review the signals, plan the next batch, create, publish and report.</p>
+      <p class="sec-lead">The strategy call after month one sets the direction. You decide whether to have future calls or keep the reviews async.</p>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing">
+      <div class="stickers"><img class="cut c" src="ecosystem-coffee.webp" alt="Iced latte seen from above"><img class="cut k" src="ecosystem-cake.webp" alt="A small cake with Love piped on top"></div>
+      <h2 class="sec-title">Is this right for your business?</h2>
+      <p class="sec-lead">Send me a message and we can talk through your goals and whether it&rsquo;s a fit.</p>
+      <a class="btn" href="mailto:sociallyintroverts@outlook.com">Send me a message</a>
+      <p class="contact-line"><a href="book.html">Or book an intro chat &rarr;</a></p>
+      <p class="contact-line" style="margin-top:14px;"><a href="work-together.html">See all the ways to work together &rarr;</a></p>
+      <p class="contact-line" style="margin-top:14px;">Questions? Email <a href="mailto:sociallyintroverts@outlook.com">sociallyintroverts@outlook.com</a></p>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>
