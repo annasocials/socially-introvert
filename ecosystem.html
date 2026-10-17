@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6e4df">
 <meta name="robots" content="noindex, nofollow">
 <title>Simplify Pinterest Management Ecosystem | Socially Introverts</title>
-<meta name="description" content="Simplify Pinterest Management Ecosystem: one connected system that maps, creates, publishes and reviews your Pinterest each month. Case-study partner rate, $500 per month.">
+<meta name="description" content="Simplify Pinterest Management Ecosystem: one connected system that maps, creates, publishes and reviews your Pinterest each month. Case-study partner rate, $500 per month, 3 founding spots.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,6 +129,34 @@
     .step{ grid-template-columns:38px 1fr; gap:14px; }
     .step .n{ width:38px; height:38px; font-size:1.05rem; }
   }
+
+  .glance{ display:grid; grid-template-columns:1fr 1fr; gap:0 28px; }
+  .glance div{ display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px dashed rgba(93,15,17,0.3); font-size:1.12rem; line-height:1.35; }
+  .glance dt{ color:var(--ink-soft); margin:0; }
+  .glance dd{ color:var(--ink); font-weight:600; margin:0; text-align:right; }
+  .glance{ margin:0; }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .two .card h3, .addons .card h3, .minis .card h3{ font-size:1.4rem; font-weight:600; color:var(--maroon); margin:0 0 10px; line-height:1.2; }
+  .checks strong, .plain strong{ color:var(--ink); }
+  .plain{ display:flex; flex-direction:column; gap:10px; }
+  .plain li{ position:relative; padding-left:20px; font-size:1.12rem; line-height:1.5; color:var(--ink-soft); }
+  .plain li::before{ content:""; position:absolute; left:2px; top:0.72em; width:5px; height:5px; border-radius:999px; background:var(--maroon); }
+  .minis{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:18px 0 14px; }
+  .minis .card{ padding:20px 20px 18px; }
+  .minis .big{ font-size:2rem; font-weight:500; color:var(--maroon); line-height:1; margin:0 0 6px; }
+  .minis p{ font-size:1.05rem; line-height:1.45; color:var(--ink-soft); }
+  .addons{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .addons .card{ display:flex; flex-direction:column; }
+  .addons .amt{ font-size:2.2rem; font-weight:500; color:var(--maroon); line-height:1; margin:0 0 4px; }
+  .addons .amt small{ font-size:1rem; color:var(--ink-soft); font-weight:500; }
+  .addons .when{ font-size:1.08rem; line-height:1.5; color:var(--ink-soft); margin-top:10px; }
+  .pills{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
+  .pills span{ border:1px dashed rgba(93,15,17,0.45); border-radius:999px; padding:9px 18px; font-size:1.08rem; color:var(--ink-soft); }
+  .tiny{ font-size:1rem; font-style:italic; color:var(--ink-soft); line-height:1.5; margin-top:14px; max-width:62ch; }
+  @media (max-width:860px){
+    .glance,.two,.addons{ grid-template-columns:1fr; }
+    .minis{ grid-template-columns:1fr; }
+  }
   @media (prefers-reduced-motion:reduce){ .btn,.back{ transition:none; } }
 </style>
 </head>
@@ -142,13 +170,14 @@
     <!-- HERO -->
     <header class="hero">
      <div class="hero-grid"><div>
-      <span class="eyebrow">Case study &middot; Limited pilot</span>
+      <span class="eyebrow">Case study &middot; 3 founding spots</span>
       <h1 class="h-title">Simplify Pinterest Management Ecosystem</h1>
       <p class="h-sub">One connected system to help the right people discover your business.</p>
-      <p class="lead">I plan, create, publish and review your Pinterest every month, and every Pin points to a page on your website where people can take the next step.</p>
+      <p class="lead">Every month I plan your Pins, create them, publish them and report back. Each Pin leads to the right page on your website.</p>
       <div class="chips">
         <span class="price">$500 per month</span>
-        <span>Case-study partner rate</span>
+        <span>3-month pilot</span>
+        <span>No setup fee</span>
       </div>
       <a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener">Become a Case-Study Partner</a>
      </div>
@@ -158,42 +187,210 @@
      </div></div>
     </header>
 
-    <!-- WHAT IT IS -->
-    <section aria-labelledby="what">
-      <h2 class="sec-title" id="what">Pinterest takes more than making Pins</h2>
-      <p class="sec-lead">You already have products, services, photos and ideas worth sharing. Turning them into steady Pinterest content takes more than making Pins and scheduling them.</p>
-      <p class="sec-lead">Simplify Pinterest Management connects four things:</p>
-      <div class="connects">
-        <div class="card"><p>What your business offers</p></div>
-        <div class="card"><p>What people may be searching for</p></div>
-        <div class="card"><p>The content you publish</p></div>
-        <div class="card"><p>The website pages where people take the next step</p></div>
+    <!-- AT A GLANCE -->
+    <section aria-labelledby="glance">
+      <h2 class="sec-title" id="glance">The offer at a glance</h2>
+      <div class="card card--strong">
+        <dl class="glance">
+          <div><dt>Price</dt><dd>$500 per month</dd></div>
+          <div><dt>Term</dt><dd>3 months, then month to month</dd></div>
+          <div><dt>Setup fee</dt><dd>Waived</dd></div>
+          <div><dt>Founding spots</dt><dd>3</dd></div>
+          <div><dt>Pins each month</dt><dd>Set by your Pin Map, usually 12 to 22</dd></div>
+          <div><dt>Your time</dt><dd>Approve, review, read one report</dd></div>
+          <div><dt>Account</dt><dd>One Pinterest business account</dd></div>
+          <div><dt>After the pilot</dt><dd>Standard rate from $850 per month</dd></div>
+        </dl>
       </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section aria-labelledby="get">
+      <h2 class="sec-title" id="get">What you get every month</h2>
+      <div class="card">
+        <ul class="checks">
+          <li><strong>A Pin Map.</strong> Keyword research tied to your products and calendar. It decides what we make this month.</li>
+          <li><strong>Original Pins.</strong> Usually 12 to 22. Each has a title, description, keywords and alt text.</li>
+          <li><strong>Destination links.</strong> Each Pin points to a relevant page on your website. I check every link.</li>
+          <li><strong>Board and profile upkeep.</strong> I add new boards when a product or campaign needs one.</li>
+          <li><strong>Scheduling and publishing.</strong> Seasonal Pins go live 30 to 45 days ahead.</li>
+          <li><strong>A one-page report.</strong> Impressions, saves, outbound clicks, top Pins and what to do next, explained so it is easy to act on.</li>
+          <li><strong>A short Loom.</strong> 10 to 15 minutes walking you through the report.</li>
+          <li><strong>One revision round</strong> on each batch of Pins.</li>
+          <li><strong>Support by message.</strong> I reply within one business day. No standing weekly calls.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PIN COUNT -->
+    <section aria-labelledby="count">
+      <h2 class="sec-title" id="count">How many Pins you get</h2>
+      <p class="sec-lead">There is no fixed number. Each month starts with a short list of what your business needs people to find. I call each item a focus. Every focus gets about three Pin variations, so we can see which angle Pinterest picks up.</p>
+      <p class="sec-lead" style="margin-bottom:10px;">A focus can be:</p>
+      <ul class="plain">
+        <li>A product or collection you want to sell more of</li>
+        <li>A seasonal moment coming up, like gifts or holidays</li>
+        <li>A blog post, guide or offer that needs traffic</li>
+        <li>A past winner worth refreshing with a new Pin</li>
+      </ul>
+      <div class="minis">
+        <div class="card"><h3>Small candle shop</h3><p class="big">about 9 Pins</p><p>3 focuses: two hero scents and one gifting moment. Fewer products, so each one gets deeper testing.</p></div>
+        <div class="card"><h3>Jewelry brand</h3><p class="big">about 18 Pins</p><p>6 focuses: three collections, a Mother&rsquo;s Day push, one blog guide and one old winner refreshed.</p></div>
+        <div class="card"><h3>Digital product launch</h3><p class="big">about 12 Pins</p><p>4 focuses: the new product, a free preview, the launch offer and a how-to guide. Pins are planned ahead so they are live when you launch.</p></div>
+        <div class="card"><h3>Larger catalog</h3><p class="big">about 22 Pins</p><p>Too many focuses for one month, so the Pin Map picks the top 7 and moves the rest to later months.</p></div>
+      </div>
+      <p class="tiny">These examples show how the Pin Map works. Your own map sets your real number. If it needs more Pins than the month allows, we move a focus to next month or add a Pin Boost. Nothing gets cut silently.</p>
     </section>
 
     <!-- THE LOOP -->
     <section aria-labelledby="loop">
-      <h2 class="sec-title" id="loop">One loop instead of five separate tasks</h2>
+      <h2 class="sec-title" id="loop">One loop each month</h2>
       <div class="steps">
-        <div class="step"><span class="n" aria-hidden="true">1</span><div><h3>Map: choose the right opportunities</h3><p>I review your priority products or services, relevant search themes, seasonal opportunities and existing content. From that I build a focused monthly Pin Map.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">2</span><div><h3>Make: turn the plan into content</h3><p>I create original Pins from your existing brand assets, with relevant titles, descriptions and destination URLs. The number of Pins depends on your business goals and setup.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">3</span><div><h3>Publish: keep your content moving</h3><p>I schedule approved Pins to relevant boards and plan publishing around your priorities and seasonal moments.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">4</span><div><h3>Learn: see what the data says</h3><p>I review the Pinterest analytics available: impressions, saves, outbound clicks and top-performing content. I look for patterns worth exploring.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">5</span><div><h3>Simplify: decide what comes next</h3><p>You get a short monthly report and a clear list of priorities for the next cycle. Each month builds on what we learned, so you never start from scratch.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">1</span><div><h3>Map &middot; Week 1</h3><p>I match your products, seasons and content to what people search for on Pinterest. You approve the Pin Map before I design anything.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">2</span><div><h3>Make &middot; Weeks 1 to 2</h3><p>I create original Pins from your brand assets, with search-focused titles and descriptions.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">3</span><div><h3>Publish &middot; Weeks 2 to 4</h3><p>I schedule the approved Pins to the right boards and check that each link lands on the right live page.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">4</span><div><h3>Learn &middot; Week 4</h3><p>I read your saves, outbound clicks and top Pins. Winners get repeated. Weak Pins get dropped.</p></div></div>
+        <div class="step"><span class="n" aria-hidden="true">5</span><div><h3>Simplify &middot; Week 4</h3><p>You get the report and the Loom. Next month&rsquo;s Pin Map starts from what worked, so you never start from scratch.</p></div></div>
       </div>
     </section>
 
-    <!-- LOW FRICTION -->
-    <section aria-labelledby="easy">
-      <h2 class="sec-title" id="easy">Designed to be low-friction</h2>
-      <div class="card card--strong">
-        <span class="label">Your part each month</span>
-        <ul class="checks">
-          <li>Approve the Pin Map.</li>
-          <li>Review the creative batch.</li>
-          <li>Read one short monthly report.</li>
+    <!-- YOUR PART -->
+    <section aria-labelledby="part">
+      <h2 class="sec-title" id="part">Your part</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Each month</h3>
+          <ul class="checks">
+            <li>Approve the Pin Map within 3 days</li>
+            <li>Review the batch of Pins</li>
+            <li>Read one short report</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>To get started</h3>
+          <ul class="checks">
+            <li>Pinterest business account access and your website or shop links</li>
+            <li>A shared folder with product photos, logo, fonts and colors</li>
+            <li>Your baseline stats, and permission to screenshot them</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIRST 90 DAYS -->
+    <section aria-labelledby="first">
+      <h2 class="sec-title" id="first">Your first 90 days</h2>
+      <div class="phases">
+        <div class="card phase">
+          <span class="label">Before publishing</span>
+          <h3>Onboarding</h3>
+          <p>I review your website, social media, products or services, existing content and Pinterest analytics. I also ask about your priorities, important offers, target customers, seasonal campaigns and what success looks like for you.</p>
+          <p class="get"><strong>Day 0 baseline:</strong> impressions, saves, outbound clicks, followers and your top 5 Pins.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">Month 1</span>
+          <h3>Foundation pass, Pin Map and first Pins</h3>
+          <p>Before the first Pin Map I set up your base: profile name and bio, up to 8 boards and a keyword map of 15 to 20 terms. This is part of month 1 and there is no setup fee. Then we run the loop for the first time.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">End of month 1</span>
+          <h3>Report and strategy call</h3>
+          <p>You get your first report. Then we have one focused strategy call about what we learned, your priorities and next month&rsquo;s direction. I write down the agreed priorities afterward and carry on by message.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">Day 45</span>
+          <h3>First read</h3>
+          <p>We look at which focuses and Pin styles are getting saves. You share a short testimonial.</p>
+        </div>
+        <div class="card phase">
+          <span class="label">Day 90</span>
+          <h3>Before and after</h3>
+          <p>We review what changed in the Pin Map. You share a second testimonial. I draft the case study and you approve it before anything goes public.</p>
+        </div>
+      </div>
+      <p class="sec-lead" style="margin-top:18px;">From month 2, the same loop repeats. You decide whether you want more strategy calls or prefer to keep reviews by message.</p>
+    </section>
+
+    <!-- NOT INCLUDED -->
+    <section aria-labelledby="notin">
+      <h2 class="sec-title" id="notin">What&rsquo;s not included</h2>
+      <div class="card">
+        <ul class="plain">
+          <li>Pinterest ads or ad spend</li>
+          <li>Blog writing or website changes</li>
+          <li>Product photography or video shoots</li>
+          <li>Email setup or funnel building</li>
+          <li>Other platforms, like Instagram or TikTok</li>
+          <li>Guaranteed traffic, sales or follower counts</li>
         </ul>
-        <p class="sec-lead" style="margin:18px 0 0;">I handle the agreed planning, creation, publishing and review.</p>
+        <p class="tiny" style="margin-top:16px;">Need one of these? Some are available as add-ons below. The rest I can quote separately.</p>
+      </div>
+    </section>
+
+    <!-- ADD-ONS -->
+    <section aria-labelledby="addons">
+      <h2 class="sec-title" id="addons">Optional add-ons</h2>
+      <div class="addons">
+        <div class="card">
+          <h3>Pin Boost</h3>
+          <p class="amt">$125 <small>per 5 Pins</small></p>
+          <p class="when">Your Pin Map needs more Pins than the monthly scope covers.</p>
+        </div>
+        <div class="card">
+          <h3>Seasonal Sprint</h3>
+          <p class="amt">$200 <small>8 extra Pins</small></p>
+          <p class="when">A holiday, a product launch or a new digital product, planned 45 days ahead so the Pins are live when it matters.</p>
+        </div>
+        <div class="card">
+          <h3>Blog + Email</h3>
+          <p class="amt">$250</p>
+          <p class="when">Blog and email content written around your Pin Map, so each Pin leads somewhere useful. The number of pieces is agreed before work begins.</p>
+        </div>
+        <div class="card">
+          <h3>Integrated Funnel</h3>
+          <p class="amt">Custom quote</p>
+          <p class="when">Connects the whole path: Pin, blog post, lead magnet or product page, email sign-up, sale. Includes a funnel map, a review of your calls to action and landing-page messaging, and tracking recommendations.</p>
+        </div>
+      </div>
+      <p class="tiny">Ads, photography and website changes are quoted separately.</p>
+    </section>
+
+    <!-- CASE STUDY TERMS -->
+    <section aria-labelledby="terms">
+      <h2 class="sec-title" id="terms">Case-study terms</h2>
+      <div class="two">
+        <div class="card">
+          <h3>You give</h3>
+          <ul class="checks">
+            <li>Permission to publish your results as a case study. You approve the final version and can stay anonymous.</li>
+            <li>A short testimonial at day 45 and day 90</li>
+            <li>Screenshots of your baseline and monthly stats</li>
+            <li>Feedback on how the service is working for you, so I can keep improving it</li>
+          </ul>
+        </div>
+        <div class="card card--strong">
+          <h3>You get</h3>
+          <ul class="checks">
+            <li>The founding rate locked for 3 months</li>
+            <li>The setup fee waived</li>
+            <li>Work built from your Pin Map, not a Pin quota</li>
+            <li>First option to stay at a loyalty rate before the standard rate applies</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section aria-labelledby="who">
+      <h2 class="sec-title" id="who">Who it&rsquo;s for</h2>
+      <p class="sec-lead">Product- and experience-led businesses with an established offer, a website people can explore and imagery we can use.</p>
+      <div class="pills">
+        <span>Artisan jewelry and accessories</span>
+        <span>Florists and boutique gifting</span>
+        <span>Boutique stays and experiences</span>
+        <span>Homeware</span>
+        <span>Lifestyle and skincare brands</span>
+        <span>Creative workshops</span>
       </div>
     </section>
 
@@ -202,57 +399,11 @@
       <div class="card card--strong invest">
         <span class="label" id="invest">Case-study partner rate</span>
         <p class="price">$500</p>
-        <p class="per">per month</p>
-        <p class="small">A limited pilot for product-based and experience-based businesses that want Pinterest managed for them.</p>
-        <p class="small">The pilot has a defined monthly scope, agreed approval points and clear reporting. It is built to set up a steady workflow and learn from your account&rsquo;s performance over time.</p>
+        <p class="per">per month &middot; 3-month pilot &middot; 3 founding spots</p>
+        <p class="small">A limited pilot for product- and experience-led businesses that want Pinterest managed for them. It has a defined monthly scope, agreed approval points and clear reporting.</p>
         <a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener">Become a Case-Study Partner</a>
-        <p class="fine">Pinterest results vary by business, audience, content, website and season, and depend on your business setup.</p>
+        <p class="fine">Pinterest builds over time, and what it does for you depends on your products, website and season. What I commit to is the work: a clear plan every month, Pins built around what people search for, and a monthly report that shows what is working and what to do next.</p>
       </div>
-    </section>
-
-    <!-- FIRST MONTH -->
-    <section aria-labelledby="first">
-      <h2 class="sec-title" id="first">How the first month works</h2>
-      <p class="sec-lead">It starts with understanding your business, moves into the work, and then uses what we learn to set the next month.</p>
-      <div class="phases">
-        <div class="card phase">
-          <span class="label">Onboarding &middot; before publishing</span>
-          <h3>Phase 1: Understand the business</h3>
-          <p>I review your website, social media, products or services, existing content, brand positioning, customer journey and available Pinterest analytics.</p>
-          <p>I also ask about your priorities, important offers, target customers, seasonal campaigns and what success looks like for you.</p>
-          <p class="get"><strong>You get:</strong> a clear picture of your business, its current discovery path and the opportunities worth exploring.</p>
-        </div>
-        <div class="card phase">
-          <span class="label">Month 1 &middot; planning</span>
-          <h3>Phase 2: Map the strategy</h3>
-          <p>I use the research to choose priority products or services, search themes, content angles and website destinations. You review a Pin Map before I create any content.</p>
-          <p class="get"><strong>You get:</strong> an agreed monthly plan that connects your offers to Pins and URLs.</p>
-        </div>
-        <div class="card phase">
-          <span class="label">Month 1 &middot; execution</span>
-          <h3>Phase 3: Make and publish</h3>
-          <p>I create the agreed Pins, write search-focused titles and descriptions, schedule the content and check the destination links. You review the creative batch at the agreed approval point. Once you approve it, I handle publishing.</p>
-          <p class="get"><strong>You get:</strong> the agreed content, prepared and published on schedule.</p>
-        </div>
-        <div class="card phase">
-          <span class="label">End of month 1</span>
-          <h3>Phase 4: Review and refine</h3>
-          <p>I review the available data, look at early content signals and write a short report.</p>
-          <p class="get"><strong>You get:</strong> a review of what was published, what we can see so far and what deserves more testing.</p>
-        </div>
-        <div class="card phase">
-          <span class="label">After month 1</span>
-          <h3>Phase 5: Strategy call and next steps</h3>
-          <p>We meet to go over the first findings, your priorities, what we learned and the direction for next month. It is a focused strategy session, not a weekly meeting. Afterward I write down the agreed priorities and continue asynchronously.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ONGOING -->
-    <section aria-labelledby="ongoing">
-      <h2 class="sec-title" id="ongoing">How the ongoing months work</h2>
-      <p class="sec-lead">From month two, the same loop repeats: review the signals, plan the next batch, create, publish and report.</p>
-      <p class="sec-lead">The strategy call after month one sets the direction. You decide whether to have future calls or keep the reviews async.</p>
     </section>
 
     <!-- CLOSING -->
