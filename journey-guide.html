@@ -235,8 +235,8 @@ const SERVICES = {
     best:"food and lifestyle brands who want finished Instagram and Pinterest content, created for them.",
     pts:["9 Instagram feed designs with captions, made from your existing brand assets","9 Pinterest Pins with titles, descriptions and website destinations","1 branded board cover, a handoff guide and 1 consolidated revision round"]},
   coded:{name:"Simplify Coded Pinterest", emoji:"🗺️", price:"$350", sub:"personalized DIY strategy · one-time", href:"beta.html", cta:"Get My Pinterest Roadmap",
-    best:"brands who are happy to create and publish their own Pins and want a clear plan to follow.",
-    pts:["Personalized keyword research and a six-month content calendar","Around 48 tailored Pin concepts, with a website destination for each","A DIY guide: you create the graphics and manage your account"]},
+    best:"brands who want a clear, personalized plan for their Pinterest content.",
+    pts:["Personalized keyword research and a six-month content calendar","Around 48 tailored Pin concepts, with a website destination for each","A DIY implementation guide to put the roadmap into action"]},
   eco:{name:"Simplify Content Ecosystem", emoji:"🌙", price:"from $750 / month", sub:"ongoing integrated content service", href:"ecosystem.html", cta:"Enquire About Monthly Content",
     best:"brands that want ongoing content across Instagram, Pinterest and a blog.",
     pts:["8 Instagram posts, 12 Pins and 1 blog article each month","A monthly content calendar, plus scheduling and publishing for agreed platforms","A monthly performance overview"]},
@@ -308,8 +308,8 @@ function go(n){
 function pick(){
   let k=S.stage==="found"?"feed":S.stage, note="";
   const b=S.budget;
-  if(k==="eco" && b==="under500"){k="coded"; note="Simplify Content Ecosystem starts at $750 a month, so I'd begin with Simplify Coded Pinterest ($350), a personalized roadmap you carry out yourself. It can grow into monthly content later.";}
-  else if(k==="feed" && b==="under500"){k="coded"; note="The Feed Refresh is $597 one-time, so Simplify Coded Pinterest ($350) may be the closer fit for your range. You'd create and publish the Pins yourself.";}
+  if(k==="eco" && b==="under500"){k="coded"; note="Simplify Content Ecosystem starts at $750 a month, so I'd begin with Simplify Coded Pinterest ($350), a personalized roadmap. It can grow into monthly content later.";}
+  else if(k==="feed" && b==="under500"){k="coded"; note="The Feed Refresh is $597 one-time, so Simplify Coded Pinterest ($350) may be the closer fit for your range.";}
   const alts={feed:["coded","eco"],coded:["feed","eco"],eco:["feed","coded"],chat:["feed","coded"]};
   return {k,note,alt:alts[k]};
 }
