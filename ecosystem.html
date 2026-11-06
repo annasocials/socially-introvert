@@ -1,357 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f6e4df">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinterest Management | Socially Introverts</title>
+<meta name="description" content="Monthly Pinterest management for F&B and modern lifestyle brands: keyword research, Pin design, scheduling and performance reviews. From $700 USD/month.">
 <meta name="robots" content="noindex, nofollow">
-<!-- PRE-LAUNCH: robots is still noindex. Switch to "index, follow" and add canonical https://sociallyintroverts.com/ecosystem when you approve this page. -->
-<meta property="og:title" content="Simplify Content Ecosystem | Socially Introverts">
-<meta property="og:description" content="Good content deserves more places to go. Connected Instagram, Pinterest and blog content each month, from $750 USD/month.">
+<link rel="canonical" href="https://sociallyintroverts.com/ecosystem">
 <meta property="og:type" content="website">
-<title>Simplify Content Ecosystem | Instagram + Pinterest + Blog | Socially Introverts</title>
-<meta name="description" content="Simplify Content Ecosystem: an ongoing monthly content service that connects Instagram, Pinterest and blog content for food and lifestyle brands, from $750 USD/month.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Beau+Rivage&display=swap" rel="stylesheet">
-
+<meta property="og:title" content="Pinterest Management | Socially Introverts">
+<meta property="og:description" content="A more intentional way to get discovered on Pinterest. From $700 USD/month.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap">
 <style>
-  :root{
-    --bg-1:#f5e6e3;
-    --pill:#f0c3cb;
-    --pill-ink:#7a2035;
-    --ink:#5d0f11;
-    --ink-soft:#4a2a2f;
-    --maroon:#5d0f11;
-    --card:rgba(255,255,255,0.45);
-    --card-line:rgba(93,15,17,0.25);
-    --font-display:'Cormorant Garamond', serif;
-    --font-script:'Beau Rivage', cursive;
-  }
-  *{ box-sizing:border-box; }
-  html,body{ margin:0; padding:0; color:var(--ink); font-family:var(--font-display); -webkit-font-smoothing:antialiased; }
-  body{
-    background-color:var(--bg-1);
-    background-image:
-      linear-gradient(180deg, rgba(240,195,203,0.55) 0%, rgba(245,230,227,0) 40%),
-      repeating-linear-gradient(0deg, rgba(93,15,17,0.035) 0 1px, transparent 1px 22px),
-      repeating-linear-gradient(90deg, rgba(93,15,17,0.035) 0 1px, transparent 1px 22px);
-  }
-  a{ color:inherit; }
-  p,h1,h2,h3,ul{ margin:0; }
-  ul{ padding:0; list-style:none; }
-
-  .page{ padding:28px 5vw 64px; }
-  .wrap{ max-width:900px; margin:0 auto; }
-  .logo{ display:block; margin:0 auto 40px; width:150px; height:auto; }
-
-  .eyebrow{ display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--maroon); background:var(--pill); border-radius:999px; padding:6px 16px; }
-  .h-title{ font-size:3.6rem; font-weight:500; line-height:1.05; color:var(--ink); margin:18px 0 14px; }
-  .h-sub{ font-size:1.55rem; font-style:italic; color:var(--ink-soft); line-height:1.35; max-width:32ch; margin:0 0 20px; }
-  .lead{ font-size:1.2rem; color:var(--ink-soft); line-height:1.6; max-width:58ch; }
-
-  .hero{ margin-bottom:52px; }
-  .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 28px; }
-  .chips span{ font-size:0.8rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--pill-ink); background:var(--pill); border-radius:999px; padding:9px 18px; }
-  .chips span.price{ background:var(--maroon); color:#fff; }
-
-  .btn{ display:inline-block; text-decoration:none; background:var(--maroon); color:#fff; font-size:0.92rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:999px; padding:16px 30px; text-align:center; transition:transform .15s ease, box-shadow .15s ease; }
-  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 18px rgba(93,15,17,0.25); }
-  .btn:focus-visible{ outline:2px solid var(--maroon); outline-offset:3px; }
-
-  section{ margin:0 0 56px; }
-  .sec-title{ font-size:2.3rem; font-weight:500; line-height:1.15; color:var(--ink); margin:0 0 14px; }
-  .sec-lead{ font-size:1.15rem; color:var(--ink-soft); line-height:1.6; max-width:62ch; margin:0 0 16px; }
-  .label{ display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--maroon); margin:0 0 8px; }
-
-  .card{ background:var(--card); border:1px solid var(--card-line); border-radius:8px; padding:26px 26px 24px; }
-  .card--strong{ border:2px solid var(--maroon); background:rgba(255,255,255,0.62); }
-
-  .connects{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:22px 0 0; }
-  .connects .card{ padding:20px 18px; }
-  .connects p{ font-size:1.1rem; line-height:1.4; color:var(--ink); font-weight:600; }
-
-  .steps{ display:flex; flex-direction:column; gap:20px; }
-  .step{ display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:start; }
-  .step .n{ width:44px; height:44px; border-radius:999px; background:var(--maroon); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:600; }
-  .step h3{ font-size:1.5rem; font-weight:600; color:var(--maroon); margin:2px 0 4px; line-height:1.2; }
-  .step p{ font-size:1.1rem; line-height:1.55; color:var(--ink-soft); max-width:60ch; }
-
-  .phases{ display:flex; flex-direction:column; gap:16px; }
-  .phase h3{ font-size:1.5rem; font-weight:600; color:var(--maroon); margin:0 0 10px; line-height:1.2; }
-  .phase p{ font-size:1.08rem; line-height:1.55; color:var(--ink-soft); max-width:64ch; margin:0 0 10px; }
-  .phase .get{ margin:14px 0 0; padding-top:12px; border-top:1px dashed rgba(93,15,17,0.35); color:var(--ink); }
-  .phase .get strong{ color:var(--maroon); }
-
-  .checks{ display:flex; flex-direction:column; gap:12px; }
-  .checks li{ position:relative; padding-left:34px; font-size:1.15rem; line-height:1.5; color:var(--ink-soft); }
-  .checks li::before{ content:""; position:absolute; left:0; top:5px; width:20px; height:20px; border-radius:999px; background:var(--pill); }
-  .checks li::after{ content:""; position:absolute; left:6px; top:9px; width:8px; height:5px; border-left:2px solid var(--pill-ink); border-bottom:2px solid var(--pill-ink); transform:rotate(-45deg); }
-
-  .invest{ text-align:center; padding:40px 26px; }
-  .invest .price{ font-size:3.4rem; font-weight:500; color:var(--maroon); line-height:1; margin:8px 0 6px; }
-  .invest .per{ font-size:1.1rem; color:var(--ink-soft); margin:0 0 18px; }
-  .invest .small{ font-size:1.1rem; color:var(--ink-soft); line-height:1.55; max-width:52ch; margin:0 auto 14px; }
-  .invest .btn{ margin-top:10px; }
-
-  .fine{ font-size:1rem; font-style:italic; color:var(--ink-soft); line-height:1.5; max-width:62ch; margin:18px auto 0; text-align:center; }
-
-  .closing{ text-align:center; padding:12px 0 8px; }
-  .closing .sec-title{ margin-bottom:10px; }
-  .closing .sec-lead{ margin:0 auto 22px; }
-  .contact-line{ text-align:center; font-size:1.15rem; color:var(--ink-soft); margin-top:30px; }
-  .contact-line a{ text-decoration:underline; }
-
-  .backrow{ margin:0 0 18px; }
-  .back{ display:inline-block; text-decoration:none; font-size:0.85rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--pill-ink); background:var(--pill); border-radius:999px; padding:10px 20px; transition:transform .15s ease, box-shadow .15s ease; }
-  .back:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(93,15,17,0.20); }
-
-  .cut{ display:block; height:auto; filter:drop-shadow(0 14px 18px rgba(74,20,30,0.22)); }
-  .hero-grid{ display:grid; grid-template-columns:1.25fr 0.75fr; gap:30px; align-items:center; }
-  .hero-art{ position:relative; min-height:420px; }
-  .hero-art .m{ position:absolute; right:0; top:0; width:78%; transform:rotate(4deg); }
-  .hero-art .s{ position:absolute; left:0; bottom:0; width:56%; transform:rotate(-6deg); }
-  .stickers{ display:flex; justify-content:center; align-items:flex-end; gap:24px; margin:0 0 14px; }
-  .stickers .c{ width:110px; transform:rotate(-6deg); }
-  .stickers .k{ width:130px; transform:rotate(5deg); }
-  @media (max-width:860px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-art{ min-height:320px; max-width:380px; width:100%; margin:0 auto; }
-  }
-  @media (max-width:860px){
-    .h-title{ font-size:2.8rem; }
-    .connects{ grid-template-columns:1fr 1fr; }
-  }
-  @media (max-width:560px){
-    .page{ padding:22px 20px 48px; }
-    .h-title{ font-size:2.4rem; }
-    .h-sub{ font-size:1.35rem; }
-    .sec-title{ font-size:1.9rem; }
-    .connects{ grid-template-columns:1fr; }
-    .btn{ display:block; width:100%; }
-    .step{ grid-template-columns:38px 1fr; gap:14px; }
-    .step .n{ width:38px; height:38px; font-size:1.05rem; }
-  }
-
-  .glance{ display:grid; grid-template-columns:1fr 1fr; gap:0 28px; }
-  .glance div{ display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px dashed rgba(93,15,17,0.3); font-size:1.12rem; line-height:1.35; }
-  .glance dt{ color:var(--ink-soft); margin:0; }
-  .glance dd{ color:var(--ink); font-weight:600; margin:0; text-align:right; }
-  .glance{ margin:0; }
-  .two{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .two .card h3, .addons .card h3, .minis .card h3{ font-size:1.4rem; font-weight:600; color:var(--maroon); margin:0 0 10px; line-height:1.2; }
-  .checks strong, .plain strong{ color:var(--ink); }
-  .plain{ display:flex; flex-direction:column; gap:10px; }
-  .plain li{ position:relative; padding-left:20px; font-size:1.12rem; line-height:1.5; color:var(--ink-soft); }
-  .plain li::before{ content:""; position:absolute; left:2px; top:0.72em; width:5px; height:5px; border-radius:999px; background:var(--maroon); }
-  .minis{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:18px 0 14px; }
-  .minis .card{ padding:20px 20px 18px; }
-  .minis .big{ font-size:2rem; font-weight:500; color:var(--maroon); line-height:1; margin:0 0 6px; }
-  .minis p{ font-size:1.05rem; line-height:1.45; color:var(--ink-soft); }
-  .addons{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .addons .card{ display:flex; flex-direction:column; }
-  .addons .amt{ font-size:2.2rem; font-weight:500; color:var(--maroon); line-height:1; margin:0 0 4px; }
-  .addons .amt small{ font-size:1rem; color:var(--ink-soft); font-weight:500; }
-  .addons .when{ font-size:1.08rem; line-height:1.5; color:var(--ink-soft); margin-top:10px; }
-  .pills{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
-  .pills span{ border:1px dashed rgba(93,15,17,0.45); border-radius:999px; padding:9px 18px; font-size:1.08rem; color:var(--ink-soft); }
-  .tiny{ font-size:1rem; font-style:italic; color:var(--ink-soft); line-height:1.5; margin-top:14px; max-width:62ch; }
-  @media (max-width:860px){
-    .glance,.two,.addons{ grid-template-columns:1fr; }
-    .minis{ grid-template-columns:1fr; }
-  }
-
-  .path{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:20px 0 22px; }
-  .path .card{ position:relative; padding:20px 18px; }
-  .path .card:not(:last-child)::after{ content:"\2192"; position:absolute; right:-14px; top:50%; transform:translateY(-50%); color:var(--maroon); font-size:1.3rem; z-index:1; background:var(--bg-1); border-radius:999px; width:24px; height:24px; line-height:22px; text-align:center; }
-  .path h3{ font-size:1.3rem; font-weight:600; color:var(--maroon); margin:0 0 8px; line-height:1.2; }
-  .path p{ font-size:1.05rem; line-height:1.45; color:var(--ink-soft); }
-  .path .k{ display:block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--pill-ink); margin:0 0 6px; }
-  .paybox{ border-top:1px dashed rgba(93,15,17,0.35); margin:22px auto 0; padding-top:18px; max-width:56ch; }
-  .paybox p{ font-size:1.08rem; line-height:1.5; color:var(--ink-soft); }
-  .paybox strong{ color:var(--maroon); }
-  @media (max-width:860px){
-    .path{ grid-template-columns:1fr; }
-    .path .card:not(:last-child)::after{ content:"\2193"; right:auto; left:50%; top:auto; bottom:-16px; transform:translateX(-50%); }
-  }
-  @media (prefers-reduced-motion:reduce){ .btn,.back{ transition:none; } }
+:root{--bg:#F5F0E8;--ink:#46372F;--soft:#6A5A50;--sage:#566049;--sage2:#89917B;--line:#DDD2C4;--tan:#C6B5A3;--card:#FBF8F3;--sand:#E4DCCD}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:inherit}
+.w{max-width:1120px;margin:0 auto;padding:0 32px}
+.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
+h3{font-size:clamp(28px,3.2vw,38px);line-height:1.08}
+p{margin:0}
+.soft{color:var(--soft)}
+.italic{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(24px,2.6vw,32px);line-height:1.25}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:var(--ink);color:var(--bg);border-radius:2px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .3s}
+.btn:hover{background:#2F241E}
+.btn.light{background:var(--bg);color:var(--ink)}
+.btn.light:hover{background:var(--card)}
+.btn.sm{min-height:44px;padding:0 22px}
+.chip{border:1px solid var(--tan);padding:6px 14px;font-size:13px;font-weight:500;letter-spacing:.04em}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:28px 0}
+header.top img{height:54px;width:auto;display:block}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:14px;font-weight:500}
+nav a.l{text-decoration:none;padding:8px 0}
+nav a.l:hover{color:var(--sage)}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center;padding:40px 0 72px}
+.hero .txt{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.frame{border:12px solid var(--sand);border-radius:28px;background:var(--sand);overflow:hidden;line-height:0}
+.frame img{width:100%;height:auto;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:16px;max-width:44em;margin-bottom:48px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:48px 72px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:20px}
+.small-img{max-width:300px;justify-self:center;border-radius:24px 24px 120px 24px;overflow:hidden;background:var(--sand);line-height:0}
+.small-img img{width:100%;height:auto;display:block}
+ul.dots{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.dots li{display:flex;gap:14px;padding-top:10px;border-top:1px solid var(--line)}
+ul.dots li:before{content:"";flex:none;width:6px;height:6px;margin-top:11px;background:var(--sage2)}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:32px}
+.plan{background:var(--card);border:1px solid var(--tan);padding:40px 36px;display:flex;flex-direction:column;gap:22px}
+.plan.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.plan.dark .eyebrow{color:#B8C0A8}
+.plan.dark .soft{color:#D9CDBD}
+.plan.dark ul.dots li{border-color:rgba(245,240,232,.2)}
+.plan.dark ul.dots li:before{background:#B8C0A8}
+.price{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(56px,7vw,80px);line-height:.95}
+.price small{font-family:'DM Sans',sans-serif;font-size:15px;color:var(--soft);margin-left:8px}
+.plan.dark .price small{color:#D9CDBD}
+.plan .btn{align-self:flex-start;margin-top:auto}
+.focus{margin-top:32px;border-left:2px solid var(--sage2);padding:4px 0 4px 24px;max-width:46em}
+.tablewrap{overflow-x:auto;border:1px solid var(--tan);background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:16px}
+th,td{text-align:left;padding:16px 24px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500}
+td:first-child{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:0;border:1px solid var(--tan);background:var(--card)}
+.three>div{padding:32px 28px;display:flex;flex-direction:column;gap:14px;border-right:1px solid var(--line)}
+.three h3{font-size:28px}
+.three .eyebrow.no{color:var(--soft)}
+.band{background:var(--ink);color:var(--bg);border-top:0}
+.band .soft{color:#D9CDBD}
+.band .eyebrow{color:#B8C0A8}
+.addon{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center}
+footer{padding:48px 0 56px;border-top:1px solid var(--line)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
+footer img{height:64px;width:auto;display:block}
+@media(max-width:600px){.w{padding:0 20px}.plan{padding:32px 24px}section{padding:64px 0}}
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="wrap">
+<div style="width:100%;line-height:0;background:#F8F7F2"><img src="ecosystem-banner.webp" alt="Simplify Pinterest Management" width="3780" height="1890" fetchpriority="high" style="display:block;width:100%;max-width:1120px;height:auto;margin:0 auto"></div>
 
-    <p class="backrow"><a class="back" href="work-together.html">&larr; Back to Work Together</a></p>
-    <img class="logo" src="logo.png" alt="Socially Introverts" width="219" height="98">
+<div class="w" id="top">
 
-    <!-- HERO -->
-    <header class="hero">
-     <div class="hero-grid"><div>
-      <span class="eyebrow">Ongoing integrated content service</span>
-      <h1 class="h-title">Simplify Content Ecosystem</h1>
-      <p class="h-sub">Instagram, Pinterest and blog content, planned to work together.</p>
-      <p class="lead">A monthly content service for food and lifestyle brands. Each month I create connected Instagram, Pinterest and blog content, point it to relevant pages on your website, and review how it&rsquo;s going.</p>
-      <div class="chips">
-        <span class="price">From $750 USD/month</span>
-        <span>Enquire first</span>
-      </div>
-      <a class="btn" href="book.html">Enquire About Monthly Content</a>
-      <p class="tiny" style="margin-top:14px;">Or email <a href="mailto:sociallyintroverts@outlook.com?subject=Simplify%20Content%20Ecosystem%20enquiry">sociallyintroverts@outlook.com</a></p>
-     </div>
-     <div class="hero-art">
-      <img class="cut m" src="ecosystem-matcha.webp" alt="Iced matcha, a compact camera, a lip balm and sunglasses laid out together">
-      <img class="cut s" src="ecosystem-strawberries.webp" alt="Fresh strawberries">
-     </div></div>
-    </header>
+<header class="top">
+<a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+<nav>
+<a class="l" href="#plans">Packages</a>
+<a class="l" href="#compare">Compare</a>
+<a class="l" href="#seo">SEO scope</a>
+<a class="l" href="#addon">Add-on</a>
+<a class="l" href="work-together.html">All services</a>
+<a class="btn sm" href="#apply">Apply</a>
+</nav>
+</header>
 
-    <!-- WHY THEY WORK TOGETHER -->
-    <section aria-labelledby="why">
-      <h2 class="sec-title" id="why">Good content deserves more places to go</h2>
-      <p class="sec-lead">Instagram, Pinterest and a blog do different jobs. Used together, they give the same product and story more than one way to be found, and a relevant page on your website to land on.</p>
-      <div class="path">
-        <div class="card"><span class="k">Instagram</span><h3>Introduces your brand</h3><p>Where your audience gets to know you and your story.</p></div>
-        <div class="card"><span class="k">Pinterest</span><h3>Another way to be found</h3><p>Where people search for ideas and products, so selected content can reach new people.</p></div>
-        <div class="card"><span class="k">Blog</span><h3>Gives search a home</h3><p>Articles written with search in mind, with a clear next step.</p></div>
-        <div class="card"><span class="k">Your website</span><h3>A place to explore</h3><p>The relevant page each piece of content points to.</p></div>
-      </div>
-      <p class="tiny">This isn&rsquo;t about posting everywhere. It&rsquo;s about making far better use of what you already have, with each piece planned around a purpose and a destination.</p>
-    </section>
-
-    <!-- AT A GLANCE -->
-    <section aria-labelledby="glance">
-      <h2 class="sec-title" id="glance">The starter scope at a glance</h2>
-      <div class="card card--strong">
-        <dl class="glance">
-          <div><dt>Starting price</dt><dd>From $750 USD/month</dd></div>
-          <div><dt>Instagram</dt><dd>8 feed posts, designs and captions</dd></div>
-          <div><dt>Pinterest</dt><dd>12 Pins, SEO-informed titles and descriptions</dd></div>
-          <div><dt>Blog</dt><dd>1 SEO-informed article, around 800&ndash;1,000 words</dd></div>
-          <div><dt>Planning</dt><dd>Monthly content calendar</dd></div>
-          <div><dt>Publishing</dt><dd>Scheduling and publishing for agreed platforms</dd></div>
-          <div><dt>Revisions</dt><dd>1 consolidated round per content batch</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- WHAT'S INCLUDED -->
-    <section aria-labelledby="get">
-      <h2 class="sec-title" id="get">What&rsquo;s included every month</h2>
-      <div class="card">
-        <ul class="checks">
-          <li><strong>8 Instagram feed posts</strong> with designs and captions.</li>
-          <li><strong>12 Pinterest Pins</strong> with SEO-informed titles and descriptions.</li>
-          <li><strong>1 SEO-informed blog article</strong> of approximately 800&ndash;1,000 words.</li>
-          <li><strong>A monthly content calendar</strong> so you know what&rsquo;s going out and why.</li>
-          <li><strong>Relevant website destination links</strong> for your content.</li>
-          <li><strong>Scheduling and publishing</strong> for the platforms we agree on.</li>
-          <li><strong>A monthly performance overview</strong> of how the content is doing.</li>
-          <li><strong>1 consolidated revision round</strong> per content batch.</li>
-        </ul>
-      </div>
-      <p class="tiny">$750 USD/month is the starting price for this starter scope. If you have something different in mind, tell me and I&rsquo;ll let you know whether it fits.</p>
-    </section>
-
-    <!-- THE MONTHLY PROCESS -->
-    <section aria-labelledby="loop">
-      <h2 class="sec-title" id="loop">How the monthly process works</h2>
-      <div class="steps">
-        <div class="step"><span class="n" aria-hidden="true">1</span><div><h3>Plan the month</h3><p>I put together your content calendar around your products, what people search for and the pages on your website you want content to lead to.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">2</span><div><h3>Create the content</h3><p>I design your Instagram posts and Pins from your brand assets, write the captions, titles and descriptions, and write your blog article.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">3</span><div><h3>Review it with me</h3><p>You receive the content batch for review, with one consolidated round of revisions.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">4</span><div><h3>Schedule and publish</h3><p>Once approved, I schedule and publish on the platforms we&rsquo;ve agreed, linking to the relevant pages on your website.</p></div></div>
-        <div class="step"><span class="n" aria-hidden="true">5</span><div><h3>Review how it went</h3><p>You get a monthly performance overview, and what we learn shapes the next month&rsquo;s plan.</p></div></div>
-      </div>
-    </section>
-
-    <!-- YOUR PART -->
-    <section aria-labelledby="part">
-      <h2 class="sec-title" id="part">What I&rsquo;ll need from you</h2>
-      <div class="two">
-        <div class="card">
-          <h3>To get started</h3>
-          <ul class="checks">
-            <li>Your brand assets: logo, colors, fonts, product photography and packaging images</li>
-            <li>Links to your website and the pages content should point to</li>
-            <li>Access to the accounts we agree to publish on</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Each month</h3>
-          <ul class="checks">
-            <li>Any news, launches or seasonal moments you want covered</li>
-            <li>Feedback on each content batch, in one consolidated round</li>
-            <li>A quick look at your monthly performance overview</li>
-          </ul>
-        </div>
-      </div>
-      <p class="tiny">I&rsquo;ll send an onboarding checklist once your enquiry is confirmed.</p>
-    </section>
-
-    <!-- HOW PERFORMANCE IS REVIEWED -->
-    <section aria-labelledby="perf">
-      <h2 class="sec-title" id="perf">How performance is reviewed</h2>
-      <p class="sec-lead">Each month you receive a performance overview based on the data available from the platforms we publish on, such as impressions, saves, clicks and top-performing content. I use it to guide what we create next. Not every piece performs equally, and that&rsquo;s useful to know.</p>
-      <p class="sec-lead">I can&rsquo;t promise specific traffic, rankings, enquiries or sales, and I&rsquo;d be careful with anyone who does. I build everything with strategy and search in mind. Results depend on your products, your website, demand and the consistency of the work over time.</p>
-    </section>
-
-    <!-- EXCLUSIONS -->
-    <section aria-labelledby="notinc">
-      <h2 class="sec-title" id="notinc">What&rsquo;s not included</h2>
-      <div class="card">
-        <ul class="plain">
-          <li>Website development</li>
-          <li>Technical SEO implementation</li>
-          <li>Conversion tracking setup</li>
-          <li>Photography and video shoots</li>
-          <li>Paid advertising</li>
-          <li>Community management, unless separately quoted</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- WHO IT'S FOR -->
-    <section aria-labelledby="who">
-      <h2 class="sec-title" id="who">Who it&rsquo;s for</h2>
-      <p class="sec-lead">Food and lifestyle brands with a visual identity, usable brand assets and a website with relevant pages to send people to, who want ongoing content rather than a one-time project.</p>
-      <div class="pills">
-        <span>Matcha and specialty drink brands</span>
-        <span>Caf&eacute;s and bakeries</span>
-        <span>Packaged and artisan food brands</span>
-        <span>Food gifting businesses</span>
-        <span>Homeware and home decor brands</span>
-        <span>Lifestyle and gifting brands</span>
-      </div>
-      <p class="tiny">Not ready for monthly? A <a href="feed-refresh.html" style="text-decoration:underline;">Feed Refresh to Pinterest Discovery</a> is a one-time content project, and <a href="beta.html" style="text-decoration:underline;">Simplify Coded Pinterest</a> is a personalized Pinterest roadmap.</p>
-    </section>
-
-    <!-- PRICE -->
-    <section aria-labelledby="invest">
-      <div class="card card--strong invest">
-        <span class="label" id="invest">Ongoing integrated content service</span>
-        <p class="price">From $750</p>
-        <p class="per">USD per month</p>
-        <p class="small">Simplify Content Ecosystem connects Instagram, Pinterest and blog content each month, with relevant website destinations, scheduling and publishing, and a monthly performance overview.</p>
-        <a class="btn" href="book.html">Enquire About Monthly Content</a>
-        <div class="paybox">
-          <p><strong>How to start:</strong> book an intro chat or email me, and we&rsquo;ll confirm the scope together. There&rsquo;s no automatic checkout for this service.</p>
-          <p style="margin-top:12px;"><strong>Payment terms:</strong> 100% upfront each month. Work begins once payment is received and the required onboarding information, assets and account access are provided.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="stickers"><img class="cut c" src="ecosystem-coffee.webp" alt="Iced latte seen from above"><img class="cut k" src="ecosystem-cake.webp" alt="A small cake with Love piped on top"></div>
-      <h2 class="sec-title">Is this right for your brand?</h2>
-      <p class="sec-lead">Send me a message and we can talk through what you&rsquo;re making and whether it&rsquo;s a fit.</p>
-      <a class="btn" href="mailto:sociallyintroverts@outlook.com?subject=Simplify%20Content%20Ecosystem%20enquiry">Send me a message</a>
-      <p class="contact-line"><a href="book.html">Or book an intro chat &rarr;</a></p>
-      <p class="contact-line" style="margin-top:14px;"><a href="work-together.html">See all the ways to work together &rarr;</a></p>
-      <p class="contact-line" style="margin-top:14px;">Questions? Email <a href="mailto:sociallyintroverts@outlook.com">sociallyintroverts@outlook.com</a></p>
-    </section>
-
-  </div>
+<div class="hero">
+<div class="txt">
+<p class="eyebrow">Monthly Pinterest management</p>
+<h1>A more intentional way to get discovered on Pinterest.</h1>
+<p class="italic">Your brand has something worth discovering. Let’s make it easier for the right people to find it.</p>
+<p class="soft" style="max-width:34em">Monthly Pinterest management for F&amp;B and modern lifestyle brands. Keyword research, content creation, strategic publishing and performance reviews.</p>
+<div class="chips"><span class="chip">From $700 USD / month</span><span class="chip">90 Pins a month</span><span class="chip">4-month minimum</span></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+<a class="btn" href="#plans">See the packages →</a>
+<a href="work-together.html" style="font-size:15px;color:var(--soft)">All ways to work together</a>
 </div>
+</div>
+<div class="frame"><img src="ecosystem-serum-flatlay.jpg" alt="Vitamin C serum bottle surrounded by sliced oranges and citrus on white marble" width="1248" height="832"></div>
+</div>
+
+</div>
+
+<section>
+<div class="w split">
+<div class="stack">
+<p class="eyebrow">Why Pinterest</p>
+<h2>Pinterest is a search engine, not just a mood board.</h2>
+<p class="soft">It’s a visual search and discovery platform where people look for ideas, products, inspiration and solutions.</p>
+<p class="soft">Building a meaningful presence takes more than publishing Pins whenever you have time. That’s where I come in.</p>
+<p class="soft">I help F&amp;B and modern lifestyle brands build a more intentional Pinterest presence. Whether you want consistent discovery, or you want to connect Pinterest to a wider customer journey, there’s an option to match.</p>
+</div>
+<div class="small-img"><img src="ecosystem-serum-splash.png" alt="Citrus serum dropper with lemon slices and water splashes" width="221" height="331"></div>
+</div>
+</section>
+
+<section id="plans">
+<div class="w">
+<div class="head">
+<p class="eyebrow">Two ways to work together</p>
+<h2>Monthly Pinterest management starts at $700 USD.</h2>
+</div>
+<div class="plans">
+
+<div class="plan">
+<p class="eyebrow">Simplify Pinterest Management</p>
+<div class="price">$700<small>/ month</small></div>
+<p class="soft">For brands ready to build a consistent Pinterest presence. Thoughtful keyword research, relevant content and steady publishing, so more people can find you. Every Pin is keyword-informed and links to a relevant page.</p>
+<ul class="dots">
+<li>90 published Pins a month (3 daily)</li>
+<li>Monthly keyword research</li>
+<li>Content calendar and strategy</li>
+<li>Pin design and creative variations</li>
+<li>SEO-informed Pin titles and descriptions</li>
+<li>Profile and board optimisation</li>
+<li>Basic website destination mapping</li>
+<li>Scheduling and publishing</li>
+<li>Monthly performance report</li>
+</ul>
+<p class="soft" style="font-size:15px">4-month minimum</p>
+<a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener noreferrer">Apply here</a>
+</div>
+
+<div class="plan dark">
+<p class="eyebrow">Management + Integrated Funnel</p>
+<div class="price">$1,000<small>/ month</small></div>
+<p class="soft">For brands ready to connect Pinterest discovery to a clearer customer journey. Content is planned around awareness, consideration and action. Each group has its own audience need, search intent, destination and next step.</p>
+<p style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B8C0A8">Everything in the $700 package, plus</p>
+<ul class="dots">
+<li>Deeper Pinterest SEO and search-intent research</li>
+<li>Keyword clustering and topic mapping</li>
+<li>Customer journey and funnel planning</li>
+<li>Content mapped to awareness, consideration and action</li>
+<li>Strategic website and landing-page destination mapping</li>
+<li>Website content and SEO opportunity recommendations</li>
+<li>CTA and messaging strategy</li>
+<li>Monthly SEO and content performance analysis</li>
+<li>Recommendations for the next stage of the journey</li>
+</ul>
+<p class="soft" style="font-size:15px">4-month minimum</p>
+<a class="btn light" href="https://shop.beacons.ai/annplates/a60a9e67-e228-4862-9394-cae1c13c188a" target="_blank" rel="noopener noreferrer">Apply here</a>
+</div>
+
+</div>
+<div class="focus">
+<p class="eyebrow" style="margin-bottom:6px">The focus</p>
+<p class="soft">Consistent Pinterest presence that gives your brand more chances to show up in relevant searches and sends interested visitors to your website. Content angles, themes and creative variations all come from your own website content and destination links.</p>
+</div>
+</div>
+</section>
+
+<section id="compare">
+<div class="w">
+<div class="head">
+<p class="eyebrow">Side by side</p>
+<h2>Which one fits?</h2>
+<p class="soft">The $700 gets you consistent Pinterest management. The $1,000 adds a fuller discovery-to-conversion strategy.</p>
+</div>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>$700 Pinterest Management</th><th>$1,000 Integrated Funnel</th></tr></thead>
+<tbody>
+<tr><td>Pin volume</td><td>90 / month</td><td>90 / month</td></tr>
+<tr><td>Content planning</td><td>Monthly calendar</td><td>Journey-based content architecture</td></tr>
+<tr><td>Customer journey</td><td>Not a core deliverable</td><td>Included</td></tr>
+<tr><td>Website SEO recommendations</td><td>Not included</td><td>Content-level recommendations</td></tr>
+<tr><td>Reporting</td><td>Pinterest performance</td><td>Pinterest + journey insights</td></tr>
+<tr><td>Website links</td><td>Relevant destinations</td><td>Strategically mapped pathways</td></tr>
+<tr><td>Keyword research</td><td>Clustered</td><td>Deeper, clustered research</td></tr>
+<tr><td>SEO titles and descriptions</td><td>Yes</td><td>Yes, guided by search intent</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section id="seo">
+<div class="w">
+<div class="head">
+<p class="eyebrow">What “SEO” means here</p>
+<h2>Clear about what’s covered.</h2>
+</div>
+<div class="three">
+<div>
+<p class="eyebrow">Both packages</p>
+<h3>Pinterest SEO</h3>
+<ul class="dots"><li>Keyword research</li><li>Pin titles and descriptions</li><li>Board titles and descriptions</li><li>Search-intent alignment</li></ul>
+</div>
+<div>
+<p class="eyebrow">$1,000 package</p>
+<h3>Deeper content SEO</h3>
+<ul class="dots"><li>Keyword clustering</li><li>Search-intent mapping</li><li>Content gap identification</li><li>Matching Pins to relevant website pages</li><li>Blog and product-page topic ideas</li><li>Checking that destination pages match the Pin’s promise</li></ul>
+</div>
+<div style="border-right:0">
+<p class="eyebrow no">Not included</p>
+<h3>Technical website SEO</h3>
+<ul class="dots"><li>Website speed optimisation</li><li>Technical audits and fixes</li><li>Backlink building</li><li>Schema implementation</li><li>Website development</li><li>Full website SEO management</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="addon">
+<div class="w addon">
+<div class="stack">
+<p class="eyebrow">Optional add-on</p>
+<h2>Blog + Email Content</h2>
+<p class="soft">Available with either package. Extra blog and email content to support your Pinterest strategy and your website journey, all matched to the monthly Pinterest themes.</p>
+</div>
+<div class="plan" style="gap:18px">
+<div class="price">+$500<small>/ month</small></div>
+<ul class="dots">
+<li>2 SEO-informed blog articles (800 to 1,200 words each), uploaded and formatted</li>
+<li>2 email campaigns with subject lines, preview text and copy</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="band" id="apply">
+<div class="w" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center">
+<div class="stack">
+<p class="eyebrow">Ready when you are</p>
+<h2>Ready to be easier to find?</h2>
+<p class="soft">Pick the package that fits and send your application. Not sure which one? Book an intro chat and we’ll work it out together.</p>
+<p class="soft" style="font-size:15px">For case study rates, DM me on <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Threads @annplates</a>.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:14px">
+<a class="btn light" href="#plans">Choose a package</a>
+<a class="btn" style="border:1px solid var(--tan)" href="book.html">Book an intro chat</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="w">
+<div class="row">
+<a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
+<p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:var(--soft)">Thoughtful content. Intentional discovery.</p>
+<a href="work-together.html" style="font-size:15px">← Back to all the ways to work together</a>
+</div>
+<p style="margin-top:20px;font-size:13px;color:var(--soft);max-width:52em">Results depend on your niche, products, website and how consistently you show up, so I don’t put a number on them. Pinterest is a trademark of its owner. This service is independent of Pinterest.</p>
+</div>
+</footer>
 </body>
 </html>
