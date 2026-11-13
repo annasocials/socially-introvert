@@ -103,6 +103,63 @@ footer img{height:64px;width:auto;display:block}
 ul.dots a{text-decoration:underline;text-underline-offset:3px}
 .btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.stk{position:relative;height:calc(100vh * 3.6);border-top:1px solid var(--line)}
+.stk-in{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center;background:var(--bg);isolation:isolate}
+.stk-title{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:0 24px;pointer-events:none}
+.stk-title h2{font-style:italic;font-size:clamp(64px,13vw,170px);line-height:.95;color:var(--sand)}
+.deck{position:relative;z-index:1;width:min(1060px,calc(100% - 40px));height:min(760px,90vh)}
+.card{position:absolute;inset:0;display:grid;grid-template-columns:5fr 7fr;border-radius:24px;overflow:hidden;background:var(--ink);color:var(--bg);box-shadow:0 18px 56px rgba(70,55,47,.28);will-change:transform;opacity:0;transform:translateY(115%) rotate(5deg)}
+.card .im{position:relative;background:var(--sand);min-height:0}
+.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.card .im:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(40,28,22,.55))}
+.card .im .tag{position:absolute;left:24px;bottom:22px;z-index:1;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:26px;color:#fff}
+.card .tx{padding:34px 40px;display:flex;flex-direction:column;gap:13px;min-height:0;overflow:hidden;font-size:15px;line-height:1.55}
+.card .tx .eyebrow{color:#B8C0A8}
+.card h3{font-size:clamp(30px,3.4vw,44px);line-height:1.02}
+.pr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
+.pr .price{font-size:clamp(46px,5vw,64px);color:var(--bg)}
+.pr span{font-size:14px;color:#D9CDBD}
+.pr em{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid #B8C0A8;color:#B8C0A8;padding:3px 10px}
+.card .for{color:#D9CDBD}
+.card .eyebrow.sm{font-size:11px;margin-top:2px}
+.card ul.dots{gap:6px}
+.card ul.dots li{border-color:rgba(245,240,232,.2);padding-top:6px}
+.card ul.dots li:before{background:#B8C0A8;margin-top:9px}
+.card ul.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.card .note{color:#D9CDBD;font-size:14px}
+.card .note b{color:var(--bg);font-weight:600}
+.card .btn{margin-top:auto;align-self:flex-start}
+.pr .price small{font-family:'DM Sans',sans-serif;font-size:15px;color:#D9CDBD;margin-left:6px}
+.card.compact .tx{gap:9px;padding:28px 40px}
+.card.compact ul.dots li{padding-top:4px}
+.card.compact ul.dots li:before{margin-top:8px}
+.card.compact .pr .price{font-size:clamp(40px,4.2vw,52px)}
+.cmp{padding:72px 0}
+.faq-list{max-width:52em;border-bottom:1px solid var(--line)}
+details.q-a{border-top:1px solid var(--line)}
+details.q-a summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(23px,2.6vw,30px);line-height:1.15;font-weight:500}
+details.q-a summary::-webkit-details-marker{display:none}
+details.q-a summary:after{content:"+";flex:none;font-family:'DM Sans',sans-serif;font-size:26px;font-weight:400;color:var(--sage);transition:transform .25s}
+details.q-a[open] summary:after{transform:rotate(45deg)}
+details.q-a summary:focus-visible{outline:2px solid var(--sage);outline-offset:4px}
+details.q-a .a{padding:0 48px 24px 0;color:var(--soft);display:flex;flex-direction:column;gap:10px}
+details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.stk-title .lead{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(20px,2.2vw,28px);line-height:1.25;color:var(--soft);max-width:34em;margin-top:6px}
+.stk.setup{height:calc(100vh * 4.6)}
+.stk.setup .stk-title h2,.stk.grow .stk-title h2{font-size:clamp(52px,10vw,130px)}
+@media(max-width:900px),(max-height:820px),(prefers-reduced-motion:reduce){
+.stk{height:auto;padding:72px 0 56px}
+.stk-in{position:static;height:auto;display:block}
+.stk-title{position:static;opacity:1!important;margin-bottom:40px;padding:0 20px}
+.stk-title h2,.stk.setup .stk-title h2,.stk.grow .stk-title h2{font-size:clamp(44px,9vw,72px);color:var(--ink)}
+.stk.setup{height:auto}
+.deck{height:auto;display:flex;flex-direction:column;gap:28px}
+.card{position:relative;inset:auto;grid-template-columns:1fr;opacity:1!important;transform:none!important}
+.card .im{height:240px}
+.card .tx{padding:28px 24px;overflow:visible}
+.card ul.cols{grid-template-columns:1fr}
+.card.compact .tx{padding:28px 24px}
+}
 </style>
 </head>
 <body>
@@ -114,7 +171,7 @@ ul.dots a{text-decoration:underline;text-underline-offset:3px}
 <div class="w" id="top">
 <header class="top">
 <a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
-<nav><a class="l" href="#strategy">Strategy</a><a class="l" href="#setup">Setup</a><a class="l" href="#support">Ongoing support</a><a class="l" href="work-together.html">All services</a><a class="btn sm" href="#talk">Let’s talk</a></nav>
+<nav><a class="l" href="#strategy">Strategy</a><a class="l" href="#setup">Setup</a><a class="l" href="#support">Ongoing support</a><a class="l" href="#faq">FAQ</a><a class="l" href="work-together.html">All services</a><a class="btn sm" href="#talk">Let’s talk</a></nav>
 </header>
 </div>
 <section id="strategy"><div class="w svc">
@@ -129,6 +186,52 @@ ul.dots a{text-decoration:underline;text-underline-offset:3px}
 <div class="out"><b>The outcome</b>Clarity, direction and a practical marketing roadmap.</div>
 <div class="btns"><a class="btn" href="work-together.html">Explore strategy services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
+<section class="stk" id="strategy-services" aria-label="Strategy services"><div class="stk-in">
+<div class="stk-title"><p class="eyebrow">Strategy services</p><h2>What’s included</h2></div>
+<div class="deck" id="deck">
+
+<article class="card" aria-label="Simplify Content Ecosystem Strategy">
+<div class="im"><img src="hello-card-01.webp" alt="An iced matcha, a compact camera, sunglasses and a lipstick on a sunlit concrete ledge" width="900" height="900" loading="lazy"><span class="tag">content ecosystem</span></div>
+<div class="tx">
+<p class="eyebrow">01 · Flagship strategy</p>
+<h3>Simplify Content Ecosystem Strategy</h3>
+<div class="pr"><div class="price">$950</div><span>One-time project · 14-20 days</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that are creating content but don’t have a connected marketing plan.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots cols"><li>Business, offer and audience research.</li><li>Review of up to four existing marketing channels.</li><li>Customer journey and content discovery analysis.</li><li>Content pillars, messaging and topic direction.</li><li>Channel strategy: Instagram, Pinterest, blog and email, where relevant.</li><li>Content repurposing and distribution map.</li><li>Website destination and CTA recommendations.</li><li>A prioritised 90-day marketing roadmap.</li><li>KPI and measurement framework.</li></ul>
+<p class="note"><b>Working together:</b> One onboarding questionnaire, one strategy working session, one consolidated revision round and a walkthrough.</p>
+<p class="note"><b>Not included:</b> Content production, publishing, website development, technical SEO or email automation.</p>
+<p class="note"><b>How we measure value:</b> Qualified website visits, outbound clicks, enquiries, email sign-ups and progress against agreed marketing priorities.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Build my content strategy →</a>
+</div></article>
+
+<article class="card" aria-label="Simplify Coded Pinterest">
+<div class="im"><img src="hello-card-02.webp" alt="A tortoiseshell comb, hair claw, compact, shell dish with a gold charm necklace and a brown satin bow on marble" width="900" height="900" loading="lazy"><span class="tag">coded pinterest</span></div>
+<div class="tx">
+<p class="eyebrow">02 · Strategy</p>
+<h3>Simplify Coded Pinterest</h3>
+<div class="pr"><div class="price">$350</div><em>Founding price</em><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that want to manage Pinterest themselves but need a strategy built around their business.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots"><li>Pinterest account and website review.</li><li>Keyword research, clusters and search intent.</li><li>Board and content architecture recommendations.</li><li>Six-month Pinterest content calendar.</li><li>Around 48 tailored Pin concepts.</li><li>Recommended website destination for every concept.</li><li>DIY implementation guide.</li><li>One revision round and recorded handover.</li></ul>
+<p class="note"><b>Not included:</b> Pin design, uploading, scheduling or ongoing account management.</p>
+<p class="note"><b>How we measure value:</b> Keyword coverage, content readiness, outbound click opportunities and traffic to priority pages.</p>
+</div></article>
+
+<article class="card" aria-label="Simplify Customer Journey Planning">
+<div class="im"><img src="hello-card-03.webp" alt="A hand reaching for a donut from plates of donuts, cookies and strawberry tarts" width="900" height="900" loading="lazy"><span class="tag">customer journey</span></div>
+<div class="tx">
+<p class="eyebrow">03 · Strategy</p>
+<h3>Simplify Customer Journey Planning</h3>
+<div class="pr"><div class="price">$550</div><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that attract attention but aren’t sure how to turn it into enquiries, subscribers or purchases.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots"><li>Review one priority product, service or offer.</li><li>Map the journey from discovery to purchase.</li><li>Review up to five existing customer touchpoints.</li><li>Identify gaps, friction and missed opportunities.</li><li>Map content to each stage of the journey.</li><li>Recommend landing pages, CTAs and lead capture opportunities.</li><li>Create a prioritised improvement plan.</li><li>One review session and one revision round.</li></ul>
+<p class="note"><b>Not included:</b> Website redesign, copywriting, email automation or technical tracking implementation.</p>
+<p class="note"><b>How we measure value:</b> Landing-page conversion, enquiry rate, email sign-ups and customer journey drop-offs.</p>
+</div></article>
+
+</div></div></section>
 <section id="setup"><div class="w svc rev">
 <figure class="fig"><div class="ph"><img src="hello-content-system.webp" alt="A desktop monitor showing an organised workspace of planners and content calendars" width="900" height="900" loading="lazy"></div><figcaption>content system</figcaption></figure>
 <div class="stack">
@@ -141,6 +244,67 @@ ul.dots a{text-decoration:underline;text-underline-offset:3px}
 <div class="out"><b>The outcome</b>Practical systems configured around their actual business.</div>
 <div class="btns"><a class="btn" href="work-together.html">Explore setup services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
+<section class="stk setup" id="setup-services" aria-label="Setup services"><div class="stk-in">
+<div class="stk-title"><p class="eyebrow">02 · Setup services</p><h2>Let’s make it work.</h2><p class="lead">Implementation services for growing F&amp;B and modern lifestyle brands. You bring a direction or a problem; I configure the tools and workflows that make the work easier.</p></div>
+<div class="deck">
+
+<article class="card" aria-label="Simplify Content Management Systems">
+<div class="im"><img src="hello-card-04.webp" alt="A hand with chunky rings holding a pastel striped notebook" width="900" height="900" loading="lazy"><span class="tag">content system</span></div>
+<div class="tx">
+<p class="eyebrow">04 · Setup</p>
+<h3>Simplify Content Management Systems</h3>
+<div class="pr"><div class="price">$750</div><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands tired of scattered content ideas, files, deadlines and planning.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots cols"><li>One customised Notion or agreed platform workspace.</li><li>Central content idea bank.</li><li>Content calendar and publishing pipeline.</li><li>Content status and task tracking.</li><li>Brand asset and resource library.</li><li>Up to three documented workflows.</li><li>One 60-minute handover and training session.</li><li>14 days of post-delivery support for questions and minor fixes.</li></ul>
+<p class="note"><b>Not included:</b> Paid software subscriptions, complex API integrations, team-wide operational redesign or ongoing content entry.</p>
+<p class="note"><b>How we measure value:</b> Time spent planning, time to publish, missed deadlines and hours saved on content administration.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Organise my content system →</a>
+</div></article>
+
+<article class="card" aria-label="Simplify AI-Assisted Content Workflows">
+<div class="im"><img src="hello-card-05.webp" alt="A hand with gold rings resting on denim beside a red maple leaf and a suede boot" width="900" height="900" loading="lazy"><span class="tag">ai-assisted workflows</span></div>
+<div class="tx">
+<p class="eyebrow">05 · Setup</p>
+<h3>Simplify AI-Assisted Content Workflows</h3>
+<div class="pr"><div class="price">$650</div><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that want to use AI practically without creating generic, disconnected content.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots cols"><li>Review one existing content workflow.</li><li>Identify two suitable AI-assisted workflows.</li><li>Build customised prompts and instructions.</li><li>Create brand voice and quality-control guidelines.</li><li>Test the workflows against real examples.</li><li>Document the process in a simple guide.</li><li>One training session and one revision round.</li></ul>
+<p class="note"><b>Not included:</b> Custom AI software, API development, paid automation tools or unlimited prompt support.</p>
+<p class="note"><b>How we measure value:</b> Time saved per content task, editing time, output consistency and workflow adoption.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Build my AI workflows →</a>
+</div></article>
+
+<article class="card" aria-label="Simplify Pinterest Account Setup">
+<div class="im"><img src="hello-card-06.webp" alt="Gold rings, a clover pendant necklace and stud earrings in a sunlit dish" width="900" height="900" loading="lazy"><span class="tag">pinterest setup</span></div>
+<div class="tx">
+<p class="eyebrow">06 · Setup</p>
+<h3>Simplify Pinterest Account Setup</h3>
+<div class="pr"><div class="price">$600</div><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands ready to establish a properly organised Pinterest presence without handling the setup themselves.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots cols"><li>Pinterest business account setup or optimisation.</li><li>Profile name, description and relevant keywords.</li><li>Keyword research for the business.</li><li>Creation or optimisation of up to 10 boards.</li><li>Board descriptions and organisation.</li><li>Design and copy for 10 starter Pins.</li><li>Website destination mapping.</li><li>Scheduling of approved Pins.</li><li>One revision round and handover.</li></ul>
+<p class="note"><b>Not included:</b> Six-month strategic planning, monthly management, photography or website changes.</p>
+<p class="note"><b>How we measure value:</b> Account readiness, search relevance, outbound clicks and visits to the selected website pages.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Set up my Pinterest →</a>
+</div></article>
+
+<article class="card" aria-label="Simplify Blog Marketing">
+<div class="im"><img src="hello-card-07.webp" alt="A breakfast table with fruit, savoury pastries, toast and a cup of coffee" width="900" height="900" loading="lazy"><span class="tag">blog marketing</span></div>
+<div class="tx">
+<p class="eyebrow">07 · Setup</p>
+<h3>Simplify Blog Marketing</h3>
+<div class="pr"><div class="price">$650</div><span>One-time project · 2 weeks</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that want their website to become a useful discovery channel, not just an online shop.</p>
+<p class="eyebrow sm">Scope and deliverables</p>
+<ul class="dots cols"><li>Review of the existing blog and website content.</li><li>Keyword and topic opportunity research.</li><li>Three-month blog editorial calendar.</li><li>Six recommended blog topics.</li><li>Two detailed SEO-informed content briefs.</li><li>Internal linking and content distribution recommendations.</li><li>Blog-to-product or service CTA mapping.</li><li>Publishing and measurement checklist.</li></ul>
+<p class="note"><b>Not included:</b> Writing and publishing the articles, technical SEO fixes, website development or link building.</p>
+<p class="note"><b>How we measure value:</b> Organic search impressions, relevant organic sessions, engaged visits and clicks to product or enquiry pages.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Build my blog strategy →</a>
+</div></article>
+
+</div></div></section>
 <section id="support"><div class="w svc">
 <figure class="fig"><div class="ph"><img src="hello-implementations.webp" alt="A laptop showing a Pinterest feed beside an iced coffee" width="900" height="900" loading="lazy"></div><figcaption>implementations</figcaption></figure>
 <div class="stack">
@@ -149,17 +313,115 @@ ul.dots a{text-decoration:underline;text-underline-offset:3px}
 <p class="italic">Let’s work together on content and marketing execution.</p>
 <div class="lab stack" style="gap:6px"><p style="font-weight:600">Let’s grow together.</p><p class="soft">For business owners who want someone alongside them to help implement their marketing consistently.</p></div>
 <p class="eyebrow" style="margin-top:4px">Services</p>
-<ul class="dots"><li><a href="ecosystem.html">Simplify Pinterest Management</a></li><li>Simplify Build</li><li>Simplify One</li></ul>
+<ul class="dots"><li><a href="ecosystem.html">Simplify Pinterest Management</a></li><li><a href="ecosystem.html">Simplify Integrated Funnel Pinterest</a></li><li>Simplify Studio</li></ul>
 <div class="out"><b>The outcome</b>More consistent execution without carrying every marketing task alone.</div>
 <div class="btns"><a class="btn" href="work-together.html">Explore ongoing support →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
+<section class="stk grow" id="support-services" aria-label="Ongoing support services"><div class="stk-in">
+<div class="stk-title"><p class="eyebrow">03 · Ongoing support</p><h2>Let’s grow together.</h2><p class="lead">For owners of growing F&amp;B and modern lifestyle brands who want a thoughtful marketing partner to help bring their ideas to life, keep their content moving and make their marketing work together.</p></div>
+<div class="deck">
+
+<article class="card" aria-label="Simplify Pinterest Management">
+<div class="im"><img src="hello-card-08.webp" alt="A sunset-coloured light glowing on a studio wall above rows of dark yoga mats" width="900" height="900" loading="lazy"><span class="tag">pinterest management</span></div>
+<div class="tx">
+<p class="eyebrow">08 · Ongoing support</p>
+<h3>Simplify Pinterest Management</h3>
+<div class="pr"><div class="price">$700<small>/ month</small></div><span>Minimum 4-month commitment · 90 Pins/month</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands that want consistent Pinterest management without having to handle the research, planning, designing and scheduling themselves.</p>
+<p class="eyebrow sm">What’s included</p>
+<ul class="dots cols"><li>Pinterest account management.</li><li>Monthly keyword and content research.</li><li>90 Pins per month.</li><li>Pin design and creative variations.</li><li>SEO-informed Pin titles and descriptions.</li><li>Content scheduling and distribution.</li><li>Website destination alignment.</li><li>Monthly performance reporting and check-in.</li></ul>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let me manage your Pinterest →</a>
+</div></article>
+
+<article class="card" aria-label="Simplify Integrated Funnel Pinterest">
+<div class="im"><img src="hello-svc-integrated-funnel.webp" alt="A skateboard, tennis rackets, tote bag and water bottle laid out on a sunlit court" width="900" height="900" loading="lazy"><span class="tag">integrated funnel</span></div>
+<div class="tx">
+<p class="eyebrow">09 · Ongoing support</p>
+<h3>Simplify Integrated Funnel Pinterest</h3>
+<div class="pr"><div class="price">$1,000<small>/ month</small></div><span>Minimum 4-month commitment · 90 Pins/month</span></div>
+<p class="for">For growing F&amp;B and modern lifestyle brands ready to make Pinterest part of a wider marketing ecosystem, connecting content discovery with website visits, products, blog content and customer journeys.</p>
+<p class="eyebrow sm">What’s included</p>
+<ul class="dots cols"><li>Everything in Simplify Pinterest Management.</li><li>Deeper customer journey and search-intent planning.</li><li>Content distribution across relevant funnel stages.</li><li>Strategic destination mapping.</li><li>Blog, product and landing-page content alignment.</li><li>Campaign and seasonal content planning.</li><li>Deeper monthly performance analysis.</li><li>Recommendations for improving the Pinterest-to-website journey.</li></ul>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Build my Pinterest funnel →</a>
+</div></article>
+
+<article class="card compact" aria-label="Simplify Studio">
+<div class="im"><img src="hello-svc-studio.webp" alt="Two women in cowboy boots walking down a country road, mid-stride" width="900" height="900" loading="lazy"><span class="tag">studio</span></div>
+<div class="tx">
+<p class="eyebrow">10 · Ongoing support</p>
+<h3>Simplify Studio</h3>
+<div class="pr"><div class="price">$850<small>/ month</small></div><span>Minimum 4-month commitment · Up to 10 hours/month</span></div>
+<p class="for">For owners of growing F&amp;B and modern lifestyle brands who have a marketing direction but need a strategic partner to help implement, organise and move things forward.</p>
+<p class="eyebrow sm">What’s included</p>
+<ul class="dots cols"><li>Up to 10 hours of strategic and implementation work.</li><li>Content planning and repurposing support.</li><li>Marketing workflow improvements.</li><li>Project tracking and shared workspace.</li><li>Monthly progress review.</li></ul>
+<p class="eyebrow sm">Examples of monthly projects</p>
+<ul class="dots cols"><li>Organising and implementing a content workflow.</li><li>Planning and preparing a seasonal campaign.</li><li>Repurposing existing content across platforms.</li><li>Setting up a blog publishing workflow.</li><li>Developing an email content plan.</li><li>Improving the customer journey.</li></ul>
+<p class="note"><b>Not included:</b> The 90-Pin Pinterest Management service, unlimited content creation, daily social media management, complex website development or unlimited requests.</p>
+<a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Work with me monthly →</a>
+</div></article>
+
+</div></div></section>
+<section class="cmp" id="compare"><div class="w">
+<div class="head"><p class="eyebrow">Choosing your support</p><h2>How these three services differ</h2></div>
+<div class="tablewrap"><table>
+<thead><tr><th>Service</th><th>What you’re paying for</th></tr></thead>
+<tbody>
+<tr><td>Pinterest Management — $700</td><td>Consistent Pinterest execution</td></tr>
+<tr><td>Integrated Funnel Pinterest — $1,000</td><td>Pinterest execution plus wider marketing funnel strategy</td></tr>
+<tr><td>Simplify Studio — $850</td><td>Flexible strategic and implementation partnership across agreed marketing projects</td></tr>
+</tbody></table></div>
+</div></section>
+<section class="cmp" id="faq"><div class="w">
+<div class="head"><p class="eyebrow">FAQ</p><h2>Questions before you book</h2><p class="soft">I’m confident in my work, so I keep everything clear upfront: what’s included, what isn’t, what it costs and how payment works.</p></div>
+<div class="faq-list">
+<details class="q-a"><summary>Which service should I choose?</summary><div class="a"><p>Choose <b>Strategy</b> if you need a clear marketing direction, <b>Setup</b> if you know what you need but want the tools and workflows configured for you, and <b>Ongoing support</b> if you want someone to help you do the work each month. Not sure? <a href="book.html">Book an intro chat</a> and I’ll point you to where I’d start.</p></div></details>
+<details class="q-a"><summary>How do I get started?</summary><div class="a"><p><a href="inquiries.html">Send an inquiry</a>. You don’t need a perfect brief, just tell me what’s going on with your brand. If you’d rather talk first, <a href="book.html">book an intro chat</a>, a conversation about your business and what feels stuck, with no pitch. Then we pick where to start, I research and build, and you publish and keep going.</p></div></details>
+<details class="q-a"><summary>Who are these services for?</summary><div class="a"><p>Growing F&amp;B and modern lifestyle brands that are creating content and want it to work harder: a clearer plan, tidier systems, or a steady partner for the day-to-day marketing.</p></div></details>
+<details class="q-a"><summary>How long does each project take?</summary><div class="a"><p>Simplify Content Ecosystem Strategy takes 14-20 days. Simplify Coded Pinterest, Customer Journey Planning, Content Management Systems, AI-Assisted Content Workflows, Pinterest Account Setup and Blog Marketing are each one-time projects of about 2 weeks.</p></div></details>
+<details class="q-a"><summary>Are there minimum commitments?</summary><div class="a"><p>The one-time projects are single projects with no ongoing commitment. All three ongoing support services (Simplify Pinterest Management, Simplify Integrated Funnel Pinterest and Simplify Studio) have a minimum 4-month commitment, because that’s how long it takes to build real momentum.</p></div></details>
+<details class="q-a"><summary>How does payment work?</summary><div class="a"><p>Payment is made upfront, and it’s how we lock in your start. Anything over $500 can be paid in two instalments, so you can spread the cost without delaying the work.</p></div></details>
+<details class="q-a"><summary>Do you offer refunds?</summary><div class="a"><p>There are no refunds once payment is made. I’m confident in my work, and I make everything clear before you pay: each service lists exactly what’s included, what isn’t, and how we measure value. Not sure yet? <a href="book.html">Book an intro chat</a> first and we’ll talk it through, with no pitch.</p></div></details>
+<details class="q-a"><summary>How quickly can we start?</summary><div class="a"><p>Fast. I onboard you within 48 hours of booking, so you’re not left waiting to get moving.</p></div></details>
+<details class="q-a"><summary>What’s the difference between Pinterest Management, Integrated Funnel Pinterest and Simplify Studio?</summary><div class="a"><p>Pinterest Management ($700/month) is consistent Pinterest execution. Integrated Funnel Pinterest ($1,000/month) is Pinterest execution plus wider marketing funnel strategy. Simplify Studio ($850/month) is a flexible strategic and implementation partnership across agreed marketing projects, up to 10 hours a month.</p></div></details>
+<details class="q-a"><summary>I want to manage Pinterest myself. What’s the best fit?</summary><div class="a"><p>Simplify Coded Pinterest ($350 founding price) gives you the strategy to run it yourself: keyword research, board architecture, a six-month content calendar, around 48 tailored Pin concepts and a DIY implementation guide. If you’d like the account built for you instead, choose Simplify Pinterest Account Setup.</p></div></details>
+<details class="q-a"><summary>Do you write the blog posts, design the Pins or run my social media?</summary><div class="a"><p>It depends on the service. Pinterest Account Setup includes design and copy for 10 starter Pins and scheduling of approved Pins, and Pinterest Management includes 90 designed and scheduled Pins a month. Blog Marketing gives you the strategy, calendar and briefs but doesn’t include writing or publishing the articles, and Simplify Studio doesn’t include daily social media management or unlimited content creation. Each service lists exactly what’s not included.</p></div></details>
+<details class="q-a"><summary>How will I know it’s working?</summary><div class="a"><p>Every service has agreed measures of value, such as outbound clicks, qualified website visits, enquiries and email sign-ups, time saved on content tasks, or account readiness. The monthly Pinterest services include performance reporting and a check-in.</p></div></details>
+</div>
+<div class="btns" style="margin-top:36px"><a class="btn" href="inquiries.html">Send an inquiry →</a><a class="btn ghost" href="book.html">Book an intro chat</a></div>
+</div></section>
 <section class="band" id="talk"><div class="w" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center">
 <div class="stack"><p class="eyebrow">Not sure where to start?</p><h2>Let’s talk about your goals.</h2><p class="soft">Message me and tell me what you’re working on. I’ll point you to where I’d start.</p></div>
-<div style="display:flex;flex-wrap:wrap;gap:14px"><a class="btn light" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Message me on Threads</a><a class="btn" style="border:1px solid var(--tan)" href="https://www.instagram.com/sociallyintrovertstudio/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px"><a class="btn light" href="inquiries.html">Send an inquiry</a><a class="btn" style="border:1px solid var(--tan)" href="book.html">Book an intro chat</a><a class="btn" style="border:1px solid var(--tan)" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Message me on Threads</a><a class="btn" style="border:1px solid var(--tan)" href="https://www.instagram.com/sociallyintrovertstudio/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></div>
 </div></section>
 <footer><div class="w"><div class="row">
 <a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
 <p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:var(--soft)">Thoughtful content. Intentional discovery.</p>
 <a href="work-together.html" style="font-size:15px">← Back to all the ways to work together</a></div></div></footer>
+<script>
+(function(){
+var ease=function(t){return 1-Math.pow(1-t,3)};
+[].slice.call(document.querySelectorAll('.stk')).forEach(function(sec){
+var cards=[].slice.call(sec.querySelectorAll('.card')),title=sec.querySelector('.stk-title'),N=cards.length,tick=false;
+function update(){
+tick=false;
+var r=sec.getBoundingClientRect(),span=r.height-window.innerHeight;
+if(span<=0)return;
+var p=Math.min(1,Math.max(0,-r.top/span)),q=p*N*1.12;
+title.style.opacity=String(1-0.85*Math.min(1,q));
+cards.forEach(function(c,i){
+var e=Math.min(1,Math.max(0,q-i)),later=0;
+for(var j=i+1;j<N;j++){later+=Math.min(1,Math.max(0,q-j))}
+var s=1-0.035*later,y=(1-ease(e))*115,rot=(1-ease(e))*(i%2?-5:5);
+c.style.opacity=e>0?'1':'0';
+c.style.transform='translateY('+y+'%) rotate('+rot+'deg) scale('+s+')';
+});
+}
+function req(){if(!tick){tick=true;requestAnimationFrame(update)}}
+window.addEventListener('scroll',req,{passive:true});
+window.addEventListener('resize',req);
+update();
+});
+})();
+</script>
 </body>
 </html>
