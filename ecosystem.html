@@ -80,6 +80,29 @@ footer{padding:48px 0 56px;border-top:1px solid var(--line)}
 footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
 footer img{height:64px;width:auto;display:block}
 @media(max-width:600px){.w{padding:0 20px}.plan{padding:32px 24px}section{padding:64px 0}}
+/* editorial warm refresh */
+:root{--bg:#F4EBDC;--ink:#35241A;--soft:#6E5746;--sage:#9A4F2C;--sage2:#C08A5B;--line:#E2D2BC;--tan:#CDB594;--card:#FAF4E9;--sand:#E9DAC3}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .2  0 0 0 0 .1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.photo img,.frame img,.small-img img{filter:sepia(.12) saturate(1.06) contrast(1.03)}
+h1,h2{letter-spacing:-.015em}
+.eyebrow{letter-spacing:.22em}
+.btn{border-radius:999px}
+.plan,.tablewrap,.three,.inside,.pain div{border-radius:6px}
+.plan{box-shadow:0 22px 50px -30px rgba(53,36,26,.45)}
+.plan.dark .eyebrow,.band .eyebrow{color:#E6BE92}
+.plan.dark ul.dots li:before{background:#E6BE92}
+.plan.dark .soft,.band .soft,.plan.dark .price small{color:#E7D7C2}
+.frame{border-color:var(--sand);border-radius:200px 200px 24px 24px;border-width:10px}
+.arch{position:relative;border-radius:999px 999px 28px 28px;overflow:visible;line-height:0;max-width:460px;justify-self:center;width:100%}
+.arch>img{width:100%;height:auto;display:block;border-radius:999px 999px 28px 28px;aspect-ratio:4/5;object-fit:cover}
+.arch .float{position:absolute;left:-28px;bottom:36px;background:var(--ink);color:var(--bg);padding:22px 28px;line-height:1.2;display:flex;flex-direction:column;gap:6px;border-radius:6px;box-shadow:0 18px 40px -18px rgba(0,0,0,.5)}
+.arch .float .eyebrow{color:#E6BE92}.arch .float .price{font-size:56px}.arch .float small{color:#E7D7C2}
+.band-photo{width:100%;line-height:0;max-height:380px;overflow:hidden}
+.band-photo img{width:100%;height:380px;object-fit:cover;display:block}
+.pic{border-radius:220px 220px 20px 20px;overflow:hidden;line-height:0;max-width:420px;justify-self:center;width:100%}
+.pic img{width:100%;height:auto;display:block}
+.pic.sq{border-radius:20px 20px 200px 20px}
+@media(max-width:600px){.arch .float{left:12px}.band-photo img{height:240px}}
 </style>
 </head>
 <body>
@@ -92,6 +115,7 @@ footer img{height:64px;width:auto;display:block}
 <nav>
 <a class="l" href="#plans">Packages</a>
 <a class="l" href="#compare">Compare</a>
+<a class="l" href="#process">How it works</a>
 <a class="l" href="#seo">SEO scope</a>
 <a class="l" href="#addon">Add-on</a>
 <a class="l" href="work-together.html">All services</a>
@@ -203,6 +227,21 @@ footer img{height:64px;width:auto;display:block}
 <tr><td>Keyword research</td><td>Clustered</td><td>Deeper, clustered research</td></tr>
 <tr><td>SEO titles and descriptions</td><td>Yes</td><td>Yes, guided by search intent</td></tr>
 </tbody></table></div>
+</div>
+</section>
+
+<section id="process">
+<div class="w">
+<div class="head">
+<p class="eyebrow">How it works</p>
+<h2>Your first 4 months, step by step.</h2>
+<p class="soft">Strategy first, then steady publishing. Both packages follow the same path, with a 4-month minimum.</p>
+</div>
+<div class="three" style="grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))"><div><p class="eyebrow">Before we start</p><h3>Apply, pay, get onboarded</h3><p class="soft" style="font-size:16px">No discovery call needed. You apply and I send you the form. Payment is upfront, then I onboard you within 48 hours. Every message and file lives in Notion, or in an interactive custom client portal if you’d feel more comfortable.</p></div><div><p class="eyebrow">Month 1, weeks 1 to 3</p><h3>Strategy first</h3><p class="soft" style="font-size:16px">Keyword research, content strategy and calendar, profile and board optimisation, and website destination mapping.</p></div><div><p class="eyebrow">Week 4 onward</p><h3>Posting starts</h3><p class="soft" style="font-size:16px">Your Pins are scheduled and published. At the one-month mark we check in with a strategy video or call.</p></div><div><p class="eyebrow">Months 2 to 4</p><h3>Consistent publishing</h3><p class="soft" style="font-size:16px">90 Pins a month (3 daily), monthly keyword research and a monthly performance report.</p></div></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px">
+<a class="btn" href="https://shop.beacons.ai/annplates/071a3589-0e82-4af4-b17a-98c0ca6652ab" target="_blank" rel="noopener noreferrer">Book Pinterest Management, $700</a>
+<a class="btn" style="background:transparent;color:var(--ink);border:1px solid var(--ink)" href="https://shop.beacons.ai/annplates/a60a9e67-e228-4862-9394-cae1c13c188a" target="_blank" rel="noopener noreferrer">Book Integrated Funnel, $1,000</a>
+</div>
 </div>
 </section>
 
