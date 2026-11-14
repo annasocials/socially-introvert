@@ -10,76 +10,37 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="How would you like to work together? | Socially Introverts">
 <meta property="og:description" content="Strategy, setup or ongoing support. Find where to start.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Poppins:wght@600;800&family=Open+Sans:ital,wdth,wght@1,75..100,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=DM+Sans:wght@400;500;600&family=Poppins:wght@600;800&family=Open+Sans:ital,wdth,wght@1,75..100,400&display=swap">
 <style>
-:root{--bg:#F5F0E8;--ink:#46372F;--soft:#6A5A50;--sage:#566049;--sage2:#89917B;--line:#DDD2C4;--tan:#C6B5A3;--card:#FBF8F3;--sand:#E4DCCD}
+:root{--cream:#FFF6EA;--paper:#FFFDF8;--ink:#35090B;--maroon:#720C0E;--sage:#8A917B;--sage-l:#CBD1BC;--pink:#F6CFD3;--pink-d:#EDA9B2;--soft:#6E4647;--line:rgba(53,9,11,.25);--bd:2.5px solid var(--ink);--sh:5px 5px 0 var(--ink);--bg:var(--cream);--card:var(--paper);--tan:var(--ink);--sage2:var(--sage)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
-a{color:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background-color:var(--cream);background-image:linear-gradient(rgba(53,9,11,.07) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(53,9,11,.07) 1.5px,transparent 1.5px);background-size:56px 56px;color:var(--ink);font:500 17px/1.6 'DM Sans',system-ui,sans-serif}
+a{color:inherit}p{margin:0}
 .w{max-width:1120px;margin:0 auto;padding:0 32px}
-.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
-h1{font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.01em}
-h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
-h3{font-size:clamp(28px,3.2vw,38px);line-height:1.08}
-p{margin:0}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:800;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--maroon);letter-spacing:-.02em}
+h2{font-size:clamp(34px,4.4vw,56px);line-height:1.02}
+h3{font-size:clamp(26px,3vw,36px);line-height:1.05}
 .soft{color:var(--soft)}
-.italic{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(24px,2.6vw,32px);line-height:1.25}
-.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:var(--ink);color:var(--bg);border-radius:2px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .3s}
-.btn:hover{background:#2F241E}
-.btn.light{background:var(--bg);color:var(--ink)}
-.btn.light:hover{background:var(--card)}
-.btn.sm{min-height:44px;padding:0 22px}
-.chip{border:1px solid var(--tan);padding:6px 14px;font-size:13px;font-weight:500;letter-spacing:.04em}
-header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:28px 0}
-header.top img{height:54px;width:auto;display:block}
-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:14px;font-weight:500}
-nav a.l{text-decoration:none;padding:8px 0}
-nav a.l:hover{color:var(--sage)}
-.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center;padding:40px 0 72px}
-.hero .txt{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-.frame{border:12px solid var(--sand);border-radius:28px;background:var(--sand);overflow:hidden;line-height:0}
-.frame img{width:100%;height:auto;display:block}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-section{padding:88px 0;border-top:1px solid var(--line)}
-.head{display:flex;flex-direction:column;gap:16px;max-width:44em;margin-bottom:48px}
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:48px 72px;align-items:center}
-.stack{display:flex;flex-direction:column;gap:20px}
-.small-img{max-width:300px;justify-self:center;border-radius:24px 24px 120px 24px;overflow:hidden;background:var(--sand);line-height:0}
-.small-img img{width:100%;height:auto;display:block}
-ul.dots{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
-ul.dots li{display:flex;gap:14px;padding-top:10px;border-top:1px solid var(--line)}
-ul.dots li:before{content:"";flex:none;width:6px;height:6px;margin-top:11px;background:var(--sage2)}
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:32px}
-.plan{background:var(--card);border:1px solid var(--tan);padding:40px 36px;display:flex;flex-direction:column;gap:22px}
-.plan.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.plan.dark .eyebrow{color:#B8C0A8}
-.plan.dark .soft{color:#D9CDBD}
-.plan.dark ul.dots li{border-color:rgba(245,240,232,.2)}
-.plan.dark ul.dots li:before{background:#B8C0A8}
-.price{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(56px,7vw,80px);line-height:.95}
-.price small{font-family:'DM Sans',sans-serif;font-size:15px;color:var(--soft);margin-left:8px}
-.plan.dark .price small{color:#D9CDBD}
-.plan .btn{align-self:flex-start;margin-top:auto}
-.focus{margin-top:32px;border-left:2px solid var(--sage2);padding:4px 0 4px 24px;max-width:46em}
-.tablewrap{overflow-x:auto;border:1px solid var(--tan);background:var(--card)}
-table{border-collapse:collapse;width:100%;min-width:620px;font-size:16px}
-th,td{text-align:left;padding:16px 24px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500}
-td:first-child{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);white-space:nowrap}
-tr:last-child td{border-bottom:0}
-.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:0;border:1px solid var(--tan);background:var(--card)}
-.three>div{padding:32px 28px;display:flex;flex-direction:column;gap:14px;border-right:1px solid var(--line)}
-.three h3{font-size:28px}
-.three .eyebrow.no{color:var(--soft)}
-.band{background:var(--ink);color:var(--bg);border-top:0}
-.band .soft{color:#D9CDBD}
-.band .eyebrow{color:#B8C0A8}
-.addon{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center}
-footer{padding:48px 0 56px;border-top:1px solid var(--line)}
-footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
-footer img{height:64px;width:auto;display:block}
-@media(max-width:600px){.w{padding:0 20px}.plan{padding:32px 24px}section{padding:64px 0}}
+.eyebrow{display:inline-flex;align-self:flex-start;width:fit-content;margin:0;padding:5px 14px;background:var(--pink);border:var(--bd);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.italic{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.3}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 26px;background:var(--maroon);color:var(--cream);border:var(--bd);border-radius:999px;box-shadow:var(--sh);text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.btn.light,.btn.ghost{background:var(--paper);color:var(--ink)}
+.btn.pink{background:var(--pink);color:var(--ink)}
+.btn.sm{min-height:42px;padding:0 20px;background:var(--pink);color:var(--ink)}
+#top.w{position:sticky;top:10px;z-index:60;padding-top:14px;padding-bottom:6px}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding:8px 12px 8px 22px;background:var(--paper);border:var(--bd);border-radius:999px;box-shadow:var(--sh)}
+header.top img{height:44px;width:auto;display:block}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px;font-weight:700}
+nav a.l{text-decoration:none;padding:7px 14px;border-radius:999px;border:2px solid transparent}
+nav a.l:hover{background:var(--pink);border-color:var(--ink)}
+.marq{background:var(--maroon);color:var(--cream);border-bottom:var(--bd);overflow:hidden;white-space:nowrap;padding:12px 0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(20px,3vw,30px);font-variation-settings:"SOFT" 100,"WONK" 1}
+.marq .track{display:inline-flex;animation:marq 30s linear infinite}
+.marq span{padding:0 22px}.marq i{font-style:normal;color:var(--pink)}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marq .track{animation:none}html{scroll-behavior:auto}}
 
 .hb{background:#FFF6EA;display:flex;justify-content:center}
 .hb .in{position:relative;width:100%;max-width:1280px;aspect-ratio:2/1;background:url(hello-banner.webp) center/cover no-repeat}
@@ -107,73 +68,107 @@ background-repeat:no-repeat,repeat-x,repeat-y}
 .hb ol a{display:block;padding:3px 0}
 .hb .cue{display:flex}
 }
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:48px 72px;align-items:center}
+.hb{border-bottom:2.5px solid #35090B}
+.hb h1,.hb .sub,.hb ol{color:#35090B}
+section{padding:88px 0;border-top:var(--bd)}
+#setup{background:var(--pink)}
+.head{display:flex;flex-direction:column;gap:16px;max-width:44em;margin-bottom:40px}
+.stack{display:flex;flex-direction:column;gap:20px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:56px 72px;align-items:center}
 .svc.rev .fig{order:2}
-.fig{margin:0;justify-self:center;width:100%;max-width:480px}
-.fig .ph{border-radius:200px 200px 24px 24px;overflow:hidden;line-height:0;background:var(--sand)}
-.fig img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover}
-.svc.rev .fig .ph{border-radius:24px 24px 200px 24px}
-.fig figcaption{margin-top:14px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:var(--soft);text-align:center}
-.q{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,4.4vw,56px);line-height:1.04;font-weight:500}
-.lab{border-left:2px solid var(--sage2);padding:2px 0 2px 20px}
-.out{background:var(--card);border:1px solid var(--tan);padding:18px 22px}
-.out b{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
-ul.dots a{text-decoration:underline;text-underline-offset:3px}
-.btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--bg)}
-.stk{position:relative;height:calc(100vh * 3.6);border-top:1px solid var(--line)}
-.stk-in{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center;background:var(--bg);isolation:isolate}
-.stk-title{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:0 24px;pointer-events:none}
-.stk-title h2{font-style:italic;font-size:clamp(64px,13vw,170px);line-height:.95;color:var(--sand)}
-.deck{position:relative;z-index:1;width:min(1060px,calc(100% - 40px));height:min(760px,90vh)}
-.card{position:absolute;inset:0;display:grid;grid-template-columns:5fr 7fr;border-radius:24px;overflow:hidden;background:var(--ink);color:var(--bg);box-shadow:0 18px 56px rgba(70,55,47,.28);will-change:transform;opacity:0;transform:translateY(115%) rotate(5deg)}
-.card .im{position:relative;background:var(--sand);min-height:0}
-.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.card .im:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(40,28,22,.55))}
-.card .im .tag{position:absolute;left:24px;bottom:22px;z-index:1;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:26px;color:#fff}
-.card .tx{padding:34px 40px;display:flex;flex-direction:column;gap:13px;min-height:0;overflow:hidden;font-size:15px;line-height:1.55}
-.card .tx .eyebrow{color:#B8C0A8}
-.card h3{font-size:clamp(30px,3.4vw,44px);line-height:1.02}
-.pr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
-.pr .price{font-size:clamp(46px,5vw,64px);color:var(--bg)}
-.pr span{font-size:14px;color:#D9CDBD}
-.pr em{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid #B8C0A8;color:#B8C0A8;padding:3px 10px}
-.card .for{color:#D9CDBD}
-.card .eyebrow.sm{font-size:11px;margin-top:2px}
-.card ul.dots{gap:6px}
-.card ul.dots li{border-color:rgba(245,240,232,.2);padding-top:6px}
-.card ul.dots li:before{background:#B8C0A8;margin-top:9px}
-.card ul.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
-.card .note{color:#D9CDBD;font-size:14px}
-.card .note b{color:var(--bg);font-weight:600}
-.card .btn{margin-top:auto;align-self:flex-start}
-.pr .price small{font-family:'DM Sans',sans-serif;font-size:15px;color:#D9CDBD;margin-left:6px}
-.card.compact .tx{gap:9px;padding:28px 40px}
-.card.compact ul.dots li{padding-top:4px}
-.card.compact ul.dots li:before{margin-top:8px}
-.card.compact .pr .price{font-size:clamp(40px,4.2vw,52px)}
-.cmp{padding:72px 0}
-.faq-list{max-width:52em;border-bottom:1px solid var(--line)}
-details.q-a{border-top:1px solid var(--line)}
-details.q-a summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(23px,2.6vw,30px);line-height:1.15;font-weight:500}
-details.q-a summary::-webkit-details-marker{display:none}
-details.q-a summary:after{content:"+";flex:none;font-family:'DM Sans',sans-serif;font-size:26px;font-weight:400;color:var(--sage);transition:transform .25s}
-details.q-a[open] summary:after{transform:rotate(45deg)}
-details.q-a summary:focus-visible{outline:2px solid var(--sage);outline-offset:4px}
-details.q-a .a{padding:0 48px 24px 0;color:var(--soft);display:flex;flex-direction:column;gap:10px}
-details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
-.stk-title .lead{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(20px,2.2vw,28px);line-height:1.25;color:var(--soft);max-width:34em;margin-top:6px}
+.fig{position:relative;margin:0;justify-self:center;width:100%;max-width:470px}
+.fig .ph{padding:12px;background:var(--paper);border:var(--bd);border-radius:28px;box-shadow:8px 8px 0 var(--ink);transform:rotate(-2.5deg);line-height:0}
+.svc.rev .fig .ph{transform:rotate(2.5deg)}
+.fig img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover;border-radius:18px;border:2px solid var(--ink)}
+.fig img.tall{aspect-ratio:3/4;object-position:center 35%}
+.fig figcaption{position:absolute;left:14px;bottom:-14px;padding:5px 16px;background:var(--pink);border:var(--bd);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:18px;line-height:1.2;transform:rotate(-3deg)}
+#setup .fig figcaption{background:var(--paper)}
+.sticker{position:absolute;top:-20px;right:-8px;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--maroon);color:var(--cream);border:var(--bd);box-shadow:3px 3px 0 var(--ink);outline:2px dashed var(--cream);outline-offset:-8px;font:800 13px/1.15 'Fraunces',Georgia,serif;letter-spacing:.04em;text-transform:uppercase;transform:rotate(12deg)}
+.q{font-family:'Fraunces',Georgia,serif;font-weight:800;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--maroon);letter-spacing:-.02em}
+.lab{border-left:6px solid var(--maroon);padding:2px 0 2px 16px}
+.out{position:relative;background:var(--paper);border:var(--bd);border-radius:16px;box-shadow:var(--sh);padding:16px 20px;transform:rotate(-1deg)}
+.out b{display:inline-block;background:var(--maroon);color:var(--cream);padding:2px 12px;border-radius:999px;margin-bottom:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+ul.dots{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.dots li{display:flex;gap:12px;padding-top:8px;border-top:2px dashed var(--line)}
+ul.dots li:before{content:"";flex:none;width:12px;height:12px;margin-top:8px;border:2px solid var(--ink);border-radius:50%;background:var(--pink)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.stk{position:relative;height:calc(100vh * 3.6);border-top:var(--bd)}
 .stk.setup{height:calc(100vh * 4.6)}
+.stk-in{position:sticky;top:0;height:100vh;padding-top:76px;overflow:hidden;display:grid;place-items:center;isolation:isolate;--tt:var(--cream);--tl:var(--ink);background-color:var(--sage);background-image:linear-gradient(rgba(255,246,234,.2) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(255,246,234,.2) 1.5px,transparent 1.5px);background-size:56px 56px}
+.stk.setup .stk-in{--tt:var(--pink);background-color:var(--cream);background-image:linear-gradient(rgba(53,9,11,.08) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(53,9,11,.08) 1.5px,transparent 1.5px)}
+.stk.grow .stk-in{--tt:var(--pink);--tl:var(--cream);background-color:var(--maroon)}
+.stk-title{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:0 24px;pointer-events:none}
+.stk-title .eyebrow{align-self:center}
+.stk-title h2{font-weight:900;font-size:clamp(64px,13vw,170px);line-height:.95;color:var(--tt);text-shadow:5px 5px 0 var(--ink)}
 .stk.setup .stk-title h2,.stk.grow .stk-title h2{font-size:clamp(52px,10vw,130px)}
+.stk-title .lead{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,2vw,26px);line-height:1.3;color:var(--tl);max-width:34em}
+.deck{position:relative;z-index:1;width:min(1060px,calc(100% - 40px));height:min(780px,calc(100vh - 120px))}
+.card{position:absolute;inset:0;display:grid;grid-template-columns:5fr 7fr;border:var(--bd);border-radius:30px;overflow:hidden;background:var(--pink);color:var(--ink);box-shadow:8px 8px 0 var(--ink);will-change:transform;opacity:0;transform:translateY(115%) rotate(5deg)}
+.deck .card:nth-child(4n+2){background:var(--paper)}
+.deck .card:nth-child(4n+3){background:var(--sage-l)}
+.deck .card:nth-child(4n+4){background:var(--cream)}
+.card .im{position:relative;background:var(--sage);min-height:0;border-right:var(--bd)}
+.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.card .im .tag{position:absolute;left:18px;bottom:20px;z-index:1;padding:4px 16px;background:var(--paper);border:var(--bd);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:18px;color:var(--ink);transform:rotate(-3deg)}
+.card .tx{padding:26px 34px;display:flex;flex-direction:column;gap:9px;min-height:0;overflow:hidden;font-size:14.5px;line-height:1.45}
+.card h3{font-size:clamp(26px,2.8vw,38px);line-height:1.02}
+.eyebrow.sm{font-size:11px;padding:3px 12px;margin-top:2px;background:var(--paper)}
+.pr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.price{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:clamp(42px,4.4vw,56px);line-height:.95;color:var(--ink);font-variation-settings:"SOFT" 100,"WONK" 1}
+.price small{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--soft);margin-left:6px}
+.pr span{font-size:14px;color:var(--soft)}
+.pr em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--maroon);color:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:3px 10px}
+.card ul.dots li{padding-top:4px}.card ul.dots li:before{margin-top:6px}
+.card ul.dots{gap:6px}
+.card ul.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.card .note{color:var(--soft);font-size:14px}.card .note b{color:var(--ink)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.card .btn.light{background:var(--maroon);color:var(--cream)}
+.card.compact .tx{gap:9px;padding:26px 36px}
+.card.compact .price{font-size:clamp(40px,4.2vw,52px)}
+.cmp{padding:72px 0}
+.tablewrap{overflow-x:auto;border:var(--bd);border-radius:22px;background:var(--paper);box-shadow:8px 8px 0 var(--ink)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:16px}
+th,td{text-align:left;padding:16px 24px;border-bottom:2px dashed var(--line);vertical-align:top}
+th{background:var(--pink);border-bottom:var(--bd);font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:800;color:var(--maroon)}
+td:first-child{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.faq-list{max-width:52em;display:flex;flex-direction:column;gap:14px}
+details.q-a{background:var(--paper);border:var(--bd);border-radius:20px;box-shadow:4px 4px 0 var(--ink);padding:0 22px}
+details.q-a[open]{background:var(--pink)}
+details.q-a summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(19px,2.3vw,25px);line-height:1.2;color:var(--ink)}
+details.q-a summary::-webkit-details-marker{display:none}
+details.q-a summary:after{content:"+";flex:none;width:34px;height:34px;display:grid;place-items:center;border:var(--bd);border-radius:50%;background:var(--cream);font:600 22px/1 'DM Sans',sans-serif;transition:transform .25s}
+details.q-a[open] summary:after{transform:rotate(45deg)}
+details.q-a summary:focus-visible{outline:3px solid var(--maroon);outline-offset:4px}
+details.q-a .a{padding:0 8px 22px 0;display:flex;flex-direction:column;gap:10px}
+details.q-a .a a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.band{background:var(--maroon);color:var(--cream);border-top:var(--bd)}
+.band h2{color:var(--cream)}.band .soft{color:var(--pink)}
+.band .btn{border-color:var(--cream);box-shadow:5px 5px 0 var(--ink)}
+footer{padding:44px 0 52px;border-top:var(--bd);background:var(--paper)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
+footer img{height:64px;width:auto;display:block}
+.tagline{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:21px;color:var(--maroon)}
+footer a{font-weight:700;font-size:15px}
+@media(max-width:700px){
+#top.w{position:static;padding-top:12px}
+header.top{border-radius:28px;padding:10px 14px}
+nav{flex-wrap:nowrap;overflow-x:auto;width:100%;padding:2px 2px 6px;-webkit-overflow-scrolling:touch}
+nav a{white-space:nowrap;flex:none}
+.sticker{width:76px;height:76px;font-size:11px;top:-16px;right:-4px}
+}
+@media(max-width:600px){.w{padding:0 20px}section{padding:64px 0}}
 @media(max-width:900px),(max-height:820px),(prefers-reduced-motion:reduce){
-.stk{height:auto;padding:72px 0 56px}
-.stk-in{position:static;height:auto;display:block}
+.stk,.stk.setup{height:auto;padding:72px 0 56px}
+.stk-in{position:static;height:auto;display:block;padding-top:0;background:none}
+.stk{background-color:var(--sage)}.stk.setup{background-color:var(--cream)}.stk.grow{background-color:var(--maroon)}
 .stk-title{position:static;opacity:1!important;margin-bottom:40px;padding:0 20px}
-.stk-title h2,.stk.setup .stk-title h2,.stk.grow .stk-title h2{font-size:clamp(44px,9vw,72px);color:var(--ink)}
-.stk.setup{height:auto}
-.deck{height:auto;display:flex;flex-direction:column;gap:28px}
+.stk-title h2,.stk.setup .stk-title h2,.stk.grow .stk-title h2{font-size:clamp(44px,9vw,72px);text-shadow:3px 3px 0 var(--ink)}
+.deck{height:auto;display:flex;flex-direction:column;gap:30px}
 .card{position:relative;inset:auto;grid-template-columns:1fr;opacity:1!important;transform:none!important}
-.card .im{height:240px}
+.card .im{height:240px;border-right:0;border-bottom:var(--bd)}
+.card .im.tallim{height:auto;aspect-ratio:4/5}
 .card .tx{padding:28px 24px;overflow:visible}
 .card ul.cols{grid-template-columns:1fr}
 .card.compact .tx{padding:28px 24px}
@@ -187,6 +182,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 <ol><li><a href="#strategy">01. I need a clear marketing direction.</a></li><li><a href="#setup">02. I need help getting things organised.</a></li><li><a href="#support">03. I want someone to help me do the work.</a></li></ol>
 </div><a class="cue" href="#top" aria-label="Scroll down"><span>scroll</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
 </div></div>
+<div class="marq" aria-hidden="true"><div class="track"><span>Strategy</span><i>✦</i><span>Setup</span><i>✦</i><span>Ongoing support</span><i>✦</i><span>F&amp;B brands</span><i>✦</i><span>Modern lifestyle brands</span><i>✦</i><span>Pinterest</span><i>✦</i><span>Content systems</span><i>✦</i><span>Strategy</span><i>✦</i><span>Setup</span><i>✦</i><span>Ongoing support</span><i>✦</i><span>F&amp;B brands</span><i>✦</i><span>Modern lifestyle brands</span><i>✦</i><span>Pinterest</span><i>✦</i><span>Content systems</span><i>✦</i></div></div>
 <div class="w" id="top">
 <header class="top">
 <a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
@@ -194,7 +190,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </header>
 </div>
 <section id="strategy"><div class="w svc">
-<figure class="fig"><div class="ph"><img src="hello-branding-and-marketing.webp" alt="Illustrator open on a laptop showing a brand board with a logo, color palette and mockups" width="900" height="900" loading="lazy"></div><figcaption>branding and marketing</figcaption></figure>
+<figure class="fig"><div class="ph"><img class="tall" src="hello-branding-collage.webp" alt="Brand collage: bakery coffee cups, a brand checklist, a visual identity diagram, burgundy packaging and a laptop saying hello" width="900" height="1600" loading="lazy"></div><figcaption>branding and marketing</figcaption><span class="sticker" aria-hidden="true">01<br>strategy</span></figure>
 <div class="stack">
 <p class="eyebrow">01 · Strategy</p>
 <h2 class="q">I need a clear marketing direction.</h2>
@@ -209,8 +205,8 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 <div class="stk-title"><p class="eyebrow">Strategy services</p><h2>What’s included</h2></div>
 <div class="deck" id="deck">
 
-<article class="card" aria-label="Simplify Content Ecosystem Strategy">
-<div class="im"><img src="hello-card-01.webp" alt="An iced matcha, a compact camera, sunglasses and a lipstick on a sunlit concrete ledge" width="900" height="900" loading="lazy"><span class="tag">content ecosystem</span></div>
+<article class="card compact" aria-label="Simplify Content Ecosystem Strategy">
+<div class="im tallim"><img src="hello-card-01-content.webp" alt="Content collage: a Life of a social media manager diagram, a Slow down you’re doing fine poster, a laptop and a phone lock screen" width="900" height="1600" loading="lazy"><span class="tag">content ecosystem</span></div>
 <div class="tx">
 <p class="eyebrow">01 · Flagship strategy</p>
 <h3>Simplify Content Ecosystem Strategy</h3>
@@ -225,7 +221,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify Coded Pinterest">
-<div class="im"><img src="hello-card-02.webp" alt="A tortoiseshell comb, hair claw, compact, shell dish with a gold charm necklace and a brown satin bow on marble" width="900" height="900" loading="lazy"><span class="tag">coded pinterest</span></div>
+<div class="im tallim"><img src="hello-card-02-pinterest.webp" alt="Pinterest collage: the Pinterest logo, a vinyl record, tulip earrings, matcha drinks, a woman in a burgundy sweater and a pin reading How I make $2k a month pinning" width="900" height="1600" loading="lazy"><span class="tag">coded pinterest</span></div>
 <div class="tx">
 <p class="eyebrow">02 · Strategy</p>
 <h3>Simplify Coded Pinterest</h3>
@@ -239,7 +235,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify Customer Journey Planning">
-<div class="im"><img src="hello-card-03.webp" alt="A hand reaching for a donut from plates of donuts, cookies and strawberry tarts" width="900" height="900" loading="lazy"><span class="tag">customer journey</span></div>
+<div class="im tallim"><img src="hello-card-03-journey.webp" alt="Dream clients collage: a Will you be my customer note, a You are my sunshine print, an It’s the journey poster, a woman in a green gown and a My dream clients are finding me everyday card" width="900" height="1600" loading="lazy"><span class="tag">customer journey</span></div>
 <div class="tx">
 <p class="eyebrow">03 · Strategy</p>
 <h3>Simplify Customer Journey Planning</h3>
@@ -254,7 +250,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 
 </div></div></section>
 <section id="setup"><div class="w svc rev">
-<figure class="fig"><div class="ph"><img src="hello-content-system.webp" alt="A desktop monitor showing an organised workspace of planners and content calendars" width="900" height="900" loading="lazy"></div><figcaption>content system</figcaption></figure>
+<figure class="fig"><div class="ph"><img src="hello-content-system.webp" alt="A desktop monitor showing an organised workspace of planners and content calendars" width="900" height="900" loading="lazy"></div><figcaption>content system</figcaption><span class="sticker" aria-hidden="true">02<br>setup</span></figure>
 <div class="stack">
 <p class="eyebrow">02 · Setup</p>
 <h2 class="q">I need help getting things organised.</h2>
@@ -270,7 +266,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 <div class="deck">
 
 <article class="card" aria-label="Simplify Content Management Systems">
-<div class="im"><img src="hello-card-04.webp" alt="A hand with chunky rings holding a pastel striped notebook" width="900" height="900" loading="lazy"><span class="tag">content system</span></div>
+<div class="im"><img src="hello-card-04.webp" alt="Letter blocks spelling Content Management System, surrounded by a pocket watch, cassette tape, wax-sealed envelope, film camera and vinyl record" width="1080" height="1920" loading="lazy"><span class="tag">content management</span></div>
 <div class="tx">
 <p class="eyebrow">04 · Setup</p>
 <h3>Simplify Content Management Systems</h3>
@@ -284,7 +280,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify AI-Assisted Content Workflows">
-<div class="im"><img src="hello-card-05.webp" alt="A hand with gold rings resting on denim beside a red maple leaf and a suede boot" width="900" height="900" loading="lazy"><span class="tag">ai-assisted workflows</span></div>
+<div class="im"><img src="hello-card-05.webp" alt="The letters AI beside a cassette tape, pocket watch, film strip, headphones, a vintage car and a bouquet of tulips" width="1080" height="1920" loading="lazy"><span class="tag">ai-assisted workflows</span></div>
 <div class="tx">
 <p class="eyebrow">05 · Setup</p>
 <h3>Simplify AI-Assisted Content Workflows</h3>
@@ -298,7 +294,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify Pinterest Account Setup">
-<div class="im"><img src="hello-card-06.webp" alt="Gold rings, a clover pendant necklace and stud earrings in a sunlit dish" width="900" height="900" loading="lazy"><span class="tag">pinterest setup</span></div>
+<div class="im"><img src="hello-card-06.webp" alt="A Pinterest funnel diagram from awareness to traffic and conversion, beside a Link to Pinterest profile mockup, a man pouring coffee and an iced latte" width="1080" height="1920" loading="lazy"><span class="tag">pinterest setup</span></div>
 <div class="tx">
 <p class="eyebrow">06 · Setup</p>
 <h3>Simplify Pinterest Account Setup</h3>
@@ -312,7 +308,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify Blog Marketing">
-<div class="im"><img src="hello-card-07.webp" alt="A breakfast table with fruit, savoury pastries, toast and a cup of coffee" width="900" height="900" loading="lazy"><span class="tag">blog marketing</span></div>
+<div class="im"><img src="hello-card-07.webp" alt="Keyboard keys spelling BLOG, surrounded by a halftone camera, a star, a bow, a sun and arrow doodles" width="1080" height="1920" loading="lazy"><span class="tag">blog marketing</span></div>
 <div class="tx">
 <p class="eyebrow">07 · Setup</p>
 <h3>Simplify Blog Marketing</h3>
@@ -327,7 +323,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 
 </div></div></section>
 <section id="support"><div class="w svc">
-<figure class="fig"><div class="ph"><img src="hello-implementations.webp" alt="A laptop showing a Pinterest feed beside an iced coffee" width="900" height="900" loading="lazy"></div><figcaption>implementations</figcaption></figure>
+<figure class="fig"><div class="ph"><img src="hello-implementations.webp" alt="A laptop showing a Pinterest feed beside an iced coffee" width="900" height="900" loading="lazy"></div><figcaption>implementations</figcaption><span class="sticker" aria-hidden="true">03<br>support</span></figure>
 <div class="stack">
 <p class="eyebrow">03 · Ongoing Support</p>
 <h2 class="q">I want someone to help me do the work.</h2>
@@ -343,7 +339,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 <div class="deck">
 
 <article class="card" aria-label="Simplify Pinterest Management">
-<div class="im"><img src="hello-card-08.webp" alt="A sunset-coloured light glowing on a studio wall above rows of dark yoga mats" width="900" height="900" loading="lazy"><span class="tag">pinterest management</span></div>
+<div class="im"><img src="hello-card-08.webp" alt="The words Pinterest Management over a retro compact camera on a red background" width="1080" height="1920" loading="lazy"><span class="tag">pinterest management</span></div>
 <div class="tx">
 <p class="eyebrow">08 · Ongoing support</p>
 <h3>Simplify Pinterest Management</h3>
@@ -355,7 +351,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card" aria-label="Simplify Integrated Funnel Pinterest">
-<div class="im"><img src="hello-svc-integrated-funnel.webp" alt="A skateboard, tennis rackets, tote bag and water bottle laid out on a sunlit court" width="900" height="900" loading="lazy"><span class="tag">integrated funnel</span></div>
+<div class="im"><img src="hello-svc-integrated-funnel.webp" alt="The words Integrated Funnel over a mirrored sphere, with a film strip, camera lenses and silver stars on a red background" width="1080" height="1920" loading="lazy"><span class="tag">integrated funnel</span></div>
 <div class="tx">
 <p class="eyebrow">09 · Ongoing support</p>
 <h3>Simplify Integrated Funnel Pinterest</h3>
@@ -367,7 +363,7 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></article>
 
 <article class="card compact" aria-label="Simplify Studio">
-<div class="im"><img src="hello-svc-studio.webp" alt="Two women in cowboy boots walking down a country road, mid-stride" width="900" height="900" loading="lazy"><span class="tag">studio</span></div>
+<div class="im"><img src="hello-svc-studio.webp" alt="The word Studio on the screen of a vintage television, on a red background" width="1080" height="1920" loading="lazy"><span class="tag">studio</span></div>
 <div class="tx">
 <p class="eyebrow">10 · Ongoing support</p>
 <h3>Simplify Studio</h3>
@@ -412,11 +408,11 @@ details.q-a .a a{text-decoration:underline;text-underline-offset:3px;color:var(-
 </div></section>
 <section class="band" id="talk"><div class="w" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center">
 <div class="stack"><p class="eyebrow">Not sure where to start?</p><h2>Let’s talk about your goals.</h2><p class="soft">Message me and tell me what you’re working on. I’ll point you to where I’d start.</p></div>
-<div style="display:flex;flex-wrap:wrap;gap:14px"><a class="btn light" href="inquiries.html">Send an inquiry</a><a class="btn" style="border:1px solid var(--tan)" href="book.html">Book an intro chat</a><a class="btn" style="border:1px solid var(--tan)" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Message me on Threads</a><a class="btn" style="border:1px solid var(--tan)" href="https://www.instagram.com/sociallyintrovertstudio/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px"><a class="btn light" href="inquiries.html">Send an inquiry</a><a class="btn pink" href="book.html">Book an intro chat</a><a class="btn pink" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Message me on Threads</a><a class="btn pink" href="https://www.instagram.com/sociallyintrovertstudio/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></div>
 </div></section>
 <footer><div class="w"><div class="row">
 <a href="work-together.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="219" height="98"></a>
-<p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:var(--soft)">Thoughtful content. Intentional discovery.</p>
+<p class="tagline">Thoughtful content. Intentional discovery.</p>
 <a href="work-together.html" style="font-size:15px">← Back to all the ways to work together</a></div></div></footer>
 <script>
 (function(){
