@@ -6,45 +6,61 @@
 <title>Welcome | Simplify Customer Journey Planning | Socially Introverts</title>
 <meta name="description" content="Your payment details for Simplify Customer Journey Planning with Socially Introverts.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=DM+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#F5F0E8;--ink:#46372F;--soft:#6A5A50;--sage:#566049;--sage2:#89917B;--line:#DDD2C4;--tan:#C6B5A3;--card:#FBF8F3;--sand:#E4DCCD}
+:root{--cream:#FFF6EA;--paper:#FFFDF8;--ink:#35090B;--maroon:#720C0E;--sage:#8A917B;--pink:#F6CFD3;--soft:#6E4647;--line:rgba(53,9,11,.25);--bd:2.5px solid var(--ink);--sh:5px 5px 0 var(--ink)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--cream);background-image:url(pattern.png);background-size:360px 360px;color:var(--ink);font:500 17px/1.6 'DM Sans',system-ui,sans-serif}
 a{color:inherit}p{margin:0}
-.w{max-width:820px;margin:0 auto;padding:0 24px}
+.w{max-width:860px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:800;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--maroon);letter-spacing:-.02em}
+h1{font-size:clamp(52px,9vw,88px);line-height:1;margin-top:36px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.05}
+.eyebrow{display:inline-flex;width:fit-content;margin:0;padding:5px 14px;background:var(--pink);border:var(--bd);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.lead{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(22px,3vw,30px);line-height:1.3;margin-top:16px}
+#top.w{position:sticky;top:10px;z-index:60;padding-top:14px;padding-bottom:6px;max-width:1120px}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding:6px 12px 6px 22px;background:var(--paper);border:var(--bd);border-radius:999px;box-shadow:var(--sh)}
+header.top img{height:52px;width:auto;display:block}
+nav{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700}
+nav a.l{text-decoration:none;padding:7px 14px;border-radius:999px;border:2px solid transparent}
+nav a.l:hover{background:var(--pink);border-color:var(--ink)}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 26px;background:var(--maroon);color:var(--cream);border:var(--bd);border-radius:999px;box-shadow:var(--sh);text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.btn.sm{min-height:42px;padding:0 20px;background:var(--pink);color:var(--ink)}
 .banner{padding:28px 0 0}
-.banner img{width:100%;height:auto;display:block;border-radius:24px;background:var(--sand)}
-.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
-h1,h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
-h1{font-size:clamp(48px,8vw,76px);line-height:1;margin-top:40px}
-h2{font-size:clamp(28px,4vw,38px);line-height:1.1}
-.lead{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.25;margin-top:14px}
-.panel{background:var(--card);border:1px solid var(--tan);padding:32px 34px;margin-top:36px}
+.banner img{width:100%;height:auto;display:block;border-radius:24px;background:#E4DCCD}
+.panel{background:var(--paper);border:var(--bd);border-radius:22px;box-shadow:8px 8px 0 var(--ink);padding:32px 34px;margin-top:36px}
 dl{margin:18px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:0 28px}
-dt,dd{margin:0;padding:14px 0;border-top:1px solid var(--line)}
-dt{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);padding-top:18px}
+dt,dd{margin:0;padding:14px 0;border-top:2px dashed var(--line)}
+dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon);padding-top:20px}
 dd{font-size:18px}
 dd small{display:block;color:var(--soft);font-size:15px}
-.fee{font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;line-height:1}
-.badge{display:inline-block;margin-left:10px;border:1px solid var(--sage2);color:var(--sage);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:2px 10px;vertical-align:middle}
+.fee{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:40px;line-height:1;color:var(--ink);font-variation-settings:"SOFT" 100,"WONK" 1}
+.badge{display:inline-block;margin-left:10px;background:var(--maroon);color:var(--cream);border:2px solid var(--ink);border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 10px;vertical-align:middle}
 ul.dots{margin:16px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
-ul.dots li{display:flex;gap:14px;padding:10px 0 0;border-top:1px solid var(--line);margin-bottom:10px;font-size:16px;line-height:1.5}
-ul.dots li:before{content:"";flex:none;width:6px;height:6px;margin-top:9px;background:var(--sage2)}
+ul.dots li{display:flex;gap:12px;padding:8px 0 0;border-top:2px dashed var(--line);margin-bottom:8px;font-size:16px;line-height:1.5}
+ul.dots li:before{content:"";flex:none;width:12px;height:12px;margin-top:6px;border:2px solid var(--ink);border-radius:50%;background:var(--pink)}
 .note{color:var(--soft);font-size:15px;margin-top:14px}.note b{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;min-height:56px;padding:0 34px;background:var(--ink);color:var(--bg);border-radius:2px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .3s}
-.btn:hover{background:#2F241E}
-.pay{background:var(--ink);color:var(--bg);padding:36px 34px;margin-top:36px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
-.pay .eyebrow{color:#B8C0A8}.pay p{color:#D9CDBD}
-.pay .btn{background:var(--bg);color:var(--ink)}.pay .btn:hover{background:var(--card)}
+.pay{background:var(--maroon);color:var(--cream);border:var(--bd);border-radius:24px;box-shadow:8px 8px 0 var(--ink);padding:36px 34px;margin-top:36px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.pay .eyebrow{background:var(--pink)}.pay p{color:var(--cream)}
+.pay .btn{background:var(--pink);color:var(--ink);border-color:var(--cream)}
 .steps{margin-top:36px;display:flex;flex-direction:column;gap:14px}
-.sign{margin-top:36px;font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;line-height:1.25}
-.sign i{display:block;color:var(--soft)}
-footer{padding:40px 0 56px;margin-top:48px;border-top:1px solid var(--line);font-size:15px}
+.sign{margin-top:36px;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:30px;line-height:1.2;color:var(--maroon)}
+.sign i{display:block;font-weight:500;color:var(--soft)}
+footer{padding:40px 0 48px;margin-top:56px;border-top:var(--bd);background:var(--paper)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
+footer img{height:72px;width:auto;display:block}
+.tagline{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:21px;color:var(--maroon)}
+footer a.back{font-weight:700;font-size:15px}
+@media(max-width:700px){#top.w{position:static;padding-top:12px}header.top{border-radius:28px;padding:8px 14px}}
 @media(max-width:600px){.w{padding:0 18px}.panel,.pay{padding:26px 22px}dl{grid-template-columns:1fr;gap:0}dt{padding-bottom:0;border-bottom:0}dd{border-top:0;padding-top:4px}ul.dots{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<div class="w" id="top"><header class="top"><a href="hello.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="900" height="326"></a><nav><a class="l" href="hello.html">All services</a><a class="btn sm" href="#pay">Payment</a></nav></header></div>
 <div class="w">
 <div class="banner"><img src="hello-welcome-banner.webp" alt="Simplify your business: build one connected growth ecosystem. Instagram, blogging and Pinterest. Socially Introverts." width="2000" height="1000"></div>
 <p class="eyebrow" style="margin-top:40px">Welcome · Simplify Customer Journey Planning</p>
@@ -62,7 +78,7 @@ footer{padding:40px 0 56px;margin-top:48px;border-top:1px solid var(--line);font
 <p class="note"><b>Not included:</b> Website redesign, copywriting, email automation or technical tracking implementation.</p><p class="note"><b>How we measure value:</b> Landing-page conversion, enquiry rate, email sign-ups and customer journey drop-offs.</p>
 </div>
 
-<div class="pay">
+<div class="pay" id="pay">
 <p class="eyebrow">Payment link</p>
 <p>Secure your start by completing payment (in full or in 2 instalments) here.</p>
 <a class="btn" href="https://shop.beacons.ai/annplates/97518ce7-7c61-4d17-bcae-d298c75c9317" target="_blank" rel="noopener noreferrer">Go to payment →</a>
@@ -74,7 +90,7 @@ footer{padding:40px 0 56px;margin-top:48px;border-top:1px solid var(--line);font
 </div>
 
 <p class="sign">Looking forward to working together!<i>Socially Introverts 🤎</i></p>
-<footer><a href="hello.html">← Back to all the ways to work together</a></footer>
 </div>
+<footer><div class="w" style="max-width:1120px"><div class="row"><a href="hello.html" aria-label="Socially Introverts"><img src="logo.png" alt="Socially Introverts" width="900" height="326"></a><p class="tagline">Thoughtful content. Intentional discovery.</p><a class="back" href="hello.html">← Back to all the ways to work together</a></div></div></footer>
 </body>
 </html>
