@@ -24,7 +24,6 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{margin:0;background-color:var(--cream);background-image:url(pattern.png);background-size:360px 360px;color:var(--ink);font:500 17px/1.6 'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-body.is-closed{overflow:hidden;height:100vh}
 a{color:inherit}
 p{margin:0}
 .w{max-width:1120px;margin:0 auto;padding:0 32px}
@@ -115,38 +114,13 @@ footer .logo img{height:72px;width:auto;display:block}
 }
 @media(max-width:600px){.w{padding:0 20px}.band{padding:64px 0}.board{padding:48px 0 64px}}
 
-/* ============ THE DOOR ============ */
-.door{position:fixed;inset:0;z-index:500;perspective:1800px;overflow:hidden;background:var(--cream);transition:background .2s ease 1s}
-.door.open{background:transparent;pointer-events:none}
-.door-logo{position:absolute;top:2.5vh;right:5vw;z-index:3;width:min(200px,38vw);height:auto;transition:opacity .4s ease}
-.door.open .door-logo{opacity:0}
-.leaf{position:absolute;top:0;bottom:0;width:50%;background:var(--pink);transition:transform 1.4s cubic-bezier(.65,0,.25,1);backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:17vh 3vw 6vh}
-.leaf.l{left:0;transform-origin:left center;border-right:2.5px solid var(--ink)}
-.leaf.r{right:0;transform-origin:right center}
-.door.open .leaf.l{transform:rotateY(-112deg)}
-.door.open .leaf.r{transform:rotateY(112deg)}
-.panel{width:100%;height:100%;max-width:420px;padding:10px;background:var(--paper);border:var(--bd);border-radius:999px 999px 18px 18px;box-shadow:var(--sh)}
-.panel img{width:100%;height:100%;object-fit:cover;display:block;border:2px solid var(--ink);border-radius:999px 999px 10px 10px}
-.knob{position:absolute;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--maroon);border:2px solid var(--ink);z-index:2}
-.leaf.l .knob{right:14px}.leaf.r .knob{left:14px}
-@media(max-width:860px){.leaf{padding:15vh 4vw 8vh}}
-.door{animation:doorgone 0s linear 4s forwards}
-@keyframes doorgone{to{visibility:hidden;pointer-events:none}}
 @media(prefers-reduced-motion:reduce){
-  .leaf,.door{transition:none}
   .marq .track{animation:none}
   html{scroll-behavior:auto}
 }
 </style>
-<noscript><style>.door{display:none !important}body.is-closed{overflow:auto;height:auto}</style></noscript>
 </head>
-<body class="is-closed">
-
-<div class="door" id="door" aria-label="Welcome" role="presentation">
-  <div class="leaf l"><div class="panel"><img src="7.webp" alt="Flat lay of open vintage books, shells, glasses and a paper flower collage on linen" width="1080" height="1374"></div><span class="knob"></span></div>
-  <div class="leaf r"><div class="panel"><img src="2.webp" alt="A wall of framed vintage art above a shelf of books and a glowing lamp" width="1080" height="1350"></div><span class="knob"></span></div>
-  <img class="door-logo" src="logo.png" alt="Socially Introverts" width="851" height="364">
-</div>
+<body>
 
 <div class="w" id="top">
   <header class="top">
@@ -211,12 +185,12 @@ footer .logo img{height:72px;width:auto;display:block}
       <a href="build-content.html">let&rsquo;s build your content</a>
       <a href="selected-work.html">selected work</a>
       <a href="toolkit.html">behind the toolkit</a>
-      <a href="tester.html">free guide</a>
+      <a href="beyond.html">beyond instagram</a>
       <a href="contact.html">contact</a>
       <a href="book.html">book an intro chat</a>
       <a href="bestie.html">why I&rsquo;m your bestie</a>
       <span class="social">
-        <a href="https://www.instagram.com/annplates/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/sociallyintrovertstudio/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.threads.com/@annplates" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a>
         <a href="https://www.pinterest.com/sociallyintroverts/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/></svg></a>
       </span>
@@ -226,26 +200,5 @@ footer .logo img{height:72px;width:auto;display:block}
   </div>
 </footer>
 
-<script>
-(function(){
-  /* The door: opens once per visit, skipped for repeat views and reduced motion */
-  var door=document.getElementById('door'), body=document.body;
-  function finish(){ door.style.display='none'; body.classList.remove('is-closed'); }
-  var seen=false;
-  try{ seen=sessionStorage.getItem('si_door_seen')==='1'; }catch(e){}
-  var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(seen||calm){ finish(); return; }
-  var opened=false;
-  function openDoor(){
-    if(opened) return; opened=true;
-    try{ sessionStorage.setItem('si_door_seen','1'); }catch(e){}
-    body.classList.remove('is-closed');
-    door.classList.add('open');
-    setTimeout(finish,1500);
-  }
-  door.addEventListener('click',openDoor);
-  setTimeout(openDoor,1400);
-})();
-</script>
 </body>
 </html>
