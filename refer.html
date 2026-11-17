@@ -198,6 +198,16 @@ nav a{white-space:nowrap;flex:none}
 <li>Monthly services earn a one-time reward, not recurring commission.</li>
 </ul></div></section>
 
+<!-- THANK-YOU WALL
+     To add someone: only if they ticked "okay to thank me by first name" in the form.
+     Copy one <li> line below, paste it inside the <ul>, and change the name. First names only. -->
+<section class="sec-sage" id="thanks"><div class="w">
+<div class="head"><p class="eyebrow">Thank you</p><h2>Thank you to my besties.</h2><p class="soft">These lovely people helped good businesses find me.</p></div>
+<ul class="dots" id="thanksList" style="max-width:46em">
+<!-- <li>Thank you, Emily, for the referral.</li> -->
+</ul>
+</div></section>
+
 <section class="band" id="refer"><div class="w">
 <div class="head"><p class="eyebrow">Refer someone</p><h2>Refer someone to Socially Introverts</h2><p>Know a business that could use some support? Share a few details and I’ll take it from there.</p></div>
 
@@ -251,6 +261,7 @@ nav a{white-space:nowrap;flex:none}
 </div>
 <p class="hint">Only needed if they become a client. You can send it later.</p>
 <label class="check"><input type="checkbox" name="permission" value="yes" required> <span>I have permission to share this person’s details.</span></label>
+<label class="check"><input type="checkbox" name="ok_to_thank_publicly" value="yes"> <span>It’s okay to thank me by first name on this page <span class="opt" style="color:var(--soft)">(optional)</span>.</span></label>
 </div>
 
 <button class="btn" type="submit">Send referral</button>
@@ -268,6 +279,8 @@ nav a{white-space:nowrap;flex:none}
 var FORM_HANDLER='https://formspree.io/f/mjywwgzy';
 var THANKS_PAGE='https://sociallyintroverts.com/bestie-referral-sent-r7k2';
 var TO_EMAIL='sociallyintroverts@outlook.com';
+var tl=document.getElementById('thanksList');
+if(tl&&!tl.querySelector('li')){var ts=document.getElementById('thanks');if(ts)ts.style.display='none'}
 var f=document.getElementById('referForm'),msg=document.getElementById('referMsg');
 f.addEventListener('submit',function(e){
   e.preventDefault();msg.textContent='';
