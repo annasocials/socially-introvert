@@ -186,7 +186,6 @@ nav a{white-space:nowrap;flex:none}
 .chip b{color:var(--maroon);font-weight:800}
 .chip:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);background:var(--pink)}
 
-.stk.core{height:calc(100vh * 3.4)}
 .guide{padding:72px 0 28px}.guide h2{margin:0}
 .ggrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
 .gc{display:flex;flex-direction:column;gap:6px;padding:18px 20px;background:var(--paper);color:var(--ink);border:var(--bd);border-radius:20px;box-shadow:4px 4px 0 var(--ink);text-decoration:none}
@@ -203,11 +202,31 @@ details.ms[open]>summary:after{transform:rotate(45deg)}
 details.ms[open]>summary{background:var(--pink);margin-bottom:28px}
 details.ms .w{width:auto}
 @media(min-width:901px) and (min-height:821px){
+.stk.core{height:calc(100vh * 3.4)}
 .stk.core .card{grid-template-rows:minmax(0,1fr)}
 .stk.core .tx{overflow-y:auto;min-height:0;gap:8px;padding-top:26px;padding-bottom:26px;scrollbar-width:thin}
 .stk.core .tx li,.stk.core .tx .note,.stk.core .tx .for{font-size:13.5px;line-height:1.38}
 .stk.core .tx h3{font-size:clamp(22px,2.4vw,30px)}
 .stk.core .tx .price{font-size:clamp(34px,4vw,48px)}
+}
+
+/* layout fixes v2 */
+.stk{padding:0}
+ul.dots li{display:block;position:relative;padding-left:26px}
+ul.dots li:before{position:absolute;left:0;top:16px;margin:0}
+.card ul.dots li:before{top:10px}
+ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
+@media(max-width:900px),(max-height:820px),(prefers-reduced-motion:reduce){
+.stk,.stk.setup,.stk.grow,.stk.core{height:auto!important;padding:56px 0 48px!important}
+.stk-in{position:static!important;height:auto!important;display:block!important;overflow:visible!important;padding-top:0!important;background:none!important}
+.stk-title{position:static!important;opacity:1!important;margin:0 auto 32px!important}
+.deck{position:static!important;height:auto!important;display:flex!important;flex-direction:column;gap:28px}
+.card{position:relative!important;inset:auto!important;display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto!important;height:auto!important;opacity:1!important;transform:none!important}
+.card .im{aspect-ratio:1/1;height:auto;border-right:0;border-bottom:var(--bd)}
+.card .im.tallim{aspect-ratio:4/5}
+.card .tx{display:flex;flex-direction:column;overflow:visible!important;padding:26px 22px!important;max-height:none!important}
+.card ul.cols{display:flex;flex-direction:column}
+.card .btn{align-self:stretch;justify-content:center}
 }
 </style>
 </head>
@@ -236,7 +255,7 @@ details.ms .w{width:auto}
 <div class="pr"><div class="price">$250</div><span>One-time async audit · Delivered in 7–9 business days</span></div>
 <p class="for"><b>If this sounds like you:</b> &ldquo;I’m creating content, but I’m not sure it’s helping my business get discovered or attract customers.&rdquo; For boutique F&amp;B and modern lifestyle brands.</p>
 <p class="eyebrow sm">Scope and deliverables</p>
-<ul class="dots cols"><li><b>Interactive Notion Scorecard:</b> profile, bio, link-in-bio and first-impression review across up to four channels (Instagram, Threads, Pinterest and website).</li><li><b>Messaging and pillar review:</b> your current content pillars, hooks, CTAs and hidden discovery gaps.</li><li><b>Ready-to-paste rewrites:</b> a custom bio rewrite and 3–5 tailored content hook concepts matched to your brand aesthetic.</li><li><b>Prioritised 30-day checklist:</b> a step-by-step Notion action board.</li><li><b>10-minute walkthrough video</b> explaining what to fix first.</li><li><b>100% upgrade credit:</b> apply your full $250 toward The Launch Campaign Edit or the Blueprint within 14 days.</li></ul>
+<ul class="dots cols"><li><span><b>Interactive Notion Scorecard:</b> profile, bio, link-in-bio and first-impression review across up to four channels (Instagram, Threads, Pinterest and website).</span></li><li><span><b>Messaging and pillar review:</b> your current content pillars, hooks, CTAs and hidden discovery gaps.</span></li><li><span><b>Ready-to-paste rewrites:</b> a custom bio rewrite and 3–5 tailored content hook concepts matched to your brand aesthetic.</span></li><li><span><b>Prioritised 30-day checklist:</b> a step-by-step Notion action board.</span></li><li><span><b>10-minute walkthrough video</b> explaining what to fix first.</span></li><li><span><b>100% upgrade credit:</b> apply your full $250 toward The Launch Campaign Edit or the Blueprint within 14 days.</span></li></ul>
 <p class="note"><b>Working together:</b> One short intake form after booking, asynchronous review on my end, and your Notion Scorecard and walkthrough video delivered to your inbox. No live calls required.</p>
 <p class="note"><b>Not included:</b> Content creation, graphic design, multiple accounts per channel, ongoing posting, community management and paid ads.</p>
 <p class="note"><b>How we measure value:</b> Immediate clarity on what’s working, where traffic drops off and what to fix in the next 30 days.</p>
@@ -250,7 +269,7 @@ details.ms .w{width:auto}
 <div class="pr"><div class="price">$550</div><span>One-time project · 7–10 business days</span></div>
 <p class="for"><b>If this sounds like you:</b> &ldquo;I’m launching a product or seasonal drop and I don’t know how to build anticipation or turn attention into orders.&rdquo; For F&amp;B and modern lifestyle brands preparing a seasonal drop, holiday box, new menu or product, or pre-order window.</p>
 <p class="eyebrow sm">Scope and deliverables</p>
-<ul class="dots cols"><li><b>Campaign strategy and hook board (Notion):</b> your central campaign angle, buyer motivation, key selling points and an ordering flow check.</li><li><b>Visual direction mini-deck (8–10 slides):</b> campaign moodboard, colour and prop direction, and visual examples for pre-launch, launch and post-launch.</li><li><b>10–12 content concepts</b> with scroll-stopping hooks, suggested captions and clear CTAs.</li><li><b>Interactive 2–3 week launch calendar.</b></li><li><b>15-minute walkthrough video</b> explaining each choice and where to start on day one.</li><li><b>1 revision round.</b></li></ul>
+<ul class="dots cols"><li><span><b>Campaign strategy and hook board (Notion):</b> your central campaign angle, buyer motivation, key selling points and an ordering flow check.</span></li><li><span><b>Visual direction mini-deck (8–10 slides):</b> campaign moodboard, colour and prop direction, and visual examples for pre-launch, launch and post-launch.</span></li><li><span><b>10–12 content concepts</b> with scroll-stopping hooks, suggested captions and clear CTAs.</span></li><li><span><b>Interactive 2–3 week launch calendar.</b></span></li><li><span><b>15-minute walkthrough video</b> explaining each choice and where to start on day one.</span></li><li><span><b>1 revision round.</b></span></li></ul>
 <p class="note"><b>Working together:</b> One onboarding questionnaire, asynchronous build on my end, and your Notion hub, visual deck and walkthrough video delivered together. No live calls required.</p>
 <p class="note"><b>Not included:</b> Creating the final photos or videos, publishing or ongoing posting, community management, paid ads or running the launch for you.</p>
 <p class="note"><b>How we measure value:</b> A 14–21 day campaign playbook that gives customers a reason to care and a clear way to order.</p>
@@ -264,7 +283,7 @@ details.ms .w{width:auto}
 <div class="pr"><div class="price">$1,150</div><span>Flagship project · 14–21 business days</span></div>
 <p class="for"><b>If this sounds like you:</b> &ldquo;My brand feels scattered. I don’t know how to stand out or connect Instagram, Pinterest and my website.&rdquo; For growing F&amp;B and modern lifestyle brands ready for complete creative direction.</p>
 <p class="eyebrow sm">Scope and deliverables</p>
-<ul class="dots cols"><li><b>Brand world and messaging hub (Notion):</b> positioning, emotional hook, audience psychology, voice guidelines and core storytelling pillars.</li><li><b>Visual identity and 3×3 concept feed deck (12–15 slides):</b> moodboard, palette, typography, photography rules and three sample content mockups with a 3×3 grid preview.</li><li><b>Connected discovery ecosystem:</b> an Instagram, Pinterest and blog/website destination map plus a content repurposing workflow.</li><li><b>15–20 tailored content ideas.</b></li><li><b>Interactive 90-day roadmap.</b></li><li><b>20-minute walkthrough video</b> and <b>1 revision round.</b></li></ul>
+<ul class="dots cols"><li><span><b>Brand world and messaging hub (Notion):</b> positioning, emotional hook, audience psychology, voice guidelines and core storytelling pillars.</span></li><li><span><b>Visual identity and 3×3 concept feed deck (12–15 slides):</b> moodboard, palette, typography, photography rules and three sample content mockups with a 3×3 grid preview.</span></li><li><span><b>Connected discovery ecosystem:</b> an Instagram, Pinterest and blog/website destination map plus a content repurposing workflow.</span></li><li><span><b>15–20 tailored content ideas.</b></span></li><li><span><b>Interactive 90-day roadmap.</b></span></li><li><span><b>20-minute walkthrough video</b> and <b>1 revision round.</b></span></li></ul>
 <p class="note"><b>Working together:</b> One onboarding questionnaire and an asynchronous build on my end. No live calls required.</p>
 <p class="note"><b>Not included:</b> Photography, filming, ongoing posting, community management, paid ads or website development.</p>
 <p class="note"><b>How we measure value:</b> A complete brand world and a 90-day discovery system built around your product.</p>
@@ -275,7 +294,7 @@ details.ms .w{width:auto}
 <div class="head"><p class="eyebrow">Not sure which one?</p><h2>Find your fit.</h2><p class="soft">Read the line that sounds like you and tap it. If none of them do, <a href="book.html" style="text-decoration:underline;font-weight:700">book an intro chat</a> and I’ll point you to where I’d start.</p></div>
 <p class="eyebrow sm" style="margin:6px 0 12px">The three core services</p><div class="ggrid"><a class="gc" href="#audit" data-card="0"><span class="gi">If you’re not sure what’s working or what to fix first…</span><span class="gw">Social Media &amp; Content Ecosystem Audit <b>$250</b></span></a><a class="gc" href="#audit" data-card="1"><span class="gi">If you have a launch, holiday box or pre-order coming…</span><span class="gw">The Launch Campaign Edit <b>$550</b></span></a><a class="gc" href="#audit" data-card="2"><span class="gi">If you want complete creative direction and a repeatable discovery system…</span><span class="gw">Campaign &amp; Content World Blueprint <b>$1,150</b></span></a></div>
 <p class="eyebrow sm" style="margin:28px 0 12px">More focused services</p><div class="ggrid"><a class="gc" href="welcome-content-ecosystem.html"><span class="gi">If you want a connected plan across Instagram, Pinterest, blog and email…</span><span class="gw">Simplify Content Ecosystem Strategy <b>$950</b></span></a><a class="gc" href="welcome-coded-pinterest.html"><span class="gi">If you want to run Pinterest yourself but need the plan…</span><span class="gw">Simplify Coded Pinterest <b>$400</b></span></a><a class="gc" href="#setup"><span class="gi">If you know what you need but your tools and workflows are a mess…</span><span class="gw">Setup services <b>$650–750</b></span><span class="gn">Content systems, AI-assisted workflows, Pinterest setup and blog marketing</span></a><a class="gc" href="#support"><span class="gi">If you want someone alongside you doing the work every month…</span><span class="gw">Ongoing support <b>from $650/mo</b></span><span class="gn">Community engagement, Pinterest management, integrated funnel and Studio</span></a></div></div></section>
-<div class="msw"><details id="more-services" class="ms"><summary><span><small>The full menu · still available</small>More services: Strategy, Setup and Ongoing support</span></summary>
+<div class="msw"><details id="more-services" class="ms"><summary><span><small>The full menu</small>More services: Strategy, Setup and Ongoing support</span></summary>
 <section id="strategy"><div class="w svc">
 <figure class="fig"><div class="ph"><img class="tall" src="hello-branding-collage.webp" alt="Brand collage: bakery coffee cups, a brand checklist, a visual identity diagram, burgundy packaging and a laptop saying hello" width="900" height="1600" loading="lazy"></div><figcaption>branding and marketing</figcaption><span class="sticker" aria-hidden="true">01<br>strategy</span></figure>
 <div class="stack">
@@ -284,7 +303,7 @@ details.ms .w{width:auto}
 <p class="italic">Let’s understand your business and build a strategy that connects your content and marketing.</p>
 <div class="lab stack" style="gap:6px"><p style="font-weight:600">Let’s find your direction.</p><p class="soft">For F&amp;B and modern lifestyle brands who have ideas, content and marketing channels but need a clear plan.</p></div>
 <p class="eyebrow" style="margin-top:4px">Services</p>
-<ul class="dots"><li>Simplify Content Ecosystem Strategy</li><li>Simplify Coded Pinterest</li></ul>
+<ul class="dots"><li><span>Simplify Content Ecosystem Strategy</span></li><li><span>Simplify Coded Pinterest</span></li></ul>
 <div class="out"><b>The outcome</b>Clarity, direction and a practical marketing roadmap.</div>
 <div class="btns"><a class="btn" href="#strategy-services">Explore strategy services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
@@ -300,7 +319,7 @@ details.ms .w{width:auto}
 <div class="pr"><div class="price">$950</div><span>One-time project · 14-20 days</span></div>
 <p class="for">For growing F&amp;B and modern lifestyle brands that are creating content but don’t have a connected marketing plan.</p>
 <p class="eyebrow sm">Scope and deliverables</p>
-<ul class="dots cols"><li>Business, offer and audience research.</li><li>Review of up to four existing marketing channels.</li><li>Customer journey and content discovery analysis.</li><li>Content pillars, messaging and topic direction.</li><li>Channel strategy: Instagram, Pinterest, blog and email, where relevant.</li><li>Content repurposing and distribution map.</li><li>Website destination and CTA recommendations.</li><li>A prioritised 90-day marketing roadmap.</li><li>KPI and measurement framework.</li></ul>
+<ul class="dots cols"><li><span>Business, offer and audience research.</span></li><li><span>Review of up to four existing marketing channels.</span></li><li><span>Customer journey and content discovery analysis.</span></li><li><span>Content pillars, messaging and topic direction.</span></li><li><span>Channel strategy: Instagram, Pinterest, blog and email, where relevant.</span></li><li><span>Content repurposing and distribution map.</span></li><li><span>Website destination and CTA recommendations.</span></li><li><span>A prioritised 90-day marketing roadmap.</span></li><li><span>KPI and measurement framework.</span></li></ul>
 <p class="note"><b>Working together:</b> One onboarding questionnaire, one strategy working session, one consolidated revision round and a walkthrough.</p>
 <p class="note"><b>Not included:</b> Content production, publishing, website development, technical SEO or email automation.</p>
 <p class="note"><b>How we measure value:</b> Qualified website visits, outbound clicks, enquiries, email sign-ups and progress against agreed marketing priorities.</p>
@@ -320,7 +339,7 @@ details.ms .w{width:auto}
 <p class="italic">Let’s create the workflows and systems that make running your marketing easier.</p>
 <div class="lab stack" style="gap:6px"><p style="font-weight:600">Let’s make it work.</p><p class="soft">For F&amp;B and modern lifestyle brands who know what they need but don’t want to spend hours figuring out tools and workflows.</p></div>
 <p class="eyebrow" style="margin-top:4px">Services</p>
-<ul class="dots"><li>Simplify content management systems</li><li>Simplify AI-assisted content workflows</li><li>Simplify Pinterest account setup</li><li>Simplify Blog marketing</li></ul>
+<ul class="dots"><li><span>Simplify content management systems</span></li><li><span>Simplify AI-assisted content workflows</span></li><li><span>Simplify Pinterest account setup</span></li><li><span>Simplify Blog marketing</span></li></ul>
 <div class="out"><b>The outcome</b>Practical systems configured around their actual business.</div>
 <div class="btns"><a class="btn" href="#setup-options">Explore setup services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
@@ -333,7 +352,7 @@ details.ms .w{width:auto}
 <p class="italic">Let’s work together on content and marketing execution.</p>
 <div class="lab stack" style="gap:6px"><p style="font-weight:600">Let’s grow together.</p><p class="soft">For business owners who want someone alongside them to help implement their marketing consistently.</p></div>
 <p class="eyebrow" style="margin-top:4px">Services</p>
-<ul class="dots"><li>Simplify Community Engagement</li><li>Simplify Pinterest Management</li><li>Simplify Integrated Funnel Pinterest</li><li>Simplify Studio</li></ul>
+<ul class="dots"><li><span>Simplify Community Engagement</span></li><li><span>Simplify Pinterest Management</span></li><li><span>Simplify Integrated Funnel Pinterest</span></li><li><span>Simplify Studio</span></li></ul>
 <div class="out"><b>The outcome</b>More consistent execution without carrying every marketing task alone.</div>
 <div class="btns"><a class="btn" href="#support-services">Explore ongoing support →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
@@ -350,7 +369,7 @@ details.ms .w{width:auto}
 <p class="for">For F&amp;B and modern lifestyle brands, personal brands and creative founders who want to be part of their industry conversations but don’t have the time to do it consistently.</p>
 <p class="soft">Be part of the conversations that matter. Thoughtful, relevant engagement in your brand’s voice, without taking on full social media management.</p>
 <p class="eyebrow sm">What’s included</p>
-<ul class="dots cols"><li>Engagement across two selected social media platforms.</li><li>Up to 20 personalised comments per platform per weekday, Monday–Friday.</li><li>Up to 40 comments per weekday across both platforms, and up to 800 comments per month.</li><li>Research from an agreed target audience or account list.</li><li>Personalised comment writing and publishing in your brand voice.</li><li>Activity tracking and a monthly engagement summary.</li></ul>
+<ul class="dots cols"><li><span>Engagement across two selected social media platforms.</span></li><li><span>Up to 20 personalised comments per platform per weekday, Monday–Friday.</span></li><li><span>Up to 40 comments per weekday across both platforms, and up to 800 comments per month.</span></li><li><span>Research from an agreed target audience or account list.</span></li><li><span>Personalised comment writing and publishing in your brand voice.</span></li><li><span>Activity tracking and a monthly engagement summary.</span></li></ul>
 <p class="note"><b>Not included:</b> Original content creation, content calendars, full social media management, DM management or sales outreach, lead generation, influencer outreach, paid advertising or guaranteed followers, engagement, leads or sales.</p>
 <a class="btn light" href="welcome-community-engagement.html">Join the conversation →</a>
 </div></article>
@@ -363,7 +382,7 @@ details.ms .w{width:auto}
 <div class="pr"><div class="price">$750<small>/ month</small></div><span>Minimum 4-month commitment · 90 Pins/month</span></div>
 <p class="for">For growing F&amp;B and modern lifestyle brands that want consistent Pinterest management without having to handle the research, planning, designing and scheduling themselves.</p>
 <p class="eyebrow sm">What’s included</p>
-<ul class="dots cols"><li>Pinterest account management.</li><li>Monthly keyword and content research.</li><li>90 Pins per month.</li><li>Pin design and creative variations.</li><li>SEO-informed Pin titles and descriptions.</li><li>Content scheduling and distribution.</li><li>Website destination alignment.</li><li>Monthly performance reporting and check-in.</li></ul>
+<ul class="dots cols"><li><span>Pinterest account management.</span></li><li><span>Monthly keyword and content research.</span></li><li><span>90 Pins per month.</span></li><li><span>Pin design and creative variations.</span></li><li><span>SEO-informed Pin titles and descriptions.</span></li><li><span>Content scheduling and distribution.</span></li><li><span>Website destination alignment.</span></li><li><span>Monthly performance reporting and check-in.</span></li></ul>
 <a class="btn light" href="welcome-pinterest-management.html">Let me manage your Pinterest →</a>
 </div></article>
 
@@ -376,7 +395,7 @@ details.ms .w{width:auto}
 <p class="for">For owners of growing F&amp;B and modern lifestyle brands who have a marketing direction but need a strategic partner to help implement, organise and move things forward.</p>
 <p class="soft">An ongoing monthly partnership for the marketing and business development work that keeps getting pushed down the list.</p>
 <p class="eyebrow sm">What’s included</p>
-<ul class="dots cols"><li>Up to 15 hours of strategic and implementation work each month.</li><li>Content planning and repurposing support.</li><li>Marketing workflow and system improvements.</li><li>Business development and partnership support.</li><li>Project tracking, a shared workspace and a monthly progress review.</li></ul>
+<ul class="dots cols"><li><span>Up to 15 hours of strategic and implementation work each month.</span></li><li><span>Content planning and repurposing support.</span></li><li><span>Marketing workflow and system improvements.</span></li><li><span>Business development and partnership support.</span></li><li><span>Project tracking, a shared workspace and a monthly progress review.</span></li></ul>
 <p class="note"><b>Not included:</b> The 90-Pin Pinterest Management service, unlimited content creation, daily social media management, complex website development, full sales-team management or unlimited outreach and follow-ups.</p>
 <a class="btn light" href="welcome-studio.html">Enquire about Simplify Studio →</a>
 </div></article>
@@ -428,6 +447,7 @@ var ease=function(t){return 1-Math.pow(1-t,3)};
 var cards=[].slice.call(sec.querySelectorAll('.card')),title=sec.querySelector('.stk-title'),N=cards.length,tick=false;
 function update(){
 tick=false;
+if(window.matchMedia('(max-width:900px),(max-height:820px),(prefers-reduced-motion:reduce)').matches){title.style.opacity='';cards.forEach(function(c){c.style.opacity='';c.style.transform=''});return}
 var r=sec.getBoundingClientRect(),span=r.height-window.innerHeight;
 if(span<=0)return;
 var p=Math.min(1,Math.max(0,-r.top/span)),q=p*N*1.12;
