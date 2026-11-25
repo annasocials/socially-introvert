@@ -230,6 +230,21 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 }
 .mini-note{margin:22px 0 0;padding-top:12px;border-top:2px dashed var(--line);font-size:13.5px;line-height:1.5;color:var(--soft)}.mini-note b{color:var(--ink);font-weight:700}.mini-note a{font-weight:700;color:var(--maroon);text-underline-offset:3px}
 [hidden]{display:none!important}
+
+.menu{display:grid;gap:34px;background:var(--paper);border:var(--bd);border-radius:22px;padding:28px;box-shadow:5px 5px 0 var(--ink)}
+.mgroup h3{font-family:'Fraunces',Georgia,serif;font-size:clamp(24px,3vw,32px);line-height:1.1;margin:0 0 4px;color:var(--maroon)}
+.mnote{margin:0 0 8px;font-size:14.5px;color:var(--soft)}
+.mrow{display:flex;flex-direction:column;gap:4px;padding:14px 12px;margin:0 -12px;border-bottom:2px dashed var(--line);border-radius:14px;color:var(--ink);text-decoration:none}
+.mrow:hover{background:var(--pink)}
+.mtop{display:flex;align-items:baseline;gap:10px}
+.mname{font-weight:800;font-size:17px;line-height:1.25}
+.mdots{flex:1;min-width:14px;border-bottom:2px dotted var(--ink);opacity:.35;transform:translateY(-4px)}
+.mprice{font-weight:800;color:var(--maroon);white-space:nowrap}
+.mif{font-size:14.5px;line-height:1.45;opacity:.85}
+.mgo{font-weight:700;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+.menu .mini-note{margin:0}
+.menu .mgroup,#setup.mgroup{background:none;padding:0}
+@media(max-width:600px){.menu{padding:20px 18px}.mtop{flex-wrap:wrap}.mdots{display:none}.mprice{margin-left:auto}.mrow{margin:0 -8px;padding:14px 8px}}
 </style>
 </head>
 <body>
@@ -309,9 +324,10 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 <p class="mini-note">Also available on request: <b>Pinterest management &amp; setup</b>, <b>community engagement</b>, <b>content systems &amp; AI workflows</b> and <b>blog marketing</b>. <a href="inquiries.html">Ask me about them →</a></p>
 <!-- HIDDEN (kept, not deleted): "More focused services" grid -->
 <div hidden data-archived="more-focused-services"><p class="eyebrow sm" style="margin:28px 0 12px">More focused services</p><div class="ggrid"><a class="gc" href="welcome-content-ecosystem.html"><span class="gi">If you want a connected plan across Instagram, Pinterest, blog and email…</span><span class="gw">Simplify Content Ecosystem Strategy <b>$950</b></span></a><a class="gc" href="welcome-coded-pinterest.html"><span class="gi">If you want to run Pinterest yourself but need the plan…</span><span class="gw">Simplify Coded Pinterest <b>$400</b></span></a><a class="gc" href="#setup"><span class="gi">If you know what you need but your tools and workflows are a mess…</span><span class="gw">Setup services <b>$650–750</b></span><span class="gn">Content systems, AI-assisted workflows, Pinterest setup and blog marketing</span></a><a class="gc" href="#support"><span class="gi">If you want someone alongside you doing the work every month…</span><span class="gw">Ongoing support <b>from $650/mo</b></span><span class="gn">Community engagement, Pinterest management, integrated funnel and Studio</span></a></div></div></div></section>
+<div class="msw" id="menu-wrap"><details id="more-services" class="ms"><summary><span><small>The full menu</small>More services: Strategy, Setup and Ongoing support</span></summary><div class="menu"><div class="mgroup" id="strategy"><h3>Strategy</h3><p class="mnote">For F&amp;B and modern lifestyle brands who have ideas, content and channels but need a clear plan.</p><a class="mrow" href="welcome-content-ecosystem.html"><span class="mtop"><span class="mname">Simplify Content Ecosystem Strategy</span><span class="mdots"></span><span class="mprice">$950</span></span><span class="mif">If you’re creating content but don’t have a connected plan across Instagram, Pinterest, blog and email.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-coded-pinterest.html"><span class="mtop"><span class="mname">Simplify Coded Pinterest</span><span class="mdots"></span><span class="mprice">$400</span></span><span class="mif">If you want to run Pinterest yourself but need the plan.</span><span class="mgo">See details &rarr;</span></a></div><div class="mgroup" id="setup"><h3>Setup</h3><p class="mnote">For brands who know what they need but don’t want to spend hours figuring out tools and workflows.</p><a class="mrow" href="welcome-content-management.html"><span class="mtop"><span class="mname">Simplify Content Management Systems</span><span class="mdots"></span><span class="mprice">$750</span></span><span class="mif">If your content ideas, drafts and schedule are scattered and you want one organised system.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-ai-workflows.html"><span class="mtop"><span class="mname">Simplify AI-Assisted Workflows</span><span class="mdots"></span><span class="mprice">$700</span></span><span class="mif">If you want AI-assisted workflows set up so content work moves faster.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-pinterest-setup.html"><span class="mtop"><span class="mname">Simplify Pinterest Account Setup</span><span class="mdots"></span><span class="mprice">$650</span></span><span class="mif">If your Pinterest account needs setting up properly for discovery.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-blog-marketing.html"><span class="mtop"><span class="mname">Simplify Blog Marketing</span><span class="mdots"></span><span class="mprice">$650</span></span><span class="mif">If you want your blog set up to bring in search traffic.</span><span class="mgo">See details &rarr;</span></a></div><div class="mgroup" id="support"><h3>Ongoing support</h3><p class="mnote">For owners who want someone alongside them to help implement their marketing consistently.</p><a class="mrow" href="welcome-community-engagement.html"><span class="mtop"><span class="mname">Simplify Community Engagement</span><span class="mdots"></span><span class="mprice">$650/mo</span></span><span class="mif">If you want to be part of your industry’s conversations without the daily time.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-pinterest-management.html"><span class="mtop"><span class="mname">Simplify Pinterest Management</span><span class="mdots"></span><span class="mprice">$750/mo</span></span><span class="mif">If you want Pinterest handled for you: research, planning, designing and scheduling.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-integrated-funnel.html"><span class="mtop"><span class="mname">Simplify Integrated Funnel Pinterest</span><span class="mdots"></span><span class="mprice">$1,000/mo</span></span><span class="mif">If you want Pinterest plus the wider funnel.</span><span class="mgo">See details &rarr;</span></a><a class="mrow" href="welcome-studio.html"><span class="mtop"><span class="mname">Simplify Studio</span><span class="mdots"></span><span class="mprice">$1,250/mo</span></span><span class="mif">If you have a marketing direction and need a strategic partner to help implement it.</span><span class="mgo">See details &rarr;</span></a></div><p class="mini-note">Not sure which one? <a href="book.html">Book an intro chat</a> or <a href="inquiries.html">send an inquiry</a> and I’ll point you to where I’d start.</p></div></details></div>
 <!-- HIDDEN (kept, not deleted): full menu of strategy, setup and ongoing support. Remove the hidden attribute below to bring it back. -->
-<div class="msw" hidden data-archived="more-services"><details id="more-services" class="ms"><summary><span><small>The full menu</small>More services: Strategy, Setup and Ongoing support</span></summary>
-<section id="strategy"><div class="w svc">
+<div class="msw" hidden data-archived="more-services"><details data-old-id="more-services" class="ms"><summary><span><small>The full menu</small>More services: Strategy, Setup and Ongoing support</span></summary>
+<section data-old-id="strategy"><div class="w svc">
 <figure class="fig"><div class="ph"><img class="tall" src="hello-branding-collage.webp" alt="Brand collage: bakery coffee cups, a brand checklist, a visual identity diagram, burgundy packaging and a laptop saying hello" width="900" height="1600" loading="lazy"></div><figcaption>branding and marketing</figcaption><span class="sticker" aria-hidden="true">01<br>strategy</span></figure>
 <div class="stack">
 <p class="eyebrow">01 · Strategy</p>
@@ -323,7 +339,7 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 <div class="out"><b>The outcome</b>Clarity, direction and a practical marketing roadmap.</div>
 <div class="btns"><a class="btn" href="#strategy-services">Explore strategy services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
-<section class="stk" id="strategy-services" aria-label="Strategy services"><div class="stk-in">
+<section class="stk" data-old-id="strategy-services" aria-label="Strategy services"><div class="stk-in">
 <div class="stk-title"><p class="eyebrow">Strategy services</p><h2>What’s included</h2></div>
 <div class="deck" id="deck">
 
@@ -347,7 +363,7 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 
 </div></div></section>
 <section class="more" aria-label="More strategy options"><div class="w"><div class="head"><p class="eyebrow">Looking for something more specific?</p><p class="soft">Smaller or more focused strategy projects.</p></div><div class="chips"><a class="chip" href="welcome-coded-pinterest.html">Simplify Coded Pinterest <b>$400</b></a></div></div></section>
-<section id="setup"><div class="w svc rev">
+<section data-old-id="setup"><div class="w svc rev">
 <figure class="fig"><div class="ph"><img src="hello-content-system.webp" alt="A desktop monitor showing an organised workspace of planners and content calendars" width="900" height="900" loading="lazy"></div><figcaption>content system</figcaption><span class="sticker" aria-hidden="true">02<br>setup</span></figure>
 <div class="stack">
 <p class="eyebrow">02 · Setup</p>
@@ -359,8 +375,8 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 <div class="out"><b>The outcome</b>Practical systems configured around their actual business.</div>
 <div class="btns"><a class="btn" href="#setup-options">Explore setup services →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
-<section class="more" id="setup-options" aria-label="More setup options"><div class="w"><div class="head"><p class="eyebrow">Looking for something more specific?</p><p class="soft">Pick the one that matches the thing you need sorted.</p></div><div class="chips"><a class="chip" href="welcome-content-management.html">Simplify Content Management Systems <b>$750</b></a><a class="chip" href="welcome-ai-workflows.html">Simplify AI-Assisted Workflows <b>$700</b></a><a class="chip" href="welcome-pinterest-setup.html">Simplify Pinterest Account Setup <b>$650</b></a><a class="chip" href="welcome-blog-marketing.html">Simplify Blog Marketing <b>$650</b></a></div></div></section>
-<section id="support"><div class="w svc">
+<section class="more" data-old-id="setup-options" aria-label="More setup options"><div class="w"><div class="head"><p class="eyebrow">Looking for something more specific?</p><p class="soft">Pick the one that matches the thing you need sorted.</p></div><div class="chips"><a class="chip" href="welcome-content-management.html">Simplify Content Management Systems <b>$750</b></a><a class="chip" href="welcome-ai-workflows.html">Simplify AI-Assisted Workflows <b>$700</b></a><a class="chip" href="welcome-pinterest-setup.html">Simplify Pinterest Account Setup <b>$650</b></a><a class="chip" href="welcome-blog-marketing.html">Simplify Blog Marketing <b>$650</b></a></div></div></section>
+<section data-old-id="support"><div class="w svc">
 <figure class="fig"><div class="ph"><img src="hello-implementations.webp" alt="A laptop showing a Pinterest feed beside an iced coffee" width="900" height="900" loading="lazy"></div><figcaption>implementations</figcaption><span class="sticker" aria-hidden="true">03<br>support</span></figure>
 <div class="stack">
 <p class="eyebrow">03 · Ongoing Support</p>
@@ -372,7 +388,7 @@ ul.dots li>span{display:block;min-width:0;overflow-wrap:anywhere}
 <div class="out"><b>The outcome</b>More consistent execution without carrying every marketing task alone.</div>
 <div class="btns"><a class="btn" href="#support-services">Explore ongoing support →</a><a class="btn ghost" href="https://www.threads.com/@annplates" target="_blank" rel="noopener noreferrer">Let’s talk about your goals</a></div>
 </div></div></section>
-<section class="stk grow" id="support-services" aria-label="Ongoing support services"><div class="stk-in">
+<section class="stk grow" data-old-id="support-services" aria-label="Ongoing support services"><div class="stk-in">
 <div class="stk-title"><p class="eyebrow">03 · Ongoing support</p><h2>Let’s grow together.</h2><p class="lead">For owners of growing F&amp;B and modern lifestyle brands who want a thoughtful marketing partner to help bring their ideas to life, keep their content moving and make their marketing work together.</p></div>
 <div class="deck">
 

@@ -240,11 +240,11 @@ footer .row img{height:72px;width:auto;display:block}
         <div class="field">
           <label>What's your biggest struggle right now?</label>
           <div class="radio-group">
-            <label><input type="radio" name="struggle" value="pinterest" required> Pinterest isn't bringing traffic</label>
-            <label><input type="radio" name="struggle" value="system"> I have content but no system</label>
-            <label><input type="radio" name="struggle" value="instagram"> Instagram feels like a black hole</label>
-            <label><input type="radio" name="struggle" value="posting"> I don't know what to post</label>
-            <label><input type="radio" name="struggle" value="sales"> I don't get any sales</label>
+            <label><input type="radio" name="struggle" value="no-results" required> I'm posting, but my content isn't turning into clicks or orders</label>
+            <label><input type="radio" name="struggle" value="launch"> I have a launch coming up and no plan to build anticipation</label>
+            <label><input type="radio" name="struggle" value="scattered"> My brand feels scattered across Instagram, Pinterest and my website</label>
+            <label><input type="radio" name="struggle" value="content-system"> My content and ideas are everywhere and I have no system to manage them</label>
+            <label><input type="radio" name="struggle" value="no-time"> I don't have time to keep up with Pinterest, engagement or content every month</label>
             <label><input type="radio" name="struggle" value="other"> Something else</label>
           </div>
         </div>
@@ -254,10 +254,29 @@ footer .row img{height:72px;width:auto;display:block}
           <label for="service">Which service are you interested in?</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Choose one</option>
-            <option value="feedrefresh">🎨 Feed Refresh to Pinterest Discovery, $650 one-time</option>
-            <option value="codedpinterest">🗺️ Simplify Coded Pinterest, $350 one-time</option>
-            <option value="ecosystem">🌙 Simplify Content Ecosystem, $950/one-time</option>
-            <option value="notsure">Not sure, tell me what's right</option>
+            <optgroup label="Start here">
+              <option value="audit">Content &amp; Discovery Audit, $297 one-time</option>
+              <option value="launch-edit">The Launch Campaign Edit, $597 one-time</option>
+              <option value="extended-launch-edit">Extended Launch Campaign Edit, $797 one-time</option>
+              <option value="blueprint">Brand World &amp; Content Ecosystem Blueprint, $1,197 one-time</option>
+            </optgroup>
+            <optgroup label="Strategy">
+              <option value="ecosystem">Simplify Content Ecosystem Strategy, $950 one-time</option>
+              <option value="codedpinterest">Simplify Coded Pinterest, $400 one-time</option>
+            </optgroup>
+            <optgroup label="Setup">
+              <option value="content-management">Simplify Content Management Systems, $750 one-time</option>
+              <option value="ai-workflows">Simplify AI-Assisted Workflows, $700 one-time</option>
+              <option value="pinterest-setup">Simplify Pinterest Account Setup, $650 one-time</option>
+              <option value="blog-marketing">Simplify Blog Marketing, $650 one-time</option>
+            </optgroup>
+            <optgroup label="Ongoing support">
+              <option value="community-engagement">Simplify Community Engagement, $650/mo</option>
+              <option value="pinterest-management">Simplify Pinterest Management, $750/mo</option>
+              <option value="integrated-funnel">Simplify Integrated Funnel Pinterest, $1,000/mo</option>
+              <option value="studio">Simplify Studio, $1,250/mo</option>
+            </optgroup>
+            <option value="notsure">Not sure yet, point me where to start</option>
           </select>
         </div>
 
